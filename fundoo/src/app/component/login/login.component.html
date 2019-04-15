@@ -1,0 +1,14 @@
+
+  <h3 class="p">Login Form</h3>
+    <div class="example-container">
+      
+        <label for="username">Username : </label>
+        <input type="text"  placeholder="Enter Email Id" ng-model="username">
+     
+        <label for="username">Password : </label>
+        <input type="password" placeholder="Enter Password" ng-model="password">
+
+    </div>
+  <button class="btn" (click)="login()">Submit</button><br>
+  <p class="link"><a [routerLink]="['reset']" >Reset password/ Forget password</a>
+  <p class="link"><a [routerLink]="['registration']">User Registration form</a>
