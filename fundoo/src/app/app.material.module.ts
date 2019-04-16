@@ -1,55 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LoginComponent } from './component/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material';
-import { MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
-import { RegistrationComponent } from './component/registration/registration.component';
-//import {Component} from '@angular/core';
-
-
-
-import {MatCardModule} from '@angular/material/card'; 
-
 import {Component} from '@angular/core';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 @NgModule({
     declarations: [
-      AppComponent,
-      LoginComponent,
-      ResetpasswordComponent,
-      RegistrationComponent,
-      
-      
+     
     ],
   
     imports: [
-      BrowserModule,
-      AppRoutingModule,
-      FormsModule, 
-      ReactiveFormsModule,
+      MatCardModule,
       MatFormFieldModule,
-      MatInputModule, 
-      BrowserAnimationsModule,
-      MatInputModule, 
-    
-      MatCardModule
-     
+      MatButtonToggleModule
+      
     ],
+
     exports:[
-        MatCardModule
+      MatCardModule,
+      MatFormFieldModule,
+      MatButtonToggleModule
+    
+      
     ],
   
     providers: [],
   
-    bootstrap: [AppComponent]
+    bootstrap: []
   
   })
+
   export class AppMaterialModule { }
   //export class ButtonToggleOverviewExample {}
   

@@ -4,24 +4,27 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { RegistrationComponent } from './component/registration/registration.component';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatDialogModule} from '@angular/material/dialog';
-import {AppMaterialModule} from '../../src/app/app.material.module'
-//import {Component} from '@angular/core';
+import { FlexLayoutModule} from '@angular/flex-layout';
+import { MatDialogModule} from '@angular/material/dialog';
+import { AppMaterialModule } from './app.material.module';
+
+//import { Component} from '@angular/core';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ResetpasswordComponent,
-    RegistrationComponent,
-    
+    RegistrationComponent
+
    
   ],
 
@@ -37,6 +40,8 @@ import {AppMaterialModule} from '../../src/app/app.material.module'
     FlexLayoutModule,
     MatDialogModule,
     AppMaterialModule
+   
+    
   ],
 
   providers: [],
@@ -44,6 +49,7 @@ import {AppMaterialModule} from '../../src/app/app.material.module'
   bootstrap: [AppComponent]
 
 })
+
 export class AppModule { }
 //export class ButtonToggleOverviewExample {}
 
