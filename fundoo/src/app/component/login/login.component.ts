@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-import { Login } from 'src/app/service/login/login';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/service/login.service';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -9,17 +13,55 @@ import { Login } from 'src/app/service/login/login';
 
 })
 export class LoginComponent implements OnInit {
+  // loginForm=FormGroup;
+  // hide=true;
+  // model:any;
+  // response:any;
+  // message='';
 
-  constructor() { }
+  // firstName='';
+  // service: any;
+    constructor() { }
 
   //emailFormControl = new FormControl('', [
   //  Validators.required,
   //  Validators.email,
   //]);
-  ngOnInit() {
+  ngOnInit()
+  {
+  //   this.getUserService()
+  //   this.service= localStorage.getItem('service')
+  //   console.log(this.formBuilder.group({
+  //     username:['',[Validators.required, Validators.email]],
+  //     password:['',[Validators.required]]
+  //   }));
+  // }
+
+  // get f()
+  // {
+  //   return this.loginForm.controls;
+  // }
+  // getUserService() {
+  //   throw new Error("Method not implemented.");
+
   }
-login()
+  
+// login()
+// {
+//   console.log('its running'); 
+//   this.model={
+//     "username":this.loginForm.get('username').value,
+//     "password":this.loginForm.get('password').value,
+//   }
+// }
+
+
+signin()
 {
-  console.log('its running'); 
+  //console.log("its running");
+  //if(this.login()!=null)
+  alert("Your responce has been submitted");
 }
+  
+
 }

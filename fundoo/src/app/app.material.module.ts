@@ -17,14 +17,18 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     imports: [
       MatCardModule,
       MatFormFieldModule,
-      MatButtonToggleModule
+      MatButtonToggleModule,
+      BrowserModule,
+      ReactiveFormsModule
       
     ],
 
     exports:[
       MatCardModule,
       MatFormFieldModule,
-      MatButtonToggleModule
+      MatButtonToggleModule,
+      BrowserModule,
+      ReactiveFormsModule
     
       
     ],

@@ -1,28 +1,40 @@
-<div class="flx" fxLayout='row' fxLayoutAlign='center center'>
-        <mat-card fxFlex='40'>
-            <h3 class="h3">Login form</h3>
-                <div class="align">
 
+ <div class="flx" fxLayout='row' fxLayoutAlign='center center'>
+        <mat-card fxFlex='30'>
+            <h3 class="h3">Sign In</h3>
+                <div class="align">
+                 
                     <mat-form-field class="align">
-                        <input matInput placeholder="Enter your email id">
+                        <input matInput placeholder="Enter your User Name"  ngModel pattern="[a-zA-Z]*" maxlength="20" minlength="5" required >
+                        <!-- <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                            <div *ngIf="firstName.errors.required">First Name is required</div>
+                        </div> -->
                     </mat-form-field>
                     <br>
     
                     <mat-form-field class="align">
-                        <input type="password" matInput placeholder="Enter your password">
+                        <input type="password" [(ngModel)]='password' matInput placeholder="Enter your password" ngModel pattern="[a-zA-Z0-9@]*" required>
                     </mat-form-field>
                     <br>
-                   
-                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
-                        <mat-button-toggle value="submit">Submit</mat-button-toggle>
-                        <mat-button-toggle value="reset"><a [routerLink]="['reset']">Reset password</a></mat-button-toggle>
-                        <mat-button-toggle value="registration"><a [routerLink]="['registration']">User Registration</a></mat-button-toggle>
-                    </mat-button-toggle-group> 
 
-                </div>
-        </mat-card>    
-    </div>
-       
+                    <mat-button-toggle class="btn2" (click)='signin()'>Sing in</mat-button-toggle><br> 
+
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
+                        <a [routerLink]="['reset']"><mat-button-toggle value="reset">Reset password</mat-button-toggle></a>
+                        <a [routerLink]="['registration']"><mat-button-toggle value="registration">User Registration</mat-button-toggle></a>
+                    </mat-button-toggle-group>                
+               
+        </div>
+        </mat-card>
+</div>
+ 
+
+
   <!-- <button class="btn" (click)="login()">Submit</button><br>
+
+[ngClass]="{'has-error':loginForm.get('name').error && loginForm.get('name').dirty}"
+
+
   <p class="link"><a [routerLink]="['reset']" >Reset password/ Forget password</a>
   <p class="link"><a [routerLink]="['registration']">User Registration form</a> -->
+<!--The whole content below can be removed with the new code.-->
