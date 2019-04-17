@@ -17,12 +17,18 @@
                     </mat-form-field>
                     <br>
 
-                    <mat-button-toggle class="btn2" (click)='signin()'>Sing in</mat-button-toggle><br> 
+                    <!-- <mat-button-toggle class="btn2" (click)='signin()'></mat-button-toggle><br>  -->
 
-                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
+                    <button class="btn2" mat-stroked-button>Sing In</button>
+
+                    <div class="example-button-row">
+                            <a [routerLink]="['reset']"><button mat-stroked-button style="margin-left:20px;">Reset password</button></a>
+                            <a [routerLink]="['registration']"><button mat-stroked-button style="margin-left:20px;">Create user registration</button></a>
+                    </div>       
+                    <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
                         <a [routerLink]="['reset']"><mat-button-toggle value="reset">Reset password</mat-button-toggle></a>
                         <a [routerLink]="['registration']"><mat-button-toggle value="registration">User Registration</mat-button-toggle></a>
-                    </mat-button-toggle-group>                
+                    </mat-button-toggle-group>                 -->
                
         </div>
         </mat-card>

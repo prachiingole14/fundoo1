@@ -13,6 +13,7 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatDialogModule} from '@angular/material/dialog';
 import { AppMaterialModule } from './app.material.module';
+import { SampleComponent } from './component/sample/sample.component';
 
 //import { Component} from '@angular/core';
 
@@ -23,7 +24,8 @@ import { AppMaterialModule } from './app.material.module';
     AppComponent,
     LoginComponent,
     ResetpasswordComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    SampleComponent
 
    
   ],
