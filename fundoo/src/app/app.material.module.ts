@@ -8,7 +8,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
-
+import { FormControl, FormGroup } from '@angular/forms';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -19,22 +20,24 @@ import {MatButtonModule} from '@angular/material/button';
       MatCardModule,
       MatFormFieldModule,
       MatButtonToggleModule,
-      BrowserModule,
-      ReactiveFormsModule,
+      // BrowserModule,
+      // ReactiveFormsModule,
       MatButtonModule,
-      FormsModule
+      // FormsModule,
+      // FormControl, FormGroup,
+     
     ],
 
     exports:[
       MatCardModule,
       MatFormFieldModule,
       MatButtonToggleModule,
-      BrowserModule,
-      ReactiveFormsModule,
+      // BrowserModule,
+      // ReactiveFormsModule,
       MatButtonModule,
-      FormsModule
+      // FormsModule,
+      // FormControl, FormGroup,
     
-      
     ],
   
     providers: [],
@@ -43,6 +46,7 @@ import {MatButtonModule} from '@angular/material/button';
   
   })
 
-  export class AppMaterialModule { }
+  export class AppMaterialModule {
+  }
   //export class ButtonToggleOverviewExample {}
   

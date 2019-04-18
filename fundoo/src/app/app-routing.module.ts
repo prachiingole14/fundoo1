@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './component/login/login.component';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { RegistrationComponent } from './component/registration/registration.component';
-import { SampleComponent } from './component/sample/sample.component';
+
 
 const routes: Routes = [
     {
@@ -21,10 +21,7 @@ const routes: Routes = [
       component : RegistrationComponent
     },
 
-    {
-      path:'sample',
-      component:SampleComponent
-    }
+   
 ];
 
 @NgModule({

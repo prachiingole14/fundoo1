@@ -1,56 +1,69 @@
 <div class="flx" fxLayout='row' fxLayoutAlign='center center'>
     <mat-card fxFlex='32'>
-
         <h3 class="h3">Registration form</h3>
-             <div class="align">
-                   
-                <mat-form-field class="align">
-                <input matInput placeholder="Enter your name" ngModel pattern="[a-zA-Z]*" required>
-                </mat-form-field>
-                <br>  
+            <div class="align">
+                <form name="form" (ngSubmit)="Clicka()">
 
-                <mat-form-field class="align">
-                <textarea matInput placeholder="Enter your Adress" ngModel pattern="[a-zA-Z]*"></textarea>
-                </mat-form-field>
-                <br>
+                    <div class="form-group"> 
+                        <mat-form-field class="align">
+                            <input matInput placeholder="Enter your name" [formControl]="firstName"  pattern="[a-zA-Z]*" >
+                        </mat-form-field>
+                        <mat-error *ngIf="firstName.dirty">{{firstNameError()}}</mat-error>
+                        <!-- <mat-error *ngIf="firstName.pattern">{{firstNamepError()}}</mat-error> -->
+                    </div>
+                    
+                    <mat-form-field class="align">
+                        <textarea matInput placeholder="Enter your Adress"  [formControl]="address" pattern="[a-zA-Z]*"></textarea>
+                        <mat-error *ngIf="address.dirty">{{firstAddressError()}}</mat-error>
+                    </mat-form-field>
+                    <br>
 
-                <mat-form-field class="align">
-                <input matInput placeholder="Enter your contact no" ngModel pattern="[0-9]*" minlength="10" maxlength="10" required>
-                </mat-form-field>
-                <br>
+                    <mat-form-field class="align">
+                        <input matInput placeholder="Enter your contact no"  [formControl]="contact" pattern="[0-9]*" minlength="10" maxlength="10" required>
+                        <mat-error *ngIf="contact.dirty">{{contactError()}}</mat-error>
+                    </mat-form-field>
+                    <br>
 
-                <mat-form-field class="align">
-                <input matInput placeholder="Enter your email id" ngModel pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-                </mat-form-field>
-                <br>
+                    <mat-form-field class="align">
+                        <input matInput placeholder="Enter your email id" [formControl]="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                        <mat-error *ngIf="email.dirty">{{emailError()}}</mat-error>
+                    </mat-form-field>
+                    <br>
 
-                <mat-form-field class="align">
-                    <input matInput placeholder="Enter your User name" ngModel pattern="[a-zA-Z]*" maxlength="20" minlength="5" required>
-                </mat-form-field>
-                <br>
+                    <mat-form-field class="align">
+                        <input matInput placeholder="Enter your User name" [formControl]="user" pattern="[a-zA-Z]*" maxlength="20" minlength="5" required>
+                        <mat-error *ngIf="user.dirty">{{userError()}}</mat-error>
+                    </mat-form-field>
+                    <br>
 
-                <mat-form-field class="align">
-                <input type="password" matInput placeholder="Enter your password" ngModel pattern="[a-zA-Z0-9@]*" required>
-                </mat-form-field>
-                <br>
+                    <mat-form-field class="align">
+                        <input type="password" matInput placeholder="Enter your password" [formControl]="password" pattern="[a-zA-Z0-9@]*" required>
+                        <mat-error *ngIf="password.dirty">{{passwordError()}}</mat-error>
+                    </mat-form-field>
+                    <br>
   
-                <mat-form-field class="align">
-                <input type="password" matInput placeholder="confirm your password" ngModel pattern="[a-zA-Z0-9@]*" required>
-                </mat-form-field>
-                <br>
-                
-                <div class="example-button-row">
-                    <button mat-stroked-button style="margin-left:80px;">Submit</button>
-                    <a [routerLink]="['']"><button mat-stroked-button style="margin-left:20px;">Sign In</button></a>
-                </div>  
+                    <mat-form-field class="align">
+                        <input type="password" matInput placeholder="confirm your password" [formControl]="confirmpassword" pattern="[a-zA-Z0-9@]*" required>
+                        <mat-error *ngIf="confirmpassword.dirty">{{checkConfirmPassword()}}</mat-error>
+                    </mat-form-field>
+                    <br>
+                    
+                    <div class="example-button-row">
+                        <button (click)="Clicka()"  mat-stroked-button style="margin-left:80px;">Submit</button>
+                        <!-- <a [routerLink]="['']"><button mat-stroked-button style="margin-left:20px;">Sign In</button></a> -->
+                    </div>  
 
-                <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
-                <mat-button-toggle value="italic">Submit</mat-button-toggle>
-                <a [routerLink]="['']"><mat-button-toggle value="underline">Sing In</mat-button-toggle></a>
-                </mat-button-toggle-group> -->
+                    <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
+                    <mat-button-toggle value="italic">Submit</mat-button-toggle>
+                    <a [routerLink]="['']"><mat-button-toggle value="underline">Sing In</mat-button-toggle></a>
+                    </mat-button-toggle-group> -->
+
+
+                </form>
             </div>
-    </mat-card>    
-</div>
+    </mat-card> 
+</div>  
+
 
 
    
