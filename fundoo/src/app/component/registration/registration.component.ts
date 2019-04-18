@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { MIN_LENGTH_VALIDATOR } from '@angular/forms/src/directives/validators';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 const newLocal = 'This field is empty';
 @Component({
@@ -19,7 +20,7 @@ export class RegistrationComponent implements OnInit
 
   model: any = {};
   
-  firstName=new FormControl(' ',[Validators.required, Validators.maxLength(20), Validators.minLength(5)]);
+  firstName=new FormControl(' ',[Validators.required, Validators.maxLength(20)]);
   address=new FormControl('',[Validators.required, Validators.maxLength(50)]);
   contact=new FormControl('',[Validators.required, Validators.maxLength(10)]);
   email= new FormControl('',[Validators.required, Validators.email]);
@@ -29,10 +30,8 @@ export class RegistrationComponent implements OnInit
 
   onSubmit() 
   { 
-    console.log(this.firstName.value, this.address.value, this.contact.value, this.user.value, this.password.value, this.confirmpassword.value);
 
     this.model={
-      
       "firstname":this.firstName.value,
       "address":this.address.value,
       "contact":this.contact.value,
@@ -40,7 +39,9 @@ export class RegistrationComponent implements OnInit
       "user": this.user.value,
       "password" : this.password.value,
       "confirmpassword" : this.confirmpassword.value
-    }    
+    } 
+    
+    console.log(this.model)
   }
 
 
@@ -97,15 +98,5 @@ export class RegistrationComponent implements OnInit
     }
 
   
-    }
-  
-
-
-
-
-
-
-
-
-
+  }
 
