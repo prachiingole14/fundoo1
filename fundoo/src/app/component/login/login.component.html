@@ -1,37 +1,30 @@
 
- <div class="flx" fxLayout='row' fxLayoutAlign='center center'>
-        <mat-card fxFlex='30'>
-            <h3 class="h3">Sign In</h3>
-                <div class="align">
-                 
+<div class="flx" fxLayout='row' fxLayoutAlign='center center'>
+    <mat-card fxFlex='30'>
+        <h3 class="h3">Sign In</h3>
+            <div class="align">
+                <form name="form" (ngSubmit)="onSubmit()">
                     <mat-form-field class="align">
-                        <input matInput placeholder="Enter your User Name"  ngModel pattern="[a-zA-Z]*" maxlength="20" minlength="5" required >
-                        <!-- <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
-                            <div *ngIf="firstName.errors.required">First Name is required</div>
-                        </div> -->
+                        <input matInput placeholder="Enter your User Name"  [formControl]="username" pattern="[a-zA-Z@]*" required >
+                        <mat-error *ngIf="username.dirty">{{usernameError()}}</mat-error>
                     </mat-form-field>
                     <br>
-    
+        
                     <mat-form-field class="align">
-                        <input type="password" [(ngModel)]='password' matInput placeholder="Enter your password" ngModel pattern="[a-zA-Z0-9@]*" required>
+                        <input type="password" matInput placeholder="Enter your password" [formControl]="password"  pattern="[a-zA-Z0-9@]*" required>
+                        <mat-error *ngIf="password.dirty">{{passwordError()}}</mat-error>
                     </mat-form-field>
                     <br>
-
+                    
                     <!-- <mat-button-toggle class="btn2" (click)='signin()'></mat-button-toggle><br>  -->
-
-                    <button class="btn2" mat-stroked-button>Sing In</button>
-
+                    <button class="btn2" ngSubmit="onSubmit()" mat-stroked-button>Sing In</button>
                     <div class="example-button-row">
-                            <a [routerLink]="['reset']"><button mat-stroked-button style="margin-left:20px;">Reset password</button></a>
-                            <a [routerLink]="['registration']"><button mat-stroked-button style="margin-left:20px;">Create user registration</button></a>
-                    </div>       
-                    <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
-                        <a [routerLink]="['reset']"><mat-button-toggle value="reset">Reset password</mat-button-toggle></a>
-                        <a [routerLink]="['registration']"><mat-button-toggle value="registration">User Registration</mat-button-toggle></a>
-                    </mat-button-toggle-group>                 -->
-               
-        </div>
-        </mat-card>
+                        <a [routerLink]="['reset']"><button mat-stroked-button style="margin-left:20px;">Reset password</button></a>
+                        <a [routerLink]="['registration']"><button mat-stroked-button style="margin-left:20px;">Create user registration</button></a>
+                    </div>  
+                </form>     
+            </div>
+    </mat-card>
 </div>
  
 

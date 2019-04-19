@@ -13,6 +13,7 @@ const newLocal = 'This field is empty';
 export class RegistrationComponent implements OnInit 
 {
   message: any;
+  submit: void;
 
   constructor(){}
 
@@ -20,7 +21,7 @@ export class RegistrationComponent implements OnInit
 
   model: any = {};
   
-  firstName=new FormControl(' ',[Validators.required, Validators.maxLength(20)]);
+  firstName=new FormControl(' ',[Validators.required,Validators.minLength(4), Validators.maxLength(20)]);
   address=new FormControl('',[Validators.required, Validators.maxLength(50)]);
   contact=new FormControl('',[Validators.required, Validators.maxLength(10)]);
   email= new FormControl('',[Validators.required, Validators.email]);
@@ -30,9 +31,10 @@ export class RegistrationComponent implements OnInit
 
   onSubmit() 
   { 
+    
 
     this.model={
-      "firstname":this.firstName.value,
+      "firstName":this.firstName.value,
       "address":this.address.value,
       "contact":this.contact.value,
       "email":this.email.value,
@@ -41,9 +43,23 @@ export class RegistrationComponent implements OnInit
       "confirmpassword" : this.confirmpassword.value
     } 
     
-    console.log(this.model)
-  }
+    this.submit=console.log(this.firstName.value,
+      this.address.value,
+      this.contact.value,
+      this.email.value,
+      this.user.value,
+      this.password.value,
+      this.confirmpassword.value)
 
+      if(this.submit!=null)
+      {
+        alert("Your form is Submited")
+      }
+      else{
+        alert("some fields are missing")
+      }
+     
+  }
 
   firstNameError()
   {
@@ -83,7 +99,7 @@ export class RegistrationComponent implements OnInit
   checkConfirmPassword()
     {
       
-      if (this.password.value==this.confirmpassword.value)
+      if (this.password.value==this.confirmpassword.value|| this.password.value==null)
         {
           console.log("valid password")
          //return "success"

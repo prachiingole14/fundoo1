@@ -2,11 +2,11 @@
     <mat-card fxFlex='32'>
         <h3 class="h3">Registration form</h3>
             <div class="align">
-                <form name="form" (ngSubmit)="Clicka()">
+                <form name="form" (ngSubmit)="onSubmit()">
 
                     <div class="form-group"> 
                         <mat-form-field class="align">
-                            <input matInput placeholder="Enter your name" [formControl]="firstName"  pattern="[a-zA-Z]*" >
+                            <input matInput placeholder="Enter your name" [formControl]="firstName"  pattern="[a-zA-Z]*" required>
                         </mat-form-field>
                         <mat-error *ngIf="firstName.dirty">{{firstNameError()}}</mat-error>
                         <!-- <mat-error *ngIf="firstName.pattern">{{firstNamepError()}}</mat-error> -->
@@ -49,7 +49,7 @@
                     <br>
                     
                     <div class="example-button-row">
-                        <button ngSubmit="Clicka()"  mat-stroked-button style="margin-left:80px;">Submit</button>
+                        <button ngSubmit="onSubmit()"  mat-stroked-button style="margin-left:120px;">Submit</button>
                         <!-- <a [routerLink]="['']"><button mat-stroked-button style="margin-left:20px;">Sign In</button></a> -->
                     </div>  
 

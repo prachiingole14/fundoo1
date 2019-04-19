@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-resetpassword',
@@ -6,10 +7,51 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resetpassword.component.scss']
 })
 export class ResetpasswordComponent implements OnInit {
-
-  constructor() { }
   message: any;
-  ngOnInit() {
+  constructor() { }
+  
+  ngOnInit() {}
+
+  model: any = {};
+
+  username= new FormControl('',[Validators.required,Validators.maxLength(10)]);
+  password=new FormControl('',[Validators.required,Validators.minLength(6), Validators.maxLength(15)]); 
+  newpassword=new FormControl('',[Validators.required,Validators.minLength(6), Validators.maxLength(15)]);
+
+  onReset()
+  {
+    this.model={   "username":this.username.value,
+                    "password":this.password.value,
+                    "newpassword":this.newpassword.value
+                }
+                console.log('success')
+
+                if(this.model==null)
+                {
+                  alert('Your password not is updated')
+                  console.log('error')
+                }
+                else{
+                  alert('Your password is updated')
+              
+                }
+                
+               
   }
+    usernameError()
+    {
+      return this.username.hasError('required')?'Enter proper user name':'Invalid username id'
+    }
+            
+    passwordError()
+    {
+      return this.password.hasError('required')?'Ex. AbcG245@':'it must be alphanumric'
+    }
+
+    resetpasswordError()
+    {
+      return this.password.hasError('required')?'Ex. AbcG245@':'it must be alphanumric'
+    }
+  
 
 }
