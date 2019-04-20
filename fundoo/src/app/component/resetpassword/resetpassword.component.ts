@@ -26,16 +26,17 @@ export class ResetpasswordComponent implements OnInit {
                 }
                 console.log('success')
 
-                if(this.model==null)
+                if(this.username==null && this.password==null && this.newpassword==null)
                 {
                   alert('Your password not is updated')
-                  console.log('error')
+                  console.log(this.password.value)
                 }
                 else{
                   alert('Your password is updated')
               
                 }
                 
+                //return alert(this.model.hasError('required')?'sads':'done')
                
   }
     usernameError()

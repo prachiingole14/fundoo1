@@ -21,7 +21,7 @@ export class RegistrationComponent implements OnInit
 
   model: any = {};
   
-  firstName=new FormControl(' ',[Validators.required,Validators.minLength(4), Validators.maxLength(20)]);
+  firstName=new FormControl(' ',[Validators.required,Validators.minLength(4), Validators.maxLength(30)]);
   address=new FormControl('',[Validators.required, Validators.maxLength(50)]);
   contact=new FormControl('',[Validators.required, Validators.maxLength(10)]);
   email= new FormControl('',[Validators.required, Validators.email]);
@@ -103,7 +103,7 @@ export class RegistrationComponent implements OnInit
         {
           console.log("valid password")
          //return "success"
-         return this.confirmpassword.hasError('required')?'Valid password':'Invalid password'
+         return this.confirmpassword.hasError('required')?'Invalid password':'Invalid password'
         }
         else
         {
