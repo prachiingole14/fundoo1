@@ -7,4 +7,5 @@ export class Register
     username: string
     password: string
     confirmpassword:string
+  firstName: string | Blob;
 }

@@ -13,6 +13,7 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatDialogModule} from '@angular/material/dialog';
 import { AppMaterialModule } from './app.material.module';
+import { RegisterService } from './service/register.service';
 
 
 
@@ -43,7 +44,8 @@ import { AppMaterialModule } from './app.material.module';
     MatInputModule, 
     FlexLayoutModule,
     MatDialogModule,
-    AppMaterialModule
+    AppMaterialModule,
+    RegisterService
   ],
     
 
