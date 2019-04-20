@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Register } from '../model/register';
 import { ServiceUrlService } from '../serviceUrl/service-url.service';
+import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class RegisterService {
   // http: any;
   // serviceurl: any;
@@ -14,7 +17,7 @@ export class RegisterService {
   
   user_registration()
   {
-    let user_registration = new FormData();
+    let user_registration = new registerapi();
     user_registration.append("firstName", this.register.firstname);
     user_registration.append("address", this.register.address);
     user_registration.append("contact",this.register.contact);
