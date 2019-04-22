@@ -12,21 +12,21 @@
         {
             parent::__construct();
             $this->load->database();
-            $this->load->model('userModel');
+           // $this->load->model('userModel');
         }
 
         public function registerApi()
         {
             echo "hiii";
-            $firstname = $_POST['firstName'];
-            $address = $_POST['address'];
-            $contact = $_POST['contact'];
-            $email = $_POST['email'];
-            $username=$_POST['username'];
-            $password = $_POST['password'];
-            $confirmpassword = $_POST['confirmpassword'];
+            // $firstname = $_POST['firstName'];
+            // $address = $_POST['address'];
+            // $contact = $_POST['contact'];
+            // $email = $_POST['email'];
+            // $username=$_POST['username'];
+            // $password = $_POST['password'];
+            // $confirmpassword = $_POST['confirmpassword'];
 
-            $query=$this->db->query("insert into registration(`firstName`,`address`,`contact`,`email`,`username`,`password`,`confirmpassword`)values('firstname','address',contact,'email','username','password','confirmpasssword')");
+            // $query=$this->db->query("insert into registration(`firstName`,`address`,`contact`,`email`,`username`,`password`,`confirmpassword`)values('firstname','address',contact,'email','username','password','confirmpasssword')");
             // $query=$this->db->query('select * from registration');
             // print_r($query->result());
         }
