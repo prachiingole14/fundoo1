@@ -4,14 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { RegistrationComponent } from './component/registration/registration.component';
-import { FlexLayoutModule} from '@angular/flex-layout';
-import { MatDialogModule} from '@angular/material/dialog';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppMaterialModule } from './app.material.module';
 import { RegisterService } from './service/register.service';
 
@@ -29,32 +29,32 @@ import { RegisterService } from './service/register.service';
     RegistrationComponent,
 
   ],
-   
-   
 
-   
- imports: [
+
+
+
+  imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule, 
+    MatInputModule,
     BrowserAnimationsModule,
-    MatInputModule, 
+    MatInputModule,
     FlexLayoutModule,
     MatDialogModule,
-    AppMaterialModule,
-    RegisterService
-  ],
+    AppMaterialModule
     
+  ],
 
 
 
-  providers: [],
+
+  providers: [RegisterService],
 
   bootstrap: [AppComponent]
-  
+
 })
 
 export class AppModule { }
