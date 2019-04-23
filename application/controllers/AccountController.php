@@ -29,11 +29,11 @@
             $username=$_POST['username'];
             print $username;
             $password = $_POST['password'];
-           
             $confirm_password = $_POST['confirmpassword'];
             
+            $this->load->Servive->AccountService()
 
-            $query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`user_name`,`password`,`confirm_password`) VALUE('$name','$address','$contact_no','$email_id','$username','$password','$confirm_password')");
+            //$query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`user_name`,`password`,`confirm_password`) VALUE('$name','$address','$contact_no','$email_id','$username','$password','$confirm_password')");
        }
 
         // public function showregister()
