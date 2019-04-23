@@ -29,33 +29,11 @@
             $username=$_POST['username'];
             print $username;
             $password = $_POST['password'];
-            print $password;
+           
             $confirm_password = $_POST['confirmpassword'];
-            print $confirm_password;
+            
 
-           // $user = new model\Entity\Users;
-            // $user->setFirstname($firstname);
-            // $user->setaddress($address);
-            // $user->setcontact($contact);
-            // $user->setemail($email);
-            // $user->setusername($username);
-            // $user->setpassword($password);
-            // $user->setconfirmpassword($confirmpassword);
-
-             $abc=$_POST['firstName'];
-             print   $abc;
-
-            // $data = array('name' => $this->input->post('name'),
-            // 'address' => $this->input->post('address'),
-            // 'contact_no' => $this->input->post('contact_no'),
-            // 'email_id' => $this->input->post('email_id'),
-            // 'user_name' => $this->input->post('user_name'),
-            // 'password' => $this->input->post('password'),
-            // 'confirm' => $this->input->post('confirmpassword'));
-
-            // $query_res=$this->load->UserService(insert($data));
-            // $this->response($query_res); 
-
+            $query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`user_name`,`password`,`confirm_password`) VALUE('$name','$address','$contact_no','$email_id','$username','$password','$confirm_password')");
        }
 
         // public function showregister()
@@ -64,14 +42,16 @@
         //     print_r($query->result());
         // }
 
-    //    public function login()
-    //    {
-    //        $username=$_POST['username'];
-    //        $password=$_POST['password'];
+       public function login()
+       {
+           $username=$_POST['userName'];
+           print $username;
+           $password=$_POST['password'];
+           print $password;
            
-    //        $query= $this->db->query("INSERT INTO Registration(`username`,`password`) VALUE('$username','$password')");
-    //        echo json_encode($query->result());
-    //    }
+           $query= $this->db->query("SELECT `user_name`='Registration.user_name'");
+           
+       }
 
       
     }

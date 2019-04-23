@@ -16,9 +16,11 @@ export class RegisterService {
     let createuser = new FormData();
     //debugger
     createuser.append("firstName", register.firstName);
-    createuser.append("lastName", register.lastName);
-    createuser.append("Emailid", register.Emailid);
+    createuser.append("address",register.address);
+    createuser.append("contact", register.contact);
+    createuser.append("email", register.email);
     createuser.append("password", register.password);
+    createuser.append("confirmpassword", register.confirmpassword);
     return this.http.post(this.serviceurl.host + this.serviceurl.register, createuser);
   }
  
