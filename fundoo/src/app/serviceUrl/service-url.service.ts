@@ -10,6 +10,6 @@ export class ServiceUrlService {
   constructor() {}
  
     public host = environment.baseUrl;
-    public register = "registerD";
+    public register = "register";
   
 }

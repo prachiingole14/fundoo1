@@ -8,25 +8,18 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class RegisterService {
-  // http: any;application/service/UserDataController.php
-  // serviceurl: any;
 
-  //constructor(){}
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
 
   register:Register
-  
-  // user_registration()
-  // {
-  //   let user_registration = new registerApi();
-  //   user_registration.append("firstName", this.register.firstname);
-  //   user_registration.append("address", this.register.address);
-  //   user_registration.append("contact",this.register.contact);
-  //   user_registration.append("email", this.register.email);
-  //   user_registration.append("username",this.register.username);
-  //   user_registration.append("password",this.register.password);
-  //   user_registration.append("confirmpassword", this.register.confirmpassword);
-  //   return this.http.post(this.serviceurl.host + this.serviceurl.register, user_registration);
-  //   //return   user_registration
-  // }
+  createuser(register){
+    let createuser = new FormData();
+    //debugger
+    createuser.append("firstName", register.firstName);
+    createuser.append("lastName", register.lastName);
+    createuser.append("Emailid", register.Emailid);
+    createuser.append("password", register.password);
+    return this.http.post(this.serviceurl.host + this.serviceurl.register, createuser);
+  }
+ 
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { MIN_LENGTH_VALIDATOR } from '@angular/forms/src/directives/validators';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { RegisterService } from 'src/app/service/register.service';
+import { stat } from 'fs';
 
 const newLocal = 'This field is empty';
 @Component({
@@ -15,7 +17,7 @@ export class RegistrationComponent implements OnInit
   message: any;
   submit: void;
 
-  constructor(){}
+  constructor(private s_register:RegisterService){}
 
   ngOnInit() {}
 
@@ -30,8 +32,8 @@ export class RegistrationComponent implements OnInit
   confirmpassword=new FormControl('',[ Validators.required, Validators.minLength(6), Validators.maxLength(15)]);
 
   onSubmit() 
-  { 
-    
+  {  
+    debugger;  
 
     this.model={
       "firstName":this.firstName.value,
@@ -42,7 +44,13 @@ export class RegistrationComponent implements OnInit
       "password" : this.password.value,
       "confirmpassword" : this.confirmpassword.value
     } 
-    
+    let status = this.s_register.createuser(this.model);
+    status.subscribe(res=>{
+
+    console.log(res);
+
+
+    });
     this.submit=console.log(this.firstName.value,
       this.address.value,
       this.contact.value,
