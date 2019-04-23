@@ -27,7 +27,6 @@ export class RegistrationComponent implements OnInit
   address=new FormControl('',[Validators.required, Validators.maxLength(50)]);
   contact=new FormControl('',[Validators.required, Validators.maxLength(10)]);
   email= new FormControl('',[Validators.required, Validators.email]);
-  user=new FormControl('',[Validators.required, Validators.maxLength(10)]);
   password=new FormControl('',[Validators.required,Validators.minLength(6), Validators.maxLength(15)]);
   confirmpassword=new FormControl('',[ Validators.required, Validators.minLength(6), Validators.maxLength(15)]);
 
@@ -40,7 +39,6 @@ export class RegistrationComponent implements OnInit
       "address":this.address.value,
       "contact":this.contact.value,
       "email":this.email.value,
-      "user": this.user.value,
       "password" : this.password.value,
       "confirmpassword" : this.confirmpassword.value
     } 
@@ -51,11 +49,11 @@ export class RegistrationComponent implements OnInit
 
 
     });
+
     this.submit=console.log(this.firstName.value,
       this.address.value,
       this.contact.value,
       this.email.value,
-      this.user.value,
       this.password.value,
       this.confirmpassword.value)
 
@@ -92,11 +90,6 @@ export class RegistrationComponent implements OnInit
   emailError()
     {
       return this.email.hasError('required')?'Ex. aca4@gmail.com':'Invalid email id'
-    }
-
-  userError()
-    {
-      return this.user.hasError('required')?'Enter proper user name':'Invalid username id'
     }
 
   passwordError()

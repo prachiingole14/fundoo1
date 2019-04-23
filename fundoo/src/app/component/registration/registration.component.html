@@ -31,12 +31,6 @@
                     <br>
 
                     <mat-form-field class="align">
-                        <input matInput placeholder="Enter your User name" [formControl]="user" pattern="[a-zA-Z]*" maxlength="20" minlength="5" required>
-                        <mat-error *ngIf="user.dirty">{{userError()}}</mat-error>
-                    </mat-form-field>
-                    <br>
-
-                    <mat-form-field class="align">
                         <input type="password" matInput placeholder="Enter your password" [formControl]="password" pattern="[a-zA-Z0-9@]*" required>
                         <mat-error *ngIf="password.dirty">{{passwordError()}}</mat-error>
                     </mat-form-field>

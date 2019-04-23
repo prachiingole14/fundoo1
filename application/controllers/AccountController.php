@@ -44,12 +44,23 @@
 
        public function login()
        {
-           $username=$_POST['userName'];
-           print $username;
+        $email_id = $_POST['email'];
+        print $email_id;
            $password=$_POST['password'];
            print $password;
            
-           $query= $this->db->query("SELECT `user_name`='Registration.user_name'");
+           $query= $this->db->query("SELECT 'email_id,password' from Registration");
+           if($query)
+           {
+               if($password==Registration.password)
+               echo "success";
+               else
+               echo "wrong";
+           }
+           else {
+               echo "error";
+           }
+           
            
        }
 

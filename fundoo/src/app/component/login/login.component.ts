@@ -21,18 +21,18 @@ export class LoginComponent implements OnInit
   ngOnInit(){}
   model: any = {};
 
-  username= new FormControl('',[Validators.required,Validators.maxLength(10)]);
+  email= new FormControl('',[Validators.required, Validators.email]);
   password=new FormControl('',[Validators.required,Validators.minLength(6), Validators.maxLength(15)]); 
 
   onSubmit()
   {
-    this.model={   "username":this.username.value,
+    this.model={   "username":this.email.value,
                     "password":this.password.value
                 }
 
                 console.log('success')
 
-                if((this.username.value || this.password.value)==null)
+                if((this.email.value || this.password.value)==null)
                 {
                   alert('all fields are required')
                   console.log('error')
@@ -43,10 +43,10 @@ export class LoginComponent implements OnInit
                 
                
   }
-    usernameError()
-    {
-      return this.username.hasError('required')?'Enter proper user name':'Invalid username id'
-    }
+  emailError()
+  {
+    return this.email.hasError('required')?'Ex. aca4@gmail.com':'Invalid email id'
+  }
             
     passwordError()
     {

@@ -4,9 +4,10 @@
         <h3 class="h3">Sign In</h3>
             <div class="align">
                 <form name="form" (ngSubmit)="onSubmit()">
+                   
                     <mat-form-field class="align">
-                        <input matInput placeholder="Enter your User Name"  [formControl]="username" pattern="[a-zA-Z@]*" required >
-                        <mat-error *ngIf="username.dirty">{{usernameError()}}</mat-error>
+                        <input matInput placeholder="Enter your email id" [formControl]="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                        <mat-error *ngIf="email.dirty">{{emailError()}}</mat-error>
                     </mat-form-field>
                     <br>
         
