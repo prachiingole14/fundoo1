@@ -1,9 +1,6 @@
 <?php
 
-namespace Entity;
-use Doctrine\Common\Collections\ArrayCollection;
-
-    class Users
+    class Account extends CI_Model
     {
         /**
         * @Id @GeneratedValue @Column(type="integer")
@@ -37,6 +34,32 @@ use Doctrine\Common\Collections\ArrayCollection;
         public function setaddress($address)
         {
             $this->address=$address;
+            return $this;
+        }
+
+        public function setcontact($contact_no)
+        {
+            $this->contact_no=$contact_no;
+            return $this;
+        }
+
+
+        public function setemail($email_id)
+        {
+            $this->email_id=$email_id;
+            return $this;
+        }
+
+
+        public function setpassword($password)
+        {
+            $this->password=$password;
+            return $this;
+        }
+
+        public function setconfirmpassword($confirmpassword)
+        {
+            $this->confirmpassword=$confirmpassword;
             return $this;
         }
     }

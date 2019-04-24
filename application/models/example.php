@@ -10,21 +10,11 @@ class userModel extends CI_Model
     {
         parent::__construct();
         $this->load->database();
-        $this->load->controllers('UserDataController');
+        $this->load->controllers('AccountController');
     }
 
     public function insert($data)
     {
-        //     'firstname'->$this->input->post('firstname');
-        //     $this->firstname = $_POST['firstName'];
-        //     $this->address = $_POST['address'];
-        //     $this->$contact = $_POST['contact'];
-        //     $this->$email = $_POST['email'];
-        //     $this->$username=$_POST['username'];
-        //     $this->$password = $_POST['password'];
-        //     $this->$confirmpassword = $_POST['confirmpassword'];
-    
-   
         $this->name  = $data['name'];
         $this->address = $data['address'];
         $this->contact_no = $data['contact_no'];

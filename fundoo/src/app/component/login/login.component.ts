@@ -16,23 +16,29 @@ import { isFunction } from 'util';
 export class LoginComponent implements OnInit 
 {
   message: any;
+  s_login: any;
   constructor(){}
 
   ngOnInit(){}
   model: any = {};
 
   email= new FormControl('',[Validators.required, Validators.email]);
-  password=new FormControl('',[Validators.required,Validators.minLength(6), Validators.maxLength(15)]); 
+  password=new FormControl('',[Validators.required,Validators.minLength(5), Validators.maxLength(15)]); 
 
   onSubmit()
   {
-    this.model={   "username":this.email.value,
-                    "password":this.password.value
+    this.model={   
+                  "username":this.email.value,
+                  "password":this.password.value
                 }
-
-                console.log('success')
-
-                if((this.email.value || this.password.value)==null)
+          
+  
+    let status = this.s_login.createlogin(this.model);
+    status.subscribe(res=>{
+                console.log(res);
+              });
+                
+                if(!(this.email.value == null) || (this.password.value != null))
                 {
                   alert('all fields are required')
                   console.log('error')
