@@ -18,6 +18,7 @@ export class LoginService {
     let createlogin = new FormData();
     createlogin.append("email", Login.email);
     createlogin.append("password", Login.password);
+    return this.http.post(this.serviceurl.host + this.serviceurl.register, createlogin);
   }
 }
 

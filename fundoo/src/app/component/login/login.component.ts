@@ -31,31 +31,29 @@ export class LoginComponent implements OnInit
                   "username":this.email.value,
                   "password":this.password.value
                 }
-          
-  
-    let status = this.s_login.createlogin(this.model);
+                
+let status = this.s_login.createlogin(this.model);
     status.subscribe(res=>{
-                console.log(res);
+                console.log(res)
               });
                 
-                if(!(this.email.value == null) || (this.password.value != null))
+                if((this.email.value != ' ') || (this.password.value != ' '))
                 {
                   alert('all fields are required')
                   console.log('error')
                 }
-                else{
+                else
+                {
                   alert('Suceessfully login')
-                }
-                
-               
+                }     
   }
   emailError()
   {
     return this.email.hasError('required')?'Ex. aca4@gmail.com':'Invalid email id'
   }
             
-    passwordError()
-    {
-      return this.password.hasError('required')?'Ex. AbcG245@':'it must be alphanumric'
-    }
+  passwordError()
+  {
+    return this.password.hasError('required')?'Ex. AbcG245@':'it must be alphanumric'
+  }
 }

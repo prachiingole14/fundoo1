@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit
 
   model: any = {};
   
-  firstName=new FormControl(' ',[Validators.required,Validators.minLength(4), Validators.maxLength(30)]);
+  firstName=new FormControl(' ',[Validators.required,Validators.minLength(2), Validators.maxLength(30)]);
   address=new FormControl('',[Validators.required, Validators.maxLength(50)]);
   contact=new FormControl('',[Validators.required, Validators.maxLength(10)]);
   email= new FormControl('',[Validators.required, Validators.email]);
@@ -32,7 +32,25 @@ export class RegistrationComponent implements OnInit
 
   onSubmit() 
   {  
-    debugger;  
+    //debugger;  
+
+     
+     if (this.firstName.value == ' '|| this.address.value == ' ' || this.contact.value == ' ' ||this.email.value ==' ' || this.password.value == ' ' || this.confirmpassword.value == ' ') 
+      {
+        alert("some fields are missing")
+        //alert("Your form is Submited")
+      }
+      else if (this.password.value != this.confirmpassword.value) 
+      {
+        alert( "Password doesnot match");
+        return;
+      }
+      else
+      {
+        //alert("some fields are missing")
+        alert("Your form is Submited")
+      }
+
 
     this.model={
       "firstName":this.firstName.value,
@@ -42,6 +60,8 @@ export class RegistrationComponent implements OnInit
       "password" : this.password.value,
       "confirmpassword" : this.confirmpassword.value
     } 
+    
+   
     
     let status = this.s_register.createuser(this.model)
     status.subscribe(res=>{
@@ -58,14 +78,6 @@ export class RegistrationComponent implements OnInit
       this.password.value,
       this.confirmpassword.value)
 
-      if(this.submit==null)
-      {
-        alert("Your form is Submited")
-      }
-      else
-      {
-        alert("some fields are missing")
-      }
      
   }
 

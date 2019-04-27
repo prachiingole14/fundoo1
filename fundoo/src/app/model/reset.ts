@@ -1,6 +1,6 @@
 export class Reset 
 {
-    username : string
+    email : string
     password : string
     confirmpassword : string
 }

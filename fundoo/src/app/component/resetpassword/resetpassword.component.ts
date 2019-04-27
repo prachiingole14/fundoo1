@@ -13,20 +13,18 @@ export class ResetpasswordComponent implements OnInit {
   ngOnInit() {}
 
   model: any = {};
-
-  username= new FormControl('',[Validators.required,Validators.maxLength(10)]);
+  email= new FormControl('',[Validators.required, Validators.email]);
   password=new FormControl('',[Validators.required,Validators.minLength(6), Validators.maxLength(15)]); 
   newpassword=new FormControl('',[Validators.required,Validators.minLength(6), Validators.maxLength(15)]);
 
   onReset()
   {
-    this.model={   "username":this.username.value,
+    this.model={   "email":this.email.value,
                     "password":this.password.value,
                     "newpassword":this.newpassword.value
                 }
                 console.log('success')
-
-                if(this.username==null && this.password==null && this.newpassword==null)
+                if(this.email.value == ' ' || this.password.value == ' ' || this.newpassword.value == ' ')
                 {
                   alert('Your password not is updated')
                   console.log(this.password.value)
@@ -35,14 +33,13 @@ export class ResetpasswordComponent implements OnInit {
                   alert('Your password is updated')
               
                 }
-                
                 //return alert(this.model.hasError('required')?'sads':'done')
                
   }
-    usernameError()
-    {
-      return this.username.hasError('required')?'Enter proper user name':'Invalid username id'
-    }
+  emailError()
+  {
+    return this.email.hasError('required')?'Ex. aca4@gmail.com':'Invalid email id'
+  }
             
     passwordError()
     {

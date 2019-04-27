@@ -26,8 +26,7 @@ import { RegisterService } from './service/register.service';
     AppComponent,
     LoginComponent,
     ResetpasswordComponent,
-    RegistrationComponent,
-
+    RegistrationComponent
   ],
 
 
@@ -45,7 +44,6 @@ import { RegisterService } from './service/register.service';
     FlexLayoutModule,
     MatDialogModule,
     AppMaterialModule
-    
   ],
 
 

@@ -3,6 +3,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule} from '@angular/common/http';
+import { from } from 'rxjs';
 
 @NgModule({
     declarations: [
@@ -13,10 +15,11 @@ import {MatButtonModule} from '@angular/material/button';
       MatCardModule,
       MatFormFieldModule,
       MatButtonToggleModule,
+    
       // BrowserModule,
       // ReactiveFormsModule,
       MatButtonModule,
-      
+      HttpClientModule
       // FormsModule,
       // FormControl, FormGroup,
      

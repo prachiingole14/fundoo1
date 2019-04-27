@@ -6,7 +6,7 @@
 
                     <div class="form-group"> 
                         <mat-form-field class="align">
-                            <input matInput placeholder="Enter your name" [formControl]="firstName"  pattern="[a-zA-Z]*" required>
+                            <input matInput placeholder="Enter your name" [formControl]="firstName" required>
                         </mat-form-field>
                         <mat-error *ngIf="firstName.dirty">{{firstNameError()}}</mat-error>
                         <!-- <mat-error *ngIf="firstName.pattern">{{firstNamepError()}}</mat-error> -->

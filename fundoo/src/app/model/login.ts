@@ -2,6 +2,6 @@
 
 export class Login 
 {
-    Username:"string"
+    email:"string"
     password : "string"
 }
