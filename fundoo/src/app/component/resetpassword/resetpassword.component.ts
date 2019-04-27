@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { ResetPasswordService } from 'src/app/service/reset-password.service';
 
 @Component({
   selector: 'app-resetpassword',
@@ -9,7 +10,8 @@ import { FormControl, Validators } from '@angular/forms';
 
 export class ResetpasswordComponent implements OnInit {
   message: any;
-  constructor() { }
+
+  constructor(private s_reset:ResetPasswordService) { }
   
   ngOnInit() {}
 
@@ -21,23 +23,28 @@ export class ResetpasswordComponent implements OnInit {
   onReset()
   {
     this.model={   
-                    "email":this.email.value,
-                    "password":this.password.value,
-                    "newpassword":this.newpassword.value
+                  "email":this.email.value,
+                  "password":this.password.value,
+                  "newpassword":this.newpassword.value
                 }
-                console.log('success')
-                
-                if(this.email.value == ' ' || this.password.value == ' ' || this.newpassword.value == ' ')
-                {
-                  alert('Your password not is updated')
-                  console.log(this.password.value)
-                }
-                else{
-                  alert('Your password is updated')
-              
-                }
-                //return alert(this.model.hasError('required')?'sads':'done')
-               
+
+    console.log('success')
+   
+    let status = this.s_reset.isreset(this.model);
+    status.subscribe(res => {
+      console.log(res)
+    });
+
+    if(this.email.value == ' ' || this.password.value == ' ' || this.newpassword.value == ' ')
+    {
+      alert('Your password not is updated')
+      console.log(this.password.value)
+    }
+    else
+    {
+      alert('Your password is updated')
+    }
+    //return alert(this.model.hasError('required')?'sads':'done')          
   }
 
     emailError()

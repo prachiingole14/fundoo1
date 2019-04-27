@@ -6,6 +6,7 @@ import { RegisterService } from 'src/app/service/register.service';
 //import { stat } from 'fs';
 
 const newLocal = 'This field is empty';
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -62,13 +63,10 @@ export class RegistrationComponent implements OnInit
     } 
     
    
-    
     let status = this.s_register.createuser(this.model)
+
     status.subscribe(res=>{
-
     console.log(res);
-    
-
     });
 
     this.submit=console.log(this.firstName.value,
@@ -77,8 +75,6 @@ export class RegistrationComponent implements OnInit
       this.email.value,
       this.password.value,
       this.confirmpassword.value)
-
-     
   }
 
   firstNameError()

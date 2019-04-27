@@ -13,12 +13,12 @@ export class ResetPasswordService
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
   reset : Reset ;
 
-  ResetPassword(Reset)
+  isreset(Reset)
   {
-    let ResetPassword = new FormData();
-    ResetPassword.append("email",Reset.email);
-    ResetPassword.append("password",Reset.password);
-    ResetPassword.append("newpassword",Reset.newpassword);
-    return this.http.post(this.serviceurl.host + this.serviceurl.register, ResetPassword);
+    let isreset = new FormData();
+    isreset.append("email",Reset.email);
+    isreset.append("password",Reset.password);
+    isreset.append("newpassword",Reset.newpassword);
+    return this.http.post(this.serviceurl.host + this.serviceurl.register, isreset);
   }
 }
