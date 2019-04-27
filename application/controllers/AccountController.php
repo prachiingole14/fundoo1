@@ -19,7 +19,7 @@
 
         public function register()
         {
-            $name = $_POST['firstName'];
+            $firstName = $_POST['firstName'];
             print $name;
             $address = $_POST['address'];
             print $address;
@@ -29,7 +29,6 @@
             print $email_id;
             $password = $_POST['password'];
             $confirmpassword = $_POST['confirmpassword'];
-
             
             // $account->setFirstname($firstName);
             // $account->setaddress($address);
@@ -38,15 +37,21 @@
             // $account->setpassword($password);
             // $account->setconfirmpassword($confirmpassword);
 
-            $res = $this->AccService->Registration($name, $address, $contact_no ,$email, $password, $confirm_password);
+            $res = $this->AccService->Registration($firstName, $address, $contact_no ,$email_id, $password, $confirmpassword);
 
             //$query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$name','$address','$contact_no','$email_id','$password','$confirm_password')");
 
-            if($res)
-                echo "data enter";
-                    else 
-                        echo "error";
        }
+
+       public function resetPassword()
+       {
+          $email = $_POST['email'];
+          $password = $_POST['password'];
+          $newpassword= $_POST['newpassword'];
+          $res = $this->AccService->ResetPassword($email, $password, $newpassword); 
+       }
+
+
 
         // public function showregister()
         // {

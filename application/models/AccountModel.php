@@ -68,6 +68,12 @@
             return $this;
         }
 
+        public function setnewpassword($confirmpassword)
+        {
+            $this->newpassword=$confirmpassword;
+            return $this;
+        }
+
 
 
     public function execute($email,$data,$password)

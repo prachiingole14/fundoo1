@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit
                   "username":this.email.value,
                   "password":this.password.value
                 }
-                
+
 let status = this.s_login.createlogin(this.model);
     status.subscribe(res=>{
                 console.log(res)

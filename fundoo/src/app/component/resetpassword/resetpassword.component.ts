@@ -6,6 +6,7 @@ import { FormControl, Validators } from '@angular/forms';
   templateUrl: './resetpassword.component.html',
   styleUrls: ['./resetpassword.component.scss']
 })
+
 export class ResetpasswordComponent implements OnInit {
   message: any;
   constructor() { }
@@ -19,11 +20,13 @@ export class ResetpasswordComponent implements OnInit {
 
   onReset()
   {
-    this.model={   "email":this.email.value,
+    this.model={   
+                    "email":this.email.value,
                     "password":this.password.value,
                     "newpassword":this.newpassword.value
                 }
                 console.log('success')
+                
                 if(this.email.value == ' ' || this.password.value == ' ' || this.newpassword.value == ' ')
                 {
                   alert('Your password not is updated')
@@ -36,10 +39,11 @@ export class ResetpasswordComponent implements OnInit {
                 //return alert(this.model.hasError('required')?'sads':'done')
                
   }
-  emailError()
-  {
-    return this.email.hasError('required')?'Ex. aca4@gmail.com':'Invalid email id'
-  }
+
+    emailError()
+    {
+      return this.email.hasError('required')?'Ex. aca4@gmail.com':'Invalid email id'
+    }
             
     passwordError()
     {

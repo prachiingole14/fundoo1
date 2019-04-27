@@ -8,13 +8,12 @@ import { ServiceUrlService } from '../serviceUrl/service-url.service';
 })
 export class LoginService {
 
-  constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
+  constructor(private http:HttpClient,private serviceurl:ServiceUrlService) {}
 
   login:Login
 
   createlogin(Login)
   {
-    
     let createlogin = new FormData();
     createlogin.append("email", Login.email);
     createlogin.append("password", Login.password);
