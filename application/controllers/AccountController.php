@@ -40,39 +40,43 @@
             $res = $this->AccService->Registration($firstName, $address, $contact_no ,$email_id, $password, $confirmpassword);
 
             //$query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$name','$address','$contact_no','$email_id','$password','$confirm_password')");
-
        }
 
        public function resetPassword()
        {
-          $email = $_POST['email'];
-          $password = $_POST['password'];
-          $newpassword= $_POST['newpassword'];
-          $res = $this->AccService->ResetPassword($email, $password, $newpassword); 
+           if($this->showregistered())
+           {
+                print("tfyut") ;
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $newpassword= $_POST['newpassword'];
+                $res = $this->AccService->ResetPassword($email, $password, $newpassword); 
+           }
        }
 
-
-
-        // public function showregister()
-        // {
-        //     $query=$this->db->query("select * from Registration");
-        //     print_r($query->result());
-        // }
-
+        public function showregistered()
+        {   $email = $_POST['email'];
+            $query=$this->db->query("select email_id,password from Registration where email_id='$email'");
+            print_r($query->result());
+        }
 
         public function login()
         {
+            
             $email = $_POST['email'];
-            print $email;
             $password = $_POST['password'];
-            print $password;
-            $res = $this->AccService->getlogin($email,$password);
+            $res=$this->AccService->getlogin($email,$password);
 
-            if($res)
-               return print "data enter";
-                    else 
-                      return  print "error";
-          // return $res;
+        //     $email = $_POST['email'];
+        //     print $email;
+        //     $password = $_POST['password'];
+        //     print $password;
+        //     $res = $this->AccService->getlogin($email,$password);
+        //     if($res)
+        //        return print "data enter";
+        //             else 
+        //               return  print "error";
+        //   // return $res;
         }
 
        

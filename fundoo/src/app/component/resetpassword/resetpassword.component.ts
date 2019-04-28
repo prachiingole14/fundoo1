@@ -22,6 +22,17 @@ export class ResetpasswordComponent implements OnInit {
 
   onReset()
   {
+    
+    if(this.email.value == ' ' || this.password.value == ' ' || this.newpassword.value == ' ')
+    {
+      alert('Your password not is updated')
+      console.log(this.password.value)
+    }
+    else
+    {
+      alert('Your password is updated')
+    }
+
     this.model={   
                   "email":this.email.value,
                   "password":this.password.value,
@@ -35,15 +46,7 @@ export class ResetpasswordComponent implements OnInit {
       console.log(res)
     });
 
-    if(this.email.value == ' ' || this.password.value == ' ' || this.newpassword.value == ' ')
-    {
-      alert('Your password not is updated')
-      console.log(this.password.value)
-    }
-    else
-    {
-      alert('Your password is updated')
-    }
+   
     //return alert(this.model.hasError('required')?'sads':'done')          
   }
 

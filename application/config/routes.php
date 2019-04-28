@@ -55,8 +55,8 @@ $route['default_controller'] = 'welcome';
 
 $route['register'] = 'AccountController/register';
 $route['login'] = 'AccountController/login';
-$route['resetPassword'] = 'AccountController/resetPassword';
-//$route['showregister']='UserDataController/showregister';
+$route['ResetPassword'] = 'AccountController/ResetPassword';
+$route['showregistered']='AccountController/showregistered';
 
 
 $route['404_override'] = '';

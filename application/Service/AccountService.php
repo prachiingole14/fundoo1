@@ -13,44 +13,77 @@
             //$this->load->controller(AccountController());
         }
 
-        public function Registration($firstname, $address,$contact, $email, $password, $confirm_password)
+        public function Registration($firstName, $address,$contact, $email, $password, $confirmpassword)
         {
-            $data = array("name" => $firstName,
+            
+                $data = array("name" => $firstName,
                         "address" => $address,
                         "contact_no" => $contact, 
                         "email_id" => $email,
                         "password" => $password,
                         "confirm_password" => $confirmpassword);
 
-            // $this->firstName  = $data['firstName'];
-            // $this->address = $data['address'];
-            // $this->contact_no = $data['contact_no'];
-            // $this->email_id = $data['email_id'];
-            // $this->password = $data['password'];
-            // $this->confirmpassword = $data['confirmpassword'];
+                // $this->firstName  = $data['firstName'];
+                // $this->address = $data['address'];
+                // $this->contact_no = $data['contact_no'];
+                // $this->email_id = $data['email_id'];
+                // $this->password = $data['password'];
+                // $this->confirmpassword = $data['confirmpassword'];
+                
+                $query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$firstName','$address','$contact','$email','$password','$confirmpassword')");
+                print_r($query);
             
-            $query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$firstName','$address','$contact','$email','$password','$confirmpassword')");
-            print_r($query);
+        }
+
+        public function isRegistered($email,$password)
+        {
+            $data[':email'] = $email;
+            $query     = "SELECT * FROM registeruser WHERE email = '$email'";
+            $statement = $this->db->conn_id->prepare($query);
+            if($statement->execute($data))
+            {
+                $result = $statement->fetchAll();
+                if($statement->rowCount() > 0)
+                {
+                    //looping over the row and verifying password
+                    foreach($result as $row)
+                    {
+                        if(password_verify($password, $row["password"]))
+                        {
+                            return 1;
+                        }
+                        else
+                        {
+                            return 2;
+                        }
+                    }
+                }
+                else
+                {
+                    return 3;
+                }
+                
+            }
         }
 
         public function ResetPassword($email, $password, $newpassword)
         {
-            $data = array("email" => $email,
-                          "password" => $password,
-                        "newpassword" => $newpassword);
+            if($this->isRegistered($email,$password))
+            {
+                $data = array("email" => $email,
+                                "password" => $password,
+                                "newpassword" => $newpassword);
 
-            $this->email = $data['email'];
-            $this->password = $data['$password'];
-            $this->newpassword = $data['$newpassword'];
+                $this->email = $data['email'];
+                $this->password = $data['$password'];
+                $this->newpassword = $data['$newpassword'];
 
-            $query = $this->db->query("UPDATE Registration SET password = 'newpassword' where email_id='$email'");
-            print_r($query);
+                $query = $this->db->query("UPDATE Registration SET newpassword = 'password' where email_id='$email'");
+                print_r($query);
+            }
             
             
         }
-
-
-
 
         public function Registered($email,$password)
         {
@@ -68,7 +101,7 @@
                     {
                         if(password_verify($password, $row["password"]))
                         {
-                          return  print "valid user you can reset your password";
+                            return  print "valid user you can reset your password";
                         }
                         else
                         {
@@ -76,23 +109,29 @@
                         }
                     }
                 }   
+                ResetPassword($email, $password, $newpassword);
             }
+
         }
 
 
 
         public function getlogin($email,$password)
         {
-            $flag = $this->isRegistered($email,$password);
-            if ($flag == 1) 
+            $data = array("email" => $email,
+                          "password" => $password);
+
+            $this->email = $data['email'];
+            $this->password = $data['$password'];
+
+            $query=$this->db->query("select email_id,password from Registration whereemail_id='$email, password='$password'");
+            if(!$query)
             {
-                $query = "SELECT email_id,password FROM Registration WHERE email = '$email'"; 
-                $statement = $this->db->conn_id->prepare($query);
-                $statement->execute();
-                $arr = $statement->fetch(PDO::FETCH_ASSOC);
-                $data = array("email" => $email,
-                              "password" => $password);
-                              return $data;
+               print_r("login success");
+            }
+            else
+            {
+                print_r("invalid user");
             }
         }    
 

@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.model = {
-      "username": this.email.value,
+      "email": this.email.value,
       "password": this.password.value
     }
 
