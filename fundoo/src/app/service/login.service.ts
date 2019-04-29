@@ -8,15 +8,25 @@ import { ServiceUrlService } from '../serviceUrl/service-url.service';
 })
 export class LoginService 
 {
+  route: any;
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) {}
   login:Login
   //debugger
-  createlogin(Login)
+
+  createlogin(login: Login) 
   {
-      let createlogin = new FormData();
-      createlogin.append("email", Login.email);
-      createlogin.append("password", Login.password);
-      return this.http.post(this.serviceurl.host + this.serviceurl.register, createlogin);
+    let userLogin = new FormData();
+    userLogin.append("email", login.email);
+    userLogin.append("password", login.password);
+    return this.http.post(this.serviceurl.host + this.serviceurl.login, this.createlogin);
+  }
+
+  getEmail() 
+  {
+    //debugger;
+    let urlTocken = new FormData();
+    urlTocken.append("token", this.route.snapshot.queryParamMap.get("token"));
+    return this.http.post(this.serviceurl.host + this.serviceurl.getEmail, urlTocken);
   }
 }
 

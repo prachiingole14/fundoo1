@@ -35,6 +35,64 @@
             
         }
 
+        public function getlogin($email,$password)
+        {
+            $flag = $this->isRegistered($email,$password);
+            if ($flag == 1) 
+            {
+                $query = "SELECT firstname,id FROM registeruser WHERE email = '$email'"; 
+                $statement = $this->db->conn_id->prepare($query);
+                $statement->execute();
+                $arr = $statement->fetch(PDO::FETCH_ASSOC);
+                $firstname = $arr['firstname'];
+                $id = $arr['id'];
+
+                $secret_key = "abc";
+
+                $data = array(
+                    "firstname" => $firstname,
+                    "email" => $email,
+                    "id" => $id
+                );
+
+                $token = JWT::encode($data, $secret_key);
+
+        
+            
+                $connection = new Redis();
+                $client = $connection->connection();
+
+                $client->set('token', $token );
+                $response = $client->get('token');
+
+                $data = array(
+                    "token"   => $token,
+                    "message" => "400",
+                );
+                print json_encode($data);
+                return "400";
+
+
+            } else if ($flag == 2) {
+                $data = array(
+                    "message" => "401",
+                );
+                print json_encode($data);
+                return "401";
+
+            } 
+            else if ($flag == 3) 
+            {
+                $data  = array(
+                    "message" => "200",
+                );
+                print json_encode($data);
+                return "200";
+            } 
+            return $data;
+        }
+    
+
         public function isRegistered($email,$password)
         {
             $data[':email'] = $email;
@@ -66,74 +124,21 @@
             }
         }
 
-        public function ResetPassword($email, $password, $newpassword)
-        {
-            if($this->isRegistered($email,$password))
-            {
-                $data = array("email" => $email,
-                                "password" => $password,
-                                "newpassword" => $newpassword);
+        // public function ResetPassword($email, $password, $newpassword)
+        // {
+        //     if($this->isRegistered($email,$password))
+        //     {
+        //         $data = array("email" => $email,
+        //                         "password" => $password,
+        //                         "newpassword" => $newpassword);
 
-                $this->email = $data['email'];
-                $this->password = $data['$password'];
-                $this->newpassword = $data['$newpassword'];
+        //         $this->email = $data['email'];
+        //         $this->password = $data['$password'];
+        //         $this->newpassword = $data['$newpassword'];
 
-                $query = $this->db->query("UPDATE Registration SET newpassword = 'password' where email_id='$email'");
-                print_r($query);
-            }
-            
-            
-        }
-
-        public function Registered($email,$password)
-        {
-            $data = array("email" => $email,
-                          "password" => $password);
-            $query     = "SELECT * FROM Registration WHERE email = '$email'";
-            $statement = $this->db->conn_id->prepare($query);
-            if($statement->execute($data))
-            {
-                $result = $statement->fetchAll();
-                if($statement->rowCount() > 0)
-                {
-                    //looping over the row and verifying password
-                    foreach($result as $row)
-                    {
-                        if(password_verify($password, $row["password"]))
-                        {
-                            return  print "valid user you can reset your password";
-                        }
-                        else
-                        {
-                           return print "Email or Password is not matched";
-                        }
-                    }
-                }   
-                ResetPassword($email, $password, $newpassword);
-            }
-
-        }
-
-
-
-        public function getlogin($email,$password)
-        {
-            $data = array("email" => $email,
-                          "password" => $password);
-
-            $this->email = $data['email'];
-            $this->password = $data['$password'];
-
-            $query=$this->db->query("select email_id,password from Registration whereemail_id='$email, password='$password'");
-            if(!$query)
-            {
-               print_r("login success");
-            }
-            else
-            {
-                print_r("invalid user");
-            }
-        }    
-
-    }
+        //         $query = $this->db->query("UPDATE Registration SET newpassword = 'password' where email_id='$email'");
+        //         print_r($query);
+        //     }
+        // }   
+}
 ?>

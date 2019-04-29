@@ -13,5 +13,6 @@ export class ServiceUrlService {
     public register = "register";
     public login = "login";
     public reset = "ResetPassword";
+    public getEmail ="getEmailId";
   
 }

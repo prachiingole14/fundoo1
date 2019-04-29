@@ -1,6 +1,6 @@
 
 <div class="flx" fxLayout='row' fxLayoutAlign='center center'>
-    <mat-card fxFlex='30'>
+    <mat-card fxFlex='28'>
         <h3 class="h3">Sign In</h3>
             <div class="align">
                 <form name="form" (ngSubmit)="onSubmit()">
@@ -10,7 +10,7 @@
                         <mat-error *ngIf="email.dirty">{{emailError()}}</mat-error>
                     </mat-form-field>
                     <br>
-        
+                    
                     <mat-form-field class="align">
                         <input type="password" matInput placeholder="Enter your password" [formControl]="password"  pattern="[a-zA-Z0-9@]*" required>
                         <mat-error *ngIf="password.dirty">{{passwordError()}}</mat-error>
@@ -18,10 +18,10 @@
                     <br>
                     
                     <!-- <mat-button-toggle class="btn2" (click)='signin()'></mat-button-toggle><br>  -->
-                    <button class="btn2" ngSubmit="onSubmit()" mat-stroked-button>Sing In</button>
+                    <button class="btn2" ngSubmit="onSubmit()" button mat-raised-button color="primary">Sing In</button>
                     <div class="example-button-row">
-                        <a [routerLink]="['reset']"><button mat-stroked-button style="margin-left:20px;">Reset password</button></a>
-                        <a [routerLink]="['registration']"><button mat-stroked-button style="margin-left:20px;">Create user registration</button></a>
+                        <a [routerLink]="['reset']"><button mat-stroked-button >Reset password</button></a>
+                        <a [routerLink]="['registration']"><button mat-stroked-button style="margin-left: 7px;">Create user registration</button></a>
                     </div>  
                 </form>     
             </div>

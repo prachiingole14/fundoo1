@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, RequiredValidator } from '@angular/forms';
 import { ResetPasswordService } from 'src/app/service/reset-password.service';
 
 @Component({
@@ -22,15 +22,14 @@ export class ResetpasswordComponent implements OnInit {
 
   onReset()
   {
-    
-    if(this.email.value == ' ' || this.password.value == ' ' || this.newpassword.value == ' ')
+    if(this.email.value == '' || this.password.value == '' || this.newpassword.value == '')
     {
-      alert('Your password not is updated')
+      alert('All fields are required')
       console.log(this.password.value)
     }
     else
     {
-      alert('Your password is updated')
+      alert("Your password is updated")
     }
 
     this.model={   

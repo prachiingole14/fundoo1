@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AppMaterialModule } from './app.material.module';
 import { RegisterService } from './service/register.service';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 
 
@@ -26,7 +27,8 @@ import { RegisterService } from './service/register.service';
     AppComponent,
     LoginComponent,
     ResetpasswordComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    DashboardComponent
   ],
 
 
