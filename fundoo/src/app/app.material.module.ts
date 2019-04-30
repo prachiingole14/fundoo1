@@ -4,9 +4,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule} from '@angular/common/http';
-import {CommonModule} from '@angular/common';
+//import {CommonModule} from '@angular/common';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 import { from } from 'rxjs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 @NgModule({
     declarations: [
@@ -18,8 +22,10 @@ import { from } from 'rxjs';
       MatFormFieldModule,
       MatButtonToggleModule,
       HttpClientModule,
-      CommonModule,
-      MatMenuModule
+      MatDividerModule,
+      MatMenuModule,
+      MatIconModule,
+      MatProgressSpinnerModule
     ],
 
     exports:[
@@ -27,8 +33,10 @@ import { from } from 'rxjs';
       MatFormFieldModule,
       MatButtonToggleModule,
       MatButtonModule,
-      CommonModule,
-      MatMenuModule
+      MatDividerModule,
+      MatMenuModule,
+      MatIconModule,
+      MatProgressSpinnerModule
     ],
   
     providers: [],

@@ -1,8 +1,9 @@
+// horizontal nav bar
 .mat-card
 {
   width: 100%;
-  height: 20px;
-  margin-top: 10px;
+  height: 25px;
+  margin-top: 16px;
 }
  
 .active-cyan input[type=search] 
@@ -13,13 +14,16 @@
 
 .fxLayout
 {
-  width: 280px;
+  width: 270px;
   height: 130px;
+ 
 }
 
 .mini-mat
 {
-  margin-top: 0px;
+  text-align: center;
+  margin-left: 25px;
+  margin-bottom: 2px;
 }
 
 .flx.mat-btn
@@ -27,11 +31,6 @@
   text-align: right;
 }
 
-.p
-{
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 .mat-flat-btn
 {
@@ -43,17 +42,115 @@
 .mat-fab-btn
 {
   margin-left:4px;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
 }
 
 .basic-btn
 {
   margin-left: 25px;
+  margin-top: 15px;
 }
 
 .basic-btn2
 {
   margin-left: 40px;
   margin-right:7px;
+  margin-top: 15px;
+}
+
+::ng-deep .mat-menu-panel 
+{
+  overflow: hidden;
+}
+
+
+
+// vertical menubar
+.menu
+{
+  width:700px;
+}
+
+.label
+{
+  margin-left: 18px;
+  margin-top: 18px;
+}
+
+.f
+{
+  margin-left:12px;
+  color: blue;
+}
+
+.u
+{
+  color: chocolate;
+}
+
+.n
+{
+  color:red;
+}
+
+.d
+{
+  color:green;
+} 
+
+
+.o
+{
+ color: crimson;
+}
+
+.oo
+{
+  color:purple;
+}
+
+//refresh
+.refresh
+{
+  margin-left: 940px;
+}
+
+//grideview
+.grid
+{
+  margin-left: 30px;
+  width: 20px;
+  height: 20px;
+}
+
+//setting
+.settings
+{
+  margin-left: 30px;
+  width: 20px;
+  height: 20px;
+}
+
+//google applications
+.apps
+{
+  margin-left: 80px;
+  width: 20px;
+  height: 20px;
+}
+.profileMenu
+{
+  width: 254px;
+}
+
+.margin
+{
+  padding-left: 10px;
+}
+
+.margin2
+{
+  padding-left: 10px;
+  padding-bottom: 15px;
 }

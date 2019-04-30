@@ -1,23 +1,119 @@
 <div fxLayout="row" fxLayoutAlign="start start" >
   <mat-card class="mat-card">
+
+    <!--start Vertical navbar -->
+      <button mat-icon-button [matMenuTriggerFor]="menubar">
+        <mat-icon>dehaze </mat-icon> 
+
+        <span class="f">F</span>
+        <span class="u">U</span>
+        <span class="n">N</span>
+        <span class="d">D</span>
+        <span class="o">O</span>
+        <span class="oo">O</span>
+
+      </button>
+
+      <mat-menu  #menubar="matMenu">
+        <button mat-menu-item class="menu">
+          <mat-icon>addcircle</mat-icon>
+          <span>Notes</span>
+        </button>
+
+        <button mat-menu-item class="menu">
+          <mat-icon>notifications_none</mat-icon>
+          <span>Reminders</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-menu-item class="menu">
+            <!-- <mat-icon>notifications_none</mat-icon> -->
+            <span class="label">LABELS</span>
+          </button>
+        
+        <button mat-menu-item class="menu">
+            <mat-icon>notifications_none</mat-icon>
+            <span>Reminders</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-menu-item class="menu">
+            <mat-icon>archive</mat-icon>
+            <span>Archive</span>
+          </button>
+  
+          <button mat-menu-item class="menu">
+            <mat-icon>delete_sweep</mat-icon>
+            <span>Bin</span>
+          </button>
+  
+      </mat-menu>
+    <!-- end vertical navbar -->
+   
+    <!-- refresh start -->
+          <mat-icon class="refresh">refresh </mat-icon>
+    <!--refrseh end -->
+
+    <!-- refresh start -->
+      <mat-icon class="grid">dashboard </mat-icon>
+    <!--refrseh end -->
+
+    <!-- refresh start -->
+      <mat-icon  class="settings">settings</mat-icon>
+    <!--refrseh end -->
+
+    <!-- refresh start -->
+      <mat-icon  class="apps">apps</mat-icon>
+    <!--refrseh end -->
+    
+
+
     <!-- Account icon -->
       <button class="mini-mat" mat-mini-fab color="primary" [matMenuTriggerFor]="menu">P</button>  
-            <mat-menu #menu="matMenu">
+            <!-- <mat-menu #menu="matMenu">
               <div class="fxLayout" fxLayout="row" fxLayoutAlign="center center" >
                 <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>  
                   <div fxLayout="row" fxLayoutAlign="space-around start" >
                     <p class="p">Prachi Ingole<br>
                       prachii760@gmail.com<br>
-                      Privacy<br>
-                      <button class="mat-flat-btn" mat-flat-button color="primary">Primary</button>
-                  </div>
-                  
+                      privacy<br>
+                      <button class="mat-flat-btn" mat-flat-button color="primary">Google Account</button>
+                    </div>
               </div>
               <mat-card-footer>
                   <button mat-stroked-button class="basic-btn">Add Account</button>
-                  <button mat-stroked-button class="basic-btn2">Sign Out</button>
+                  <button mat-stroked-button  class="basic-btn2">Sign Out</button>
               </mat-card-footer>
-            </mat-menu>
-           
+            </mat-menu>     -->
+
+   <mat-menu #menu="matMenu" >
+    <div fxLayout="row" class="profileMenu">
+      <div>
+        <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>
+      </div>
+      <div fxLayout='column'>
+        <div class="margin">
+          Prachi Ingole
+        </div>
+        <div class="margin">
+          prachi760@gmail.com
+        </div>
+        <div class="margin2">
+            privacy
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+      <div fxLayout='row'>
+        <div>
+            <button mat-stroked-button class="basic-btn">Add Account</button>
+        </div>
+        <div>
+            <button mat-stroked-button  class="basic-btn2">Sign Out</button>
+        </div>
+      </div>
+    </mat-menu>
   </mat-card>
 </div>
