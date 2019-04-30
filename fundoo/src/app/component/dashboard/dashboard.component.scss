@@ -4,14 +4,56 @@
   height: 20px;
   margin-top: 10px;
 }
-
-.mat-btn
-{
-    margin-left: 1235px;
-}
-
+ 
 .active-cyan input[type=search] 
 {
     border-bottom: 1px solid #4dd0e1;
     box-shadow: 0 1px 0 0 #4dd0e1;
+}
+
+.fxLayout
+{
+  width: 280px;
+  height: 130px;
+}
+
+.mini-mat
+{
+  margin-top: 0px;
+}
+
+.flx.mat-btn
+{
+  text-align: right;
+}
+
+.p
+{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mat-flat-btn
+{
+  width:160px;
+  text-align:center;
+  margin-top: 10px;
+}
+
+.mat-fab-btn
+{
+  margin-left:4px;
+  height: 70px;
+  width: 70px;
+}
+
+.basic-btn
+{
+  margin-left: 25px;
+}
+
+.basic-btn2
+{
+  margin-left: 40px;
+  margin-right:7px;
 }

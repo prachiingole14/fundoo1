@@ -1,6 +1,23 @@
 <div fxLayout="row" fxLayoutAlign="start start" >
   <mat-card class="mat-card">
-      <button class="mat-btn" mat-mini-fab color="primary">P</button>
-        
+    <!-- Account icon -->
+      <button class="mini-mat" mat-mini-fab color="primary" [matMenuTriggerFor]="menu">P</button>  
+            <mat-menu #menu="matMenu">
+              <div class="fxLayout" fxLayout="row" fxLayoutAlign="center center" >
+                <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>  
+                  <div fxLayout="row" fxLayoutAlign="space-around start" >
+                    <p class="p">Prachi Ingole<br>
+                      prachii760@gmail.com<br>
+                      Privacy<br>
+                      <button class="mat-flat-btn" mat-flat-button color="primary">Primary</button>
+                  </div>
+                  
+              </div>
+              <mat-card-footer>
+                  <button mat-stroked-button class="basic-btn">Add Account</button>
+                  <button mat-stroked-button class="basic-btn2">Sign Out</button>
+              </mat-card-footer>
+            </mat-menu>
+           
   </mat-card>
 </div>
