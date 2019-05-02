@@ -11,7 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { from } from 'rxjs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip'
-
+import { MatSidenavModule,MatListModule} from '@angular/material';
 
 @NgModule({
     declarations: [
@@ -27,7 +27,10 @@ import {MatTooltipModule} from '@angular/material/tooltip'
       MatMenuModule,
       MatIconModule,
       MatProgressSpinnerModule,
-      MatTooltipModule
+      MatTooltipModule,
+      MatSidenavModule,
+      MatListModule
+     //NgMatSearchBarModule
     ],
 
     exports:[
@@ -39,7 +42,11 @@ import {MatTooltipModule} from '@angular/material/tooltip'
       MatMenuModule,
       MatIconModule,
       MatProgressSpinnerModule,
-      MatTooltipModule
+      MatTooltipModule,
+      MatSidenavModule,
+      MatListModule,
+      
+     // NgMatSearchBarModule
     ],
   
     providers: [],

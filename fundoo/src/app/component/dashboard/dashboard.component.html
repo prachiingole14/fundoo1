@@ -5,7 +5,6 @@
       <button mat-icon-button [matMenuTriggerFor]="menubar">
         
         <mat-icon matTooltip="Main-Menu">dehaze</mat-icon> 
-
         <span class="f">F</span>
         <span class="u">U</span>
         <span class="n">N</span>
@@ -14,9 +13,9 @@
         <span class="oo">O</span>
 
       </button>
-
-      <mat-menu  #menubar="matMenu">
-        <button mat-menu-item class="menu">
+   
+      <mat-menu  #menubar="matMenu" #sidenav mode ="side">
+        <button mat-menu-item class="menu" >
           <mat-icon>addcircle</mat-icon>
           <span>Notes</span>
         </button>
@@ -48,6 +47,7 @@
             <span>Bin</span>
           </button>
       </mat-menu>
+   
     <!-- end vertical navbar -->
         
     <!-- fundoo search -->
@@ -120,19 +120,22 @@
                   prachi760@gmail.com
                 </div>
                 <div class="margin2">
-                    privacy
+                    <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a>
                 </div>
               </div>
             </div>
             <mat-divider></mat-divider>
               <div fxLayout='row'>
                 <div>
-                    <button mat-stroked-button class="basic-btn">Add Account</button>
+                    <a [routerLink]="['registration']"><button mat-stroked-button class="basic-btn">Add Account</button></a>
                 </div>
                 <div>
-                    <button mat-stroked-button  class="basic-btn2">Sign Out</button>
+                    <a [routerLink]="[' ']"><button mat-stroked-button  class="basic-btn2">Sign Out</button></a>
                 </div>
               </div>
             </mat-menu>
   </mat-card>
 </div>
+
+<!-- <button mat-button (click)="openDialog()">Open dialog</button> -->
+
