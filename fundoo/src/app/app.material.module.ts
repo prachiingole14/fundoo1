@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { from } from 'rxjs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatTooltipModule} from '@angular/material/tooltip'
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
       MatDividerModule,
       MatMenuModule,
       MatIconModule,
-      MatProgressSpinnerModule
+      MatProgressSpinnerModule,
+      MatTooltipModule
     ],
 
     exports:[
@@ -36,16 +38,20 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
       MatDividerModule,
       MatMenuModule,
       MatIconModule,
-      MatProgressSpinnerModule
+      MatProgressSpinnerModule,
+      MatTooltipModule
     ],
   
     providers: [],
   
     bootstrap: []
+
+  
   
   })
 
   export class AppMaterialModule {
+    
   }
   //export class ButtonToggleOverviewExample {}
   

@@ -64,7 +64,7 @@ export class RegistrationComponent implements OnInit
     
    
     let status = this.s_register.createuser(this.model)
-
+ 
     status.subscribe(res=>{
     console.log(res);
     });

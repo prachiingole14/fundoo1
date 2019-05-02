@@ -6,11 +6,6 @@
   margin-top: 16px;
 }
  
-.active-cyan input[type=search] 
-{
-    border-bottom: 1px solid #4dd0e1;
-    box-shadow: 0 1px 0 0 #4dd0e1;
-}
 
 .fxLayout
 {
@@ -23,7 +18,7 @@
 {
   text-align: center;
   margin-left: 25px;
-  margin-bottom: 2px;
+  margin-bottom: 4%;
 }
 
 .flx.mat-btn
@@ -113,13 +108,13 @@
 //refresh
 .refresh
 {
-  margin-left: 940px;
+  margin-left: 10%;
 }
 
 //grideview
 .grid
 {
-  margin-left: 30px;
+  margin-left: 2%;
   width: 20px;
   height: 20px;
 }
@@ -127,30 +122,48 @@
 //setting
 .settings
 {
-  margin-left: 30px;
+  margin-left: 2%;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 18px;
+}
+
+//google profile applications
+.apps
+{
+  margin-left:5%;
   width: 20px;
   height: 20px;
 }
 
-//google applications
-.apps
-{
-  margin-left: 80px;
-  width: 20px;
-  height: 20px;
-}
 .profileMenu
 {
   width: 254px;
+  margin-block-end: 2px;
 }
 
 .margin
 {
   padding-left: 10px;
+  font-size: 12px;
 }
 
 .margin2
 {
   padding-left: 10px;
   padding-bottom: 15px;
+  font-size: 12px;
+}
+
+.text
+{
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+// Search
+.search
+{
+  width : 42%;
+  margin-left : 20%;
 }
