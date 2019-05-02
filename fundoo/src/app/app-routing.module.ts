@@ -4,6 +4,7 @@ import { LoginComponent } from './component/login/login.component';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { DashboardComponent } from "./component/dashboard/DashboardComponent";
+import { NotesComponent } from './component/notes/notes.component';
 
 const routes: Routes = [
     {
@@ -24,6 +25,11 @@ const routes: Routes = [
     {
       path: 'dashboard',
       component : DashboardComponent
+    },
+
+    {
+      path: 'notes',
+      component : NotesComponent
     },
 
    

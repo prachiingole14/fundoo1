@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AppMaterialModule } from './app.material.module';
 import { RegisterService } from './service/register.service';
 import { DashboardComponent } from "./component/dashboard/DashboardComponent";
+import { NotesComponent } from './component/notes/notes.component';
 
 
 
@@ -28,7 +29,8 @@ import { DashboardComponent } from "./component/dashboard/DashboardComponent";
     LoginComponent,
     ResetpasswordComponent,
     RegistrationComponent,
-    DashboardComponent
+    DashboardComponent,
+    NotesComponent
   ],
 
 
