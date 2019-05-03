@@ -4,20 +4,21 @@
 
 <mat-card  class="flex" >
   <div  fxLayout="row" fxLayoutAlign="center center" >
+      <input matInput placeholder="Title">
     <mat-form-field appearance="outline"  class="formfield"   (click)="flag=true" *ngIf=!flag>
-      <mat-label>Title : </mat-label>
-        <input matInput placeholder="Take a Note....">
         <mat-icon matTooltip="New List" class="add-box" >add_box</mat-icon>
         <mat-icon matTooltip="New List with drawing" class="margin">brush</mat-icon>
         <mat-icon matTooltip="New List with image"  class="margin">insert_photo</mat-icon>
     </mat-form-field>  
   </div> 
- 
+
   <div  *ngIf=flag>
     <mat-form-field appearance="outline"  class="formfield">
-      <mat-icon matTooltip="Remind Me" >notification_important</mat-icon>
+        <!-- <mat-label>Title : </mat-label> -->
+        <textarea matInput placeholder="Take a Note...."></textarea>
+      <mat-icon matTooltip="Remind Me" class="margin">notification_important</mat-icon>
       <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
-      <mat-icon matTooltip="Change color"class="margin">color_lens</mat-icon>
+      <mat-icon matTooltip="Change color"class="margin">palette</mat-icon>
       <mat-icon matTooltip="Add Image" class="margin">insert_photo</mat-icon>
       <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
       
@@ -30,15 +31,12 @@
                 <span>Add drawing</span>
               </button>
               <button mat-menu-item>
-                <span>Show tick boxes</span>
+                <span>Show tick </span>
               </button>
             </mat-menu>
-            
-      <mat-icon matTooltip="Undo" class="margin">undo</mat-icon>
-      <mat-icon matTooltip="Redo" class="margin">redo</mat-icon>
-      <button mat-button  matTooltip="Close" class="close">Close</button>
+
+      <button  mat-button  matTooltip="Close" class="close-btn">Close</button>
     </mat-form-field>  
   </div>
-
 </mat-card>
 
