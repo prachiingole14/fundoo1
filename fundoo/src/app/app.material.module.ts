@@ -29,7 +29,8 @@ import { MatSidenavModule,MatListModule} from '@angular/material';
       MatProgressSpinnerModule,
       MatTooltipModule,
       MatSidenavModule,
-      MatListModule
+      MatListModule,
+     
      //NgMatSearchBarModule
     ],
 
@@ -45,7 +46,7 @@ import { MatSidenavModule,MatListModule} from '@angular/material';
       MatTooltipModule,
       MatSidenavModule,
       MatListModule,
-      
+    
      // NgMatSearchBarModule
     ],
   

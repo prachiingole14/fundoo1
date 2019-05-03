@@ -1,13 +1,22 @@
-<div class="flex" fxLayout="row" fxLayoutAlign="center center" >
-  <div>
-    Add Notes
-  </div>
 
-  <div>
-      <div class="example-container">
-        <mat-form-field>
-          <input matInput placeholder="Input">
-        </mat-form-field>
-      </div>   
-  </div>
-</div>
+
+<mat-card class="flex">
+
+  <div  fxLayout="row" fxLayoutAlign="center center" >
+    <mat-form-field appearance="outline"  class="formfield">
+      <mat-label >Title : </mat-label>
+        <input matInput placeholder="Take a Notes">
+        <mat-icon matTooltip="New List" class="add-box">add_box</mat-icon>
+        <mat-icon matTooltip="New List with drawing">brush</mat-icon>
+        <mat-icon matTooltip="New List with image">insert_photo</mat-icon>
+    </mat-form-field>  
+  </div> 
+ 
+  <!-- <div  class="flex" fxLayout="row" fxLayoutAlign="center center" disable>
+    <mat-form-field appearance="outline" class="formfield">
+      <mat-label>Description : </mat-label>
+        <input matInput placeholder="Enter description here">
+      <mat-hint>Hint : It must be in character format</mat-hint>
+    </mat-form-field>   
+  </div> -->
+</mat-card>

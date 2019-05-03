@@ -1,10 +1,16 @@
+
 .flex
 {
- border-color: brown;
+    border-color: brown;
+    width: 500px;
 }
+ .formfield
+ {
+    width:100%;
+ }
 
-.input
-{
-    color: aqua;
-    text-emphasis: none;
-}
+ .add-box
+ {
+    margin-left: 82%;
+    margin-top: 0%;
+ }
