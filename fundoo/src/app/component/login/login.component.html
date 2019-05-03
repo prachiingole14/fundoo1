@@ -1,6 +1,14 @@
 
 <div class="flx" fxLayout='row' fxLayoutAlign='center center'>
     <mat-card fxFlex='28'>
+
+            <span class="f">F</span>
+            <span class="u">U</span>
+            <span class="n">N</span>
+            <span class="d">D</span>
+            <span class="o">O</span>
+            <span class="oo">O</span>
+    
         <h3 class="h3">Sign In</h3>
             <div class="align">
                 <form name="form" (ngSubmit)="onSubmit()">
@@ -18,7 +26,7 @@
                     <br>
                     
                     <!-- <mat-button-toggle class="btn2" (click)='signin()'></mat-button-toggle><br>  -->
-                    <button class="btn2" ngSubmit="onSubmit()" button mat-raised-button color="primary">Sing In</button>
+                    <a [routerLink]="['dashboard']"><button class="btn2" ngSubmit="onSubmit()" button mat-raised-button color="primary">Sing In</button></a>
                     <div class="example-button-row">
                         <a [routerLink]="['reset']"><button mat-stroked-button >Reset password</button></a>
                         <a [routerLink]="['registration']"><button mat-stroked-button style="margin-left: 7px;">Create user registration</button></a>

@@ -8,6 +8,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   constructor(){}
+  flag=false;
+  value = '';
   ngOnInit() {
   }
 

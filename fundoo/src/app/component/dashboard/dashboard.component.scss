@@ -77,32 +77,38 @@
 {
   margin-left:12px;
   color: blue;
+  font-size: 20px;
 }
 
 .u
 {
   color: chocolate;
+  font-size: 20px;
 }
 
 .n
 {
   color:red;
+  font-size: 20px;
 }
 
 .d
 {
   color:green;
+  font-size: 20px;
 } 
 
 
 .o
 {
  color: crimson;
+ font-size: 20px;
 }
 
 .oo
 {
   color:purple;
+  font-size: 20px;
 }
 
 //refresh
@@ -168,4 +174,53 @@
   margin-left : 20%;
   height: 30px;
  margin-bottom: 20px;
+}
+
+
+/////////////////////////////////////////  NEW NAV-BAR   ///////////////////////////////////////
+
+// .nav
+// {
+//   widows: 7px;
+// }
+
+.mini-mats
+{
+  text-align: center;
+  margin-left: 25px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left:5%;
+}
+
+.app
+{
+  margin-left:5%;
+  width: 25px;
+  height: 25px;
+}
+
+.setting
+{
+  margin-left: 80%;
+  width: 25px;
+  height: 25px;
+  
+}
+
+.grids
+{
+  margin-left: 2%;
+  width: 25px;
+  height: 25px;
+}
+
+.searchss
+{
+ margin-left: 25%;
+}
+
+.search-input
+{
+  width:500px;
 }
