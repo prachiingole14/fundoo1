@@ -7,15 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesComponent implements OnInit
 {
-    color: any;
-
+  color:any;
     constructor() {}
-    flag=false;
-
+    flag=true;
     ngOnInit() {}
-
-    ChangeColor()
+   
+    ChangeColor(color)
     {
-      console.log("change color")
+      this.color=color;
+      console.log(this.color,"change color");
     }
+
+    reverse(){
+      this.flag = !this.flag
+    }
+
 }
