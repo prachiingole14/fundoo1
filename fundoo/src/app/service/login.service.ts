@@ -11,8 +11,7 @@ export class LoginService
   route: any;
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) {}
   login:Login
-  //debugger
-
+ 
   createlogin(login: Login) 
   {
     let userLogin = new FormData();
@@ -23,7 +22,7 @@ export class LoginService
 
   getEmail() 
   {
-    //debugger;
+    
     let urlTocken = new FormData();
     urlTocken.append("token", this.route.snapshot.queryParamMap.get("token"));
     return this.http.post(this.serviceurl.host + this.serviceurl.getEmail, urlTocken);

@@ -8,10 +8,11 @@ import { HttpClientModule} from '@angular/common/http';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-import { from } from 'rxjs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip'
 import { MatSidenavModule,MatListModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -30,8 +31,9 @@ import { MatSidenavModule,MatListModule} from '@angular/material';
       MatTooltipModule,
       MatSidenavModule,
       MatListModule,
- 
-     //NgMatSearchBarModule
+      BrowserAnimationsModule,
+      NoopAnimationsModule,
+
     ],
 
     exports:[
@@ -46,8 +48,9 @@ import { MatSidenavModule,MatListModule} from '@angular/material';
       MatTooltipModule,
       MatSidenavModule,
       MatListModule,
-
-     // NgMatSearchBarModule
+      BrowserAnimationsModule,
+      NoopAnimationsModule,
+  
     ],
   
     providers: [],

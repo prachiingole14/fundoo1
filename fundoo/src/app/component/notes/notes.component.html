@@ -18,7 +18,32 @@
         <textarea matInput placeholder="Take a Note...."></textarea>
       <mat-icon matTooltip="Remind Me" class="margin">notification_important</mat-icon>
       <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
-      <mat-icon matTooltip="Change color"class="margin">palette</mat-icon>
+
+      <mat-icon matTooltip="Change color" class="margin"   [matMenuTriggerFor]="color">palette</mat-icon>
+        <mat-menu #color="matMenu">
+          <div   fxLayout="row" fxLayoutAlign="center center">
+              <button matTooltip="red"  mat-mini-fab class="fab" style="background-color:brown" ngclick="ChangeColor()"></button>
+              <button matTooltip="pink"  mat-mini-fab class="fab" style="background-color:#E91E63 "></button>
+              <button matTooltip="purpul"  mat-mini-fab class="fab" style="background-color:#E040FB "></button>
+              <button matTooltip="deep-purpul" mat-mini-fab class="fab" style="background-color:#673AB7 "></button>
+          </div>
+
+          <div   fxLayout="row" fxLayoutAlign="center center">
+            <button matTooltip="orange"  mat-mini-fab class="fab" style="background-color:#FF9800"></button>
+            <button matTooltip="yellow"  mat-mini-fab class="fab" style="background-color:#FFEB3B"></button>
+            <button matTooltip="blue"  mat-mini-fab class="fab" style="background-color:#2196F3 "></button>
+            <button matTooltip="cyan" mat-mini-fab class="fab" style="background-color:#18FFFF "></button>
+        </div>
+
+        <div   fxLayout="row" fxLayoutAlign="center center">
+          <button matTooltip="teal"  mat-mini-fab class="fab" style="background-color:#009688"></button>
+          <button matTooltip="green"  mat-mini-fab class="fab" style="background-color:#8BC34A "></button>
+          <button matTooltip="deep-orange"  mat-mini-fab class="fab" style="background-color:#FF5722"></button>
+          <button matTooltip="lime" mat-mini-fab class="fab" style="background-color:#CDDC39"></button>
+      </div>
+    </mat-menu>
+
+
       <mat-icon matTooltip="Add Image" class="margin">insert_photo</mat-icon>
       <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
       
@@ -27,9 +52,11 @@
               <button mat-menu-item>
                 <span>Add Label</span>
               </button>
+
               <button mat-menu-item >
                 <span>Add drawing</span>
               </button>
+
               <button mat-menu-item>
                 <span>Show tick </span>
               </button>

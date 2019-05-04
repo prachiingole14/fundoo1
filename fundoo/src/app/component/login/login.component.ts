@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
         let obj = this.LoginService.createlogin(this.model);
         obj.subscribe((res: any) => 
         {
-          //debugger;
+         
           // if (res.message == "400") 
           // {
           //   this.emailError = "user logged in successfully";
