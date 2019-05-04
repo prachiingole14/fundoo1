@@ -4,7 +4,7 @@
 
 <mat-card class="flex" [style.backgroundColor]='color'>
   <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
-    <input matInput placeholder="Title">
+      <mat-form-field style="width:80%;"><input matInput placeholder="Title"></mat-form-field>
     <div appearance="outline" class="formfield" fxLayout='row'>
       <mat-icon matTooltip="New List" class="add-box">add_box</mat-icon>
       <mat-icon matTooltip="New List with drawing" class="margin">brush</mat-icon>
@@ -12,13 +12,14 @@
     </div>
   </div>
 
-  <div *ngIf="flag==false">
+  <div *ngIf="flag==false"  >
     <!-- <mat-form-f-ield [ngStyle.background]=color appearance="outline"  class="formfield"> -->
-    <div fxLayout='column' appearance="outline" class="formfield">
+    <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
       <!-- <mat-label>Title : </mat-label> -->
       <div>
-        <input matInput placeholder="Title"></div>
-      <textarea matInput placeholder="Take a Note...."></textarea>
+        <mat-form-field style="width:70%;"><input matInput placeholder="Title"></mat-form-field></div>
+        <mat-form-field><textarea matInput placeholder="Take a Note...."></textarea></mat-form-field>
+
       <div fxLayout='row'>
         <mat-icon matTooltip="Remind Me" class="margin">notification_important</mat-icon>
         <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
