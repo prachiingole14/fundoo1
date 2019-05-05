@@ -4,7 +4,12 @@
 
 <mat-card class="flex" [style.backgroundColor]='color'>
   <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
-      <mat-form-field style="width:80%;"><input matInput placeholder="Title"></mat-form-field>
+
+      <mat-form-field style="width:80%;">
+        <input matInput placeholder="Title"  [formControl]="title" >
+        <mat-error *ngIf="firstName.dirty">{{titleError()}}</mat-error>
+      </mat-form-field>
+
     <div appearance="outline" class="formfield" fxLayout='row'>
       <mat-icon matTooltip="New List" class="add-box">add_box</mat-icon>
       <mat-icon matTooltip="New List with drawing" class="margin">brush</mat-icon>
@@ -17,10 +22,19 @@
     <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
       <!-- <mat-label>Title : </mat-label> -->
       <div>
-        <mat-form-field style="width:70%;"><input matInput placeholder="Title"></mat-form-field></div>
-        <mat-form-field><textarea matInput placeholder="Take a Note...."></textarea></mat-form-field>
+        <mat-form-field style="width:70%;">
+          <input matInput placeholder="Title" [formControl]="title">
+          <mat-error *ngIf="firstName.dirty">{{titleError()}}</mat-error>
+        </mat-form-field></div>
 
-      <div fxLayout='row'>
+        <mat-form-field>
+          <textarea matInput placeholder="Take a Note...."  [formControl]="description" >
+              <mat-error *ngIf="firstName.dirty">{{descriptionError()}}</mat-error>
+          </textarea>
+        </mat-form-field>
+
+      <div fxLayout='row' fxLayoutAlign="start end"
+      >
         <mat-icon matTooltip="Remind Me" class="margin">notification_important</mat-icon>
         <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
 

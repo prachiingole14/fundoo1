@@ -57,8 +57,6 @@
 
                 $token = JWT::encode($data, $secret_key);
 
-        
-            
                 $connection = new Redis();
                 $client = $connection->connection();
 

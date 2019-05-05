@@ -13,8 +13,9 @@ export class ServiceUrlService {
     public register = "register";
     public login = "login";
     public reset = "ResetPassword";
-    public getEmail ="getEmailId";
-    public notes= "notes";
-    public changeColor="col"
+    public getEmail = "getEmailId";
+    public notes = "notes";
+    public changeColor = "col";
+    public addNotes = "takeNotes";
   
 }

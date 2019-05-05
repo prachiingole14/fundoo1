@@ -52,12 +52,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'welcome';
 
-
+//login,registration,reset routing
 $route['register'] = 'AccountController/register';
 $route['login'] = 'AccountController/login';
 $route['ResetPassword'] = 'AccountController/ResetPassword';
-$route['showregistered']='AccountController/showregistered';
+$route['showregistered'] = 'AccountController/showregistered';
 
+//notes routing
+$route['addNotes'] = 'notesController/addNotes';
+$route['demo'] = 'NotesController/demo';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
