@@ -7,7 +7,7 @@
 
       <mat-form-field style="width:80%;">
         <input matInput placeholder="Title"  [formControl]="title" >
-        <mat-error *ngIf="firstName.dirty">{{titleError()}}</mat-error>
+        <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
       </mat-form-field>
 
     <div appearance="outline" class="formfield" fxLayout='row'>
@@ -24,12 +24,12 @@
       <div>
         <mat-form-field style="width:70%;">
           <input matInput placeholder="Title" [formControl]="title">
-          <mat-error *ngIf="firstName.dirty">{{titleError()}}</mat-error>
+          <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
         </mat-form-field></div>
 
         <mat-form-field>
           <textarea matInput placeholder="Take a Note...."  [formControl]="description" >
-              <mat-error *ngIf="firstName.dirty">{{descriptionError()}}</mat-error>
+              <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
           </textarea>
         </mat-form-field>
 

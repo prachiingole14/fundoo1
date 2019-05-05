@@ -8,7 +8,7 @@
         protected $description;
         protected $color;
         protected $image;
-
+        protected $label_list;
         public function __construct()
         {
             parent::__construct();

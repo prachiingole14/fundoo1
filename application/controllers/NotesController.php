@@ -9,8 +9,10 @@
         {
             parent::__construct();
             $this->load->database();
+           // $this->noteModel= new NoteModel();
             $this->addnote = new Add_Note_Service();
-            $this->noteModel= new NoteModel();
+           // $this->noteModel= new NoteModel();
+          
         }
 
         public function addNotes()

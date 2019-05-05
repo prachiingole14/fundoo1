@@ -5,6 +5,7 @@
         public function __construct()
         {
             parent::__construct();
+            //$this->load->controllers(NotesController());
         }
 
         public function Add_Notes()
@@ -14,7 +15,7 @@
                         "color" => $color, 
                         "image" => $image);
 
-            $query= $this->db->query("INSERT INTO notes(`title`,`description`,`color`,`image`) VALUE('$title','$decription','$color','$image')");
+            $query= $this->db->query("INSERT INTO notes(`title`,`description`,`color`,`image`) VALUE('$title','$description','$color','$image')");
             print_r($query);
         }
     }
