@@ -1,6 +1,6 @@
 <?php
-
-    if (! defined('BASEPATH')) exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
+   // if (! defined('BASEPATH')) exit('No direct script access allowed');
 
     class NoteModel extends CI_Model
     {
@@ -8,7 +8,8 @@
         protected $description;
         protected $color;
         protected $image;
-        protected $label_list;
+
+       // protected $label_list;
         public function __construct()
         {
             parent::__construct();

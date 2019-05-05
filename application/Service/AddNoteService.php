@@ -1,14 +1,15 @@
 <?php
 
-    class Add_Note_Service extends CI_Controller
+    class AddNoteService extends CI_Controller
     {
+        
         public function __construct()
         {
             parent::__construct();
-            //$this->load->controllers(NotesController());
+           $this->load->controllers(NotesController());
         }
 
-        public function Add_Notes()
+        public function AddNotes()
         {
             $data = array("title" => $title,
                         "description" => $description,

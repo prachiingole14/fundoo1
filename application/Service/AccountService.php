@@ -1,6 +1,5 @@
 <?php
-    //include '/var/www/html/CodeIgniter-3.1.10/application/models/AccountModel.php';
-
+    
     class AccountService extends CI_Controller
     {
         private $connect;

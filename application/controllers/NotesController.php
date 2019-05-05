@@ -1,6 +1,6 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
-    include "/var/www/html/CodeIgniter-3.1.10/application/Service/Add_Note_Service.php";
+    include "/var/www/html/CodeIgniter-3.1.10/application/Service/AddNoteService.php";
     //include "/var/www/html/CodeIgniter-3.1.10/application/models/NoteModel.php";
 
     class NotesController extends CI_Controller
@@ -10,8 +10,8 @@
             parent::__construct();
             $this->load->database();
            // $this->noteModel= new NoteModel();
-            $this->addnote = new Add_Note_Service();
-           // $this->noteModel= new NoteModel();
+            $this->addnote = new AddNoteService();
+            //$this->noteModel= new NoteModel();
           
         }
 
@@ -22,7 +22,7 @@
             $color = $_POST['color'];
             $image = $_POST['image'];
 
-            $res = $this->addnote->Add_Notes($title, $description, $color ,$image);
+            $res = $this->addnote->AddNotes($title, $description, $color ,$image);
         }
 
         public function demo()
