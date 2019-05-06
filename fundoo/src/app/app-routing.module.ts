@@ -6,6 +6,7 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { NotesComponent } from './component/notes/notes.component';
 import { from } from 'rxjs';
+
 const routes: Routes = [
     {
       path:'',

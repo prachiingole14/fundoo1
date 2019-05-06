@@ -51,11 +51,11 @@ export class NotesComponent implements OnInit
 
   titleError()
   {
-    return this.title.hasError('required')?'':'size should be less than 20 and greater than 5 must be required in character format '
+    return this.title.hasError('required')?'':'It must be required in character format and size should be greater than 5 and less than 30 '
   }
 
   descriptionError()
   {
-    return this.description.hasError('required')?'':'This size should be less than 50 and greater than 10 is empty must be required in character format '
+    return this.description.hasError('required')?'':'It must be required in character format and size should be greater than 10 and less than 50  '
   }
 }

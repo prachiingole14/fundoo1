@@ -1,3 +1,4 @@
+
 <!-- <div (click)="flag=true" *ngIf=!flag>
   ghfhfy
 </div> -->
@@ -32,9 +33,16 @@
               <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
         </mat-form-field>
 
-      <div fxLayout='row' fxLayoutAlign="start end"
-      >
-        <mat-icon matTooltip="Remind Me" class="margin">notification_important</mat-icon>
+      <div fxLayout='row' fxLayoutAlign="start end" >
+        <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="setting">notification_important</mat-icon>
+          <mat-menu #setting="matMenu">
+            <mat-icon>keyboard_backspace</mat-icon>
+            <span>Select Date and time</span>
+              <button mat-menu-item>
+              
+              </button>
+          </mat-menu>
+
         <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
 
         <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
@@ -63,6 +71,7 @@
 
 
         <mat-icon matTooltip="Add Image" class="margin">insert_photo</mat-icon>
+       
         <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
 
         <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
@@ -84,3 +93,4 @@
     </div>
   </div>
 </mat-card>
+

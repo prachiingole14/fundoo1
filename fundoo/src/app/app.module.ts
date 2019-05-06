@@ -17,6 +17,8 @@ import { RegisterService } from './service/register.service';
 import { DashboardComponent } from "./component/dashboard/dashboard.component";
 import { NotesComponent } from './component/notes/notes.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ReminderComponent } from './component/reminder/reminder.component';
+
 
 
 
@@ -31,7 +33,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     ResetpasswordComponent,
     RegistrationComponent,
     DashboardComponent,
-    NotesComponent
+    NotesComponent,
+    ReminderComponent
+  
   ],
 
 

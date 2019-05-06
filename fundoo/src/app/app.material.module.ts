@@ -13,6 +13,8 @@ import {MatTooltipModule} from '@angular/material/tooltip'
 import { MatSidenavModule,MatListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 @NgModule({
     declarations: [
@@ -33,7 +35,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
       MatListModule,
       BrowserAnimationsModule,
       NoopAnimationsModule,
-
+      MatDatepickerModule
     ],
 
     exports:[
@@ -50,7 +52,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
       MatListModule,
       BrowserAnimationsModule,
       NoopAnimationsModule,
-  
+      MatDatepickerModule
     ],
   
     providers: [],

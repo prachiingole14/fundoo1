@@ -146,6 +146,7 @@ lass="searchs"
 
 
 
+
 <mat-sidenav-container class="sidenav-container" >
     <mat-sidenav #drawer class="sidenav" fixedInViewport="flase"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -277,8 +278,10 @@ lass="searchs"
                 </mat-menu>
       
       </mat-toolbar>
+
       <!-- Add Content Here -->
-     <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
+
     </mat-sidenav-content>
   </mat-sidenav-container>
 
