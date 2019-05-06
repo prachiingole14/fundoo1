@@ -144,6 +144,8 @@ lass="searchs"
 
 
 
+
+
 <mat-sidenav-container class="sidenav-container" >
     <mat-sidenav #drawer class="sidenav" fixedInViewport="flase"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -159,8 +161,8 @@ lass="searchs"
         <span class="o">O</span>
         <span class="oo">O</span></mat-toolbar>
 
-      <mat-nav-list class="nav" *ngIf=flag class="nav">
-        <a mat-list-item href="notes" class="nav">
+      <mat-nav-list class="nav" *ngIf=flag >
+        <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']" >
           <mat-icon>addcircle</mat-icon>  Notes</a>
 
         <a mat-list-item href="#" > 
@@ -276,6 +278,7 @@ lass="searchs"
       
       </mat-toolbar>
       <!-- Add Content Here -->
+     <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 

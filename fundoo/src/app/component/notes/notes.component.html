@@ -6,7 +6,7 @@
   <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
 
       <mat-form-field style="width:80%;">
-        <input matInput placeholder="Title"  [formControl]="title" required>
+        <input matInput placeholder="Title"  [formControl]="title" required pattern="(a-zA-Z)">
         <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
       </mat-form-field>
 
@@ -23,14 +23,13 @@
       <!-- <mat-label>Title : </mat-label> -->
       <div>
         <mat-form-field style="width:70%;">
-          <input matInput placeholder="Title" [formControl]="title" required>
+          <input matInput placeholder="Title" [formControl]="title" pattern="(a-zA-Z)" required>
           <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
         </mat-form-field></div>
 
         <mat-form-field>
-          <textarea matInput placeholder="Take a Note...."  [formControl]="description" required>
+          <input matInput placeholder="Take a Note...."  [formControl]="description" pattern="(a-zA-Z)"required>
               <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
-          </textarea>
         </mat-form-field>
 
       <div fxLayout='row' fxLayoutAlign="start end"
@@ -41,21 +40,17 @@
         <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
         <mat-menu #color="matMenu">
           <div fxLayout="row" fxLayoutAlign="center center">
-            <button matTooltip="red" mat-mini-fab class="fab" style="background-color: brown"
-              (click)="ChangeColor('brown')"></button>
-            <button matTooltip="pink" mat-mini-fab class="fab" style="background-color:#E91E63 "
-              (click)="ChangeColor('#E91E63')"></button>
-            <button matTooltip="purpul" mat-mini-fab class="fab" style="background-color:#E040FB "
-              (click)="ChangeColor('#E040FB ')"></button>
-            <button matTooltip="deep-purpul" mat-mini-fab class="fab" style="background-color:#673AB7 "
-              (click)="ChangeColor('#673AB7')"></button>
+            <button matTooltip="red" mat-mini-fab class="fab" style="background-color: brown" (click)="ChangeColor('brown')"></button>
+            <button matTooltip="pink" mat-mini-fab class="fab" style="background-color:#E91E63"  (click)="ChangeColor('#E91E63')"></button>
+            <button matTooltip="purpul" mat-mini-fab class="fab" style="background-color:#E040FB"  (click)="ChangeColor('#E040FB ')"></button>
+            <button matTooltip="deep-purpul" mat-mini-fab class="fab" style="background-color:#673AB7"  (click)="ChangeColor('#673AB7')"></button>
           </div>
 
           <div fxLayout="row" fxLayoutAlign="center center">
             <button matTooltip="orange" mat-mini-fab class="fab" style="background-color:#FF9800" (click)="ChangeColor('#FF9800')"></button>
             <button matTooltip="yellow" mat-mini-fab class="fab" style="background-color:#FFEB3B" (click)="ChangeColor('#FFEB3B')"></button>
-            <button matTooltip="blue" mat-mini-fab class="fab" style="background-color:#2196F3 "  (click)="ChangeColor('#2196F3')"></button>
-            <button matTooltip="cyan" mat-mini-fab class="fab" style="background-color:#18FFFF "  (click)="ChangeColor('#18FFFF')"></button>
+            <button matTooltip="blue" mat-mini-fab class="fab" style="background-color:#2196F3"  (click)="ChangeColor('#2196F3')"></button>
+            <button matTooltip="cyan" mat-mini-fab class="fab" style="background-color:#18FFFF"  (click)="ChangeColor('#18FFFF')"></button>
           </div>
 
           <div fxLayout="row" fxLayoutAlign="center center">

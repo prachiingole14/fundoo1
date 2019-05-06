@@ -10,6 +10,8 @@ import { from } from 'rxjs';
 
 export class NotesService 
 {
+  title: any;
+  description: any;
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
   notes:Notes;
 
@@ -39,7 +41,7 @@ export class NotesService
     // debugger;
     let col = new FormData();
     col.append('color',color);
-    col.append('string',string)
+    col.append('string',string);
     return this.http.post(this.serviceurl.host+this.serviceurl.changeColor,col);
   }
 
