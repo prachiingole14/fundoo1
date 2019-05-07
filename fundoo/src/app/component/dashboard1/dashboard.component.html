@@ -1,0 +1,289 @@
+<!-- <div fxLayout="row" fxLayoutAlign="start start" >
+  <mat-card class="mat-card">
+lass="searchs"
+    <!--start Vertical navbar -lass="searchs"->
+      <!-- <button mat-icon-butlass="searchs"ton [matMenuTriggerFor]="menubar">
+        
+        <mat-icon matTooltip="Main-Menu">dehaze</mat-icon> 
+        <span class="f">F</span>
+        <span class="u">U</span>
+        <span class="n">N</span>
+        <span class="d">D</span>
+        <span class="o">O</span>
+        <span class="oo">O</span>
+
+      </button>
+   
+      <mat-menu  #menubar="matMenu" #sidenav mode ="side">
+        <button mat-menu-item class="menu" >
+          <mat-icon>addcircle</mat-icon>
+          <span>Notes</span>
+        </button>
+
+        <button mat-menu-item class="menu">
+          <mat-icon>notifications_none</mat-icon>
+          <span>Reminders</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-menu-item class="menu"> -->
+            <!-- <mat-icon>notifications_none</mat-icon> -->
+            <!-- <span class="label">LABELS</span> </button>
+            <button mat-menu-item class="menu">
+              <mat-icon>create</mat-icon>
+              <span  (click)="openDialog()">Edit Label</span>
+            </button>
+        
+        <mat-divider></mat-divider>
+
+        <button mat-menu-item class="menu">
+            <mat-icon>archive</mat-icon>
+            <span>Archive</span>
+          </button>
+  
+          <button mat-menu-item class="menu">
+            <mat-icon>delete_sweep</mat-icon>
+            <span>Bin</span>
+          </button>
+      </mat-menu>
+    <!-- end vertical navbar -->
+        
+    <!-- fundoo search -->
+      <!-- <mat-icon>search</mat-icon> 
+      <input  class="search" type="text" name="search"  placeholder="Search">
+    <!--fundoo search end   
+   
+
+    <!-- refresh start --
+      <mat-icon class="refresh" matTooltip="Refresh">refresh </mat-icon>
+    <!--refrseh end -->
+
+    <!-- grid start --
+      <mat-icon <!-- refresh start --class="grid" matTooltip="Grid-View">dashboard </mat-icon>
+    <!--drid en      <mat-icon class="refresh" matTooltip="Refresh">refresh </mat-icon> -->
+
+    <!-- settin    <!--refrseh end -- start --
+          <button mat-icon-button [matMenuTriggerFor]="menu1">
+              <mat-icon  class="settings" matTooltip="Settings">settings</mat-icon>
+            </button>
+            <mat-menu #menu1="matMenu">
+              <button mat-menu-item>
+                <span>Settings</span>
+              </button>
+              <button mat-menu-item>
+                <span>Send Feedback</span>
+              </button>
+              <button mat-menu-item>
+                <span>Helps</span>
+              </button>
+              <button mat-menu-item>
+                  <span>Aapp Downloads</span>
+                </button>
+                <button mat-menu-item>
+                  <span>Keyboard Shortcuts</span>
+                </button>
+            </mat-menu>
+    <!--setting end --
+
+    <!-- FundooApps start --
+      <mat-icon  class="apps" matTooltip="FundooApps">apps</mat-icon>
+    <!--FundooApps end --
+    
+    <!-- Account icon --
+      <button class="mini-mat" mat-mini-fab color="primary" [matMenuTriggerFor]="menu"  matTooltip="Fundoo Account">P</button>  
+            <!-- <mat-menu #menu="matMenu">
+              <div class="fxLayout" fxLayout="row" fxLayoutAlign="center center" >
+                <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>  
+                  <div fxLayout="row" fxLayoutAlign="space-around start" >
+                    <p class="p">Prachi Ingole<br>
+                      prachii760@gmail.com<br>
+                      privacy<br>
+                      <button class="mat-flat-btn" mat-flat-button color="primary">Google Account</button>
+                    </div>
+              </div>
+              <mat-card-footer>
+                  <button mat-stroked-button class="basic-btn">Add Account</button>
+                  <button mat-stroked-button  class="basic-btn2">Sign Out</button>
+              </mat-card-footer>
+            </mat-menu>     --
+          <mat-menu #menu="matMenu" >
+            <div fxLayout="row" class="profileMenu">
+              <div>
+                <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>
+              </div>
+              <div fxLayout='column'>
+                <div class="text">
+                  Prachi Ingole
+                </div>
+                <div class="margin">
+                  prachi760@gmail.com
+                </div>
+                <div class="margin2">
+                    <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a>
+                </div>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+              <div fxLayout='row'>
+                <div>
+                    <a [routerLink]="['registration']"><button mat-stroked-button class="basic-btn">Add Account</button></a>
+                </div>
+                <div>
+                    <a [routerLink]="[' ']"><button mat-stroked-button  class="basic-btn2">Sign Out</button></a>
+                </div>
+              </div>
+            </mat-menu>
+  </mat-card>
+</div> -->
+
+<!-- <button mat-button (click)="openDialog()">Open dialog</button> -->
+
+
+
+
+
+
+
+
+
+<mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="flase"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)" >
+      <mat-toolbar > 
+        <mat-icon matTooltip="Main-Menu"  (click)="flag=true" *ngIf=!flag style="color: gray;">dehaze</mat-icon> 
+
+        <span class="f">F</span>
+        <span class="u">U</span>
+        <span class="n">N</span>
+        <span class="d">D</span>
+        <span class="o">O</span>
+        <span class="oo">O</span></mat-toolbar>
+
+      <mat-nav-list class="nav" *ngIf=flag >
+        <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']" >
+          <mat-icon>addcircle</mat-icon>  Notes</a>
+
+        <a mat-list-item [routerLink] = "['reminder']" [routerLinkActive]="['is-active']" > 
+          <mat-icon>notifications_none</mat-icon>
+          <span>  Reminders</span></a> 
+          <mat-divider></mat-divider>
+             <span class="labels">LABELS</span> 
+             <a mat-list-item href="#" >
+              <mat-icon>create</mat-icon>
+              <span > Edit Label</span>
+        </a>
+        <mat-divider></mat-divider>
+
+        <a mat-list-item href="#" class="nav">
+            <mat-icon>archive</mat-icon>  Archive</a>
+  
+          <a mat-list-item href="#" > 
+            <mat-icon>delete_sweep</mat-icon>
+            <span>  Trash</span></a>
+        
+      </mat-nav-list>
+ 
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar>
+          <mat-form-field class="example-form-field" class="search-input"  >
+            <mat-icon >search</mat-icon>
+              <input class="search-input" matInput type="text"  [(ngModel)]="value">
+              <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+
+    <!-- refresh start -->
+      <mat-icon class="refresh" matTooltip="Refresh">refresh </mat-icon>
+    <!--refrseh end -->
+
+    <!-- grid start -->
+      <mat-icon class="grid" matTooltip="Grid-View">dashboard </mat-icon>
+    <!--drid end -->
+
+    <!-- setting start -->
+          <button mat-icon-button [matMenuTriggerFor]="menu1">
+              <mat-icon  class="setting" matTooltip="Settings">settings</mat-icon>
+            </button>
+            <mat-menu #menu1="matMenu">
+              <button mat-menu-item>
+                <span>Settings</span>
+              </button>
+              <button mat-menu-item>
+                <span>Send Feedback</span>
+              </button>
+              <button mat-menu-item>
+                <span>Helps</span>
+              </button>
+              <button mat-menu-item>
+                  <span>Aapp Downloads</span>
+                </button>
+                <button mat-menu-item>
+                  <span>Keyboard Shortcuts</span>
+                </button>
+            </mat-menu>
+    <!--setting end -->
+
+      <!-- FundooApps start -->
+        <mat-icon  class="app" matTooltip="FundooApps">apps</mat-icon>
+      <!--FundooApps end -->
+
+          <button class="mini-mats" mat-mini-fab color="primary" [matMenuTriggerFor]="menu"  matTooltip="Fundoo Account">P</button>  
+          <mat-menu #menu="matMenu">
+              <div class="fxLayout" fxLayout="row" fxLayoutAlign="center center" >
+                <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>  
+                  <div fxLayout="row" fxLayoutAlign="space-around start" >
+                    <p class="p">Prachi Ingole<br>
+                      prachii760@gmail.com<br>
+                      privacy<br>
+                      <button class="mat-flat-btn" mat-flat-button color="primary">Google Account</button>
+                    </div>
+              </div>
+              <mat-card-footer>
+                  <button mat-stroked-button class="basic-btn">Add Account</button>
+                  <button mat-stroked-button  class="basic-btn2">Sign Out</button>
+              </mat-card-footer>
+            </mat-menu> 
+            <mat-menu #menu="matMenu" >
+                <div fxLayout="row" class="profileMenu">
+                  <div>
+                    <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>
+                  </div>
+                  <div fxLayout='column'>
+                    <div class="text">
+                      Prachi Ingole
+                    </div>
+                    <div class="margin">
+                      prachi760@gmail.com
+                    </div>
+                    <div class="margin2">
+                        <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a>
+                    </div>
+                  </div>
+                </div>
+                <mat-divider></mat-divider>
+                  <div fxLayout='row'>
+                    <div>
+                        <a [routerLink]="['registration']"><button mat-stroked-button class="basic-btn">Add Account</button></a>
+                    </div>
+                    <div>
+                        <a [routerLink]="['#']"><button mat-stroked-button  class="basic-btn2">Sign Out</button></a>
+                    </div>
+                  </div>
+                </mat-menu>
+      
+      </mat-toolbar>
+
+      <!-- Add Content Here -->
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+ 

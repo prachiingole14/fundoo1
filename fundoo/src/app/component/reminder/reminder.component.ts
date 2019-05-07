@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import {take} from 'rxjs/operators';
 @Component({
   selector: 'app-reminder',
   templateUrl: './reminder.component.html',
@@ -11,16 +12,15 @@ export class ReminderComponent implements OnInit
   color:any;
   image: any;
   
-  constructor() { }
   flag=true;
- 
-  
+
+  constructor() {}
+
   ngOnInit() {}
   model: any = {};
 
   title=new FormControl(' ',[Validators.required,Validators.minLength(5), Validators.maxLength(30)]);
   description=new FormControl(' ',[Validators.required, Validators.minLength(10), Validators.maxLength(50)]);
-
 
   titleError()
   {

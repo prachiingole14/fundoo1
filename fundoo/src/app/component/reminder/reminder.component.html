@@ -4,43 +4,37 @@
             <input matInput placeholder="Title"  [formControl]="title" required pattern="(a-zA-Z)">
             <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
         </mat-form-field>
-       
     </div>
 
-    <div *ngIf="flag==false">
+    <div>
             <!-- <mat-form-f-ield [ngStyle.background]=color appearance="outline"  class="formfield"> -->
             <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
               <!-- <mat-label>Title : </mat-label> -->
-                <div>
-                    <mat-form-field style="width:70%;">
-                        <input matInput placeholder="Title" [formControl]="title" pattern="(a-zA-Z)" required>
-                        <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
-                    </mat-form-field>
-                </div>
-
+           
                 <mat-form-field>
                     <input matInput placeholder="Take a Note...."  [formControl]="description" pattern="(a-zA-Z)"required>
                     <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
                 </mat-form-field>
               
-                <div fxLayout='row' fxLayoutAlign="start end" >
+                <div  fxLayout='row' fxLayoutAlign="start end" >
                   <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
                     <div style="margin-left:10px;">
-                      <mat-menu  #remainder="matMenu">
-                          <mat-icon >keyboard_backspace</mat-icon>
-                          <span>Select Date and Time</span>
-                        
-                        
+                      <mat-menu *ngIf='flag==true' #remainder="matMenu">
+                        <mat-icon class="back-icon">keyboard_backspace</mat-icon>
+                        <span class="font">Select Date and Time</span>
                         </mat-menu> 
                     </div>
-                    <!-- <div style="margin-left:10px;">
+                    <div style="margin-left:10px;">
                       <mat-menu  #remainder="matMenu">
-                        <button mat-menu-item>  <mat-icon>keyboard_backspace</mat-icon>Remainder:</button>
+                        <button mat-menu-item>Remainder:</button>
                         <button mat-menu-item (click)="today(n)">Later today <span  class="align">08:00 PM</span></button>
                         <button mat-menu-item (click)="tomorrow(n)">Tomorrow <span  class="align">08:00 PM</span></button>
                         <button mat-menu-item (click)="nextWeek(n)">Next week Mon, <span  class="align2">08:00 PM</span></button>
-                       </mat-menu>
-                    </div> -->
+                        <button mat-menu-item (click)="nextWeek(n)">Work <span  class="align">Govandi</span></button>
+                        <button mat-menu-item (click)="nextWeek(n)"><mat-icon>query_builder</mat-icon> Select date and Time</button>
+                        <button mat-menu-item (click)="nextWeek(n)"><mat-icon>room</mat-icon> Select Place</button>
+                      </mat-menu>
+                    </div>
                     
                     <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
 
@@ -69,7 +63,6 @@
                     </mat-menu>
 
         <mat-icon matTooltip="Add Image" class="margin">insert_photo</mat-icon>
-       
         <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
 
         <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>

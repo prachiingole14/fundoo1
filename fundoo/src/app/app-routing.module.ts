@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './component/login/login.component';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { RegistrationComponent } from './component/registration/registration.component';
-import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { DashboardComponent } from './component/dashboard1/dashboard.component';
 import { NotesComponent } from './component/notes/notes.component';
 import { from } from 'rxjs';
 import { ReminderComponent } from './component/reminder/reminder.component';
@@ -25,7 +25,7 @@ const routes: Routes = [
     },
 
     {
-      path: 'dashboard',
+      path: 'dashboard1',
       component : DashboardComponent,
 
       children: [
@@ -41,11 +41,9 @@ const routes: Routes = [
        
       ]
     },
-
-    // {
-    //   path: 'notes',
-    //   component : NotesComponent,
-    // }
+    {
+      path: 'dashboard',
+      component : DashboardComponent}
   
 ];
 

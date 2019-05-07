@@ -14,7 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AppMaterialModule } from './app.material.module';
 import { RegisterService } from './service/register.service';
-import { DashboardComponent } from "./component/dashboard/dashboard.component";
+import { DashboardComponent } from "./component/dashboard1/dashboard.component";
 import { NotesComponent } from './component/notes/notes.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ReminderComponent } from './component/reminder/reminder.component';

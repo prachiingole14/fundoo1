@@ -17,9 +17,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
-    declarations: [
-     
-    ],
+    declarations: [],
   
     imports: [
       MatCardModule,
@@ -58,7 +56,6 @@ import {MatInputModule} from '@angular/material/input';
     ],
   
     providers: [],
-  
     bootstrap: []
 
   })
