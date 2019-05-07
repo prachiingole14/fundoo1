@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NotesService } from 'src/app/service/Notes.service';
 import { Validators, FormControl } from '@angular/forms';
 
+
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',

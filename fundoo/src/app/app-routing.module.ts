@@ -6,6 +6,7 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { NotesComponent } from './component/notes/notes.component';
 import { from } from 'rxjs';
+import { ReminderComponent } from './component/reminder/reminder.component';
 
 const routes: Routes = [
     {
@@ -31,6 +32,11 @@ const routes: Routes = [
         {
           path: 'notes',
           component : NotesComponent,
+        },
+
+        {
+          path: 'reminder',
+          component : ReminderComponent,
         },
        
       ]

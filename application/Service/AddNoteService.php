@@ -2,11 +2,11 @@
 
     class AddNoteService extends CI_Controller
     {
-        
+        private $noteService = "";
         public function __construct()
         {
             parent::__construct();
-           $this->load->controllers(NotesController());
+            $this->load->controllers(NotesController());
         }
 
         public function AddNotes()
@@ -15,7 +15,7 @@
                         "description" => $description,
                         "color" => $color, 
                         "image" => $image);
-
+                        
             $query= $this->db->query("INSERT INTO notes(`title`,`description`,`color`,`image`) VALUE('$title','$description','$color','$image')");
             print_r($query);
         }

@@ -1,18 +1,17 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
     include "/var/www/html/CodeIgniter-3.1.10/application/Service/AddNoteService.php";
-    //include "/var/www/html/CodeIgniter-3.1.10/application/models/NoteModel.php";
+    
 
     class NotesController extends CI_Controller
     {
+
+        private $AddNoteService = " ";
         public function __construct()
         {
             parent::__construct();
             $this->load->database();
-           // $this->noteModel= new NoteModel();
             $this->addnote = new AddNoteService();
-            //$this->noteModel= new NoteModel();
-          
         }
 
         public function addNotes()
