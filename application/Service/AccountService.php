@@ -9,7 +9,7 @@
         public function __construct()
         {
             parent::__construct();
-            $this->load->controller(AccountController());
+            $this->load->controllers(AccountController());
         }
 
         public function Registration($firstName, $address,$contact, $email, $password, $confirmpassword)

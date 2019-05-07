@@ -14,7 +14,7 @@ import { MatSidenavModule,MatListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
     declarations: [
@@ -35,7 +35,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
       MatListModule,
       BrowserAnimationsModule,
       NoopAnimationsModule,
-      MatDatepickerModule
+      MatDatepickerModule,
+      MatInputModule
     ],
 
     exports:[
@@ -52,19 +53,14 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
       MatListModule,
       BrowserAnimationsModule,
       NoopAnimationsModule,
-      MatDatepickerModule
+      MatDatepickerModule,
+      MatInputModule
     ],
   
     providers: [],
   
     bootstrap: []
 
-  
-  
   })
 
-  export class AppMaterialModule {
-    
-  }
-  //export class ButtonToggleOverviewExample {}
-  
+  export class AppMaterialModule {}

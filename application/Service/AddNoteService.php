@@ -6,7 +6,7 @@
         public function __construct()
         {
             parent::__construct();
-            $this->load->controllers(NotesController());
+            $this->load->NotesController->addNotes();
         }
 
         public function AddNotes()

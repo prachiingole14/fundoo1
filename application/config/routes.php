@@ -59,7 +59,7 @@ $route['ResetPassword'] = 'AccountController/ResetPassword';
 $route['showregistered'] = 'AccountController/showregistered';
 
 //notes routing
-$route['addNotes'] = 'notesController/addNotes';
+$route['addnote'] = 'notesController/addnote';
 $route['demo'] = 'NotesController/demo';
 
 $route['404_override'] = '';

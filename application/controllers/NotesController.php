@@ -1,7 +1,9 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
     include "/var/www/html/CodeIgniter-3.1.10/application/Service/AddNoteService.php";
-    
+    header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: Authorization");
+
 
     class NotesController extends CI_Controller
     {
@@ -11,17 +13,18 @@
         {
             parent::__construct();
             $this->load->database();
-            $this->addnote = new AddNoteService();
+            $this->addnoteservice = new AddNoteService();
         }
 
-        public function addNotes()
+        public function addnote()
         {
             $title = $_POST['title'];
             $description = $_POST['description'];
             $color = $_POST['color'];
             $image = $_POST['image'];
 
-            $res = $this->addnote->AddNotes($title, $description, $color ,$image);
+            $res = $this->addnoteservice->AddNotes($title, $description, $color ,$image);
+            return $res;
         }
 
         public function demo()
