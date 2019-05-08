@@ -22,6 +22,8 @@ export class ReminderComponent implements OnInit
   title=new FormControl(' ',[Validators.required,Validators.minLength(5), Validators.maxLength(30)]);
   description=new FormControl(' ',[Validators.required, Validators.minLength(10), Validators.maxLength(50)]);
 
+
+
   titleError()
   {
     return this.title.hasError('required')?'':'It must be required in character format and size should be greater than 5 and less than 30 '

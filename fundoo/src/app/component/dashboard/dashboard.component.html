@@ -147,7 +147,7 @@ lass="searchs"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
         [opened]="!(isHandset$ | async)" >
-      <mat-toolbar > 
+      <mat-toolbar> 
         <mat-icon matTooltip="Main-Menu"  (click)="flag=true" *ngIf=!flag style="color: gray;">dehaze</mat-icon> 
 
         <span class="f">F</span>

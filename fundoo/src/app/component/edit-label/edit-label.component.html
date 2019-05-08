@@ -3,8 +3,8 @@
   <mat-icon class="icon">add</mat-icon>
     <!-- <div  *ngIf="flag==true">    -->
     <div>
-      <input class="input" class="font" matInput placeholder="Create new Label">
-      
+      <input class="input" class="font" matInput placeholder="Create new Label" [formControl]="lable_name" required>
+      <mat-error *ngIf="lable_name.dirty">{{lableError()}}</mat-error>
     </div><mat-icon class="icon">check</mat-icon>
     <!-- <div  *ngIf="flag==true">
        <input class="input" matInput placeholder="Create new Label">
