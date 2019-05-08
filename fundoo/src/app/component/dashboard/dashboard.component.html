@@ -142,11 +142,6 @@ lass="searchs"
 
 
 
-
-
-
-
-
 <mat-sidenav-container class="sidenav-container" >
     <mat-sidenav #drawer class="sidenav" fixedInViewport="flase"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -171,7 +166,7 @@ lass="searchs"
           <span>  Reminders</span></a> 
 
           <mat-divider></mat-divider>
-             <span class="labels">LABELS</span> 
+             <div class="labels"><h6>LABELS</h6></div> 
              <a mat-list-item  (click)="openDialog()">
               <mat-icon>create</mat-icon>
               <span> Edit Label</span>

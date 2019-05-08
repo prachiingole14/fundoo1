@@ -37,7 +37,6 @@ export class NotesComponent implements OnInit
 
 
     }
-    
 
     ChangeColor(color)
     {

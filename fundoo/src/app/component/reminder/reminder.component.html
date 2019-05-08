@@ -1,86 +1,102 @@
 <mat-card class="flex" [style.backgroundColor]='color'>
-    <div *ngIf='flag==false' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
+    <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
+       
         <mat-form-field style="width:80%;">
-            <input matInput placeholder="Title"  [formControl]="title" required pattern="(a-zA-Z)">
-            <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
+          <input matInput placeholder="Title"  [formControl]="title" required pattern="(a-zA-Z)">
+          <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
         </mat-form-field>
+
+        <div appearance="outline" class="formfield" fxLayout='row'>
+            <mat-icon matTooltip="New List" class="add-box">add_box</mat-icon>
+            <mat-icon matTooltip="New List with drawing" class="margin">brush</mat-icon>
+            <mat-icon matTooltip="New List with image" class="margin">insert_photo</mat-icon>
+        </div>
+
     </div>
 
-    <div>
-            <!-- <mat-form-f-ield [ngStyle.background]=color appearance="outline"  class="formfield"> -->
-            <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
-              <!-- <mat-label>Title : </mat-label> -->
-           
-                <mat-form-field>
-                    <input matInput placeholder="Take a Note...."  [formControl]="description" pattern="(a-zA-Z)"required>
-                    <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
-                </mat-form-field>
+    <div *ngIf="flag==false"  >
+      <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
+        <div>
+          <mat-form-field style="width:70%;">
+            <input matInput placeholder="Title" [formControl]="title" pattern="(a-zA-Z)" required>
+            <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field>
+            <input matInput placeholder="Take a Note...."  [formControl]="description" pattern="(a-zA-Z)"required>
+                <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
+        </mat-form-field>
+
+        <div  fxLayout='row' fxLayoutAlign="start end" >
+            <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
+              <div style="margin-left:10px;">
+                <mat-menu *ngIf='flag==false' #remainder="matMenu">
+                  <mat-icon class="back-icon">keyboard_backspace</mat-icon>
+                    <span class="font">Select Date and Time</span>
+                  </mat-menu> 
+              </div>
+                    
+              <div style="margin-left:10px;">
+                <mat-menu  #remainder="matMenu">
+                  <button mat-menu-item>Remainder:</button>
+                  <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
+                  <button mat-menu-item>Tomorrow <span  class="align">08:00 PM</span></button>
+                  <button mat-menu-item>Next week Mon, <span  class="align2">08:00 PM</span></button>
+                  <button mat-menu-item>Work <span  class="gov">Govandi</span></button>
+                  <button mat-menu-item><mat-icon>query_builder</mat-icon> Select date and Time</button>
+                  <button mat-menu-item><mat-icon>room</mat-icon> Select Place</button>
+                </mat-menu>
+              </div>
+                    
+              <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
+
+              <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
+                <mat-menu #color="matMenu">
+
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <button matTooltip="red" mat-mini-fab class="fab" style="background-color: brown" (click)="ChangeColor('brown')"></button>
+                    <button matTooltip="pink" mat-mini-fab class="fab" style="background-color:#E91E63"  (click)="ChangeColor('#E91E63')"></button>
+                    <button matTooltip="purpul" mat-mini-fab class="fab" style="background-color:#E040FB"  (click)="ChangeColor('#E040FB ')"></button>
+                    <button matTooltip="deep-purpul" mat-mini-fab class="fab" style="background-color:#673AB7"  (click)="ChangeColor('#673AB7')"></button>
+                  </div>
+
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <button matTooltip="orange" mat-mini-fab class="fab" style="background-color:#FF9800" (click)="ChangeColor('#FF9800')"></button>
+                    <button matTooltip="yellow" mat-mini-fab class="fab" style="background-color:#FFEB3B" (click)="ChangeColor('#FFEB3B')"></button>
+                    <button matTooltip="blue" mat-mini-fab class="fab" style="background-color:#2196F3"  (click)="ChangeColor('#2196F3')"></button>
+                    <button matTooltip="cyan" mat-mini-fab class="fab" style="background-color:#18FFFF"  (click)="ChangeColor('#18FFFF')"></button>
+                  </div>
+
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <button matTooltip="teal" mat-mini-fab class="fab" style="background-color:#009688" (click)="ChangeColor('#009688')"></button>
+                    <button matTooltip="green" mat-mini-fab class="fab" style="background-color:#8BC34A"  (click)="ChangeColor('#8BC34A')"></button>
+                    <button matTooltip="deep-orange" mat-mini-fab class="fab" style="background-color:#FF5722"  (click)="ChangeColor('#FF5722')"></button>
+                    <button matTooltip="lime" mat-mini-fab class="fab" style="background-color:#CDDC39" (click)="ChangeColor('#CDDC39')"></button>
+                  </div>    
+                </mat-menu>
+
+              <mat-icon matTooltip="Add Image" class="margin">insert_photo</mat-icon>
+              <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
+
+              <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
               
-                <div  fxLayout='row' fxLayoutAlign="start end" >
-                  <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
-                    <div style="margin-left:10px;">
-                      <mat-menu *ngIf='flag==true' #remainder="matMenu">
-                        <mat-icon class="back-icon">keyboard_backspace</mat-icon>
-                        <span class="font">Select Date and Time</span>
-                        </mat-menu> 
-                    </div>
-                    
-                    <div style="margin-left:10px;">
-                      <mat-menu  #remainder="matMenu">
-                        <button mat-menu-item>Remainder:</button>
-                        <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
-                        <button mat-menu-item>Tomorrow <span  class="align">08:00 PM</span></button>
-                        <button mat-menu-item>Next week Mon, <span  class="align2">08:00 PM</span></button>
-                        <button mat-menu-item>Work <span  class="gov">Govandi</span></button>
-                        <button mat-menu-item><mat-icon>query_builder</mat-icon> Select date and Time</button>
-                        <button mat-menu-item><mat-icon>room</mat-icon> Select Place</button>
-                      </mat-menu>
-                    </div>
-                    
-                    <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <span>Add Label</span>
+                </button>
 
-                    <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
-                      <mat-menu #color="matMenu">
-                        <div fxLayout="row" fxLayoutAlign="center center">
-                          <button matTooltip="red" mat-mini-fab class="fab" style="background-color: brown" (click)="ChangeColor('brown')"></button>
-                          <button matTooltip="pink" mat-mini-fab class="fab" style="background-color:#E91E63"  (click)="ChangeColor('#E91E63')"></button>
-                          <button matTooltip="purpul" mat-mini-fab class="fab" style="background-color:#E040FB"  (click)="ChangeColor('#E040FB ')"></button>
-                          <button matTooltip="deep-purpul" mat-mini-fab class="fab" style="background-color:#673AB7"  (click)="ChangeColor('#673AB7')"></button>
-                        </div>
+                <button mat-menu-item>
+                  <span>Add drawing</span>
+                </button>
 
-                        <div fxLayout="row" fxLayoutAlign="center center">
-                          <button matTooltip="orange" mat-mini-fab class="fab" style="background-color:#FF9800" (click)="ChangeColor('#FF9800')"></button>
-                          <button matTooltip="yellow" mat-mini-fab class="fab" style="background-color:#FFEB3B" (click)="ChangeColor('#FFEB3B')"></button>
-                          <button matTooltip="blue" mat-mini-fab class="fab" style="background-color:#2196F3"  (click)="ChangeColor('#2196F3')"></button>
-                          <button matTooltip="cyan" mat-mini-fab class="fab" style="background-color:#18FFFF"  (click)="ChangeColor('#18FFFF')"></button>
-                        </div>
-                          
-                        <div fxLayout="row" fxLayoutAlign="center center">
-                          <button matTooltip="teal" mat-mini-fab class="fab" style="background-color:#009688" (click)="ChangeColor('#009688')"></button>
-                          <button matTooltip="green" mat-mini-fab class="fab" style="background-color:#8BC34A"  (click)="ChangeColor('#8BC34A')"></button>
-                          <button matTooltip="deep-orange" mat-mini-fab class="fab" style="background-color:#FF5722"  (click)="ChangeColor('#FF5722')"></button>
-                          <button matTooltip="lime" mat-mini-fab class="fab" style="background-color:#CDDC39" (click)="ChangeColor('#CDDC39')"></button>
-                        </div>
-                    </mat-menu>
+                <button mat-menu-item>
+                  <span>Show tick </span>
+                </button>
+              </mat-menu>
 
-        <mat-icon matTooltip="Add Image" class="margin">insert_photo</mat-icon>
-        <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
-
-        <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>
-            <span>Add Label</span>
-          </button>
-
-          <button mat-menu-item>
-            <span>Add drawing</span>
-          </button>
-
-          <button mat-menu-item>
-            <span>Show tick </span>
-          </button>
-        </mat-menu>
         <button mat-button (click)='reverse()' matTooltip="Close" class="close-btn">Close</button>
+
       </div>
     </div>
   </div>

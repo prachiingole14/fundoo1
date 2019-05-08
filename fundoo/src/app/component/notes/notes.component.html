@@ -11,11 +11,12 @@
         <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
       </mat-form-field>
 
-    <div appearance="outline" class="formfield" fxLayout='row'>
-      <mat-icon matTooltip="New List" class="add-box">add_box</mat-icon>
-      <mat-icon matTooltip="New List with drawing" class="margin">brush</mat-icon>
-      <mat-icon matTooltip="New List with image" class="margin">insert_photo</mat-icon>
-    </div>
+      <div appearance="outline" class="formfield" fxLayout='row'>
+        <mat-icon matTooltip="New List" class="add-box">add_box</mat-icon>
+        <mat-icon matTooltip="New List with drawing" class="margin">brush</mat-icon>
+        <mat-icon matTooltip="New List with image" class="margin">insert_photo</mat-icon>
+      </div>
+
   </div>
 
   <div *ngIf="flag==false"  >
@@ -40,7 +41,7 @@
               <button mat-menu-item>Remainder:</button>
               <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
               <button mat-menu-item>Tomorrow <span  class="align">08:00 PM</span></button>
-              <button mat-menu-item>Next week Mon, <span  class="align2">08:00 PM</span></button>
+              <button mat-menu-item>Next week Mon<span  class="align2">08:00 PM</span></button>
               <button mat-menu-item>Work <span  class="gov">Govandi</span></button>
               <button mat-menu-item><mat-icon>query_builder</mat-icon> Select date and Time</button>
               <button mat-menu-item><mat-icon>room</mat-icon> Select Place</button>
@@ -81,6 +82,7 @@
         <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
 
         <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+
         <mat-menu #menu="matMenu">
           <button mat-menu-item>
             <span>Add Label</span>
@@ -93,8 +95,11 @@
           <button mat-menu-item>
             <span>Show tick </span>
           </button>
+
         </mat-menu>
+
         <button mat-button (click)='reverse()' matTooltip="Close" class="close-btn">Close</button>
+        
       </div>
     </div>
   </div>
