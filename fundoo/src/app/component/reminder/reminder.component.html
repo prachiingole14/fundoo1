@@ -1,5 +1,5 @@
 <mat-card class="flex" [style.backgroundColor]='color'>
-    <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
+    <div *ngIf='flag==false' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
         <mat-form-field style="width:80%;">
             <input matInput placeholder="Title"  [formControl]="title" required pattern="(a-zA-Z)">
             <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
@@ -24,15 +24,16 @@
                         <span class="font">Select Date and Time</span>
                         </mat-menu> 
                     </div>
+                    
                     <div style="margin-left:10px;">
                       <mat-menu  #remainder="matMenu">
                         <button mat-menu-item>Remainder:</button>
-                        <button mat-menu-item (click)="today(n)">Later today <span  class="align">08:00 PM</span></button>
-                        <button mat-menu-item (click)="tomorrow(n)">Tomorrow <span  class="align">08:00 PM</span></button>
-                        <button mat-menu-item (click)="nextWeek(n)">Next week Mon, <span  class="align2">08:00 PM</span></button>
-                        <button mat-menu-item (click)="nextWeek(n)">Work <span  class="align">Govandi</span></button>
-                        <button mat-menu-item (click)="nextWeek(n)"><mat-icon>query_builder</mat-icon> Select date and Time</button>
-                        <button mat-menu-item (click)="nextWeek(n)"><mat-icon>room</mat-icon> Select Place</button>
+                        <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
+                        <button mat-menu-item>Tomorrow <span  class="align">08:00 PM</span></button>
+                        <button mat-menu-item>Next week Mon, <span  class="align2">08:00 PM</span></button>
+                        <button mat-menu-item>Work <span  class="gov">Govandi</span></button>
+                        <button mat-menu-item><mat-icon>query_builder</mat-icon> Select date and Time</button>
+                        <button mat-menu-item><mat-icon>room</mat-icon> Select Place</button>
                       </mat-menu>
                     </div>
                     
@@ -84,3 +85,5 @@
     </div>
   </div>
 </mat-card>   
+
+

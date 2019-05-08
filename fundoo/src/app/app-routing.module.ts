@@ -3,10 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './component/login/login.component';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { RegistrationComponent } from './component/registration/registration.component';
-import { DashboardComponent } from './component/dashboard1/dashboard.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { NotesComponent } from './component/notes/notes.component';
 import { from } from 'rxjs';
 import { ReminderComponent } from './component/reminder/reminder.component';
+import { EditLabelComponent } from './component/edit-label/edit-label.component';
+import { ArchiveComponent } from './component/archive/archive.component';
+import { TrashComponent } from './component/trash/trash.component';
 
 const routes: Routes = [
     {
@@ -25,7 +28,7 @@ const routes: Routes = [
     },
 
     {
-      path: 'dashboard1',
+      path: 'dashboard',
       component : DashboardComponent,
 
       children: [
@@ -38,12 +41,26 @@ const routes: Routes = [
           path: 'reminder',
           component : ReminderComponent,
         },
+
+        {
+          path: 'edit-label',
+          component : EditLabelComponent,
+        },
+
+        {
+          path: 'archive',
+          component : ArchiveComponent,
+        },
+
+
+        {
+          path: 'trash',
+          component : TrashComponent,
+        }
        
       ]
     },
-    {
-      path: 'dashboard',
-      component : DashboardComponent}
+
   
 ];
 

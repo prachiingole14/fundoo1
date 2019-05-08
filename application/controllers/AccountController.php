@@ -9,7 +9,7 @@
         {
             parent::__construct();
             $this->load->database();
-           $this->AccModel=new AccountModel();
+            $this->AccModel=new AccountModel();
             $this->AccService = new AccountService();
             $this->AccModel= new AccountModel();
         }
@@ -37,7 +37,7 @@
 
             $res = $this->AccService->Registration($firstName, $address, $contact_no ,$email_id, $password, $confirmpassword);
 
-            //$query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$name','$address','$contact_no','$email_id','$password','$confirm_password')");
+           //$query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$name','$address','$contact_no','$email_id','$password','$confirm_password')");
        }
 
     //    public function resetPassword()

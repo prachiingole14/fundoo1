@@ -1,6 +1,6 @@
 <?php
 
-    class AddNoteService extends CI_Controller
+    class NoteService extends CI_Controller
     {
         private $noteService = "";
         public function __construct()
@@ -9,7 +9,7 @@
             $this->load->NotesController->addNotes();
         }
 
-        public function AddNotes()
+        public function AddNotes($title, $description, $color ,$image)
         {
             $data = array("title" => $title,
                         "description" => $description,

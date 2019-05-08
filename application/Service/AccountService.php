@@ -9,29 +9,29 @@
         public function __construct()
         {
             parent::__construct();
-            $this->load->controllers(AccountController());
+            $this->load->database();
+            $this->controller->AccountController();
+        
         }
 
         public function Registration($firstName, $address,$contact, $email, $password, $confirmpassword)
         {
-            
-                $data = array("name" => $firstName,
+            $data = array("name" => $firstName,
                         "address" => $address,
                         "contact_no" => $contact, 
                         "email_id" => $email,
                         "password" => $password,
                         "confirm_password" => $confirmpassword);
 
-                // $this->firstName  = $data['firstName'];
-                // $this->address = $data['address'];
-                // $this->contact_no = $data['contact_no'];
-                // $this->email_id = $data['email_id'];
-                // $this->password = $data['password'];
-                // $this->confirmpassword = $data['confirmpassword'];
+            // $this->firstName  = $data['firstName'];
+            // $this->address = $data['address'];
+            // $this->contact_no = $data['contact_no'];
+            // $this->email_id = $data['email_id'];
+            // $this->password = $data['password'];
+            // $this->confirmpassword = $data['confirmpassword'];
                 
-                $query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$firstName','$address','$contact','$email','$password','$confirmpassword')");
-                print_r($query);
-            
+            $query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$firstName','$address','$contact','$email','$password','$confirmpassword')");
+            print_r($query);
         }
 
         public function getlogin($email,$password)
@@ -51,8 +51,7 @@
                 $data = array(
                     "firstname" => $firstname,
                     "email" => $email,
-                    "id" => $id
-                );
+                    "id" => $id);
 
                 $token = JWT::encode($data, $secret_key);
 
@@ -128,11 +127,9 @@
         //         $data = array("email" => $email,
         //                         "password" => $password,
         //                         "newpassword" => $newpassword);
-
         //         $this->email = $data['email'];
         //         $this->password = $data['$password'];
         //         $this->newpassword = $data['$newpassword'];
-
         //         $query = $this->db->query("UPDATE Registration SET newpassword = 'password' where email_id='$email'");
         //         print_r($query);
         //     }
