@@ -42,14 +42,14 @@
         public function editcolor()
         {
             $color = $_POST['color'];
-            $id = $_POST['id'];
+            $id = $_POST['note_id'];
             $result= $this->noteservice->changeColor($color,$id);
             return $result;
         }
 
         public function DisplayNotes()
         {
-            $id = $_POST['id'];
+            $id = $_POST['note_id'];
 
             $result = $this->noteservice->showdata($id);
             return $result;
