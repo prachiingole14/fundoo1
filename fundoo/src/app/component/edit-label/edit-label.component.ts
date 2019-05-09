@@ -22,6 +22,5 @@ export class EditLabelComponent implements OnInit {
   lableError()
   {
     return this.lable_name.hasError('required')?'':'It must be required in character format and size should be greater than 10 and less than 50  '
-
   }
 }
