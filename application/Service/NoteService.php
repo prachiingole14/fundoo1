@@ -11,6 +11,8 @@
            //$this->controllers->NotesController();
         }
 
+
+
         public function AddNotes($title, $description, $color ,$image)
         {
             $data = array('title' => $title,
@@ -24,19 +26,67 @@
             return $res;
         }
 
+
+        public function deleteNote($title, $description, $color ,$image)
+        {
+            $data = array('id' => $id);
+
+            $query = "DELETE FROM notes where id='$id'";
+            $stmt = $this->db->conn_id->prepare($query);
+            $res = $stmt->execute($data);
+            print_r($res);
+
+            if($res)
+            {
+                print("success");
+            }
+
+            else
+            {
+                print("failed");
+            }
+            return $res; 
+        }
+
+
+    
+
         public function changeColor($color,$id)
         {
             $data=array('id' => $id,
                         'color' => $color );
 
-            $query = "UPDATE notes SET color = '$color' where $id";
+            $query = "UPDATE notes SET color = '$color' where $id = '$id'";
             $stmt = $this->db->conn_id->prepare($query);
             $res = $stmt->execute($data);
             if($res)
             {
                 print("success");
             }
-            else{
+            else
+            {
+                print("failed");
+            }
+            return $res;
+        }
+
+
+
+        public function showdata($id)
+        {
+            $data = array('id' => $id);
+
+            $query = "SELECT * FROM notes where id='$id'";
+            $stmt = $this->db->conn_id->prepare($query);
+            $res = $stmt->execute($data);
+            print_r($res);
+
+            if($res)
+            {
+                print("success");
+            }
+            else
+            {
                 print("failed");
             }
             return $res;

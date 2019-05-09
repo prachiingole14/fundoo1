@@ -21,6 +21,7 @@ import { ReminderComponent } from './component/reminder/reminder.component';
 import { EditLabelComponent } from './component/edit-label/edit-label.component';
 import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component';
+import { SettingComponent } from './component/setting/setting.component';
 
 
 
@@ -40,7 +41,8 @@ import { TrashComponent } from './component/trash/trash.component';
     ReminderComponent,
     EditLabelComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    SettingComponent
   
   ],
 

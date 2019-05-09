@@ -10,6 +10,7 @@ import { ReminderComponent } from './component/reminder/reminder.component';
 import { EditLabelComponent } from './component/edit-label/edit-label.component';
 import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component';
+import { SettingComponent } from './component/setting/setting.component';
 
 const routes: Routes = [
     {
@@ -56,7 +57,12 @@ const routes: Routes = [
         {
           path: 'trash',
           component : TrashComponent,
-        }
+        },
+
+        {
+          path: 'setting',
+          component : SettingComponent,
+        },
        
       ]
     },

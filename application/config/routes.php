@@ -64,8 +64,8 @@ $route['showregistered'] = 'AccountController/showregistered';
 $route['addnote'] = 'NotesController/addnote';
 $route['demo'] = 'NotesController/demo';
 $route['editcolor'] = 'NotesController/editcolor';
-
-
+$route['DisplayNotes'] = 'NotesController/DisplayNotes';
+$route['deletenote'] = 'NotesController/deletenote';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

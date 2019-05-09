@@ -25,11 +25,33 @@
             return $result;
         }
 
+        public function deletenote()
+        {
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            $color = $_POST['color'];
+            $image = $_POST['image'];
+
+            $result = $this->noteservice->deleteNote($title, $description, $color ,$image);
+            return $result;
+        }
+
+
+
+
         public function editcolor()
         {
             $color = $_POST['color'];
             $id = $_POST['id'];
             $result= $this->noteservice->changeColor($color,$id);
+            return $result;
+        }
+
+        public function DisplayNotes()
+        {
+            $id = $_POST['id'];
+
+            $result = $this->noteservice->showdata($id);
             return $result;
         }
     }    

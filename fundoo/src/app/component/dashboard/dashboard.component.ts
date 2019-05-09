@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { EditLabelComponent } from '../edit-label/edit-label.component';
 import { MatDialog } from '@angular/material';
+import { SettingComponent } from '../setting/setting.component';
 
 
 @Component({
@@ -19,6 +20,11 @@ export class DashboardComponent implements OnInit
   openDialog()
   {
      this.dialog.open(EditLabelComponent)
+  }
+
+  opensettingDialog()
+  {
+    this.dialog.open(SettingComponent)
   }
 
 }
