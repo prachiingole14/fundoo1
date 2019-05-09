@@ -19,10 +19,16 @@ export class NotesComponent implements OnInit
     model: any = {};
 
     title=new FormControl(' ',[Validators.required,Validators.minLength(5), Validators.maxLength(30)]);
-    description=new FormControl(' ',[Validators.required, Validators.minLength(10), Validators.maxLength(50)]);
+    description=new FormControl(' ',[Validators.required, Validators.minLength(7), Validators.maxLength(50)]);
 
-    onSubmit()
+    reverse()
     {
+      if(this.title.value != '' && this.description.value != '')
+      {
+        this.flag = !this.flag
+      }
+    
+
       this.model={
         "title":this.title.value,
         "description":this.description.value,
@@ -30,6 +36,7 @@ export class NotesComponent implements OnInit
         "image":this.image.value
       }
 
+     
       let status= this.s_notes.addNotes(this.model)
       status.subscribe(res=>{
         console.log(res);
@@ -44,10 +51,10 @@ export class NotesComponent implements OnInit
       console.log(this.color,"change color");
     }
 
-    reverse()
-    {
-      this.flag = !this.flag
-    }
+    // reverse()
+    // {
+    //   this.flag = !this.flag
+    // }
 
   titleError()
   {
@@ -56,6 +63,6 @@ export class NotesComponent implements OnInit
 
   descriptionError()
   {
-    return this.description.hasError('required')?'':'It must be required in character format and size should be greater than 10 and less than 50  '
+    return this.description.hasError('required')?'':'It must be required in character format and size should be greater than 7 and less than 50  '
   }
 }

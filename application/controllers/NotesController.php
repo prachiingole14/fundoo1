@@ -25,9 +25,12 @@
             return $result;
         }
 
-        public function demo()
+        public function editcolor()
         {
-            echo "hiiiiii";
+            $color = $_POST['color'];
+            $id = $_POST['id'];
+            $result= $this->noteservice->changeColor($color,$id);
+            return $result;
         }
     }    
 

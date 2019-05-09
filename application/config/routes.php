@@ -58,9 +58,14 @@ $route['login'] = 'AccountController/login';
 $route['ResetPassword'] = 'AccountController/ResetPassword';
 $route['showregistered'] = 'AccountController/showregistered';
 
+
+
 //notes routing
 $route['addnote'] = 'NotesController/addnote';
 $route['demo'] = 'NotesController/demo';
+$route['editcolor'] = 'NotesController/editcolor';
+
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

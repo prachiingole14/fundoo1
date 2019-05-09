@@ -23,5 +23,23 @@
             $res = $stmt->execute($data);
             return $res;
         }
+
+        public function changeColor($color,$id)
+        {
+            $data=array('id' => $id,
+                        'color' => $color );
+
+            $query = "UPDATE notes SET color = '$color' where $id";
+            $stmt = $this->db->conn_id->prepare($query);
+            $res = $stmt->execute($data);
+            if($res)
+            {
+                print("success");
+            }
+            else{
+                print("failed");
+            }
+            return $res;
+        }
     }     
 ?>
