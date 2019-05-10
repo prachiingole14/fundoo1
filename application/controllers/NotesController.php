@@ -36,9 +36,6 @@
             return $result;
         }
 
-
-
-
         public function editcolor()
         {
             $color = $_POST['color'];

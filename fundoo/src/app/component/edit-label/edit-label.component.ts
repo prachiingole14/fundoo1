@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Validators, FormControl } from '@angular/forms';
+import { RegisterService } from 'src/app/service/register.service';
+
+
+const newLocal = 'This field is empty';
+
 
 @Component({
   selector: 'app-edit-label',
@@ -9,12 +13,11 @@ import { Validators, FormControl } from '@angular/forms';
 })
 export class EditLabelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private s_register:RegisterService) { }
 
   flag="true";
   ngOnInit() 
-  {
-  }
+  {}
 
 
   lable_name=new FormControl(' ',[Validators.required,Validators.minLength(5), Validators.maxLength(30)]);
@@ -23,4 +26,5 @@ export class EditLabelComponent implements OnInit {
   {
     return this.lable_name.hasError('required')?'':'It must be required in character format and size should be greater than 10 and less than 50  '
   }
+
 }

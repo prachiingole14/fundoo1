@@ -24,16 +24,15 @@ export class NotesService
     takeNotes.append("color", notes.color);
     takeNotes.append("image", notes.image);
  
-    return this.http.post(this.serviceurl.host + this.serviceurl.register, takeNotes);
+    return this.http.post(this.serviceurl.host + this.serviceurl.addNotes , takeNotes);
   }
-
 
 
   displayNote(data)
   {
    
     let displayNote = new FormData();
-    return this.http.post(this.serviceurl.host+this.serviceurl.notes,displayNote);
+    return this.http.post(this.serviceurl.host + this.serviceurl.notes,displayNote);
   }
 
   changeColor(color,string)
