@@ -1,9 +1,42 @@
-<div  fxLayout="row">
-  <h3>Setting</h3>
 
-  <div>Notes and Lists</div>
-  <div fxLayout="row">
-    <span>Add new item to the bottom</span>
-      <mat-checkbox></mat-checkbox>
-  </div>
+<div class="head">
+  <div fxLayout="row" fxLayoutAlign="center center" class="set">Settings</div>
+  <div class="text-color">Notes and lists</div>
+
+    <div  class="text">Add new items to bottom
+      <mat-checkbox class="check"></mat-checkbox>
+    </div>
+
+    <div  class="text">Move ticked item bottom
+        <mat-checkbox class="check"></mat-checkbox>
+    </div>
+
+    <div  class="text">Display rich link previews
+        <mat-checkbox class="check"></mat-checkbox>
+    </div>
+
+  <div class="text-color">Reminder defaults</div>
+    
+    <div  fxLayout="row" class="text">Morning
+      <input matInput placeholder="Morning" value="08:00" class="input" required>
+    </div>
+
+    <div  fxLayout="row" class="text">Afternoon
+      <input matInput placeholder="Afternoon" value="13:00" class="input2" required>
+    </div>
+
+    <div  fxLayout="row" class="text">Evening
+      <input matInput placeholder="Evening" value="18:00" class="input" required>
+    </div>
+
+    <div class="text-color">Sharing</div>
+
+    <div  class="text">Enble sharing
+        <mat-checkbox class="check2"></mat-checkbox>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="end center" >
+        <button mat-button  class="btn1"  mat-dialog-close="true">Cancel</button>
+        <button mat-button  class="btn2"   mat-dialog-close="true">Save</button>
+    </div>
 </div>

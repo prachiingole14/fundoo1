@@ -1,0 +1,36 @@
+<!-- <div fxlayout="row" class="top">
+  <mat-card class="send-feedback-text">Send Feedback</mat-card>
+  <mat-form-field>
+    <textarea placeholder="Describe your issues and share your ideas.." class="textarea" required></textarea>
+  </mat-form-field>
+  <mat-card>
+      <mat-checkbox></mat-checkbox> include screenshots
+  </mat-card>
+
+</div> -->
+
+<mat-card class="example-card">
+  <mat-card-header style="background-color:rgb(51, 77, 77);">
+    <mat-card-title  class="send-feedback-text">Send Feedback</mat-card-title>
+  </mat-card-header>
+  
+  <textarea placeholder="describe issues and share ideas.." class="textarea"></textarea>
+
+  <mat-divider></mat-divider>
+
+  <img src="/var/www/html/CodeIgniter-3.1.10/fundoo/src/assets/images/Screenshot.png" alt="Photo of a Shiba Inu">
+
+  <mat-divider></mat-divider>
+
+      <p class="mat-card-text">Go to the Legal Help page to request content changes for legal reasons.
+      Some account and system information may be sent to Google. 
+      We will use the information that you give us to help address technical issues 
+      and to improve our services, subject to our Privacy Policy and Terms of Service.</p>
+  
+  <mat-card-actions>
+    <div fxLayout="row" fxLayoutAlign="end center" >
+      <button mat-button  class="btn1"  mat-dialog-close="true">Cancel</button>
+      <button mat-button  class="btn2"  mat-dialog-close="true">Send</button>
+    </div>
+  </mat-card-actions>
+</mat-card>

@@ -2,7 +2,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { EditLabelComponent } from '../edit-label/edit-label.component';
 import { MatDialog } from '@angular/material';
 import { SettingComponent } from '../setting/setting.component';
-
+import { SendfeedbackComponent } from '../sendfeedback/sendfeedback.component';
+import { ShortcutkeysComponent } from '../shortcutkeys/shortcutkeys.component'
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -25,6 +27,16 @@ export class DashboardComponent implements OnInit
   opensettingDialog()
   {
     this.dialog.open(SettingComponent)
+  }
+
+  openfeedbackDialog()
+  {
+    this.dialog.open(SendfeedbackComponent)
+  }
+
+  shortcutkeys()
+  {
+    this.dialog.open(ShortcutkeysComponent)
   }
 
 }

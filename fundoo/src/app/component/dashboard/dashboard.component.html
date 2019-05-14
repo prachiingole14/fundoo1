@@ -141,7 +141,6 @@ lass="searchs"
 
 
 
-
 <mat-sidenav-container class="sidenav-container" >
     <mat-sidenav #drawer class="sidenav" fixedInViewport="flase"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -212,16 +211,16 @@ lass="searchs"
                 <span>Settings</span>
               </button>
 
-              <button mat-menu-item>
+              <button mat-menu-item (click)="openfeedbackDialog()">
                 <span>Send Feedback</span>
               </button>
               <button mat-menu-item>
-                <span>Helps</span>
+                <span><a href="https://support.google.com/keep/#topic=6262468">Helps</a></span>
               </button>
               <button mat-menu-item>
-                  <span>Aapp Downloads</span>
-                </button>
-                <button mat-menu-item>
+                  <span><a href="https://keep.google.com/u/0/#archive">Aapp Downloads</a></span>
+              </button>
+                <button mat-menu-item (click)="shortcutkeys()">
                   <span>Keyboard Shortcuts</span>
                 </button>
             </mat-menu>

@@ -15,7 +15,6 @@ export class EditlableService {
   Editlables(editlable)
   {
     let Editlables = new FormData();
-
     Editlables.append("editlables", editlable.lable_name);
     return this.http.post(this.serviceurl.host + this.serviceurl.editlables, Editlable);
   }

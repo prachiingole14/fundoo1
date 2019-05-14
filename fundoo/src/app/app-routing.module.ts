@@ -11,6 +11,8 @@ import { EditLabelComponent } from './component/edit-label/edit-label.component'
 import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component';
 import { SettingComponent } from './component/setting/setting.component';
+import { SendfeedbackComponent } from './component/sendfeedback/sendfeedback.component';
+import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.component';
 
 const routes: Routes = [
     {
@@ -63,7 +65,16 @@ const routes: Routes = [
           path: 'setting',
           component : SettingComponent,
         },
-       
+        
+        {
+          path: 'sendfeedback',
+          component : SendfeedbackComponent,
+        },
+
+        {
+          path: 'shortcutkeys',
+          component : ShortcutkeysComponent,
+        },
       ]
     },
 

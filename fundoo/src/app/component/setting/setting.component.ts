@@ -9,7 +9,9 @@ export class SettingComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
+
 
 }

@@ -22,6 +22,8 @@ import { EditLabelComponent } from './component/edit-label/edit-label.component'
 import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component';
 import { SettingComponent } from './component/setting/setting.component';
+import { SendfeedbackComponent } from './component/sendfeedback/sendfeedback.component';
+import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.component';
 
 
 
@@ -42,7 +44,9 @@ import { SettingComponent } from './component/setting/setting.component';
     EditLabelComponent,
     ArchiveComponent,
     TrashComponent,
-    SettingComponent
+    SettingComponent,
+    SendfeedbackComponent,
+    ShortcutkeysComponent
   
   ],
 

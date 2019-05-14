@@ -27,7 +27,7 @@
         }
 
 
-        public function deleteNote($title, $description, $color ,$image)
+        public function deleteNote($note_id)
         {
             $data = array('note_id' => $note_id);
 

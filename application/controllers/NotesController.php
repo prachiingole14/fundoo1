@@ -46,9 +46,9 @@
 
         public function DisplayNotes()
         {
-            $id = $_POST['note_id'];
+            $note_id = $_POST['note_id'];
 
-            $result = $this->noteservice->showdata($id);
+            $result = $this->noteservice->showdata($note_id);
             return $result;
         }
     }    
