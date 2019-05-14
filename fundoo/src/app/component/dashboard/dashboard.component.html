@@ -142,13 +142,12 @@ lass="searchs"
 
 
 <mat-sidenav-container class="sidenav-container" >
-    <mat-sidenav #drawer class="sidenav" fixedInViewport="flase"
-        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    <mat-sidenav class="sidenav" fixedInViewport="true"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
         [opened]="!(isHandset$ | async)" >
       <mat-toolbar> 
         <mat-icon matTooltip="Main-Menu"  (click)="flag=true" *ngIf=!flag style="color: gray;">dehaze</mat-icon> 
-
+        <mat-icon matTooltip="Main-Menu"  (click)="flag=false" *ngIf=flag style="color: gray;">dehaze</mat-icon> 
         <span class="f">F</span>
         <span class="u">U</span>
         <span class="n">N</span>
@@ -194,11 +193,13 @@ lass="searchs"
             </mat-form-field>
 
     <!-- refresh start -->
-      <mat-icon class="refresh" matTooltip="Refresh">refresh </mat-icon>
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag>refresh</mat-icon>
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag>cloud_done</mat-icon>
     <!--refrseh end -->
 
     <!-- grid start -->
-      <mat-icon class="grid" matTooltip="Grid-View">dashboard </mat-icon>
+      <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag>dashboard </mat-icon>
+      <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag>dns </mat-icon>
     <!--drid end -->
 
     <!-- setting start -->
@@ -276,6 +277,11 @@ lass="searchs"
       
       </mat-toolbar>
 
+      <div>
+
+          <a mat-list-item [routerLink] = "['displaycontents']" class="nav" [routerLinkActive]="['is-active']">
+              <mat-icon>archive</mat-icon></a>
+      </div>
       <!-- Add Content Here -->
       <router-outlet></router-outlet>
 
@@ -283,4 +289,3 @@ lass="searchs"
   </mat-sidenav-container>
 
 
- 

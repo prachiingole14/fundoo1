@@ -16,6 +16,8 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
     declarations: [],
   
@@ -35,7 +37,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
       NoopAnimationsModule,
       MatDatepickerModule,
       MatInputModule,
-      MatCheckboxModule
+      MatCheckboxModule,
+      MatGridListModule
     ],
 
     exports:[
@@ -54,7 +57,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
       NoopAnimationsModule,
       MatDatepickerModule,
       MatInputModule,
-      MatCheckboxModule
+      MatCheckboxModule,
+      MatGridListModule
     ],
   
     providers: [],

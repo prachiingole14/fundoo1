@@ -70,8 +70,22 @@
             return $res;
         }
 
-
-
+        public function showdata()
+        {
+            //$data = array('note_id' => $note_id);
+            $query = "SELECT * from notes";
+            $stmt = $this->db->conn_id->prepare($query);
+            //$res = $stmt->execute($);
+            if($query)
+            {
+                print("success");
+            }
+            else
+            {
+                print("failed");
+            }
+            print_r($query);
+        }
        
         
     }     

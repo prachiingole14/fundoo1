@@ -19,19 +19,19 @@ export class ReminderComponent implements OnInit
   ngOnInit() {}
   model: any = {};
 
-  title=new FormControl(' ',[Validators.required,Validators.minLength(5), Validators.maxLength(30)]);
-  description=new FormControl(' ',[Validators.required, Validators.minLength(10), Validators.maxLength(50)]);
+  title=new FormControl(' ',[Validators.required]);
+  description=new FormControl(' ',[Validators.required]);
 
 
 
   titleError()
   {
-    return this.title.hasError('required')?'':'It must be required in character format and size should be greater than 5 and less than 30 '
+    return this.title.hasError('required')?'':''
   }
 
   descriptionError()
   {
-    return this.description.hasError('required')?'':'It must be required in character format and size should be greater than 10 and less than 50  '
+    return this.description.hasError('required')?'':''
   }
 
   ChangeColor(color)

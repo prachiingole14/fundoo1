@@ -13,11 +13,17 @@ import { TrashComponent } from './component/trash/trash.component';
 import { SettingComponent } from './component/setting/setting.component';
 import { SendfeedbackComponent } from './component/sendfeedback/sendfeedback.component';
 import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.component';
+import { DisplaycontentsComponent } from './component/displaycontents/displaycontents.component';
 
 const routes: Routes = [
     {
       path:'',
       component:LoginComponent
+    },
+
+    {
+      path: 'displaycontents',
+      component : DisplaycontentsComponent,
     },
 
     {
@@ -34,49 +40,51 @@ const routes: Routes = [
       path: 'dashboard',
       component : DashboardComponent,
 
-      children: [
-        {
-          path: 'notes',
-          component : NotesComponent,
-        },
+        children: [
+            {
+              path: 'notes',
+              component : NotesComponent,
+            },
 
-        {
-          path: 'reminder',
-          component : ReminderComponent,
-        },
+            {
+              path: 'reminder',
+              component : ReminderComponent,
+            },
 
-        {
-          path: 'edit-label',
-          component : EditLabelComponent,
-        },
+            {
+              path: 'edit-label',
+              component : EditLabelComponent,
+            },
 
-        {
-          path: 'archive',
-          component : ArchiveComponent,
-        },
+            {
+              path: 'archive',
+              component : ArchiveComponent,
+            },
 
 
-        {
-          path: 'trash',
-          component : TrashComponent,
-        },
+            {
+              path: 'trash',
+              component : TrashComponent,
+            },
 
-        {
-          path: 'setting',
-          component : SettingComponent,
-        },
-        
-        {
-          path: 'sendfeedback',
-          component : SendfeedbackComponent,
-        },
+            {
+              path: 'setting',
+              component : SettingComponent,
+            },
+            
+            {
+              path: 'sendfeedback',
+              component : SendfeedbackComponent,
+            },
 
-        {
-          path: 'shortcutkeys',
-          component : ShortcutkeysComponent,
-        },
-      ]
+            {
+              path: 'shortcutkeys',
+              component : ShortcutkeysComponent,
+            },
+        ]
     },
+
+    
 
   
 ];

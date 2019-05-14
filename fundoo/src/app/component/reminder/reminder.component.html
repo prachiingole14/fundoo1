@@ -2,7 +2,7 @@
     <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
        
         <mat-form-field style="width:80%;">
-          <input matInput placeholder="Title"  [formControl]="title" required pattern="(a-zA-Z)">
+          <input matInput placeholder="Title"  [formControl]="title" required>
           <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
         </mat-form-field>
 
@@ -18,13 +18,13 @@
       <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
         <div>
           <mat-form-field style="width:70%;">
-            <input matInput placeholder="Title" [formControl]="title" pattern="(a-zA-Z)" required>
+            <input matInput placeholder="Title" [formControl]="title" required>
             <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
           </mat-form-field>
         </div>
 
         <mat-form-field>
-            <input matInput placeholder="Take a Note...."  [formControl]="description" pattern="(a-zA-Z)"required>
+            <input matInput placeholder="Take a Note...."  [formControl]="description" required>
                 <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
         </mat-form-field>
 
@@ -100,6 +100,7 @@
     </div>
   </div>
 </mat-card>   
+
 
 
 

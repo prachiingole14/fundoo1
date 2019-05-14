@@ -24,6 +24,7 @@ import { TrashComponent } from './component/trash/trash.component';
 import { SettingComponent } from './component/setting/setting.component';
 import { SendfeedbackComponent } from './component/sendfeedback/sendfeedback.component';
 import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.component';
+import { DisplaycontentsComponent } from './component/displaycontents/displaycontents.component';
 
 
 
@@ -46,7 +47,8 @@ import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.com
     TrashComponent,
     SettingComponent,
     SendfeedbackComponent,
-    ShortcutkeysComponent
+    ShortcutkeysComponent,
+    DisplaycontentsComponent
   
   ],
 

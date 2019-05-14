@@ -18,8 +18,8 @@ export class NotesComponent implements OnInit
     ngOnInit() {}
     model: any = {};
 
-    title=new FormControl(' ',[Validators.required,Validators.minLength(5), Validators.maxLength(30)]);
-    description=new FormControl(' ',[Validators.required, Validators.minLength(7), Validators.maxLength(50)]);
+    title=new FormControl(' ',[Validators.required]);
+    description=new FormControl(' ',[Validators.required]);
 
     reverse()
     {
@@ -58,11 +58,11 @@ export class NotesComponent implements OnInit
 
   titleError()
   {
-    return this.title.hasError('required')?'':'It must be required in character format and size should be greater than 5 and less than 30 '
+    return this.title.hasError('required')?'':''
   }
 
   descriptionError()
   {
-    return this.description.hasError('required')?'':'It must be required in character format and size should be greater than 7 and less than 50  '
+    return this.description.hasError('required')?'':''
   }
 }
