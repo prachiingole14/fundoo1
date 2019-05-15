@@ -25,31 +25,33 @@
             return $result;
         }
 
+        public function DisplayNotes()
+        {
+             $note_id=$_POST['note_id'];
+            // $title = $_POST['title'];
+            // $description = $_POST['description'];
+            // $color = $_POST['color'];
+            // $image = $_POST['image'];
+           $result = $this->noteservice->showdata($note_id);
+            print_r($result);
+        }
+
         public function deletenote()
         {
-            $title = $_POST['title'];
-            $description = $_POST['description'];
-            $color = $_POST['color'];
-            $image = $_POST['image'];
-
-            $result = $this->noteservice->deleteNote($title, $description, $color ,$image);
+          $note_id=$_POST['note_id'];
+            $result = $this->noteservice->deleteNote($note_id);
             return $result;
         }
 
         public function editcolor()
         {
+            $note_id = $_POST['note_id'];
             $color = $_POST['color'];
-            $id = $_POST['note_id'];
-            $result= $this->noteservice->changeColor($color,$id);
+            
+            $result= $this->noteservice->changeColor($note_id,$color);
             return $result;
         }
 
-        public function DisplayNotes()
-        {
-            //$note_id = $_POST['note_id'];
-
-            $result = $this->noteservice->showdata();
-            return $result;
-        }
+      
     }    
 

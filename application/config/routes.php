@@ -67,5 +67,8 @@ $route['editcolor'] = 'NotesController/editcolor';
 $route['DisplayNotes'] = 'NotesController/DisplayNotes';
 $route['deletenote'] = 'NotesController/deletenote';
 
+
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -19,63 +19,59 @@
                         'description' => $description,
                         'color' => $color, 
                         'image' => $image);
+                       $q= $this->db->insert('notes',$data);  
 
-            $query = "INSERT into notes(title,description,color,image) values ('$title','$description','$color','$image')";
-            $stmt = $this->db->conn_id->prepare($query);
-            $res = $stmt->execute($data);
-            return $res;
+            //$query =  $this->db->query("INSERT INTO notes(title,description,color,image) VALUES('$title','$description','$color','$image')");
+           
+            print_r($q);
+            return $q;
         }
+
+
+        public function showdata($note_id)
+        {
+            // $data = array('note_id' =>$note_id,
+            //     'title' => $title,
+            //     'description' => $description,
+            //     'color' => $color, 
+            //     'image' => $image);
+
+           //$query = $this->db->query("SELECT * FROM `notes`");
+           //$stmt = $this->db->conn_id->prepare($query);
+           //$res = $stmt->execute($data);
+
+          // $this->db->where('note_id', $note_id);
+           // here we select every column of the table
+
+           $q = $this->db->get('notes');
+           $data = $q->result_array();
+           
+           echo json_encode($data);
+        } 
 
 
         public function deleteNote($note_id)
         {
             $data = array('note_id' => $note_id);
 
-            $query = "DELETE FROM notes where note_id='$note_id'";
-            $stmt = $this->db->conn_id->prepare($query);
-            $res = $stmt->execute($data);
-            print_r($res);
+            $note_id=$this->input->get('note_id');
+            $query=$this->db->query("delete  from notes where note_id='".$note_id."'");
 
-            if($res)
+            if($query)
             {
-                print("success");
+                echo "Date deleted successfully....!";
             }
-
-            else
-            {
-                print("failed");
-            }
-            return $res; 
+            return $query; 
         }
 
-
-    
-
-        public function changeColor($color,$id)
+        public function changeColor($note_id,$color)
         {
-            $data=array('id' => $id,
-                        'color' => $color );
-
-            $query = "UPDATE notes SET color = '$color' where $note_id = '$note_id'";
-            $stmt = $this->db->conn_id->prepare($query);
-            $res = $stmt->execute($data);
-            if($res)
-            {
-                print("success");
-            }
-            else
-            {
-                print("failed");
-            }
-            return $res;
-        }
-
-        public function showdata()
-        {
-            //$data = array('note_id' => $note_id);
-            $query = "SELECT * from notes";
-            $stmt = $this->db->conn_id->prepare($query);
-            //$res = $stmt->execute($);
+            $data=array('note_id' => $note_id,
+                        'color' => $color);
+                    
+            $note_id=$this->input->get('note_id');
+            $query = $this->db->query("UPDATE notes SET color = '$color' where note_id='".$note_id."'");
+         
             if($query)
             {
                 print("success");
@@ -84,9 +80,8 @@
             {
                 print("failed");
             }
-            print_r($query);
+            return $query;
         }
-       
-        
+
     }     
 ?>
