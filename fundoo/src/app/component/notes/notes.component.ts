@@ -11,11 +11,21 @@ const newLocal = 'This field is empty';
 
 export class NotesComponent implements OnInit
 {
+  parentMessage = "message from parent"
+
     color:any;
-  image: any;
+    image: any;
+
     constructor(private s_notes:NotesService) {}
+
     flag=true;
     ngOnInit() {}
+    
+    getAllCard()
+    {
+      
+    }
+
     model: any = {};
 
     title=new FormControl(' ',[Validators.required]);
@@ -27,7 +37,6 @@ export class NotesComponent implements OnInit
       {
         this.flag = !this.flag
       }
-    
 
       this.model={
         "title":this.title.value,
@@ -35,14 +44,11 @@ export class NotesComponent implements OnInit
         "color":this.color.value, 
         "image":this.image.value
       }
-
      
       let status= this.s_notes.addNotes(this.model)
       status.subscribe(res=>{
         console.log(res);
       })
-
-
     }
 
     ChangeColor(color)

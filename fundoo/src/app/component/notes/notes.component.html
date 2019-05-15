@@ -3,7 +3,7 @@
   ghfhfy
 </div> -->
 
-<mat-card class="flex" >
+<mat-card class="flex" [style.backgroundColor]='color'>
   <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
 
       <mat-form-field style="width:80%;">
@@ -19,7 +19,7 @@
 
   </div>
 
-  <div *ngIf="flag==false"  >
+  <div *ngIf="flag==false">
     <!-- <mat-form-f-ield [ngStyle.background]=color appearance="outline"  class="formfield"> -->
     <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
       <!-- <mat-label>Title : </mat-label> -->
@@ -104,3 +104,4 @@
   </div>
 </mat-card>
 
+<app-displaycontents  [childMessage]="parentMessage"></app-displaycontents>

@@ -4,21 +4,13 @@
 </div> -->
 
  <mat-card class="flex" [style.backgroundColor]='color'>
-    <!--<div  fxLayout="row" fxLayoutAlign="space-evenly end">
-  
+    <!-- <div  fxLayout="row" fxLayoutAlign="space-evenly end">
         <mat-form-field style="width:40%;">
           <input matInput placeholder="Empty node" >
-          <!-- <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>  --
         </mat-form-field>
-
     </div> -->
   
-    <div >
-      <!-- <mat-form-f-ield [ngStyle.background]=color appearance="outline"  class="formfield"> -->
-      <div fxLayout='column' class="formfield" >
-        <!-- <mat-label>Title : </mat-label> -->
-  
-        <div fxLayout='row' fxLayoutAlign="start center"   [style.backgroundColor]='color'>
+        <div fxLayout="row" fxLayoutAlign="space-around center"    [style.backgroundColor]='color'>
           <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
             <div style="margin-left:10px;">
               <mat-menu  #remainder="matMenu">
@@ -81,9 +73,8 @@
   
           </mat-menu>
   
-        </div>
-      </div>
     </div>
   </mat-card>
   
   
+{{childMessage}}

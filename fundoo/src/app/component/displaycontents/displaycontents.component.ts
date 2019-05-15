@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-displaycontents',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplaycontentsComponent implements OnInit {
   color: any;
+  
+  @Input() childMessage: string;
 
   constructor() { }
+
   flag=true;
+
   ngOnInit() 
   {}
   

@@ -12,9 +12,10 @@ export class NotesService
 {
   title: any;
   description: any;
+  httpClient: any;
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
   notes:Notes;
-
+  
   addNotes(notes)
   {
     let takeNotes = new FormData();
@@ -27,11 +28,16 @@ export class NotesService
     return this.http.post(this.serviceurl.host + this.serviceurl.addNotes , takeNotes);
   }
 
-
-  displayNote(data)
+  getcard()
   {
    
+  }
+ 
+  displayNote(data)
+  {
+    //debugger;
     let displayNote = new FormData();
+    displayNote.append("note_id",data);
     return this.http.post(this.serviceurl.host + this.serviceurl.notes,displayNote);
   }
 
