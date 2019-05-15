@@ -49,7 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-
+header("Access-Control-Allow-Headers : Content-Type");
+header("Access-Control-Allow-Methods : POST, OPTIONS");
 $route['default_controller'] = 'welcome';
 
 //login,registration,reset routing

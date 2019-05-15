@@ -1,7 +1,8 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
     include "/var/www/html/CodeIgniter-3.1.10/application/Service/NoteService.php";
- 
+    header("Access-Control-Allow-Headers : Content-Type");
+    header("Access-Control-Allow-Methods : POST, OPTIONS");
 
     class NotesController extends CI_Controller
     {

@@ -30,7 +30,7 @@ export class NotesService
 
   getcard()
   {
-   
+    return this.http.post(this.serviceurl.host + 'DisplayNotes' , {});
   }
  
   displayNote(data)

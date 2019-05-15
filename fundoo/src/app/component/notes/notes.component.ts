@@ -19,11 +19,19 @@ export class NotesComponent implements OnInit
     constructor(private s_notes:NotesService) {}
 
     flag=true;
-    ngOnInit() {}
+    ngOnInit() {
+      this.getAllCard()
+    }
     
     getAllCard()
     {
-      
+      this.s_notes.getcard().subscribe(data=>{
+        console.log('all note is ',data);
+        
+      },err=>{
+        console.log('error in get note',err);
+        
+      })
     }
 
     model: any = {};
