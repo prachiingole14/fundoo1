@@ -10,18 +10,18 @@
         {
             parent::__construct();
             $this->load->database();
-            $this->controller->AccountController();
+          
         
         }
 
-        public function Registration($firstName, $address,$contact, $email, $password, $confirmpassword)
+        public function Registration($firstName, $address,$contact, $email, $password, $confirm_password)
         {
-            $data = array("name" => $firstName,
+            $data = array("firstName" => $firstName,
                         "address" => $address,
                         "contact_no" => $contact, 
                         "email_id" => $email,
                         "password" => $password,
-                        "confirm_password" => $confirmpassword);
+                        "confirm_password" => $confirm_password);
 
             // $this->firstName  = $data['firstName'];
             // $this->address = $data['address'];
@@ -30,7 +30,7 @@
             // $this->password = $data['password'];
             // $this->confirmpassword = $data['confirmpassword'];
                 
-            $query= $this->db->query("INSERT INTO Registration(`name`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUE('$firstName','$address','$contact','$email','$password','$confirmpassword')");
+            $query= $this->db->query("INSERT INTO Registration(`firstName`,`address`,`contact_no`,`email_id`,`password`,`confirm_password`) VALUES ('$firstName','$address','$contact','$email','$password','$confirm_password')");
             print_r($query);
         }
 

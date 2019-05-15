@@ -38,8 +38,8 @@
                     <br>
   
                     <mat-form-field class="align">
-                        <input type="password" matInput placeholder="confirm your password" [formControl]="confirmpassword" pattern="[a-zA-Z0-9@]*" required>
-                        <mat-error *ngIf="confirmpassword.dirty">{{checkConfirmPassword()}}</mat-error>
+                        <input type="password" matInput placeholder="confirm your password" [formControl]="confirm_password" pattern="[a-zA-Z0-9@]*" required>
+                        <mat-error *ngIf="confirm_password.dirty">{{checkConfirmPassword()}}</mat-error>
                     </mat-form-field>
                     <br>
                     

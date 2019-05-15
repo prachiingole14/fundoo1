@@ -6,6 +6,6 @@ export class Register
     email :string
     username: string
     password: string
-    confirmpassword:string
+    confirm_password:string
   //firstName: string | Blob;
 }

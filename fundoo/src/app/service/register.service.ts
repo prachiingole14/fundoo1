@@ -23,7 +23,7 @@ export class RegisterService {
     createuser.append("contact", register.contact);
     createuser.append("email", register.email);
     createuser.append("password", register.password);
-    createuser.append("confirmpassword", register.confirmpassword);
+    createuser.append("confirm_password", register.confirm_password);
     return this.http.post(this.serviceurl.host + this.serviceurl.register, createuser);
   }
  

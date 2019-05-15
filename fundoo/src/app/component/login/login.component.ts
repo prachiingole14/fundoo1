@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   message: any;
   LoginService: any;
   router: any;
-  
+  hide = true;
   constructor(private s_login:LoginService) { }
 
   ngOnInit() { }
@@ -38,42 +38,20 @@ export class LoginComponent implements OnInit {
       console.log(res)
     });
 
-    if (this.email.value == '' || this.password.value == '')
+    if (this.email.value == ' ' || this.password.value == ' ')
     {
       alert('all fields are required')
       console.log('error')
+     
     }
     else  
     {
       alert('Suceessfully login')
-
-        this.message="";
-
         console.log(this.model);
 
         let obj = this.LoginService.createlogin(this.model);
         obj.subscribe((res: any) => 
-        {
-         
-          // if (res.message == "400") 
-          // {
-          //   this.emailError = "user logged in successfully";
-          //   localStorage.setItem("token", res.token);
-          //   localStorage.setItem("email",this.email.value);
-          //   //this.router.navigate(['/dashboard']);
-          // }
-
-          // else if (res.message == "401") 
-          // {
-          //   this.emailError = "password doesnot match";
-          // } 
-
-          // else if (res.message == "200") 
-          // {
-          //   this.emailError = "Email is Not Registered, invalid user";
-          // } 
-        },
-      );
+        { },);
     
     }
   }

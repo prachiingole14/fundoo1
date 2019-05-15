@@ -29,19 +29,19 @@ export class RegistrationComponent implements OnInit
   contact=new FormControl('',[Validators.required, Validators.maxLength(10)]);
   email= new FormControl('',[Validators.required, Validators.email]);
   password=new FormControl('',[Validators.required,Validators.minLength(5), Validators.maxLength(15)]);
-  confirmpassword=new FormControl('',[ Validators.required, Validators.minLength(5), Validators.maxLength(15)]);
+  confirm_password=new FormControl('',[ Validators.required, Validators.minLength(5), Validators.maxLength(15)]);
 
   onSubmit() 
   {  
     //debugger;  
 
      
-     if (this.firstName.value == ' '|| this.address.value == ' ' || this.contact.value == ' ' ||this.email.value ==' ' || this.password.value == ' ' || this.confirmpassword.value == ' ') 
+     if (this.firstName.value == ' '|| this.address.value == ' ' || this.contact.value == ' ' ||this.email.value ==' ' || this.password.value == ' ' || this.confirm_password.value == ' ') 
       {
         alert("some fields are missing")
         //alert("Your form is Submited")
       }
-      else if (this.password.value != this.confirmpassword.value) 
+      else if (this.password.value != this.confirm_password.value) 
       {
         alert( "Password doesnot match");
         return;
@@ -59,7 +59,7 @@ export class RegistrationComponent implements OnInit
       "contact":this.contact.value,
       "email":this.email.value,
       "password" : this.password.value,
-      "confirmpassword" : this.confirmpassword.value
+      "confirmpassword" : this.confirm_password.value
     } 
     
    
@@ -74,7 +74,7 @@ export class RegistrationComponent implements OnInit
       this.contact.value,
       this.email.value,
       this.password.value,
-      this.confirmpassword.value)
+      this.confirm_password.value)
   }
 
   firstNameError()
@@ -110,11 +110,11 @@ export class RegistrationComponent implements OnInit
   checkConfirmPassword()
     {
       
-      if (this.password.value==this.confirmpassword.value|| this.password.value==null)
+      if (this.password.value==this.confirm_password.value|| this.password.value==null)
         {
           console.log("valid password")
          //return "success"
-         return this.confirmpassword.hasError('required')?'Invalid password':'Invalid password'
+         return this.confirm_password.hasError('required')?'Invalid password':'Invalid password'
         }
         else
         {

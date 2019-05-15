@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="flx" fxLayout='row' fxLayoutAlign='center center'>
     <mat-card fxFlex='28'>
 
@@ -25,7 +25,7 @@
                     </mat-form-field>
                     <br>
                     
-                    <!-- <mat-button-toggle class="btn2" (click)='signin()'></mat-button-toggle><br>  -->
+                    <mat-button-toggle class="btn2" (click)='signin()'></mat-button-toggle><br>  --
                     <a [routerLink]="['dashboard']"><button class="btn2" ngSubmit="onSubmit()" button mat-raised-button color="primary">Sing In</button></a>
                     <div class="example-button-row">
                         <a [routerLink]="['reset']"><button mat-stroked-button >Reset password</button></a>
@@ -34,7 +34,7 @@
                 </form>     
             </div>
     </mat-card>
-</div>
+</div> -->
  
 
 
@@ -46,3 +46,48 @@
   <p class="link"><a [routerLink]="['reset']" >Reset password/ Forget password</a>
   <p class="link"><a [routerLink]="['registration']">User Registration form</a> -->
 <!--The whole content below can be removed with the new code.-->
+
+<div fxLayout='row' fxLayoutAlign='center center'   class="flx">
+    <mat-card fxFlex='23' class = "mat-card">
+            
+        <div   fxLayout="row" fxLayoutAlign="center center">   
+            <span class="f">F</span>
+            <span class="u">U</span>
+            <span class="n">N</span>
+            <span class="d">D</span>
+            <span class="o">O</span>
+            <span class="oo">O</span>
+        </div>
+
+        <h3 class="h3">Sign In</h3>
+        <div class="align">
+            <form name="form" (ngSubmit)="onSubmit()">
+
+                <mat-form-field appearance="outline" class="field"  [formControl]="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                    <mat-label>Email Id :</mat-label>
+                    <input matInput placeholder="Enter email id here..">
+                    <mat-error *ngIf="email.dirty">{{emailError()}}</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Password :</mat-label>
+                    <input matInput [type]="hide?'password':'text'" placeholder="Enter password id here.."  [formControl]="password"  pattern="[a-zA-Z0-9@]*">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-error *ngIf="password.dirty">{{passwordError()}}</mat-error>
+                </mat-form-field>
+
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <button  ngSubmit="onSubmit()" button mat-raised-button color="primary">Sing In</button>
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="start none"> 
+                        <a [routerLink]="['registration']"><button mat-flat-button style="margin-top: 10px;" class="btn-text">Create new registration</button></a>
+                        <a [routerLink]="['reset']"><button mat-flat-button style="margin-top: 10px;"   class="btn-text">Reset password</button></a>     
+                </div> 
+                <div fxLayout="row" fxLayoutAlign="center center"> 
+                    <button mat-flat-button class="btn-text2">Login with Facebook</button>
+                </div>
+            </form>
+        </div>
+    </mat-card>
+</div>
