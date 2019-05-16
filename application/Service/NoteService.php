@@ -1,5 +1,9 @@
 
 <?php
+
+header("Access-Control-Allow-Headers : Content-Type");
+header("Access-Control-Allow-Methods : POST, OPTIONS");
+header('Access-Control-Allow-Origin: *');
      
     class NoteService extends CI_Controller
     {
@@ -11,20 +15,18 @@
            //$this->controllers->NotesController();
         }
 
-
-
         public function AddNotes($title, $description, $color ,$image)
         {
             $data = array('title' => $title,
                         'description' => $description,
                         'color' => $color, 
                         'image' => $image);
-                       $q= $this->db->insert('notes',$data);  
 
+            $query_result= $this->db->insert('notes',$data);  
             //$query =  $this->db->query("INSERT INTO notes(title,description,color,image) VALUES('$title','$description','$color','$image')");
            
-            print_r($q);
-            return $q;
+            print_r($query_result);
+            return $query_result;
         }
 
 
