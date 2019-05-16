@@ -11,5 +11,6 @@
     ]);
 
     $helper = $fb -> getRedirectLoginHelper();
-    = $helper -> getLoginUrl("localhost:4200");
+    $Login_url = $helper -> getLoginUrl("localhost:4200");
+    
 ?>
