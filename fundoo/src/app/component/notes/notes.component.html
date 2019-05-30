@@ -7,7 +7,7 @@
   <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
 
       <mat-form-field style="width:80%;">
-        <input matInput placeholder="Title"  [formControl]="title" required >
+        <input matInput placeholder="Title"  [formControl]="title"  style="width:80%;" required >
         <!-- <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error> -->
       </mat-form-field>
 
@@ -55,7 +55,7 @@
         <mat-menu #color="matMenu">
 
           <div fxLayout="row" fxLayoutAlign="center center">
-            <button matTooltip="light red" mat-mini-fab class="fab" style="background-color: rgb(189, 88, 88)" (click)="ChangeColor('rgb(189, 88, 88)')"></button>
+            <button matTooltip="light red" mat-mini-fab class="fab" style="background-color:white" (click)="ChangeColor('white')"></button>
             <button matTooltip="light pink" mat-mini-fab class="fab" style="background-color:rgb(243, 134, 170)"  (click)="ChangeColor('rgb(243, 134, 170)')"></button>
             <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
             <button matTooltip="light deep-purpul" mat-mini-fab class="fab" style="background-color:rgb(158, 131, 206)"  (click)="ChangeColor('rgb(158, 131, 206)')"></button>

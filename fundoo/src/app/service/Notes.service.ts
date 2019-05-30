@@ -14,20 +14,19 @@ export class NotesService
   description: any;
   httpClient: any;
 
-  constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
+  constructor( private http:HttpClient,private serviceurl:ServiceUrlService) { }
 
   notes:Notes;
   
   addNotes(notes)
   {
     let takeNotes = new FormData();
-    //debugger
     takeNotes.append("title", notes.title);
     takeNotes.append("description",notes.description);
     takeNotes.append("color", notes.color);
     takeNotes.append("image", notes.image);
  
-    return this.http.post(this.serviceurl.host + this.serviceurl.addNotes , takeNotes);
+    return this.http.post(this.serviceurl.host + this.serviceurl.notes, takeNotes);
   }
 
   getcard()

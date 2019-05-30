@@ -18,7 +18,8 @@ export class NotesComponent implements OnInit
     color:any;
     image: any;
     dialog: any;
-  message: string;
+    message: string;
+  submit: void;
 
     constructor(private s_notes:NotesService) {}
 
@@ -54,14 +55,19 @@ export class NotesComponent implements OnInit
       this.model={
         "title":this.title.value,
         "description":this.description.value,
-        "color":this.color.value, 
-        "image":this.image.value
+        //"color":this.color.value, 
+        //"image":this.image.value
       }
      
       let status= this.s_notes.addNotes(this.model)
-      status.subscribe(res=>{
-        console.log(res);
-      })
+        status.subscribe(res=>{
+       // console.log(res);
+      });
+
+      // this.submit=console.log(this.title.value,
+      //                         this.description.value,
+      //                         this.color.value,
+      //                         this.image.value)
     }
 
     ChangeColor(color)

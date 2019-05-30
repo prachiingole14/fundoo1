@@ -17,7 +17,6 @@ export class RegisterService {
   {
     
     let createuser = new FormData();
-    //debugger
     createuser.append("firstName", register.firstName);
     createuser.append("address",register.address);
     createuser.append("contact", register.contact);
