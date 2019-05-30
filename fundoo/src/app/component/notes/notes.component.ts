@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from 'src/app/service/Notes.service';
 import { Validators, FormControl } from '@angular/forms';
+import { EditLabelComponent } from '../edit-label/edit-label.component';
 
 const newLocal = 'This field is empty';
 @Component({
@@ -11,28 +12,32 @@ const newLocal = 'This field is empty';
 
 export class NotesComponent implements OnInit
 {
-  parentMessage = "message from parent"
+  //parentMessage = "app-displaycontents";
+  // parentMessage = "fgfg"
 
     color:any;
     image: any;
+    dialog: any;
+  message: string;
 
     constructor(private s_notes:NotesService) {}
 
     flag=true;
-    ngOnInit() {
-      this.getAllCard()
+    ngOnInit() 
+    {
+      //this.getAllCard()
     }
     
-    getAllCard()
-    {
-      this.s_notes.getcard().subscribe(data=>{
-        console.log('all note is ',data);
+    // getAllCard()
+    // {
+    //   this.s_notes.getcard().subscribe(data=>{
+    //     console.log('all note is ',data);
         
-      },err=>{
-        console.log('error in get note',err);
+    //   },err=>{
+    //     console.log('error in get note',err);
         
-      })
-    }
+    //   })
+    // }
 
     model: any = {};
 
@@ -65,18 +70,24 @@ export class NotesComponent implements OnInit
       console.log(this.color,"change color");
     }
 
+    openDialog()
+    {
+       this.dialog.open(EditLabelComponent)
+    }
+
     // reverse()
     // {
     //   this.flag = !this.flag
     // }
 
-  titleError()
-  {
-    return this.title.hasError('required')?'':''
-  }
+    // titleError()
+    // {
+    //   return this.title.hasError('required')?'':''
+    // }
 
-  descriptionError()
-  {
-    return this.description.hasError('required')?'':''
-  }
+    // descriptionError()
+    // {
+    //   return this.description.hasError('required')?'':''
+    // }
+
 }

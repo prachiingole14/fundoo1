@@ -141,19 +141,22 @@ lass="searchs"
 
 
 
+
+
+
 <mat-sidenav-container class="sidenav-container" >
     <mat-sidenav class="sidenav" fixedInViewport="true"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
-        [opened]="!(isHandset$ | async)" >
+        [opened]="!(isHandset$ | async)"  style="background-color:white;" >
       <mat-toolbar> 
         <mat-icon matTooltip="Main-Menu"  (click)="flag=true" *ngIf=!flag style="color: gray;">dehaze</mat-icon> 
         <mat-icon matTooltip="Main-Menu"  (click)="flag=false" *ngIf=flag style="color: gray;">dehaze</mat-icon> 
-        <span class="f">F</span>
-        <span class="u">U</span>
-        <span class="n">N</span>
-        <span class="d">D</span>
-        <span class="o">O</span>
-        <span class="oo">O</span></mat-toolbar>
+          <span class="f">F</span>
+          <span class="u">U</span>
+          <span class="n">N</span>
+          <span class="d">D</span>
+          <span class="o">O</span>
+          <span class="oo">O</span></mat-toolbar>
 
       <mat-nav-list class="nav" *ngIf=flag >
         <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']" >
@@ -182,15 +185,17 @@ lass="searchs"
  
     </mat-sidenav>
 
-    <mat-sidenav-content>
-      <mat-toolbar>
-          <mat-form-field class="example-form-field" class="search-input"  >
-            <mat-icon >search</mat-icon>
-              <input class="search-input" matInput type="text"  [(ngModel)]="value">
-              <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-              </button>
-            </mat-form-field>
+    <mat-sidenav-content >
+      <mat-toolbar fxLayoutAlign="end center">
+              <mat-form-field appearance="outline" class="search-input">
+                  <mat-icon >search</mat-icon>
+                  <input class="search-input" matInput type="text" placeholder="Search" [(ngModel)]="value">
+                  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                  </button>
+              </mat-form-field>
+            
+
 
     <!-- refresh start -->
     <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag>refresh</mat-icon>
@@ -282,4 +287,4 @@ lass="searchs"
     </mat-sidenav-content>
   </mat-sidenav-container>
 
-
+ 

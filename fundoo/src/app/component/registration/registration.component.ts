@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { MIN_LENGTH_VALIDATOR } from '@angular/forms/src/directives/validators';
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { Validators, FormControl } from '@angular/forms';
 import { RegisterService } from 'src/app/service/register.service';
 //import { stat } from 'fs';
 
@@ -53,15 +51,12 @@ export class RegistrationComponent implements OnInit
       }
 
 
-    this.model={
-      "firstName":this.firstName.value,
-      "address":this.address.value,
-      "contact":this.contact.value,
-      "email":this.email.value,
-      "password" : this.password.value,
-      "confirmpassword" : this.confirm_password.value
-    } 
-    
+    this.model={"firstName":this.firstName.value,
+                "address":this.address.value,
+                "contact":this.contact.value,
+                "email":this.email.value,
+                "password" : this.password.value,
+                "confirmpassword" : this.confirm_password.value} 
    
     let status = this.s_register.createuser(this.model)
  
@@ -70,12 +65,11 @@ export class RegistrationComponent implements OnInit
     });
 
     this.submit=console.log(this.firstName.value,
-      this.address.value,
-      this.contact.value,
-      this.email.value,
-      this.password.value,
-      this.confirm_password.value)
-  }
+                            this.address.value,
+                            this.contact.value,
+                            this.email.value,
+                            this.password.value,
+                            this.confirm_password.value)}
 
   firstNameError()
   {
@@ -110,7 +104,7 @@ export class RegistrationComponent implements OnInit
   checkConfirmPassword()
     {
       
-      if (this.password.value==this.confirm_password.value|| this.password.value==null)
+      if (this.password.value==this.confirm_password.value || this.password.value==null)
         {
           console.log("valid password")
          //return "success"

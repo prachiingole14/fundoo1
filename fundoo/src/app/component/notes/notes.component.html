@@ -11,7 +11,7 @@
         <!-- <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error> -->
       </mat-form-field>
 
-      <div appearance="outline" class="formfield" fxLayout='row'>
+      <div fxLayoutAlign="end center" appearance="outline" class="formfield" fxLayout='row'>
         <mat-icon matTooltip="New List" class="add-box">add_box</mat-icon>
         <mat-icon matTooltip="New List with drawing" class="margin">brush</mat-icon>
         <mat-icon matTooltip="New List with image" class="margin">insert_photo</mat-icon>
@@ -30,7 +30,7 @@
         </mat-form-field></div>
 
         <mat-form-field>
-          <input matInput placeholder="Take a Note...."  [formControl]="description" required>
+          <input matInput  placeholder="Take a Note...."  [formControl]="description" required>
               <!-- <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error> -->
         </mat-form-field>
 
@@ -48,42 +48,44 @@
             </mat-menu>
           </div>
 
-
         <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
 
         <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
+
         <mat-menu #color="matMenu">
+
           <div fxLayout="row" fxLayoutAlign="center center">
-            <button matTooltip="red" mat-mini-fab class="fab" style="background-color: brown" (click)="ChangeColor('brown')"></button>
-            <button matTooltip="pink" mat-mini-fab class="fab" style="background-color:#E91E63"  (click)="ChangeColor('#E91E63')"></button>
-            <button matTooltip="purpul" mat-mini-fab class="fab" style="background-color:#E040FB"  (click)="ChangeColor('#E040FB ')"></button>
-            <button matTooltip="deep-purpul" mat-mini-fab class="fab" style="background-color:#673AB7"  (click)="ChangeColor('#673AB7')"></button>
+            <button matTooltip="light red" mat-mini-fab class="fab" style="background-color: rgb(189, 88, 88)" (click)="ChangeColor('rgb(189, 88, 88)')"></button>
+            <button matTooltip="light pink" mat-mini-fab class="fab" style="background-color:rgb(243, 134, 170)"  (click)="ChangeColor('rgb(243, 134, 170)')"></button>
+            <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
+            <button matTooltip="light deep-purpul" mat-mini-fab class="fab" style="background-color:rgb(158, 131, 206)"  (click)="ChangeColor('rgb(158, 131, 206)')"></button>
           </div>
 
           <div fxLayout="row" fxLayoutAlign="center center">
-            <button matTooltip="orange" mat-mini-fab class="fab" style="background-color:#FF9800" (click)="ChangeColor('#FF9800')"></button>
-            <button matTooltip="yellow" mat-mini-fab class="fab" style="background-color:#FFEB3B" (click)="ChangeColor('#FFEB3B')"></button>
-            <button matTooltip="blue" mat-mini-fab class="fab" style="background-color:#2196F3"  (click)="ChangeColor('#2196F3')"></button>
-            <button matTooltip="cyan" mat-mini-fab class="fab" style="background-color:#18FFFF"  (click)="ChangeColor('#18FFFF')"></button>
+            <button matTooltip="light orange" mat-mini-fab class="fab" style="background-color:rgb(236, 158, 105)" (click)="ChangeColor('rgb(236, 158, 105)')"></button>
+            <button matTooltip="light yellow" mat-mini-fab class="fab" style="background-color:rgb(233, 222, 129)" (click)="ChangeColor('rgb(233, 222, 129)')"></button>
+            <button matTooltip="light blue" mat-mini-fab class="fab" style="background-color:rgb(158, 202, 238)"  (click)="ChangeColor('rgb(158, 202, 238)')"></button>
+            <button matTooltip="light cyan" mat-mini-fab class="fab" style="background-color:rgb(180, 243, 243)"  (click)="ChangeColor('rgb(180, 243, 243)')"></button>
           </div>
 
           <div fxLayout="row" fxLayoutAlign="center center">
-            <button matTooltip="teal" mat-mini-fab class="fab" style="background-color:#009688" (click)="ChangeColor('#009688')"></button>
-            <button matTooltip="green" mat-mini-fab class="fab" style="background-color:#8BC34A"  (click)="ChangeColor('#8BC34A')"></button>
-            <button matTooltip="deep-orange" mat-mini-fab class="fab" style="background-color:#FF5722"  (click)="ChangeColor('#FF5722')"></button>
-            <button matTooltip="lime" mat-mini-fab class="fab" style="background-color:#CDDC39" (click)="ChangeColor('#CDDC39')"></button>
+            <button matTooltip="light teal" mat-mini-fab class="fab" style="background-color:#49c7ba" (click)="ChangeColor('#49c7ba')"></button>
+            <button matTooltip="light green" mat-mini-fab class="fab" style="background-color:rgb(181, 221, 135)"  (click)="ChangeColor('rgb(181, 221, 135)')"></button>
+            <button matTooltip="light deep-orange" mat-mini-fab class="fab" style="background-color:rgb(240, 140, 110)"  (click)="ChangeColor('rgb(240, 140, 110)')"></button>
+            <button matTooltip="light lime" mat-mini-fab class="fab" style="background-color:rgb(211, 218, 149)" (click)="ChangeColor('rgb(211, 218, 149)')"></button>
           </div>
+
         </mat-menu>
 
-
-        <mat-icon matTooltip="Add Image" class="margin">insert_photo</mat-icon>
+        <input type="file"  style="display:none"  #img>
+        <mat-icon matTooltip="Add Image" class="margin" (click)="img.click()">insert_photo</mat-icon>
        
         <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
 
         <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
 
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item (click)="openDialog()">
             <span>Add Label</span>
           </button>
 
@@ -94,14 +96,15 @@
           <button mat-menu-item>
             <span>Show tick</span>
           </button>
-
         </mat-menu>
 
-        <button mat-button (click)='reverse()' matTooltip="Close" class="close-btn">Close</button>
+        <button mat-button (click)='reverse()'  fxLayoutAlign="end center" matTooltip="Close" class="close-btn">Close</button>
 
       </div>
     </div>
   </div>
 </mat-card>
 
-<app-displaycontents  [childMessage]="parentMessage"></app-displaycontents>
+<!-- <app-displaycontents  [childMessage]="parentMessage"></app-displaycontents> -->
+
+

@@ -18,37 +18,36 @@
                 <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
                 <button mat-menu-item>Tomorrow <span  class="align">08:00 PM</span></button>
                 <button mat-menu-item>Next week Mon<span  class="align2">08:00 PM</span></button>
-                <button mat-menu-item>Work <span  class="gov">Govandi</span></button>
+                <button mat-menu-item>Work<span  class="gov">Govandi</span></button>
                 <button mat-menu-item><mat-icon>query_builder</mat-icon> Select date and Time</button>
                 <button mat-menu-item><mat-icon>room</mat-icon> Select Place</button>
               </mat-menu>
             </div>
   
-  
           <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
   
           <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
           <mat-menu #color="matMenu">
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <button matTooltip="red" mat-mini-fab class="fab" style="background-color: rgb(196, 141, 141)" (click)="ChangeColor('brown')"></button>
-              <button matTooltip="pink" mat-mini-fab class="fab" style="background-color:#E91E63"  (click)="ChangeColor('#E91E63')"></button>
-              <button matTooltip="purpul" mat-mini-fab class="fab" style="background-color:#E040FB"  (click)="ChangeColor('#E040FB ')"></button>
-              <button matTooltip="deep-purpul" mat-mini-fab class="fab" style="background-color:#673AB7"  (click)="ChangeColor('#673AB7')"></button>
-            </div>
-  
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <button matTooltip="orange" mat-mini-fab class="fab" style="background-color:#FF9800" (click)="ChangeColor('#FF9800')"></button>
-              <button matTooltip="yellow" mat-mini-fab class="fab" style="background-color:#FFEB3B" (click)="ChangeColor('#FFEB3B')"></button>
-              <button matTooltip="blue" mat-mini-fab class="fab" style="background-color:#2196F3"  (click)="ChangeColor('#2196F3')"></button>
-              <button matTooltip="cyan" mat-mini-fab class="fab" style="background-color:#18FFFF"  (click)="ChangeColor('#18FFFF')"></button>
-            </div>
-  
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <button matTooltip="teal" mat-mini-fab class="fab" style="background-color:#009688" (click)="ChangeColor('#009688')"></button>
-              <button matTooltip="green" mat-mini-fab class="fab" style="background-color:#8BC34A"  (click)="ChangeColor('#8BC34A')"></button>
-              <button matTooltip="deep-orange" mat-mini-fab class="fab" style="background-color:#FF5722"  (click)="ChangeColor('#FF5722')"></button>
-              <button matTooltip="lime" mat-mini-fab class="fab" style="background-color:#CDDC39" (click)="ChangeColor('#CDDC39')"></button>
-            </div>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                  <button matTooltip="light red" mat-mini-fab class="fab" style="background-color: rgb(189, 88, 88)" (click)="ChangeColor('rgb(189, 88, 88)')"></button>
+                  <button matTooltip="light pink" mat-mini-fab class="fab" style="background-color:rgb(243, 134, 170)"  (click)="ChangeColor('rgb(243, 134, 170)')"></button>
+                  <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
+                  <button matTooltip="light deep-purpul" mat-mini-fab class="fab" style="background-color:rgb(158, 131, 206)"  (click)="ChangeColor('rgb(158, 131, 206)')"></button>
+                </div>
+      
+                <div fxLayout="row" fxLayoutAlign="center center">
+                  <button matTooltip="light orange" mat-mini-fab class="fab" style="background-color:rgb(236, 158, 105)" (click)="ChangeColor('rgb(236, 158, 105)')"></button>
+                  <button matTooltip="light yellow" mat-mini-fab class="fab" style="background-color:rgb(233, 222, 129)" (click)="ChangeColor('rgb(233, 222, 129)')"></button>
+                  <button matTooltip="light blue" mat-mini-fab class="fab" style="background-color:rgb(158, 202, 238)"  (click)="ChangeColor('rgb(158, 202, 238)')"></button>
+                  <button matTooltip="light cyan" mat-mini-fab class="fab" style="background-color:rgb(180, 243, 243)"  (click)="ChangeColor('rgb(180, 243, 243)')"></button>
+                </div>
+      
+                <div fxLayout="row" fxLayoutAlign="center center">
+                  <button matTooltip="light teal" mat-mini-fab class="fab" style="background-color:#49c7ba" (click)="ChangeColor('#49c7ba')"></button>
+                  <button matTooltip="light green" mat-mini-fab class="fab" style="background-color:rgb(181, 221, 135)"  (click)="ChangeColor('rgb(181, 221, 135)')"></button>
+                  <button matTooltip="light deep-orange" mat-mini-fab class="fab" style="background-color:rgb(240, 140, 110)"  (click)="ChangeColor('rgb(240, 140, 110)')"></button>
+                  <button matTooltip="light lime" mat-mini-fab class="fab" style="background-color:rgb(211, 218, 149)" (click)="ChangeColor('rgb(211, 218, 149)')"></button>
+                </div>
           </mat-menu>
   
   
@@ -62,15 +61,18 @@
             <button mat-menu-item>
               <span>Add Label</span>
             </button>
-  
+
+            <button mat-menu-item>
+              <span>Delete label</span>
+            </button>
+
             <button mat-menu-item>
               <span>Add drawing</span>
             </button>
-  
+            
             <button mat-menu-item>
               <span>Show tick </span>
             </button>
-  
           </mat-menu>
   
     </div>
