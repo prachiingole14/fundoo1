@@ -67,6 +67,7 @@ $route['demo'] = 'NotesController/demo';
 $route['editcolor'] = 'NotesController/editcolor';
 $route['DisplayNotes'] = 'NotesController/DisplayNotes';
 $route['deletenote'] = 'NotesController/deletenote';
+$route['addLabel'] = 'EditLabelController/addLabel';
 
 
 

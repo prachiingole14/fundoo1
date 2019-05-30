@@ -12,9 +12,10 @@ const newLocal = 'This field is empty';
 })
 export class EditLabelComponent implements OnInit 
 {
+  submit: void;
   constructor(private s_editlabel:EditlableService) { }
 
-  flag="true";
+  flag = true;
   ngOnInit() 
   {}
 
@@ -27,4 +28,19 @@ export class EditLabelComponent implements OnInit
     return this.lable_name.hasError('required')?'':'It must be required in character format and size should be greater than 10 and less than 50  '
   }
 
+  addLebale()
+  {
+    if(this.lable_name.value !='')
+    {
+      this.model={"lable_name":this.lable_name.value}
+
+      let status = this.s_editlabel.Editlables(this.model)
+      status.subscribe(res=>{
+      console.log(res);
+      });
+  
+      this.submit=console.log(this.lable_name.value)
+    }
+   
+  }
 }
