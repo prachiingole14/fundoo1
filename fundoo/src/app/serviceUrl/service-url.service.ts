@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 
 export class ServiceUrlService {
   editlables: string;
+  addLabel: string;
 
   constructor() {}
  
