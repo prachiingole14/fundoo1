@@ -262,7 +262,7 @@ abstract class REST_Controller extends CI_Controller {
     /**
      * The arguments from GET, POST, PUT, DELETE, PATCH, HEAD and OPTIONS request methods combined
      *
-     * @var array
+     * @var array 
      */
     protected $_args = [];
 

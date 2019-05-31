@@ -14,6 +14,7 @@ import { SettingComponent } from './component/setting/setting.component';
 import { SendfeedbackComponent } from './component/sendfeedback/sendfeedback.component';
 import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.component';
 import { DisplaycontentsComponent } from './component/displaycontents/displaycontents.component';
+import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
 
 const routes: Routes = [
     {
@@ -80,6 +81,11 @@ const routes: Routes = [
             {
               path: 'shortcutkeys',
               component : ShortcutkeysComponent,
+            },
+
+            {
+              path: 'profilepic',
+              component : ProfilePicComponent,
             },
         ]
     },

@@ -5,7 +5,7 @@
   <!-- <div *ngIf="flag==true"> -->
       <mat-icon class="icon">add_box</mat-icon>
       <input class="input" class="font" matInput placeholder="Create new Label" [formControl]="lable_name" required>
-      <!-- <mat-error *ngIf="lable_name.dirty">{{lableError()}}</mat-error> -->
+      <mat-error *ngIf="lable_name.dirty">{{lableError()}}</mat-error>
   <!-- </div> -->
 
   <!-- <div  *ngIf="flag==false">

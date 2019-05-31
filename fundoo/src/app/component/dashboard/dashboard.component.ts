@@ -5,6 +5,7 @@ import { SettingComponent } from '../setting/setting.component';
 import { SendfeedbackComponent } from '../sendfeedback/sendfeedback.component';
 import { ShortcutkeysComponent } from '../shortcutkeys/shortcutkeys.component'
 import { from } from 'rxjs';
+import { ProfilePicComponent } from '../profile-pic/profile-pic.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -39,4 +40,8 @@ export class DashboardComponent implements OnInit
     this.dialog.open(ShortcutkeysComponent)
   }
 
+  profile_pic()
+  {
+    this.dialog.open(ProfilePicComponent)
+  }
 }

@@ -139,11 +139,6 @@ lass="searchs"
 
 <!-- <button mat-button (click)="openDialog()">Open dialog</button> -->
 
-
-
-
-
-
 <mat-sidenav-container class="sidenav-container" >
     <mat-sidenav class="sidenav" fixedInViewport="true"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -159,7 +154,7 @@ lass="searchs"
           <span class="oo">O</span></mat-toolbar>
 
       <mat-nav-list class="nav" *ngIf=flag >
-        <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']" >
+        <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
           <mat-icon>addcircle</mat-icon>  Notes</a>
 
         <a mat-list-item [routerLink] = "['reminder']" [routerLinkActive]="['is-active']" > 
@@ -170,8 +165,7 @@ lass="searchs"
              <div class="labels"><h6>LABELS</h6></div> 
              <a mat-list-item  (click)="openDialog()">
               <mat-icon>create</mat-icon>
-              <span> Edit Label</span>
-        </a>
+              <span> Edit Label</span></a>
         <mat-divider></mat-divider>
 
         <a mat-list-item [routerLink] = "['archive']" class="nav" [routerLinkActive]="['is-active']">
@@ -182,21 +176,18 @@ lass="searchs"
             <span> Trash</span></a>
         
       </mat-nav-list>
- 
     </mat-sidenav>
 
     <mat-sidenav-content >
       <mat-toolbar fxLayoutAlign="end center">
-              <mat-form-field appearance="outline" class="search-input">
-                  <mat-icon >search</mat-icon>
-                  <input class="search-input" matInput type="text" placeholder="Search" [(ngModel)]="value">
-                  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                    <mat-icon>close</mat-icon>
-                  </button>
-              </mat-form-field>
-            
-
-
+        <mat-form-field appearance="outline" class="search-input">
+          <mat-icon >search</mat-icon>
+            <input class="search-input" matInput type="text" placeholder="Search" [(ngModel)]="value">
+            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+            <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+  
     <!-- refresh start -->
     <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag>refresh</mat-icon>
     <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag>cloud_done</mat-icon>
@@ -220,12 +211,15 @@ lass="searchs"
               <button mat-menu-item (click)="openfeedbackDialog()">
                 <span>Send Feedback</span>
               </button>
+
               <button mat-menu-item>
                 <span><a href="https://support.google.com/keep/#topic=6262468">Helps</a></span>
               </button>
+
               <button mat-menu-item>
                   <span><a href="https://keep.google.com/u/0/#archive">Aapp Downloads</a></span>
               </button>
+
                 <button mat-menu-item (click)="shortcutkeys()">
                   <span>Keyboard Shortcuts</span>
                 </button>
@@ -237,7 +231,7 @@ lass="searchs"
       <!--FundooApps end -->
 
           <button class="mini-mats" mat-mini-fab color="primary" [matMenuTriggerFor]="menu"  matTooltip="Fundoo Account">P</button>  
-          <mat-menu #menu="matMenu">
+          <!-- <mat-menu #menu="matMenu">
               <div class="fxLayout" fxLayout="row" fxLayoutAlign="center center" >
                 <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>  
                   <div fxLayout="row" fxLayoutAlign="space-around start" >
@@ -251,40 +245,49 @@ lass="searchs"
                   <button mat-stroked-button class="basic-btn">Add Account</button>
                   <button mat-stroked-button  class="basic-btn2">Sign Out</button>
               </mat-card-footer>
-            </mat-menu> 
+            </mat-menu>  -->
             <mat-menu #menu="matMenu" >
                 <div fxLayout="row" class="profileMenu">
+
                   <div>
-                    <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P</button>
+                    <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P
+                      <mat-divider></mat-divider>
+                      <!-- <input type="file" style="display:none" #profile> -->
+                      <span class="add-profile-pic" (click)="profile_pic()">change</span>
+                    </button>
                   </div>
+
                   <div fxLayout='column'>
                     <div class="text">
                       Prachi Ingole
                     </div>
+
                     <div class="margin">
                       prachi760@gmail.com
                     </div>
-                    <div class="margin2">
-                        <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a>
+
+                    <div class="margin2">privacy
+                      <!-- <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a> -->
                     </div>
                   </div>
                 </div>
                 <mat-divider></mat-divider>
-                  <div fxLayout='row'>
-                    <div>
-                        <a [routerLink]="['registration']"><button mat-stroked-button class="basic-btn">Add Account</button></a>
-                    </div>
-                    <div>
-                        <a [routerLink]="[' ']"><button mat-stroked-button  class="basic-btn2">Sign Out</button></a>
-                    </div>
+                <div fxLayout='row'>
+                  <div>
+                    <!-- <a [routerLink]="['registration']"> -->
+                      <button mat-stroked-button class="basic-btn">Add Account</button>
+                    <!-- </a> -->
                   </div>
-                </mat-menu>
+                  <div>
+                    <!-- <a [routerLink]="[' ']"> -->
+                      <button mat-stroked-button  class="basic-btn2">Sign Out</button>
+                    <!-- </a> -->
+                  </div>
+                </div>
+            </mat-menu>
       
       </mat-toolbar>
-
     <!-- Add Content Here -->
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-
- 

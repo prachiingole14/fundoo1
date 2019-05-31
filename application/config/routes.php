@@ -59,7 +59,7 @@ $route['login'] = 'AccountController/login';
 $route['ResetPassword'] = 'AccountController/ResetPassword';
 $route['showregistered'] = 'AccountController/showregistered';
 
-
+$route['sam'] = 'sample/sam';
 
 //notes routing
 $route['addnote'] = 'NotesController/addnote';

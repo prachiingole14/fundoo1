@@ -33,15 +33,6 @@
   margin-top: 10px;
 }
 
-.mat-fab-btn
-{
-  margin-left:6px;
-  margin-right:6px;
-  margin-top: 2px;
-  margin-bottom: 4px;
-  height: 20px;
-  width: 60px;
-}
 
 .basic-btn
 {
@@ -106,11 +97,7 @@
   color: rgb(80, 79, 79);
 }
 
-.profileMenu
-{
-  width: 254px;
-  margin-block-end: 2px;
-}
+
 
 .margin
 {
@@ -131,6 +118,7 @@
   font-size: 16px;
   padding-left: 10px;
   color:  rgb(80, 79, 79);
+  margin-top: 6px;
 }
 
 
@@ -140,7 +128,6 @@
 {
  width:300px;
 }
-
 
 .f
 {
@@ -227,4 +214,27 @@
   margin-top: 10px;
   font-size: 16px;
   color: rgb(80, 79, 79);
+}
+
+.profileMenu
+{
+  width: 254px;
+  margin-block-end: 2px;
+}
+
+.mat-fab-btn
+{
+  margin-left:6px;
+  margin-right:6px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  height: 60px;
+  width: 60px;
+}
+
+.add-profile-pic
+{
+  margin-bottom: 8px;
+  font-size: 9px;
+ // background-color: grey;
 }

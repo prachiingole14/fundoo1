@@ -25,6 +25,7 @@ import { SettingComponent } from './component/setting/setting.component';
 import { SendfeedbackComponent } from './component/sendfeedback/sendfeedback.component';
 import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.component';
 import { DisplaycontentsComponent } from './component/displaycontents/displaycontents.component';
+import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
 
 
 
@@ -48,7 +49,8 @@ import { DisplaycontentsComponent } from './component/displaycontents/displaycon
     SettingComponent,
     SendfeedbackComponent,
     ShortcutkeysComponent,
-    DisplaycontentsComponent
+    DisplaycontentsComponent,
+    ProfilePicComponent
   
   ],
 

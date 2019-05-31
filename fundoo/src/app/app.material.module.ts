@@ -17,7 +17,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
     declarations: [],
   
@@ -38,7 +38,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
       MatDatepickerModule,
       MatInputModule,
       MatCheckboxModule,
-      MatGridListModule
+      MatGridListModule,
+      MatTabsModule
     ],
 
     exports:[
@@ -58,7 +59,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
       MatDatepickerModule,
       MatInputModule,
       MatCheckboxModule,
-      MatGridListModule
+      MatGridListModule,
+      MatTabsModule
     ],
   
     providers: [],
