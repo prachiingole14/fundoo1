@@ -30,17 +30,14 @@ export class EditLabelComponent implements OnInit
 
   addLebale()
   {
-    if(this.lable_name.value !='')
-    {
-      this.model={"lable_name":this.lable_name.value}
+    this.model={"lable_name":this.lable_name.value}
 
-      let status = this.s_editlabel.Editlables(this.model)
-      status.subscribe(res=>{
-      console.log(res);
-      });
-  
-      this.submit=console.log(this.lable_name.value)
-    }
+    let status = this.s_editlabel.Editlables(this.model)
+    status.subscribe(res=>{
+    console.log(res);
+    });
+
+    this.submit=console.log(this.lable_name.value)
    
   }
 }

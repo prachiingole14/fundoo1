@@ -1,6 +1,6 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
-    include "/var/www/html/CodeIgniter-3.1.10/application/Service/labelService.php";
+    include "/var/www/html/fundoonote/application/Service/labelService.php";
     // header('Access-Control-Allow-Origin: *');
     // header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
     
@@ -17,7 +17,6 @@
         public function addLabel()
         {
             $lable_name=$_POST['lable_name'];
-
             $result = $this->label->add_label($lable_name);
             return $result;
         }
