@@ -9,4 +9,9 @@ export class ProfilePicComponent implements OnInit
 {
   constructor() {}
   ngOnInit() {}
+
+  close()
+  {
+    
+  }
 }

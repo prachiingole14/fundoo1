@@ -20,6 +20,14 @@
             $result = $this->label->add_label($lable_name);
             return $result;
         }
+
+        public function deleteLabel()
+        {
+            $label_id=$_POST['label_id'];
+            //$lable_name=$_POST['label_name'];
+            $result = $this->label->delete_label($label_id, $lable_name);
+            return $result;
+        }
    
     }
 ?>

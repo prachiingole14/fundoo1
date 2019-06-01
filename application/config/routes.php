@@ -70,6 +70,8 @@ $route['deletenote'] = 'NotesController/deletenote';
 $route['addLabel'] = 'EditLabelController/addLabel';
 
 
+$route['Sample'] = 'Sample/Sample';
+
 
 
 $route['404_override'] = '';

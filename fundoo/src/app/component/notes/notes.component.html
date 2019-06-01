@@ -53,7 +53,6 @@
         <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
 
         <mat-menu #color="matMenu">
-
           <div fxLayout="row" fxLayoutAlign="center center">
             <button matTooltip="light red" mat-mini-fab class="fab" style="background-color:white" (click)="ChangeColor('white')"></button>
             <button matTooltip="light pink" mat-mini-fab class="fab" style="background-color:rgb(243, 134, 170)"  (click)="ChangeColor('rgb(243, 134, 170)')"></button>
@@ -98,13 +97,15 @@
           </button>
         </mat-menu>
 
-        <button mat-button (click)='reverse()'  fxLayoutAlign="end center" matTooltip="Close" class="close-btn">Close</button>
+        <button mat-button (click)='reverse()'  fxLayoutAlign="end end" matTooltip="Close" class="close-btn">Close</button>
 
       </div>
     </div>
   </div>
 </mat-card>
 
-<!-- <app-displaycontents  [childMessage]="parentMessage"></app-displaycontents> -->
+<app-displaycontents  [childMessage]="parentMessage"></app-displaycontents>
+
+
 
 

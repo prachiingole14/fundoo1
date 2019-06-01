@@ -57,11 +57,11 @@ header('Access-Control-Allow-Origin: *');
             $data = array('note_id' => $note_id);
 
             $note_id=$this->input->get('note_id');
-            $query=$this->db->query("delete  from notes where note_id='".$note_id."'");
+            $query=$this->db->query("delete from notes where note_id='$note_id'");
 
             if($query)
             {
-                echo "Date deleted successfully....!";
+                echo "Data deleted successfully....!";
             }
             return $query; 
         }

@@ -3,16 +3,16 @@
   ghfhfy
 </div> -->
 
- <mat-card class="flex" [style.backgroundColor]='color'>
+ <mat-card class="flex" [style.backgroundColor]='color'  cdkDragLockAxis="x,y" cdkDrag>
     <!-- <div  fxLayout="row" fxLayoutAlign="space-evenly end">
         <mat-form-field style="width:40%;">
           <input matInput placeholder="Empty node" >
         </mat-form-field>
-    </div> -->
+    </div> -->uyty
   
-        <div fxLayout="row" fxLayoutAlign="space-around center"    [style.backgroundColor]='color'>
+        <div fxLayout="row" fxLayoutAlign="start end"   >
           <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
-            <div style="margin-left:10px;">
+            <div style="margin-left:10px;" [style.backgroundColor]='color'>
               <mat-menu  #remainder="matMenu">
                 <button mat-menu-item>Remainder:</button>
                 <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
@@ -36,7 +36,7 @@
                 </div>
       
                 <div fxLayout="row" fxLayoutAlign="center center">
-                  <button matTooltip="light orange" mat-mini-fab class="fab" style="background-color:rgb(236, 158, 105)" (click)="ChangeColor('rgb(236, 158, 105)')"></button>
+                  <button matTooltip="light orange" mat-mini-fab class="fab" style="background-color:rgb(226, 170, 133)" (click)="ChangeColor('rgb(226, 170, 133)')"></button>
                   <button matTooltip="light yellow" mat-mini-fab class="fab" style="background-color:rgb(233, 222, 129)" (click)="ChangeColor('rgb(233, 222, 129)')"></button>
                   <button matTooltip="light blue" mat-mini-fab class="fab" style="background-color:rgb(158, 202, 238)"  (click)="ChangeColor('rgb(158, 202, 238)')"></button>
                   <button matTooltip="light cyan" mat-mini-fab class="fab" style="background-color:rgb(180, 243, 243)"  (click)="ChangeColor('rgb(180, 243, 243)')"></button>
@@ -80,3 +80,4 @@
   
   
 {{childMessage}}
+

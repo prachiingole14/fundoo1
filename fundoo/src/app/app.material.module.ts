@@ -18,6 +18,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
+import {DragDropModule} from '@angular/cdk/drag-drop'
 @NgModule({
     declarations: [],
   
@@ -39,7 +40,8 @@ import {MatTabsModule} from '@angular/material/tabs';
       MatInputModule,
       MatCheckboxModule,
       MatGridListModule,
-      MatTabsModule
+      MatTabsModule,
+      DragDropModule
     ],
 
     exports:[
@@ -60,7 +62,8 @@ import {MatTabsModule} from '@angular/material/tabs';
       MatInputModule,
       MatCheckboxModule,
       MatGridListModule,
-      MatTabsModule
+      MatTabsModule,
+      DragDropModule
     ],
   
     providers: [],

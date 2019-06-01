@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NotesService } from 'src/app/service/Notes.service';
 import { Validators, FormControl } from '@angular/forms';
 import { EditLabelComponent } from '../edit-label/edit-label.component';
@@ -22,7 +22,7 @@ export class NotesComponent implements OnInit
   submit: void;
 
     constructor(private s_notes:NotesService) {}
-
+    @Input() childMessage: string;
     flag=true;
     ngOnInit() 
     {
