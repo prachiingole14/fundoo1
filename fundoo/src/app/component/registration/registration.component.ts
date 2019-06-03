@@ -33,7 +33,6 @@ export class RegistrationComponent implements OnInit
   {  
     //debugger;  
 
-     
      if (this.firstName.value == ' '|| this.address.value == ' ' || this.contact.value == ' ' ||this.email.value ==' ' || this.password.value == ' ' || this.confirm_password.value == ' ') 
       {
         alert("some fields are missing")

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { EditLabelComponent } from '../edit-label/edit-label.component';
 
 
 
@@ -12,6 +13,7 @@ export class DisplaycontentsComponent implements OnInit
   color: any;
   
   @Input() childMessage: string;
+  dialog: any;
 
   constructor() { }
 
@@ -24,6 +26,12 @@ export class DisplaycontentsComponent implements OnInit
   {
     this.color=color;
     console.log(this.color,"change color");
+  }
+
+
+  openDialog1() {
+    this.dialog.open(EditLabelComponent)
+    console.log("its work")
   }
 
 }

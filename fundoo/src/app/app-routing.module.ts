@@ -15,7 +15,7 @@ import { SendfeedbackComponent } from './component/sendfeedback/sendfeedback.com
 import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.component';
 import { DisplaycontentsComponent } from './component/displaycontents/displaycontents.component';
 import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
-
+import { Dashboard1Component} from './component/dashboard1/dashboard1.component';
 const routes: Routes = [
     {
       path:'',
@@ -39,7 +39,12 @@ const routes: Routes = [
 
     {
       path: 'dashboard',
-      component : DashboardComponent,
+      component : DashboardComponent, 
+    },
+
+    {
+      path: 'dashboard1',
+      component : Dashboard1Component,
 
         children: [
             {

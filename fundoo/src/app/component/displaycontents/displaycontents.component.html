@@ -8,11 +8,11 @@
         <mat-form-field style="width:40%;">
           <input matInput placeholder="Empty node" >
         </mat-form-field>
-    </div> -->uyty
+    </div> -->
   
-        <div fxLayout="row" fxLayoutAlign="start end"   >
+        <div fxLayout="row" fxLayoutAlign="space-around center"  [style.backgroundColor]="color">
           <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
-            <div style="margin-left:10px;" [style.backgroundColor]='color'>
+            <div style="margin-left:10px; margin-top: 20px;" [style.backgroundColor]='color'>
               <mat-menu  #remainder="matMenu">
                 <button mat-menu-item>Remainder:</button>
                 <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
@@ -29,7 +29,7 @@
           <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
           <mat-menu #color="matMenu">
               <div fxLayout="row" fxLayoutAlign="center center">
-                  <button matTooltip="light red" mat-mini-fab class="fab" style="background-color: rgb(189, 88, 88)" (click)="ChangeColor('rgb(189, 88, 88)')"></button>
+                  <button matTooltip="light red" mat-mini-fab class="fab" style="background-color:white" (click)="ChangeColor('white')"></button>
                   <button matTooltip="light pink" mat-mini-fab class="fab" style="background-color:rgb(243, 134, 170)"  (click)="ChangeColor('rgb(243, 134, 170)')"></button>
                   <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
                   <button matTooltip="light deep-purpul" mat-mini-fab class="fab" style="background-color:rgb(158, 131, 206)"  (click)="ChangeColor('rgb(158, 131, 206)')"></button>
@@ -50,16 +50,16 @@
                 </div>
           </mat-menu>
   
-  
-          <mat-icon matTooltip="Add Image" class="margin">insert_photo</mat-icon>
+          <input type="file"  style="display:none"  #img>
+          <mat-icon matTooltip="Add Image" class="margin" (click)="img.click()">insert_photo</mat-icon>
          
           <mat-icon matTooltip="Archive" class="margin">archive</mat-icon>
   
           <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
   
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <span>Add Label</span>
+            <button mat-menu-item (click)="openDialog1()">
+              <span >Add Label</span>
             </button>
 
             <button mat-menu-item>
@@ -80,4 +80,3 @@
   
   
 {{childMessage}}
-

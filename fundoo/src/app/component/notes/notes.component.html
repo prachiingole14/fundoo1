@@ -6,10 +6,10 @@
 <mat-card class="flex" [style.backgroundColor]='color'>
   <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
 
-      <mat-form-field style="width:80%;">
-        <input matInput placeholder="Title"  [formControl]="title"  style="width:80%;" required >
+      <div style="width:80%;">
+        <input matInput placeholder="Title"  style="width:80%;" required >
         <!-- <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error> -->
-      </mat-form-field>
+      </div>
 
       <div fxLayoutAlign="end center" appearance="outline" class="formfield" fxLayout='row'>
         <mat-icon matTooltip="New List" class="add-box">add_box</mat-icon>
@@ -24,15 +24,16 @@
     <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
       <!-- <mat-label>Title : </mat-label> -->
       <div>
-        <mat-form-field style="width:70%;">
-          <input matInput placeholder="Title" [formControl]="title" required>
+        <div style="width:70%;"  >
+          <input matInput placeholder="Title"  required>
           <!-- <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error> -->
-        </mat-form-field></div>
+        </div>
+      </div>
 
-        <mat-form-field>
-          <input matInput  placeholder="Take a Note...."  [formControl]="description" required>
+        <div style="margin-top:18px;">
+          <input matInput  placeholder="Take a Note...."  required>
               <!-- <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error> -->
-        </mat-form-field>
+        </div>
 
       <div fxLayout='row' fxLayoutAlign="start end" >
         <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>

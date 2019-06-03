@@ -1,0 +1,74 @@
+//////////////////// side-nav ////////////////
+
+.example-container 
+{
+    height:100%;
+}
+  
+.example-sidenav-content 
+{
+    display: flex;
+    height: 100%;
+
+}
+
+
+//////////////////////////////funfoo text ////////////////////////////////
+.f
+{
+  margin-left:12px;
+  color: blue;
+  font-size: 20px;
+}
+
+.u
+{
+  color: chocolate;
+  font-size: 20px;
+}
+
+.n
+{
+  color:red;
+  font-size: 20px;
+}
+
+.d
+{
+  color:green;
+  font-size: 20px;
+} 
+
+.o
+{
+ color: crimson;
+ font-size: 20px;
+}
+
+.oo
+{
+  color:purple;
+  font-size: 20px;
+}
+
+//////////////////////////// side-nav-content ///////////@at-root
+.nav:active
+{
+    width:250px;
+    background-color: lightyellow;
+}
+
+ //////////////////// navbar /////////////////////////////////////////@at-root
+.flex
+{
+    margin-top:12px;
+    margin-bottom: 12px;
+}
+
+.profileMenu
+{
+  width: 254px;
+  margin-block-end: 2px;
+}
+
+

@@ -59,7 +59,10 @@ $route['login'] = 'AccountController/login';
 $route['ResetPassword'] = 'AccountController/ResetPassword';
 $route['showregistered'] = 'AccountController/showregistered';
 
-$route['sam'] = 'sample/sam';
+
+$route['sam'] = 'Sample/sam';
+
+
 
 //notes routing
 $route['addnote'] = 'NotesController/addnote';
@@ -67,12 +70,9 @@ $route['demo'] = 'NotesController/demo';
 $route['editcolor'] = 'NotesController/editcolor';
 $route['DisplayNotes'] = 'NotesController/DisplayNotes';
 $route['deletenote'] = 'NotesController/deletenote';
-$route['addLabel'] = 'EditLabelController/addLabel';
-
-
-$route['Sample'] = 'Sample/Sample';
-
+$route['addLabel'] = 'EditLabelController/addLabel'; 
 
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+   

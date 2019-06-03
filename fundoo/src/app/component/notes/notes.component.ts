@@ -26,19 +26,19 @@ export class NotesComponent implements OnInit
     flag=true;
     ngOnInit() 
     {
-      //this.getAllCard()
+      this.getAllCard()
     }
     
-    // getAllCard()
-    // {
-    //   this.s_notes.getcard().subscribe(data=>{
-    //     console.log('all note is ',data);
+    getAllCard()
+    {
+      this.s_notes.getcard().subscribe(data=>{
+        console.log('all note is ',data);
         
-    //   },err=>{
-    //     console.log('error in get note',err);
+      },err=>{
+        console.log('error in get note',err);
         
-    //   })
-    // }
+      })
+    }
 
     model: any = {};
 

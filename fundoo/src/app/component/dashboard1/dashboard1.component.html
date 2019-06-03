@@ -1,0 +1,120 @@
+
+<div fxLayout="row" class="flex" >
+  <button mat-button>
+    <mat-icon (click)="drawer.toggle()" style="color: grey;">dehaze</mat-icon>
+  </button>
+    <span class="f">F</span>
+    <span class="u">U</span>
+    <span class="n">N</span>
+    <span class="d">D</span>
+    <span class="o">O</span>
+    <span class="oo">O</span>
+   
+
+
+  <!-- grid start -->
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag style="color:grey;">refresh</mat-icon>
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag style="color:grey;">cloud_done</mat-icon>
+  <!--drid end -->
+
+  <!-- grid start -->
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag style="color:grey;">dashboard </mat-icon>
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag style="color:grey;">dns </mat-icon>
+  <!--drid end -->
+
+  <!-- setting start -->
+  <button mat-icon-button [matMenuTriggerFor]="menu1">
+      <mat-icon  style=" color:grey;" matTooltip="Settings" >settings</mat-icon>
+  </button>
+    <mat-menu #menu1="matMenu">
+      
+      <button mat-menu-item  (click)="opensettingDialog()">
+        <span>Settings</span>
+      </button>
+
+      <button mat-menu-item (click)="openfeedbackDialog()">
+        <span>Send Feedback</span>
+      </button>
+
+      <button mat-menu-item>
+        <span><a href="https://support.google.com/keep/#topic=6262468">Helps</a></span>
+      </button>
+
+      <button mat-menu-item>
+          <span><a href="https://keep.google.com/u/0/#archive">Aapp Downloads</a></span>
+      </button>
+
+        <button mat-menu-item (click)="shortcutkeys()">
+          <span>Keyboard Shortcuts</span>
+        </button>
+    </mat-menu>
+<!--setting end -->
+
+<!-- FundooApps start -->
+<mat-icon   matTooltip="FundooApps"  style="color:grey;">apps</mat-icon>
+<!--FundooApps end -->
+
+
+    <button class="mini-mats" mat-mini-fab color="primary" [matMenuTriggerFor]="menu"  matTooltip="Fundoo Account">P</button>  
+    <mat-menu #menu="matMenu" >
+        <div fxLayout="row" class="profileMenu">
+
+          <div>
+            <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P
+              <mat-divider></mat-divider>
+              <!-- <input type="file" style="display:none" #profile> -->
+              <span class="add-profile-pic" (click)="profile_pic()">change</span>
+            </button>
+          </div>
+
+          <div fxLayout='column'>
+            <div class="text">
+              Prachi Ingole
+            </div>
+
+            <div class="margin">
+              prachi760@gmail.com
+            </div>
+
+            <div class="margin2">privacy
+              <!-- <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a> -->
+            </div>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div fxLayout='row'>
+          <div>
+            <!-- <a [routerLink]="['registration']"> -->
+              <button mat-stroked-button class="basic-btn">Add Account</button>
+            <!-- </a> -->
+          </div>
+          <div>
+            <!-- <a [routerLink]="[' ']"> -->
+              <button mat-stroked-button  class="basic-btn2">Sign Out</button>
+            <!-- </a> -->
+          </div>
+        </div>
+    </mat-menu>
+
+</div>
+
+<mat-drawer-container class="example-container" #drawer>
+  <mat-drawer #drawer  mode="side">
+    <div style="margin-top:20px; margin-left:2px; width:250px;">
+
+        <mat-nav-list class="nav" >
+            <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
+            <mat-icon>lightbulb_outline</mat-icon> Notes</a>
+        </mat-nav-list>
+
+        <mat-nav-list class="nav" >
+            <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
+            <mat-icon>notifications_none</mat-icon> Reminder</a>
+        </mat-nav-list>
+
+      <mat-divider></mat-divider>
+        
+    </div>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-drawer-container>
