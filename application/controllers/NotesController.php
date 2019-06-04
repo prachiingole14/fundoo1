@@ -1,8 +1,9 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
-    include "/var/www/html/CodeIgniter-3.1.10/application/Service/NoteService.php";
-    // header('Access-Control-Allow-Origin: *');
-    // header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+    include "/var/www/html/fundoonote/application/Service/NoteService.php";
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Headers: Authorization");
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
     
     class NotesController extends CI_Controller
     {
@@ -12,7 +13,7 @@
         {
             parent::__construct();
             $this->load->database();
-            $this->noteservice = new NoteService();
+            $this->note = new NoteService();
         }
 
         public function addnote()
@@ -22,25 +23,24 @@
             $color = $_POST['color'];
             $image = $_POST['image'];
 
-            $result = $this->noteservice->AddNotes($title, $description, $color ,$image);
+            $result = $this->note->AddNotes($title, $description, $color ,$image);
             return $result;
         }
 
-        public function DisplayNotes()
+        public function displaynotes()
         {
-             $note_id=$_POST['note_id'];
-            // $title = $_POST['title'];
-            // $description = $_POST['description'];
-            // $color = $_POST['color'];
-            // $image = $_POST['image'];
-           $result = $this->noteservice->showdata($note_id);
-            print_r($result);
+            $note_id=$_POST['note_id'];
+           $result = $this->note->shownotes($note_id);
+           //$result= $this->db->query("SELECT note_id FROM notes where 'note_id=$note_id'");
+           print_r($result);
+
+           return $result;
         }
 
         public function deletenote()
         {
           $note_id=$_POST['note_id'];
-            $result = $this->noteservice->deleteNote($note_id);
+          $result = $this->noteservice->deleteNote($note_id);
             return $result;
         }
 
@@ -54,5 +54,4 @@
         }
 
       
-    }    
-
+    }   

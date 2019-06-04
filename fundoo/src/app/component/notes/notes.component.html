@@ -7,7 +7,7 @@
   <div *ngIf="flag==true" (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
 
       <div style="width:80%;">
-        <input matInput placeholder="Title"  style="width:80%;" [formControl]="title">
+        <input matInput placeholder="Title"  style="width:80%;outline: none; border:none;" >
         <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
       </div>
 
@@ -25,12 +25,12 @@
       <!-- <mat-label>Title : </mat-label> -->
       <div>
         <div style="width:70%;"  >
-          <input matInput placeholder="Title" [formControl]="title" required>
+          <input matInput placeholder="Title" [formControl]="title" style="outline: none; border:none;" required>
           <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
         </div>
       </div>
 
-        <div style="margin-top:18px;">
+        <div style="margin-top:18px; outline: none; border:none;">
           <input matInput  placeholder="Take a Note...." [formControl]="description" required>
             <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
         </div>

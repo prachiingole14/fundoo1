@@ -17,7 +17,7 @@ export class DisplaycontentsComponent implements OnInit
 
   constructor() { }
 
-  flag=true;
+  flag=false;
 
   ngOnInit() 
   {}
@@ -29,7 +29,7 @@ export class DisplaycontentsComponent implements OnInit
   }
 
 
-  openDialog1() {
+  openDialog() {
     this.dialog.open(EditLabelComponent)
     console.log("its work")
   }

@@ -1,6 +1,6 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
-    include '/var/www/html/CodeIgniter-3.1.10/application/Service/AccountService.php';
+    include_path(".:/var/www/html/fundoonote/application/Service");
 
     class AccountController extends CI_Controller
     {
@@ -11,7 +11,7 @@
             $this->load->database();
             $this->AccModel=new AccountModel();
             $this->AccService = new AccountService();
-            $this->AccModel= new AccountModel();
+           // $this->AccModel= new AccountModel();
         }
 
 

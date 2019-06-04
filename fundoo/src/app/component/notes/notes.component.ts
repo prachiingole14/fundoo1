@@ -46,30 +46,15 @@ export class NotesComponent implements OnInit
 
     reverse()
     {
-      if(this.title.value == '' || this.description.value == '')
+      if(this.title.value != ''&& this.description.value != '')
       {
         //this.flag = !this.flag
         console.log("all fileds are mendetary....!")
       }
+      else{
+        console.log("done")
+      }
     } 
-
-    //   this.model={
-    //     "title":this.title.value,
-    //     "description":this.description.value,
-    //     //"color":this.color.value, 
-    //     //"image":this.image.value
-    //   }
-     
-    //   let status= this.s_note.addNotes(this.model)
-    //     status.subscribe(res=>{
-    //     console.log(res);
-    //   });
-
-    //   this.submit=console.log(this.title.value,
-    //                           this.description.value,
-    //                           this.color.value,
-    //                           this.image.value)
-    // }
 
     ChangeColor(color)
     {

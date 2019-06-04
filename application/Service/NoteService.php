@@ -1,18 +1,16 @@
 
 <?php
 
-header("Access-Control-Allow-Headers : Content-Type");
-header("Access-Control-Allow-Methods : POST, OPTIONS");
-header('Access-Control-Allow-Origin: *');
+// header("Access-Control-Allow-Headers : Content-Type");
+// header("Access-Control-Allow-Methods : POST, OPTIONS");
+// header('Access-Control-Allow-Origin: *');
      
     class NoteService extends CI_Controller
     {
-       // private $noteService = "";
+        private $noteService = "";
         public function __construct()
         {
             parent::__construct();
-            $this->load->database();
-           //$this->controllers->NotesController();
         }
 
         public function AddNotes($title, $description, $color ,$image)
@@ -30,7 +28,7 @@ header('Access-Control-Allow-Origin: *');
         }
 
 
-        public function showdata($note_id)
+        public function shownotes($note_id)
         {
             // $data = array('note_id' =>$note_id,
             //     'title' => $title,
@@ -38,7 +36,7 @@ header('Access-Control-Allow-Origin: *');
             //     'color' => $color, 
             //     'image' => $image);
 
-           //$query = $this->db->query("SELECT * FROM `notes`");
+           //$query = $this->db->query("SELECT * FROM `notes` WHERE `note_id`=$note_id");
            //$stmt = $this->db->conn_id->prepare($query);
            //$res = $stmt->execute($data);
 

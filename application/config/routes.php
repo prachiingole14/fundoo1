@@ -61,15 +61,13 @@ $route['showregistered'] = 'AccountController/showregistered';
 
 $route['sam'] = 'Sample/sam';
 
-
-
 //notes routing
 $route['addnote'] = 'NotesController/addnote';
-$route['demo'] = 'NotesController/demo';
 $route['editcolor'] = 'NotesController/editcolor';
-$route['DisplayNotes'] = 'NotesController/DisplayNotes';
+$route['displaynotes'] = 'NotesController/displaynotes';
 $route['deletenote'] = 'NotesController/deletenote';
 
+//label routing
 $route['addLabel'] = 'EditLabelController/addLabel'; 
 
 
