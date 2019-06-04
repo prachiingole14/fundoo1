@@ -1,31 +1,45 @@
-
-<div fxLayout="row" class="flex" >
-  <button mat-button>
-    <mat-icon (click)="drawer.toggle()" style="color: grey;">dehaze</mat-icon>
-  </button>
+<div class="container"  fxLayout  fxLayout.xs="column"  fxLayoutAlign="center"  fxLayoutGap="10px"  fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="15%">
+    <button matSuffix mat-icon-button aria-label="Clear">
+      <mat-icon (click)="drawer.toggle()" class="navbar-content1" >dehaze</mat-icon>
+    </button>
     <span class="f">F</span>
     <span class="u">U</span>
     <span class="n">N</span>
     <span class="d">D</span>
     <span class="o">O</span>
     <span class="oo">O</span>
-   
+  </div>
+  
 
+  <div class="item item-2" fxFlex="55%" fxLayoutAlign="center center" *ngIf="flag==true">
+      <mat-card class="searchbar1">
+        <mat-icon class="navbar-content">search</mat-icon>
+        <mat-icon class="navbar-content-close">close</mat-icon>
+      </mat-card>
+  </div>
 
+  <div  fxFlex="50%" fxLayoutAlign="center center" *ngIf="flag==false">
+      <mat-card class="searchbar2">
+        <mat-icon class="navbar-content">search</mat-icon>
+        <mat-icon class="navbar-content-close">close</mat-icon>
+      </mat-card>
+  </div>
+
+  <div class="item item-3" fxFlex="30%" fxLayoutAlign="end center" > 
   <!-- grid start -->
-    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag style="color:grey;">refresh</mat-icon>
-    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag style="color:grey;">cloud_done</mat-icon>
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag class="navbar-content">refresh</mat-icon>
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag class="navbar-content">cloud_done</mat-icon>
   <!--drid end -->
 
   <!-- grid start -->
-    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag style="color:grey;">dashboard </mat-icon>
-    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag style="color:grey;">dns </mat-icon>
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag class="navbar-content">dashboard </mat-icon>
+    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag class="navbar-content">dns </mat-icon>
   <!--drid end -->
 
   <!-- setting start -->
-  <button mat-icon-button [matMenuTriggerFor]="menu1">
-      <mat-icon  style=" color:grey;" matTooltip="Settings" >settings</mat-icon>
-  </button>
+      <mat-icon  class="navbar-content" matTooltip="Settings" [matMenuTriggerFor]="menu1">settings</mat-icon>
+  
     <mat-menu #menu1="matMenu">
       
       <button mat-menu-item  (click)="opensettingDialog()">
@@ -51,51 +65,10 @@
 <!--setting end -->
 
 <!-- FundooApps start -->
-<mat-icon   matTooltip="FundooApps"  style="color:grey;">apps</mat-icon>
+<mat-icon   matTooltip="FundooApps"  class="navbar-content">apps</mat-icon>
 <!--FundooApps end -->
-
-
-    <button class="mini-mats" mat-mini-fab color="primary" [matMenuTriggerFor]="menu"  matTooltip="Fundoo Account">P</button>  
-    <mat-menu #menu="matMenu" >
-        <div fxLayout="row" class="profileMenu">
-
-          <div>
-            <button class="mat-fab-btn" mat-fab color="primary" [matMenuTriggerFor]="menu">P
-              <mat-divider></mat-divider>
-              <!-- <input type="file" style="display:none" #profile> -->
-              <span class="add-profile-pic" (click)="profile_pic()">change</span>
-            </button>
-          </div>
-
-          <div fxLayout='column'>
-            <div class="text">
-              Prachi Ingole
-            </div>
-
-            <div class="margin">
-              prachi760@gmail.com
-            </div>
-
-            <div class="margin2">privacy
-              <!-- <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a> -->
-            </div>
-          </div>
-        </div>
-        <mat-divider></mat-divider>
-        <div fxLayout='row'>
-          <div>
-            <!-- <a [routerLink]="['registration']"> -->
-              <button mat-stroked-button class="basic-btn">Add Account</button>
-            <!-- </a> -->
-          </div>
-          <div>
-            <!-- <a [routerLink]="[' ']"> -->
-              <button mat-stroked-button  class="basic-btn2">Sign Out</button>
-            <!-- </a> -->
-          </div>
-        </div>
-    </mat-menu>
-
+</div>
+<mat-divider></mat-divider>
 </div>
 
 <mat-drawer-container class="example-container" #drawer>
@@ -113,6 +86,30 @@
         </mat-nav-list>
 
       <mat-divider></mat-divider>
+
+      <mat-nav-list class="nav" >
+        <span style="color:grey;">Labels</span>
+          <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
+              <mat-icon>create</mat-icon>
+              <span> Edit Label</span></a>
+      </mat-nav-list>
+
+      <mat-divider></mat-divider>
+
+      <mat-nav-list class="nav" >
+          <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
+              <mat-icon>addcircle</mat-icon>
+              <span> Archive</span>
+          </a>
+      </mat-nav-list>
+
+      <mat-nav-list class="nav" >
+          <a mat-list-item [routerLink] = "['delete']" class="nav" [routerLinkActive]="['is-active']">
+              <mat-icon>delete_sweep</mat-icon>
+              <span> Trash</span>
+          </a>
+      </mat-nav-list>
+       <mat-divider></mat-divider>
         
     </div>
   </mat-drawer>

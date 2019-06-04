@@ -28,12 +28,7 @@ import { DisplaycontentsComponent } from './component/displaycontents/displaycon
 import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
 import { Dashboard1Component } from './component/dashboard1/dashboard1.component';
 
-
-
-
 //import { Component} from '@angular/core';
-
-
 
 @NgModule({
   declarations: [
@@ -53,11 +48,7 @@ import { Dashboard1Component } from './component/dashboard1/dashboard1.component
     DisplaycontentsComponent,
     ProfilePicComponent,
     Dashboard1Component
-  
   ],
-
-
-
 
   imports: [
     BrowserModule,
@@ -79,16 +70,12 @@ import { Dashboard1Component } from './component/dashboard1/dashboard1.component
     MatListModule
   ],
 
-
-
-
   providers: [RegisterService],
 
   bootstrap: [AppComponent]
-
 })
 
-export class AppModule { }
+export class AppModule {}
 //export class ButtonToggleOverviewExample {}
 
 

@@ -8,15 +8,15 @@
             $this->load->database();
         }
 
-        public function add_label($lable_name)
+        public function add_label($label_name)
         {
-            $data = array("lable_name" => $lable_name);
+            $data = array("label_name" => $label_name);
             
-            $query= $this->db->query("INSERT INTO labels(`lable_name`) VALUES ('$lable_name')");
+            $query= $this->db->query("INSERT INTO labels(`label_name`) VALUES ('$label_name')");
             print_r($query);
         }
 
-        public function delete_label($label_id, $lable_name)
+        public function delete_label($label_id, $label_name)
         {
             // $data = array("label_id" => $label_id,
             //             "lable_name" => $lable_name);

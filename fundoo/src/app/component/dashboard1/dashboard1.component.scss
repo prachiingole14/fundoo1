@@ -1,68 +1,111 @@
-//////////////////// side-nav ////////////////
+/////////////////////////////// side-nav ////////////////////////////
 
 .example-container 
 {
-    height:100%;
+  height:100%;
+  width:100%;
+  background-color:white;
 }
   
-.example-sidenav-content 
-{
-    display: flex;
-    height: 100%;
 
-}
-
-
-//////////////////////////////funfoo text ////////////////////////////////
+////////////////////////////// fundoo text ////////////////////////////////
 .f
 {
   margin-left:12px;
   color: blue;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .u
 {
   color: chocolate;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .n
 {
   color:red;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .d
 {
   color:green;
-  font-size: 20px;
+  font-size: 22px;
 } 
 
 .o
 {
  color: crimson;
- font-size: 20px;
+ font-size: 22px;
 }
 
 .oo
 {
   color:purple;
-  font-size: 20px;
+  font-size: 22px;
 }
 
-//////////////////////////// side-nav-content ///////////@at-root
+//////////////////////////// side-nav-content //////////////////////
+
 .nav:active
 {
     width:250px;
     background-color: lightyellow;
+    border-radius: 16;
 }
 
- //////////////////// navbar /////////////////////////////////////////@at-root
+.navbar-content
+{
+  color:rgb(114, 113, 113);
+  margin-right: 16px; 
+}
+
+.navbar-content1
+{
+  color:rgb(114, 113, 113);
+}
+
+.example-form-field 
+{
+  width: 400px;
+  margin-right: 20%;
+}
+
+.searchbar1
+{
+  width:100%;
+  height: 12px;
+  margin-bottom:6px;
+  margin-top: 6px;
+  background-color: rgb(235, 241, 234);
+}
+
+.searchbar2
+{
+  width:100%;
+  height: 12px;
+  margin-bottom:6px;
+  margin-top: 6px;
+  background-color:white;
+  border: 2px solid #D0D0D0;
+  box-shadow: 0 0 10px #D0D0D0;
+}
+
+.navbar-content-close
+{
+  color:rgb(114, 113, 113);
+  margin-left: 88%; 
+}
+
+
+
+//////////////////////////// navbar ////////////////////////////////////////
+
 .flex
 {
-    margin-top:12px;
-    margin-bottom: 12px;
+  margin-top:12px;
+  margin-bottom: 12px;
 }
 
 .profileMenu

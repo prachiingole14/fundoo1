@@ -19,5 +19,6 @@ export class ServiceUrlService {
     public notes = "notes";
     public changeColor = "col";
     public addNotes = "takeNotes";
-    public Editlables = "edit-lable";
+
+    public Editlables = "addlable";
 }

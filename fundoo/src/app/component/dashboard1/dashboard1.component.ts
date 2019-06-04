@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { EditLabelComponent } from '../edit-label/edit-label.component';
+import { SettingComponent } from '../setting/setting.component';
+import { SendfeedbackComponent } from '../sendfeedback/sendfeedback.component';
+import { ShortcutkeysComponent } from '../shortcutkeys/shortcutkeys.component';
+import { ProfilePicComponent } from '../profile-pic/profile-pic.component';
 
 @Component({
   selector: 'app-dashboard1',
@@ -7,12 +13,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Dashboard1Component implements OnInit 
 {
+  dialog: any;
 
   constructor() { } 
-
+  flag=true;
   showFiller = false;
   
+  myControl = new FormControl();
+ 
+  
   ngOnInit() {
+  }
+
+  openDialog()
+  {
+     this.dialog.open(EditLabelComponent)
+  }
+
+  opensettingDialog()
+  {
+    this.dialog.open(SettingComponent)
+  }
+
+  openfeedbackDialog()
+  {
+    this.dialog.open(SendfeedbackComponent)
+  }
+
+  shortcutkeys()
+  {
+    this.dialog.open(ShortcutkeysComponent)
+  }
+
+  profile_pic()
+  {
+    this.dialog.open(ProfilePicComponent)
   }
  
 }

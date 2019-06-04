@@ -16,8 +16,9 @@
 
         public function addLabel()
         {
-            $lable_name=$_POST['lable_name'];
-            $result = $this->label->add_label($lable_name);
+            $label_name=$_POST['label_name'];
+            print $label_name;
+            $result = $this->label->add_label($label_name);
             return $result;
         }
 

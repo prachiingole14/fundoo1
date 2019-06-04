@@ -4,11 +4,11 @@
 </div> -->
 
 <mat-card class="flex" [style.backgroundColor]='color'>
-  <div *ngIf='flag==true' (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
+  <div *ngIf="flag==true" (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
 
       <div style="width:80%;">
-        <input matInput placeholder="Title"  style="width:80%;" required >
-        <!-- <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error> -->
+        <input matInput placeholder="Title"  style="width:80%;" [formControl]="title">
+        <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
       </div>
 
       <div fxLayoutAlign="end center" appearance="outline" class="formfield" fxLayout='row'>
@@ -25,14 +25,14 @@
       <!-- <mat-label>Title : </mat-label> -->
       <div>
         <div style="width:70%;"  >
-          <input matInput placeholder="Title"  required>
-          <!-- <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error> -->
+          <input matInput placeholder="Title" [formControl]="title" required>
+          <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
         </div>
       </div>
 
         <div style="margin-top:18px;">
-          <input matInput  placeholder="Take a Note...."  required>
-              <!-- <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error> -->
+          <input matInput  placeholder="Take a Note...." [formControl]="description" required>
+            <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
         </div>
 
       <div fxLayout='row' fxLayoutAlign="start end" >
