@@ -2,8 +2,9 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  baseUrl: "http://localhost/CodeIgniter-3.1.10/",
+export const environment = 
+{
+  baseUrl: "http://localhost:4200/",
   production: false
 };
 

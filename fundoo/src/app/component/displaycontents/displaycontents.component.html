@@ -1,21 +1,17 @@
 
-<!-- <div (click)="flag=true" *ngIf=!flag>
-  ghfhfy
-</div> -->
-
- <mat-card class="flex" [style.backgroundColor]='color'  cdkDragLockAxis="x,y" cdkDrag>
+ <mat-card class="flex" [style.backgroundColor]='color' cdkDragLockAxis="x,y" cdkDrag >
     <!-- <div  fxLayout="row" fxLayoutAlign="space-evenly end">
         <mat-form-field style="width:40%;">
           <input matInput placeholder="Empty node" >
         </mat-form-field>
     </div> -->
-  
+
         <div fxLayout="row" fxLayoutAlign="space-around center"  [style.backgroundColor]="color">
           <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
             <div style="margin-left:10px; margin-top: 20px;" [style.backgroundColor]='color'>
               <mat-menu  #remainder="matMenu">
                 <button mat-menu-item>Remainder:</button>
-                <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
+                <button mat-menu-item>   today <span  class="align">08:00 PM</span></button>
                 <button mat-menu-item>Tomorrow <span  class="align">08:00 PM</span></button>
                 <button mat-menu-item>Next week Mon<span  class="align2">08:00 PM</span></button>
                 <button mat-menu-item>Work<span  class="gov">Govandi</span></button>
@@ -76,6 +72,8 @@
           </mat-menu>
   
     </div>
+   
   </mat-card>
   
+
 {{childMessage}}

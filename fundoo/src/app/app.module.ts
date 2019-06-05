@@ -28,6 +28,7 @@ import { DisplaycontentsComponent } from './component/displaycontents/displaycon
 import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
 import { Dashboard1Component } from './component/dashboard1/dashboard1.component';
 
+
 //import { Component} from '@angular/core';
 
 @NgModule({
@@ -47,7 +48,8 @@ import { Dashboard1Component } from './component/dashboard1/dashboard1.component
     ShortcutkeysComponent,
     DisplaycontentsComponent,
     ProfilePicComponent,
-    Dashboard1Component
+    Dashboard1Component,
+  
   ],
 
   imports: [

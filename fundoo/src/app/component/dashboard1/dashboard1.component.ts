@@ -5,6 +5,8 @@ import { SettingComponent } from '../setting/setting.component';
 import { SendfeedbackComponent } from '../sendfeedback/sendfeedback.component';
 import { ShortcutkeysComponent } from '../shortcutkeys/shortcutkeys.component';
 import { ProfilePicComponent } from '../profile-pic/profile-pic.component';
+import { MatDialog } from '@angular/material';
+
 
 @Component({
   selector: 'app-dashboard1',
@@ -13,21 +15,20 @@ import { ProfilePicComponent } from '../profile-pic/profile-pic.component';
 })
 export class Dashboard1Component implements OnInit 
 {
-  dialog: any;
+  
 
-  constructor() { } 
+  constructor(public dialog: MatDialog) { }
+
   flag=true;
   showFiller = false;
   
   myControl = new FormControl();
  
-  
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   openDialog()
   {
-     this.dialog.open(EditLabelComponent)
+    this.dialog.open(EditLabelComponent)
   }
 
   opensettingDialog()

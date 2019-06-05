@@ -5,7 +5,8 @@
    margin-top: 40px;
    margin-left: 30%;
 	border: 2px solid #D0D0D0;
-	box-shadow: 0 0 10px #D0D0D0;
+  box-shadow: 0 0 10px #D0D0D0;
+  border-radius: 12px;
 }
 
  .formfield
@@ -28,7 +29,7 @@
 
  .close-btn
  {
-   margin-left: 220px;
+   margin-left:40%;
    align-content: flex-end;
    color: rgb(80, 79, 79);
  }

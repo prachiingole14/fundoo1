@@ -7,8 +7,8 @@
   <div *ngIf="flag==true" (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
 
       <div style="width:80%;">
-        <input matInput placeholder="Title"  style="width:80%;outline: none; border:none;" >
-        <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
+        <input matInput placeholder="Take a notes"  style="width:80%;outline: none; border:none;" >
+        <!-- <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error> -->
       </div>
 
       <div fxLayoutAlign="end center" appearance="outline" class="formfield" fxLayout='row'>
@@ -16,22 +16,20 @@
         <mat-icon matTooltip="New List with drawing" class="margin">brush</mat-icon>
         <mat-icon matTooltip="New List with image" class="margin">insert_photo</mat-icon>
       </div>
-
   </div>
 
-  <div *ngIf="flag==false">
+  <div *ngIf="flag==false" [style.backgroundColor]='color'>
     <!-- <mat-form-f-ield [ngStyle.background]=color appearance="outline"  class="formfield"> -->
     <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
       <!-- <mat-label>Title : </mat-label> -->
-      <div>
+     
         <div style="width:70%;"  >
-          <input matInput placeholder="Title" [formControl]="title" style="outline: none; border:none;" required>
+          <input matInput placeholder="Title" style="outline: none; border:none; margin-bottom:20px;" required>
           <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
         </div>
-      </div>
 
-        <div style="margin-top:18px; outline: none; border:none;">
-          <input matInput  placeholder="Take a Note...." [formControl]="description" required>
+        <div style="margin-top:18px; ">
+          <input matInput  placeholder="Take a Note...."  style="outline: none; border:none;" required>
             <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
         </div>
 
@@ -50,12 +48,11 @@
           </div>
 
         <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
-
         <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
 
         <mat-menu #color="matMenu">
           <div fxLayout="row" fxLayoutAlign="center center">
-            <button matTooltip="light red" mat-mini-fab class="fab" style="background-color:white" (click)="ChangeColor('white')"></button>
+            <button matTooltip="none" mat-mini-fab class="fab" style="background-color:white" (click)="ChangeColor('white')"></button>
             <button matTooltip="light pink" mat-mini-fab class="fab" style="background-color:rgb(243, 134, 170)"  (click)="ChangeColor('rgb(243, 134, 170)')"></button>
             <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
             <button matTooltip="light deep-purpul" mat-mini-fab class="fab" style="background-color:rgb(158, 131, 206)"  (click)="ChangeColor('rgb(158, 131, 206)')"></button>
@@ -104,8 +101,7 @@
     </div>
   </div>
 </mat-card>
-
-<app-displaycontents  [childMessage]="parentMessage"></app-displaycontents>
+<app-displaycontents  [allCard]="card"></app-displaycontents>
 
 
 

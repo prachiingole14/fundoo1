@@ -1,4 +1,4 @@
-<!-- <div class="flx" fxLayout='row' fxLayoutAlign='center center'>
+<div class="flx" fxLayout='row' fxLayoutAlign='center center'>
     <mat-card fxFlex='32'>
         
         <h3 class="h3">Registration form</h3>
@@ -10,7 +10,7 @@
                             <input matInput placeholder="Enter your name" [formControl]="firstName" required>
                         </mat-form-field>
                         <mat-error *ngIf="firstName.dirty">{{firstNameError()}}</mat-error>
-                        <!-- <mat-error *ngIf="firstName.pattern">{{firstNamepError()}}</mat-error> --
+                        <!-- <mat-error *ngIf="firstName.pattern">{{firstNamepError()}}</mat-error> -->
                     </div>
                     
                     <mat-form-field class="align">
@@ -45,23 +45,26 @@
                     
                     <div class="example-button-row">
                         <button ngSubmit="onSubmit()"  mat-stroked-button style="margin-left:120px;">Register</button>
-                        <!-- <a [routerLink]="['']"><button mat-stroked-button style="margin-left:20px;">Sign In</button></a> --
+                        <!-- <a [routerLink]="['']"><button mat-stroked-button style="margin-left:20px;">Sign In</button></a> -->
                     </div>  
 
                     <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
                     <mat-button-toggle value="italic">Submit</mat-button-toggle>
                     <a [routerLink]="['']"><mat-button-toggle value="underline">Sing In</mat-button-toggle></a>
-                    </mat-button-toggle-group> --
+                    </mat-button-toggle-group> -->
 
 
                 </form>
             </div>
     </mat-card> 
-</div>   -->
+</div>  
 
 
 
-  
+
+
+
+<!--   
 <div fxLayout="row" fxLayoutAlign="center center" >
     <mat-card>
 
@@ -111,4 +114,4 @@
         </div>
 
     </mat-card>
-</div> 
+</div>  -->

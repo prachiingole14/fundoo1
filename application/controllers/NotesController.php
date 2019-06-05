@@ -29,12 +29,11 @@
 
         public function displaynotes()
         {
-            $note_id=$_POST['note_id'];
-           $result = $this->note->shownotes($note_id);
+        //    $note_id=$_GET['note_id'];
+           $data = $this->note->shownotes();
            //$result= $this->db->query("SELECT note_id FROM notes where 'note_id=$note_id'");
-           print_r($result);
-
-           return $result;
+           print_r($data);
+           return $data;
         }
 
         public function deletenote()

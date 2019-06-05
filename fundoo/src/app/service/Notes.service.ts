@@ -31,10 +31,12 @@ export class NotesService
 
   getcard()
   {
-    return this.http.post(this.serviceurl.host + 'DisplayNotes' , {});
+    console.log('hel');
+    
+    return this.http.post('http://localhost/displaynotes' , {});
   }
  
-  displayNote(data)
+  displayNotes(data)
   {
     //debugger;
     let displayNote = new FormData();

@@ -11,7 +11,6 @@
         public function add_label($label_name)
         {
             $data = array("label_name" => $label_name);
-            
             $query= $this->db->query("INSERT INTO labels(`label_name`) VALUES ('$label_name')");
             print_r($query);
         }

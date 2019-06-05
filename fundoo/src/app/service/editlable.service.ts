@@ -7,14 +7,16 @@ import { Editlable } from '../model/editlable';
   providedIn: 'root'
 })
 
-export class EditlableService {
+export class EditlableService 
+{
 
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
   editlable : Editlable;
 
-  Editlables(editlable)
+  addLables(editlable)
   {
     let Editlables = new FormData();
+
     Editlables.append("editlables", editlable.lable_name);
     return this.http.post(this.serviceurl.host + this.serviceurl.editlables, Editlables);
   }

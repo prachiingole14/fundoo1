@@ -19,6 +19,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
     declarations: [],
@@ -42,7 +44,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
       MatCheckboxModule,
       MatGridListModule,
       MatTabsModule,
-      DragDropModule
+      DragDropModule,
+      MatSnackBarModule,
+      MatToolbarModule
     ],
 
     exports:[
@@ -64,7 +68,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
       MatCheckboxModule,
       MatGridListModule,
       MatTabsModule,
-      DragDropModule
+      DragDropModule,
+      MatSnackBarModule,
+      MatToolbarModule
     ],
   
     providers: [],

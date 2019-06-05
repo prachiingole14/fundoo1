@@ -28,19 +28,14 @@
         }
 
 
-        public function shownotes($note_id)
+        public function shownotes()
         {
             // $data = array('note_id' =>$note_id,
             //     'title' => $title,
             //     'description' => $description,
             //     'color' => $color, 
             //     'image' => $image);
-
-           //$query = $this->db->query("SELECT * FROM `notes` WHERE `note_id`=$note_id");
-           //$stmt = $this->db->conn_id->prepare($query);
-           //$res = $stmt->execute($data);
-
-          // $this->db->where('note_id', $note_id);
+            // $this->db->where('note_id', $note_id);
            // here we select every column of the table
 
            $q = $this->db->get('notes');
