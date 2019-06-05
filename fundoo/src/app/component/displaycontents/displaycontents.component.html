@@ -5,6 +5,9 @@
           <input matInput placeholder="Empty node" >
         </mat-form-field>
     </div> -->
+    <div *ngFor="let data of data">
+{{data.title}}
+    </div>
 
         <div fxLayout="row" fxLayoutAlign="space-around center"  [style.backgroundColor]="color">
           <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>

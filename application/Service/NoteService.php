@@ -20,11 +20,11 @@
                         'color' => $color, 
                         'image' => $image);
 
-            $query_result= $this->db->insert('notes',$data);  
-            //$query =  $this->db->query("INSERT INTO notes(title,description,color,image) VALUES('$title','$description','$color','$image')");
+           // $query_result= $this->db->insert('notes', $data);  
+            $query =  $this->db->query("INSERT INTO notes(title,description,color,image) VALUES('$title','$description','$color','$image')");
            
-            print_r($query_result);
-            return $query_result;
+            print_r($query);
+            return $query;
         }
 
 
