@@ -10,7 +10,6 @@ export class ServiceUrlService {
   addLabel: string;
 
   constructor() {}
- 
     public host = environment.baseUrl;
     public register = "register";
     public login = "login";
@@ -20,5 +19,5 @@ export class ServiceUrlService {
     public changeColor = "col";
     public addNotes = "takeNotes";
     public displaycontents = "displayNotes";
-    public editlable = "addLable";
+    public lable = " addLables";
 }

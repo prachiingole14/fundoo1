@@ -14,7 +14,7 @@ const newLocal = 'This field is empty';
 export class EditLabelComponent implements OnInit 
 {
   submit: void;
-  constructor(private s_label:lableService, private snack : MatSnackBar) { }
+  constructor( private snack : MatSnackBar) { }
 
   flag = true;
   ngOnInit() 
@@ -29,27 +29,8 @@ export class EditLabelComponent implements OnInit
     return this.lable_name.hasError('required')?'Invalid label....!':''
   }
 
-  addLabel()
-  {
-    this.model={  "lable_name":this.lable_name.value }
-
-    if(this.lable_name.value == ' ')
-    {
-      console.log("empty label")
-    }
-    else
-    {
-      this.model={"lable_name":this.lable_name.value}
-
-      let status = this.s_label.addLables(this.model)
-      status.subscribe(res=>{
-      console.log(res);
-      });
-   
-      this.submit=console.log(this.lable_name.value)
-      let snackBarRef = this.snack.open('Label added successfully.....!', 'Undo');
-    }
+  
     
    
   }
-}
+

@@ -20,7 +20,7 @@
             // $data = array("label_id" => $label_id,
             //             "lable_name" => $lable_name);
             
-            $query = $this->db->query("DELETE INTO labels(`label_id`) WHERE 'label_id = $label_id'");
+            $query = $this->db->query("DELETE FROM labels WHERE `label_id` = '$label_id'");
             print_r($query);
             
         }

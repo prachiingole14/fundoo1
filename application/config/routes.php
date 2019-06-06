@@ -58,7 +58,6 @@ $route['login'] = 'AccountController/login';
 $route['ResetPassword'] = 'AccountController/ResetPassword';
 $route['showregistered'] = 'AccountController/showregistered';
 
-
 $route['sam'] = 'Sample/sam';
 
 //notes routing
@@ -69,7 +68,7 @@ $route['deletenote'] = 'NotesController/deletenote';
 
 //label routing
 $route['addLabel'] = 'EditLabelController/addLabel'; 
-
+$route['deleteLabel'] = 'EditLabelController/deleteLabel';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

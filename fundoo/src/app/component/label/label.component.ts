@@ -16,6 +16,8 @@ export class LabelComponent implements OnInit
   constructor(private s_label:lableService , private snack : MatSnackBar) { }
 
   flag = true;
+
+  
   ngOnInit() 
   {}
 
@@ -35,6 +37,7 @@ export class LabelComponent implements OnInit
     if(this.lable_name.value == ' ')
     {
       console.log("empty label")
+      let snackBarRef = this.snack.open('Label empty....!', 'Undo');
     }
     else
     {
@@ -44,11 +47,10 @@ export class LabelComponent implements OnInit
       status.subscribe(res=>{
       console.log(res);
       });
-   
+  
       this.submit=console.log(this.lable_name.value)
       let snackBarRef = this.snack.open('Label added successfully.....!', 'Undo');
     }
-    
-   
+  
   }
 }
