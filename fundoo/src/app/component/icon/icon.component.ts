@@ -29,22 +29,13 @@ export class IconComponent implements OnInit
   flag=false;
 
   ngOnInit() 
-  {
-    
-  }
+  {}
 
   ChangeColor(color)
   {
     this.color=color;
     console.log(this.color,"change color");
   }
-  
-  // ChangeColor(color)
-  // {
-  //   this.color=color;
-  //   console.log(this.color,"change color");
-  // }
-
 
   openDialog() 
   {

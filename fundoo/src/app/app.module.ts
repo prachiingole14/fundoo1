@@ -26,11 +26,10 @@ import { SendfeedbackComponent } from './component/sendfeedback/sendfeedback.com
 import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.component';
 import { DisplaycontentsComponent } from './component/displaycontents/displaycontents.component';
 import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
-import { Dashboard1Component } from './component/dashboard1/dashboard1.component';
 import { InsertnotesComponent } from './component/insertnotes/insertnotes.component';
 import { IconComponent } from './component/icon/icon.component';
-
-
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { Dashboard1Component } from './component/dashboard1/dashboard1.component';
 //import { Component} from '@angular/core';
 
 @NgModule({
@@ -50,10 +49,10 @@ import { IconComponent } from './component/icon/icon.component';
     ShortcutkeysComponent,
     DisplaycontentsComponent,
     ProfilePicComponent,
-    Dashboard1Component,
     InsertnotesComponent,
     IconComponent,
-  
+    NavbarComponent,
+    Dashboard1Component
   ],
 
   imports: [

@@ -39,7 +39,7 @@
         public function deletenote()
         {
           $note_id=$_POST['note_id'];
-          $result = $this->noteservice->deleteNote($note_id);
+          $result = $this->note->deleteNote($note_id);
             return $result;
         }
 
@@ -48,7 +48,7 @@
             $note_id = $_POST['note_id'];
             $color = $_POST['color'];
             
-            $result= $this->noteservice->changeColor($note_id,$color);
+            $result= $this->note->changeColor($note_id,$color);
             return $result;
         }
 

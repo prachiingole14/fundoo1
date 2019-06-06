@@ -1,4 +1,7 @@
 /////////////////////////////// side-nav ////////////////////////////
+body {
+  overflow: hidden !important ;
+}
 
 .example-container 
 {
@@ -7,6 +10,8 @@
   background-color:white;
   border: none;
   outline: none;
+  border-start-end-radius: 14px;
+  overflow: hidden !important ;
 }
   
 ////////////////////////////// fundoo text ////////////////////////////////
@@ -134,6 +139,16 @@
   margin-top: 10px;
 }
 
+.nav
+{
+  margin-left:6px;
+}
+
+.navmargin
+{
+  margin-left: 24px;
+}
+
 .searchbar
 {
   outline: none;
@@ -143,7 +158,8 @@
   margin-top: 0px;
 }
 
-:host ::ng-deep .mat-drawer-side{
+:host ::ng-deep .mat-drawer-side
+{
   border-right: 0px !important
 } 
 

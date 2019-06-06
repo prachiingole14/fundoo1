@@ -23,16 +23,12 @@ export class NotesService
     let takeNotes = new FormData();
     takeNotes.append("title", notes.title);
     takeNotes.append("description",notes.description);
-    takeNotes.append("color", notes.color);
-    takeNotes.append("image", notes.image);
  
     return this.http.post(this.serviceurl.host + this.serviceurl.notes, takeNotes);
   }
 
   getcard()
   {
-    console.log('hel');
-    
     return this.http.post('http://localhost/displaynotes' , {});
   }
  
@@ -44,13 +40,12 @@ export class NotesService
     return this.http.post(this.serviceurl.host + this.serviceurl.notes,displayNote);
   }
 
-  changeColor(color,string)
+  changeColor(notes)
   {
     // debugger;
-    let col = new FormData();
-    col.append('color',color);
-    col.append('string',string);
-    return this.http.post(this.serviceurl.host+this.serviceurl.changeColor,col);
+    let color = new FormData();
+    color.append('color', notes.color);
+    return this.http.post(this.serviceurl.host+this.serviceurl.changeColor,color);
   }
 
 }

@@ -69,12 +69,16 @@
   
           <mat-nav-list class="nav" >
               <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
-              <mat-icon>lightbulb_outline</mat-icon> Notes</a>
+              <mat-icon>lightbulb_outline</mat-icon> 
+              <span class="navmargin">Notes</span>
+            </a>
           </mat-nav-list>
   
           <mat-nav-list class="nav" >
               <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
-              <mat-icon>notifications_none</mat-icon> Reminder</a>
+              <mat-icon>notifications_none</mat-icon> 
+              <span class="navmargin">Reminder</span>
+            </a>
           </mat-nav-list>
   
         <mat-divider></mat-divider>
@@ -83,7 +87,7 @@
           <span style="color:grey;">Labels</span>
             <mat-list-item  class="nav" >
                 <mat-icon>create</mat-icon>
-                <span (click)="openDialog()"> Edit Label</span>
+                <span (click)="openDialog()" class="navmargin"> Edit Label</span>
             </mat-list-item>
         </mat-nav-list>
   
@@ -92,14 +96,14 @@
         <mat-nav-list class="nav" >
             <a mat-list-item [routerLink] = "['archive']" class="nav" [routerLinkActive]="['is-active']">
                 <mat-icon>addcircle</mat-icon>
-                <span> Archive</span>
+                <span  class="navmargin"> Archive</span>
             </a>
         </mat-nav-list>
   
         <mat-nav-list class="nav" >
             <a mat-list-item [routerLink] = "['trash']" class="nav" [routerLinkActive]="['is-active']">
                 <mat-icon>delete_sweep</mat-icon>
-                <span> Trash</span>
+                <span  class="navmargin"> Trash</span>
             </a>
         </mat-nav-list>
          <mat-divider></mat-divider>
