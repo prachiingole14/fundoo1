@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { SettingComponent } from '../setting/setting.component';
 import { SendfeedbackComponent } from '../sendfeedback/sendfeedback.component';
@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit
 {
 
   constructor(public dialog: MatDialog) { }
-
+  @Input() alllabels: any;
   flag=true;
   showFiller = false;
   

@@ -5,7 +5,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 
-export class ServiceUrlService {
+export class ServiceUrlService 
+{
   editlables: string;
   addLabel: string;
 
@@ -19,5 +20,5 @@ export class ServiceUrlService {
     public changeColor = "col";
     public addNotes = "takeNotes";
     public displaycontents = "displayNotes";
-    public lable = " addLables";
+    public label = " addLables";
 }

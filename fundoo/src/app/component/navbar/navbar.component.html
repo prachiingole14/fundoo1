@@ -82,6 +82,13 @@
           </mat-nav-list>
   
         <mat-divider></mat-divider>
+
+          <div fxLayout='column'*ngFor="let data of alllabels" [ngStyle]="{'background-color': data.color}">
+              <div class="title-design">
+                      {{data.label_name}}
+              </div>
+          </div>  
+        
   
         <mat-nav-list class="nav" >
           <span style="color:grey;">Labels</span>

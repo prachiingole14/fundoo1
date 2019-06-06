@@ -12,6 +12,7 @@ import { from } from 'rxjs';
 export class LabelComponent implements OnInit 
 {
   submit: void;
+  label: any;
  
   constructor(private s_label:lableService , private snack : MatSnackBar) { }
 
@@ -19,7 +20,9 @@ export class LabelComponent implements OnInit
 
   
   ngOnInit() 
-  {}
+  {
+    this.getAllLabels()
+  }
 
   model: any = {};
 
@@ -52,5 +55,17 @@ export class LabelComponent implements OnInit
       let snackBarRef = this.snack.open('Label added successfully.....!', 'Undo');
     }
   
+  }
+
+  getAllLabels()
+  {
+    this.s_label.getlabels().subscribe(data=>{
+      console.log('all labels is in',data);
+        this.label=data;
+      
+    },err=>{
+      console.log('error in get note',err);
+      
+    })
   }
 }
