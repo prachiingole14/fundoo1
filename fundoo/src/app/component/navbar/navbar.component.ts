@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { EditLabelComponent } from '../edit-label/edit-label.component';
 import { SettingComponent } from '../setting/setting.component';
 import { SendfeedbackComponent } from '../sendfeedback/sendfeedback.component';
 import { ShortcutkeysComponent } from '../shortcutkeys/shortcutkeys.component';
 import { ProfilePicComponent } from '../profile-pic/profile-pic.component';
 import { MatDialog } from '@angular/material';
+import { LabelComponent } from '../label/label.component';
 
 @Component({
   selector: 'app-navbar',
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit
 
   openDialog()
   {
-    this.dialog.open(EditLabelComponent)
+    this.dialog.open(LabelComponent)
   }
 
   opensettingDialog()

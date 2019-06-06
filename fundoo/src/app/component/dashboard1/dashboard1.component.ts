@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { EditLabelComponent } from '../edit-label/edit-label.component';
+//import { EditLabelComponent } from '../edit-label/edit-label.component';
 import { SettingComponent } from '../setting/setting.component';
 import { SendfeedbackComponent } from '../sendfeedback/sendfeedback.component';
 import { ShortcutkeysComponent } from '../shortcutkeys/shortcutkeys.component';
@@ -26,10 +26,10 @@ export class Dashboard1Component implements OnInit
  
   ngOnInit() {}
 
-  openDialog()
-  {
-    this.dialog.open(EditLabelComponent)
-  }
+  // openDialog()
+  // {
+  //   this.dialog.open(EditLabelComponent)
+  // }
 
   opensettingDialog()
   {

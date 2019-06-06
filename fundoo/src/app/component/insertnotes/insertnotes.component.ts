@@ -3,7 +3,7 @@ import { NotesService } from 'src/app/service/Notes.service';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { HttpHeaders } from '@angular/common/http';
 import { FormControl, Validators } from '@angular/forms';
-import { EditLabelComponent } from '../edit-label/edit-label.component';
+import { LabelComponent } from '../label/label.component';
 
 @Component({
   selector: 'app-insertnotes',
@@ -56,7 +56,7 @@ card:any;
 
     openDialog()
     {
-       this.dialog.open(EditLabelComponent)
+       this.dialog.open(LabelComponent)
     }
 
     titleError()

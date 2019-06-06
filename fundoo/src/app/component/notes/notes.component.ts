@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NotesService } from 'src/app/service/Notes.service';
 import { Validators, FormControl } from '@angular/forms';
-import { EditLabelComponent } from '../edit-label/edit-label.component';
+import { LabelComponent } from '../label/label.component';
 import { HttpHeaders } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
 import {MatSnackBar} from '@angular/material/snack-bar';
@@ -74,7 +74,7 @@ this.card=data;
 
     openDialog()
     {
-       this.dialog.open(EditLabelComponent)
+       this.dialog.open(LabelComponent)
     }
 
     titleError()

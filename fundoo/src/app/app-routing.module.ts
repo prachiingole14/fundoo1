@@ -5,9 +5,7 @@ import { ResetpasswordComponent } from './component/resetpassword/resetpassword.
 import { RegistrationComponent } from './component/registration/registration.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { NotesComponent } from './component/notes/notes.component';
-import { from } from 'rxjs';
 import { ReminderComponent } from './component/reminder/reminder.component';
-import { EditLabelComponent } from './component/edit-label/edit-label.component';
 import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component';
 import { SettingComponent } from './component/setting/setting.component';
@@ -17,6 +15,7 @@ import { DisplaycontentsComponent } from './component/displaycontents/displaycon
 import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { InsertnotesComponent } from './component/insertnotes/insertnotes.component';
+import { LabelComponent } from 'src/app/component/label/label.component';
 
 const routes: Routes = [
     {
@@ -60,8 +59,8 @@ const routes: Routes = [
             },
 
             {
-              path: 'edit-label',
-              component : EditLabelComponent,
+              path: 'label',
+              component : LabelComponent,
             },
 
             {

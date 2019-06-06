@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { EditLabelComponent } from '../edit-label/edit-label.component';
+//import { LabelComponent } from '../label/label.component';
 import { MatDialog } from '@angular/material';
 import { SettingComponent } from '../setting/setting.component';
 import { SendfeedbackComponent } from '../sendfeedback/sendfeedback.component';
@@ -20,10 +20,10 @@ export class DashboardComponent implements OnInit
   value = '';
   ngOnInit() {}
 
-  openDialog()
-  {
-     this.dialog.open(EditLabelComponent)
-  }
+  // openDialog()
+  // {
+  //    this.dialog.open(LabelComponent)
+  // }
 
   opensettingDialog()
   {

@@ -18,7 +18,7 @@ import { DashboardComponent } from "./component/dashboard/dashboard.component";
 import { NotesComponent } from './component/notes/notes.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ReminderComponent } from './component/reminder/reminder.component';
-import { EditLabelComponent } from './component/edit-label/edit-label.component';
+import { LabelComponent } from './component/label/label.component';
 import { ArchiveComponent } from './component/archive/archive.component';
 import { TrashComponent } from './component/trash/trash.component';
 import { SettingComponent } from './component/setting/setting.component';
@@ -30,6 +30,7 @@ import { InsertnotesComponent } from './component/insertnotes/insertnotes.compon
 import { IconComponent } from './component/icon/icon.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { Dashboard1Component } from './component/dashboard1/dashboard1.component';
+import { EditLabelComponent } from './component/edit-label/edit-label.component';
 //import { Component} from '@angular/core';
 
 @NgModule({
@@ -41,7 +42,7 @@ import { Dashboard1Component } from './component/dashboard1/dashboard1.component
     DashboardComponent,
     NotesComponent,
     ReminderComponent,
-    EditLabelComponent,
+    LabelComponent,
     ArchiveComponent,
     TrashComponent,
     SettingComponent,
