@@ -29,7 +29,7 @@
 
         public function displaynotes()
         {
-        //    $note_id=$_GET['note_id'];
+            // $note_id=$_GET['note_id'];
            $data = $this->note->shownotes();
            //$result= $this->db->query("SELECT note_id FROM notes where 'note_id=$note_id'");
            print_r($data);

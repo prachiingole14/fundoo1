@@ -15,16 +15,14 @@
 
         public function AddNotes($title, $description, $color ,$image)
         {
-            $data = array('title' => $title,
-                        'description' => $description,
-                        'color' => $color, 
-                        'image' => $image);
+            // $data = array('title' => $title,
+            //             'description' => $description,
+            //             'color' => $color, 
+            //             'image' => $image);
 
-           // $query_result= $this->db->insert('notes', $data);  
-            $query =  $this->db->query("INSERT INTO notes(title,description,color,image) VALUES('$title','$description','$color','$image')");
-           
+            //$query= $this->db->post->insert('notes', $data);  
+            $query =  $this->db->query("INSERT INTO notes(`title`,`description`,`color`,`image`) VALUES('$title','$description','$color','$image')");
             print_r($query);
-            return $query;
         }
 
 
@@ -40,7 +38,6 @@
 
            $q = $this->db->get('notes');
            $data = $q->result_array();
-           
            echo json_encode($data);
         } 
 

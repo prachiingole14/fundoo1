@@ -1,25 +1,26 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EditLabelComponent } from '../edit-label/edit-label.component';
-import { NotesService } from 'src/app/service/Notes.service';
 import { HttpHeaders } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
+import { from } from 'rxjs';
 
 @Component({
-  selector: 'app-displaycontents',
-  templateUrl: './displaycontents.component.html',
-  styleUrls: ['./displaycontents.component.scss']
+  selector: 'app-icon',
+  templateUrl: './icon.component.html',
+  styleUrls: ['./icon.component.scss']
 })
-export class DisplaycontentsComponent implements OnInit 
+export class IconComponent implements OnInit 
 {
+
   color: any;
  
   @Input() allCard;
   
   headers: any;
 
-  constructor(private s_notes:NotesService, public dialog:MatDialog, private snack : MatSnackBar) 
+  constructor(public dialog:MatDialog, private snack : MatSnackBar) 
   {
     this.headers = new HttpHeaders();
     this.headers.append('Access-Control-Allow-Headers', 'Authorization');
@@ -51,6 +52,5 @@ export class DisplaycontentsComponent implements OnInit
     console.log("its work")
   }
 
-  
 
-  }
+}

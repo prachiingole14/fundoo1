@@ -1,6 +1,6 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
-    include_path(".:/var/www/html/fundoonote/application/Service");
+    include "/var/www/html/fundoonote/application/Service/AccountService.php";
 
     class AccountController extends CI_Controller
     {
@@ -9,7 +9,7 @@
         {
             parent::__construct();
             $this->load->database();
-            $this->AccModel=new AccountModel();
+           // $this->AccModel=new AccountModel();
             $this->AccService = new AccountService();
            // $this->AccModel= new AccountModel();
         }

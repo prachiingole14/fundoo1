@@ -27,6 +27,8 @@ import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.com
 import { DisplaycontentsComponent } from './component/displaycontents/displaycontents.component';
 import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
 import { Dashboard1Component } from './component/dashboard1/dashboard1.component';
+import { InsertnotesComponent } from './component/insertnotes/insertnotes.component';
+import { IconComponent } from './component/icon/icon.component';
 
 
 //import { Component} from '@angular/core';
@@ -49,6 +51,8 @@ import { Dashboard1Component } from './component/dashboard1/dashboard1.component
     DisplaycontentsComponent,
     ProfilePicComponent,
     Dashboard1Component,
+    InsertnotesComponent,
+    IconComponent,
   
   ],
 

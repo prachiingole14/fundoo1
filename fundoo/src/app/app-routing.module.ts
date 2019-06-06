@@ -16,6 +16,8 @@ import { ShortcutkeysComponent } from './component/shortcutkeys/shortcutkeys.com
 import { DisplaycontentsComponent } from './component/displaycontents/displaycontents.component';
 import { ProfilePicComponent } from './component/profile-pic/profile-pic.component';
 import { Dashboard1Component} from './component/dashboard1/dashboard1.component';
+import { InsertnotesComponent } from './component/insertnotes/insertnotes.component';
+
 const routes: Routes = [
     {
       path:'',
@@ -92,6 +94,11 @@ const routes: Routes = [
               path: 'profilepic',
               component : ProfilePicComponent,
             },
+
+            {
+              path:'insertnotes',
+              component : InsertnotesComponent,
+            }
         ]
     },
 
