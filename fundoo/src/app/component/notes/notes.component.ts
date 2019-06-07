@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NotesService } from 'src/app/service/Notes.service';
 import { Validators, FormControl } from '@angular/forms';
 import { LabelComponent } from '../label/label.component';
@@ -27,7 +27,7 @@ export class NotesComponent implements OnInit
         this.headers.append('Access-Control-Allow-Headers', 'Authorization');
     }
     
-    flag=true;
+flag=true;
 card:any;
     
     ngOnInit() 
@@ -38,11 +38,11 @@ card:any;
     getAllCard()
     {
       this.s_notes.getcard().subscribe(data=>{
-        console.log('all note is ',data);
-this.card=data;
-        
-      },err=>{
-        console.log('error in get note',err);
+        console.log('all labels is ',data);
+          this.card=data;
+      },
+      err=>{
+        console.log('error in get label',err);
         
       })
     }
@@ -87,4 +87,5 @@ this.card=data;
       return this.description.hasError('required')?'':''
     }
 
+    
 }

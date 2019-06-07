@@ -7,18 +7,21 @@ import { environment } from 'src/environments/environment';
 
 export class ServiceUrlService 
 {
-  editlables: string;
-  addLabel: string;
-
+  showlabel: string;
   constructor() {}
     public host = environment.baseUrl;
+
     public register = "register";
     public login = "login";
     public reset = "ResetPassword";
     public getEmail = "getEmailId";
+
     public notes = "notes";
     public changeColor = "col";
-    public addNotes = "takeNotes";
+    public takeNotes = "addNotes";
     public displaycontents = "displayNotes";
-    public label = " addLables";
+
+    public label = "addLabel";
+    public navbar = "displayNotes";
+    public getLabel="displaylabeles"
 }

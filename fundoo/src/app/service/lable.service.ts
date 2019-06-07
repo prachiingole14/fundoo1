@@ -9,7 +9,6 @@ import { Editlable } from '../model/editlable';
 
 export class lableService 
 {
-
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
   editlable : Editlable;
 
@@ -17,19 +16,22 @@ export class lableService
   {
     let addlable = new FormData();
     addlable.append("editlables", editlable.lable_name);
-    return this.http.post(this.serviceurl.host + this.serviceurl.label, addlable);
+    let url=this.serviceurl.host+this.serviceurl.label;
+    console.log(url);
+    
+    return this.http.post(this.serviceurl.host+this.serviceurl.label, addlable);
   }
   
   getlabels()
   {
-    return this.http.post('http://localhost/displaylabels' , {});
+    return this.http.post(this.serviceurl.host+this.serviceurl.getLabel , {});
   }
 
-  displayLabels(data)
-  {
-    //debugger;
-    let displaylabel = new FormData();
-    displaylabel.append("label_id",data);
-    return this.http.post(this.serviceurl.host + this.serviceurl.notes,displaylabel);
-  }
+  // displaylabeles(data)
+  // {
+  //   //debugger;
+  //   let displaylabels = new FormData();
+  //   displaylabels.append("label_id",data);
+  //   return this.http.post(this.serviceurl.host + this.serviceurl.showlabel,displaylabels);
+  // }
 }

@@ -21,10 +21,9 @@
             $title = $_POST['title'];
             $description = $_POST['description'];
             $color = $_POST['color'];
-            $image = $_POST['image'];
-
-            $result = $this->note->AddNotes($title, $description, $color ,$image);
-            return $result;
+    
+            $result = $this->note->AddNotes($title, $description, $color);
+            return print_r(json_encode($result));
         }
 
         public function displaynotes()

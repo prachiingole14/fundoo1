@@ -6,23 +6,31 @@ import { ShortcutkeysComponent } from '../shortcutkeys/shortcutkeys.component';
 import { ProfilePicComponent } from '../profile-pic/profile-pic.component';
 import { MatDialog } from '@angular/material';
 import { LabelComponent } from '../label/label.component';
+import { lableService } from 'src/app/service/lable.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+
 export class NavbarComponent implements OnInit 
 {
+  label: any;
 
-  constructor(public dialog: MatDialog) { }
-  @Input() alllabels: any;
+  constructor(public dialog: MatDialog,public s_label: lableService) { }
+
+  @Input() alllabel;
+  
   flag=true;
   showFiller = false;
   
   myControl = new FormControl();
  
-  ngOnInit() {}
+  ngOnInit() 
+  {
+    this.getAllLabels()
+  }
 
   openDialog()
   {
@@ -48,6 +56,16 @@ export class NavbarComponent implements OnInit
   {
     this.dialog.open(ProfilePicComponent)
   }
- 
 
+  getAllLabels()
+  {
+   this.s_label.getlabels().subscribe(data=>{
+      console.log('all labels is in',data);
+        this.label=data;
+    },
+    err=>{
+      console.log('error in get label',err);
+      
+    })
+  }
 }

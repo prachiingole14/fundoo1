@@ -18,10 +18,9 @@ export class LabelComponent implements OnInit
 
   flag = true;
 
-  
   ngOnInit() 
   {
-    this.getAllLabels()
+   
   }
 
   model: any = {};
@@ -39,7 +38,6 @@ export class LabelComponent implements OnInit
 
     if(this.lable_name.value == ' ')
     {
-      console.log("empty label")
       let snackBarRef = this.snack.open('Label empty....!', 'Undo');
     }
     else
@@ -49,23 +47,17 @@ export class LabelComponent implements OnInit
       let status = this.s_label.addLables(this.model)
       status.subscribe(res=>{
       console.log(res);
+
+      let snackBarRef = this.snack.open('Label added successfully.....!', 'Undo');
       });
   
       this.submit=console.log(this.lable_name.value)
-      let snackBarRef = this.snack.open('Label added successfully.....!', 'Undo');
+     console.log("label not added")
     }
-  
+
   }
 
-  getAllLabels()
-  {
-    this.s_label.getlabels().subscribe(data=>{
-      console.log('all labels is in',data);
-        this.label=data;
-      
-    },err=>{
-      console.log('error in get note',err);
-      
-    })
-  }
+  
+
+ 
 }

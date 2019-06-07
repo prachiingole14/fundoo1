@@ -9,14 +9,14 @@
     <span class="o">O</span>
     <span class="oo">O</span> 
 
-    <mat-card *ngIf="flag==true" style="width: 700px; margin-left: 120px; height: 16px; border: redius 14px;background-color: whitesmoke;" (click)="openSearch">
+    <mat-card style="width: 700px; margin-left: 120px; height: 16px; border: redius 14px;background-color: whitesmoke;">
       <mat-icon class="navbar-content-search">search</mat-icon>
       <!-- <input matInput placeholder="Search" class="searchbar"> -->
     </mat-card>
-    <mat-card *ngIf="flag==false" style="width: 700px; margin-left: 120px; height: 16px; border: redius 14px;" #openSearch>
+    <!-- <mat-card style="width: 700px; margin-left: 120px; height: 16px; border: redius 14px;">
         <mat-icon class="navbar-content-search">search</mat-icon>
-        <!-- <input matInput placeholder="Search" class="searchbar"> -->
-    </mat-card>
+        <!-- <input matInput placeholder="Search" class="searchbar"> --
+    </mat-card> -->
     
   <!-- grid start -->
     <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag class="navbar-content1">refresh</mat-icon>
@@ -28,7 +28,7 @@
    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag class="navbar-content">dns </mat-icon>
  <!--drid end -->
 
- <mat-icon  class="navbar-content" matTooltip="Settings" [matMenuTriggerFor]="menu1">settings</mat-icon>
+ <mat-icon  class="navbar-content" matTooltip="Settings" [matMenuTriggerFor]="menu1">settings_outline</mat-icon>
 
  <mat-icon class="navbar-content" matTooltip="Setting">apps</mat-icon>
 
@@ -83,15 +83,19 @@
   
         <mat-divider></mat-divider>
 
-          <div fxLayout='column'*ngFor="let data of alllabels" [ngStyle]="{'background-color': data.color}">
-              <div class="title-design">
-                      {{data.label_name}}
-              </div>
-          </div>  
-        
-  
+        <mat-nav-list >
+            <span style="color:grey; margin-left: 6px; margin-top:8px;">Labels</span>
+                <div *ngFor="let data of label" >
+                  <div fxLayout="column">
+                    <mat-list-item  class="nav" >
+                        <mat-icon>label_outline</mat-icon>
+                        {{data.label_name}}
+                    </mat-list-item>
+                  </div>
+                </div>
+        </mat-nav-list>
+
         <mat-nav-list class="nav" >
-          <span style="color:grey;">Labels</span>
             <mat-list-item  class="nav" >
                 <mat-icon>create</mat-icon>
                 <span (click)="openDialog()" class="navmargin"> Edit Label</span>
@@ -101,10 +105,10 @@
         <mat-divider></mat-divider>
   
         <mat-nav-list class="nav" >
-            <a mat-list-item [routerLink] = "['archive']" class="nav" [routerLinkActive]="['is-active']">
-                <mat-icon>addcircle</mat-icon>
-                <span  class="navmargin"> Archive</span>
-            </a>
+          <a mat-list-item [routerLink] = "['archive']" class="nav" [routerLinkActive]="['is-active']">
+            <mat-icon>addcircle</mat-icon>
+            <span  class="navmargin"> Archive</span>
+          </a>
         </mat-nav-list>
   
         <mat-nav-list class="nav" >
@@ -113,13 +117,21 @@
                 <span  class="navmargin"> Trash</span>
             </a>
         </mat-nav-list>
-         <mat-divider></mat-divider>
-          
+
+       <div fxLayout="row" style="color:gray; font-size: 10px; margin-top: 90px; margin-left: 25px;">
+          <div fxLayout="column">Privacy</div> 
+          <div style="margin-left:2px; margin-right:2px;">.</div>
+          <div fxLayout="column"> Term</div>
+       </div>
+
+       <div style="color:gray; font-size: 10px; margin-top: 10px; margin-left:25px;">Open-source licens</div>  
       </div>
+
     </mat-drawer>
 
   <app-insertnotes></app-insertnotes>
-    <app-displaycontents></app-displaycontents>
+  
     <router-outlet></router-outlet>
   </mat-drawer-container>
   
+  <app-displaycontents></app-displaycontents>

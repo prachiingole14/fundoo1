@@ -32,13 +32,13 @@ export class NotesService
     return this.http.post('http://localhost/displaynotes' , {});
   }
  
-  displayNotes(data)
-  {
-    //debugger;
-    let displayNote = new FormData();
-    displayNote.append("note_id",data);
-    return this.http.post(this.serviceurl.host + this.serviceurl.notes,displayNote);
-  }
+  // displayNotes(data)
+  // {
+  //   //debugger;
+  //   let displayNote = new FormData();
+  //   displayNote.append("note_id",data);
+  //   return this.http.post(this.serviceurl.host + this.serviceurl.notes,displayNote);
+  // }
 
   changeColor(notes)
   {

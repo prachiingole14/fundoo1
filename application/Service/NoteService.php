@@ -13,29 +13,20 @@
             parent::__construct();
         }
 
-        public function AddNotes($title, $description, $color ,$image)
+        public function AddNotes($title, $description, $color)
         {
             // $data = array('title' => $title,
             //             'description' => $description,
-            //             'color' => $color, 
-            //             'image' => $image);
+            //             'color' => $color);
 
             //$query= $this->db->post->insert('notes', $data);  
-            $query =  $this->db->query("INSERT INTO notes(`title`,`description`,`color`,`image`) VALUES('$title','$description','$color','$image')");
-            print_r($query);
+            $query =  $this->db->query("INSERT INTO notes(`title`,`description`,`color`) VALUES('$title','$description','$color')");
+            echo json_encode($query);
         }
 
 
         public function shownotes()
         {
-            // $data = array('note_id' =>$note_id,
-            //     'title' => $title,
-            //     'description' => $description,
-            //     'color' => $color, 
-            //     'image' => $image);
-            // $this->db->where('note_id', $note_id);
-           // here we select every column of the table
-
            $q = $this->db->get('notes');
            $data = $q->result_array();
            echo json_encode($data);

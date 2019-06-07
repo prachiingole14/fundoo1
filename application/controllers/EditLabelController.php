@@ -19,7 +19,9 @@
             $label_name=$_GET['label_name'];
             print $label_name;
             $result = $this->label->add_label($label_name);
-            return $result;
+            $data=json_encode($result);
+            return $data;
+        
         }
 
         public function deleteLabel()
@@ -28,6 +30,13 @@
             //$lable_name=$_POST['label_name'];
             $result = $this->label->delete_label($label_id, $lable_name);
             return $result;
+        }
+
+        public function displaylabeles()
+        {
+            $data = $this->label->show_labels();
+            json_encode($data);
+           return $data;
         }
    
     }

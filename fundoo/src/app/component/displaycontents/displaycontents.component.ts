@@ -26,30 +26,16 @@ export class DisplaycontentsComponent implements OnInit
 
   flag=false;
 
-  ngOnInit() 
-  {
-    
-  }
+  ngOnInit() {}
 
   ChangeColor(color)
   {
     this.color=color;
     console.log(this.color,"change color");
   }
-  
-  // ChangeColor(color)
-  // {
-  //   this.color=color;
-  //   console.log(this.color,"change color");
-  // }
-
 
   openDialog() 
   {
     this.dialog.open(LabelComponent)
-    console.log("its work")
   }
-
-  
-
-  }
+}

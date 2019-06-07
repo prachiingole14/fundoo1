@@ -25,10 +25,6 @@ card:any;
     
     ngOnInit() 
     {  }
-    
-    
-    
-
     model: any = {};
 
     title=new FormControl(' ',[Validators.required]);
@@ -36,14 +32,24 @@ card:any;
 
     reverse()
     {
-      if(this.title.value != ' ' && this.description.value != ' ')
+      if(this.title.value == ' ' && this.description.value == ' ')
+      {
+        this.flag = !this.flag
+        console.log("some missing")
+
+        this.model={"title" : this.title.value,
+                    "description" : this.description.value}
+
+        let status = this.s_notes.addNotes(this.model)
+          status.subscribe(res=>{
+          console.log(res);
+                
+          let snackBarRef = this.snack.open('Label added successfully.....!', 'Undo');});    
+      }
+      else 
       {
         this.flag = !this.flag
         console.log("done")
-      }
-      else{
-        this.flag = !this.flag
-        console.log("all fileds are mendetary....!")
       }
     } 
 
@@ -69,4 +75,8 @@ card:any;
       return this.description.hasError('required')?'':''
     }
 
+    addnotes()
+    {
+
+    }
 }

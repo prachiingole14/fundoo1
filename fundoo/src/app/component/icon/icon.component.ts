@@ -15,9 +15,7 @@ export class IconComponent implements OnInit
 {
 
   color: any;
- 
-  @Input() allCard;
-  
+  @Input() alllabels;
   headers: any;
 
   constructor(public dialog:MatDialog, private snack : MatSnackBar) 
@@ -40,8 +38,5 @@ export class IconComponent implements OnInit
   openDialog() 
   {
     this.dialog.open(LabelComponent)
-    console.log("its work")
   }
-
-
 }

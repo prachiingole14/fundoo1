@@ -1,19 +1,20 @@
 
-    <mat-card   *ngFor="let data of allCard" [ngStyle]="{'background-color': data.color}" class="flex" cdkDragLockAxis="x,y" cdkDrag >
-        <div>
-
-            <div fxLayout='column'>
-              <div class="title-design">
-                  {{data.title}}
-              </div>
-      
-              <div class="description-design">
-                 {{data.description}}
-              </div>
-            </div>
-            <app-icon></app-icon> 
-      
-        </div>    
-      </mat-card>
-
 {{childMessage}}
+
+<div class="cardList" >
+    <ng-container *ngFor="let _ of [1]">
+        <mat-card   *ngFor="let data of allCard" [ngStyle]="{'background-color': data.color}" class="flex" cdkDragLockAxis="x,y" cdkDrag >
+           <div>
+              <div fxLayout='column'>
+                <div class="title-design">
+                    {{data.title}}
+                </div>
+                <div class="description-design">
+                     {{data.description}}
+                </div>
+              </div>
+              <app-icon></app-icon> 
+           </div>    
+            </mat-card>
+    </ng-container>
+  </div>

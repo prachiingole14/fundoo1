@@ -69,6 +69,7 @@ $route['deletenote'] = 'NotesController/deletenote';
 //label routing
 $route['addLabel'] = 'EditLabelController/addLabel'; 
 $route['deleteLabel'] = 'EditLabelController/deleteLabel';
+$route['displaylabeles'] = 'EditLabelController/displaylabeles';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

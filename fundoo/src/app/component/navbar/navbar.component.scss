@@ -5,13 +5,14 @@ body {
 
 .example-container 
 {
-  //height:100%;
+  height:100%;
   width:100%;
   background-color:white;
   border: none;
   outline: none;
   border-start-end-radius: 14px;
   overflow: hidden !important ;
+
 }
   
 ////////////////////////////// fundoo text ////////////////////////////////
@@ -101,8 +102,8 @@ body {
 
 .flex
 {
-  margin-top:12px;
-  margin-bottom: 12px;
+  margin-top:14px;
+  margin-bottom: 14px;
 }
 
 .profileMenu
@@ -168,3 +169,4 @@ body {
 {
   overflow: hidden !important ;
 }
+
