@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit
   
   flag=true;
   showFiller = false;
-  
+  headerName="fundoo";
   myControl = new FormControl();
  
   ngOnInit() 

@@ -1,5 +1,6 @@
 /////////////////////////////// side-nav ////////////////////////////
-body {
+body 
+{
   overflow: hidden !important ;
 }
 
@@ -10,7 +11,6 @@ body {
   background-color:white;
   border: none;
   outline: none;
-  border-start-end-radius: 14px;
   overflow: hidden !important ;
 
 }
@@ -61,11 +61,20 @@ body {
 
 //////////////////////////// side-nav-content //////////////////////
 
-.nav:active
+
+.nav
+{
+  margin-left:6px;
+  border-bottom-right-radius: 400px;
+  border-top-right-radius: 400px;
+}
+
+.nav2
 {
     width:100%;
-    background-color: lightyellow;
-    border-radius: 22;
+    background-color: #FFFACD;
+    border-bottom-right-radius: 400px;
+    border-top-right-radius: 400px;
 }
 
 .navbar-content
@@ -73,8 +82,16 @@ body {
   color:rgb(114, 113, 113);
   margin-right: 16px; 
   margin-top: 10px;
+  margin-left:80px; 
 }
 
+.navbar-content11
+{
+  color:rgb(114, 113, 113);
+  margin-right: 16px; 
+  margin-top: 10px;
+  margin-left:20px; 
+}
 .navbar-content1
 {
   color:rgb(114, 113, 113);
@@ -91,9 +108,8 @@ body {
 
 .example-form-field 
 {
-  width: 400px;
+  width: 500px;
   margin-right: 20%;
-  border-radius: 22;
   border:none;
   outline: none;
 }
@@ -140,14 +156,9 @@ body {
   margin-top: 10px;
 }
 
-.nav
-{
-  margin-left:6px;
-}
-
 .navmargin
 {
-  margin-left: 24px;
+  margin-left: 20px;
 }
 
 .searchbar

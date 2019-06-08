@@ -1,14 +1,27 @@
-<div fxLayout="row" fxLayoutAlign="space-around center"  [style.backgroundColor]="color">
+<div fxLayout="row" fxLayoutAlign="space-around end"  [style.backgroundColor]="color">
    
   <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
       <div style=" margin-top: 20px;" [style.backgroundColor]='color'>
-        <div style="margin-left:10px;">
-          <mat-menu  #remainder="matMenu">
+        <div >
+            <mat-menu  #remainder="matMenu">
               <button mat-menu-item>Remainder:</button>
-              <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
-              <button mat-menu-item>Tomorrow <span  class="align">08:00 PM</span></button>
-              <button mat-menu-item>Next week Mon<span  class="align2">08:00 PM</span></button>
-              <button mat-menu-item>Work <span  class="gov">Govandi</span></button>
+
+              <button mat-menu-item>Later today 
+               <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
+              </button>
+
+              <button mat-menu-item>Tomorrow 
+                <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
+              </button>
+
+              <button mat-menu-item>Next week
+                <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
+              </button>
+
+              <button mat-menu-item>Work 
+                <input matInput value="Govandi" style="border: none; margin-left: 24px; text-align-last: right;">
+              </button>
+
               <button mat-menu-item><mat-icon>query_builder</mat-icon> Select date and Time</button>
               <button mat-menu-item><mat-icon>room</mat-icon> Select Place</button>
             </mat-menu>
@@ -18,8 +31,8 @@
     <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
 
     <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
-    <mat-menu #color="matMenu">
-        <div fxLayout="row" fxLayoutAlign="center center">
+      <mat-menu #color="matMenu">
+         <div fxLayout="row" fxLayoutAlign="center center">
             <button matTooltip="none" mat-mini-fab class="fab" style="background-color:white" (click)="ChangeColor('white')"></button>
             <button matTooltip="light pink" mat-mini-fab class="fab" style="background-color:rgb(243, 134, 170)"  (click)="ChangeColor('rgb(243, 134, 170)')"></button>
             <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
@@ -39,7 +52,7 @@
             <button matTooltip="light deep-orange" mat-mini-fab class="fab" style="background-color:rgb(240, 140, 110)"  (click)="ChangeColor('rgb(240, 140, 110)')"></button>
             <button matTooltip="light lime" mat-mini-fab class="fab" style="background-color:rgb(211, 218, 149)" (click)="ChangeColor('rgb(211, 218, 149)')"></button>
           </div>
-    </mat-menu>
+      </mat-menu>
 
     <input type="file"  style="display:none"  #img>
     <mat-icon matTooltip="Add Image" class="margin" (click)="img.click()">insert_photo</mat-icon>
@@ -49,6 +62,7 @@
     <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
 
     <mat-menu #menu="matMenu">
+
       <button mat-menu-item (click)="openDialog()">
         <span >Add Label</span>
       </button>
@@ -60,10 +74,11 @@
       <button mat-menu-item>
         <span>Add drawing</span>
       </button>
-      
+
       <button mat-menu-item>
         <span>Show tick </span>
       </button>
+
     </mat-menu>
 
 </div>

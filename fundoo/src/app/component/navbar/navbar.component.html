@@ -1,7 +1,7 @@
 <mat-toolbar fxLayout="row" fxAlign="start center" style="width:100%;background-color:white;outline-color: gray; border:2px;">
     <button matSuffix mat-icon-button aria-label="Clear">
       <mat-icon (click)="drawer.toggle()" class="navbar-content2" >dehaze</mat-icon>
-    </button> 
+    </button> {{headername}}
     <span class="f">F</span>
     <span class="u">U</span>
     <span class="n">N</span>
@@ -17,22 +17,16 @@
         <mat-icon class="navbar-content-search">search</mat-icon>
         <!-- <input matInput placeholder="Search" class="searchbar"> --
     </mat-card> -->
-    
-  <!-- grid start -->
-    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag class="navbar-content1">refresh</mat-icon>
-    <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag class="navbar-content1">cloud_done</mat-icon>
-  <!--drid end -->
 
    <!-- grid start -->
-   <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag class="navbar-content">dashboard </mat-icon>
-   <mat-icon class="grid" matTooltip="Grid-View" (click)="flag=false" *ngIf=flag class="navbar-content">dns </mat-icon>
+   <mat-icon  matTooltip="Grid-View" (click)="flag=true" *ngIf=!flag class="navbar-content">dashboard </mat-icon>
+   <mat-icon  matTooltip="Grid-View" (click)="flag=false" *ngIf=flag class="navbar-content">dns </mat-icon>
  <!--drid end -->
 
- <mat-icon  class="navbar-content" matTooltip="Settings" [matMenuTriggerFor]="menu1">settings_outline</mat-icon>
+ <mat-icon  class="navbar-content11" matTooltip="Settings" [matMenuTriggerFor]="menu1">settings_outline</mat-icon>
 
- <mat-icon class="navbar-content" matTooltip="Setting">apps</mat-icon>
 
- <button mat-mini-fab color="primary">P</button>
+ <button mat-mini-fab color="primary" class="navbar-content11">P</button>
 </mat-toolbar>
  
   <!-- setting start -->
@@ -65,16 +59,18 @@
 
 <mat-drawer-container class="example-container" #drawer>
     <mat-drawer #drawer  mode="side">
-      <div style="margin-top:20px; margin-left:2px; width:250px;">
-  
+      <div style="margin-top:5px;margin-right: 4px; width:300px;">
+  {{headername}}
           <mat-nav-list class="nav" >
+              <div [ngClass]="{ nav:true, 'nav2':true }" headername="Notes">
               <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
               <mat-icon>lightbulb_outline</mat-icon> 
               <span class="navmargin">Notes</span>
-            </a>
+            </a></div>
           </mat-nav-list>
   
           <mat-nav-list class="nav" >
+              <!-- <div [ngClass]="{ nav:false, 'nav2':true }"> -->
               <a mat-list-item [routerLink] = "['notes']" class="nav" [routerLinkActive]="['is-active']">
               <mat-icon>notifications_none</mat-icon> 
               <span class="navmargin">Reminder</span>
@@ -88,8 +84,8 @@
                 <div *ngFor="let data of label" >
                   <div fxLayout="column">
                     <mat-list-item  class="nav" >
-                        <mat-icon>label_outline</mat-icon>
-                        {{data.label_name}}
+                        <mat-icon >label_outline</mat-icon>
+                        <p class="navmargin">{{data.label_name}}
                     </mat-list-item>
                   </div>
                 </div>
@@ -118,20 +114,22 @@
             </a>
         </mat-nav-list>
 
-       <div fxLayout="row" style="color:gray; font-size: 10px; margin-top: 90px; margin-left: 25px;">
+       <div fxLayout="row" style="color:gray; font-size: 10px; margin-top: 40px; margin-left: 25px;">
           <div fxLayout="column">Privacy</div> 
           <div style="margin-left:2px; margin-right:2px;">.</div>
           <div fxLayout="column"> Term</div>
        </div>
 
-       <div style="color:gray; font-size: 10px; margin-top: 10px; margin-left:25px;">Open-source licens</div>  
-      </div>
+       <div style="color:gray; font-size: 10px; margin-top: 10px; margin-left:25px;">Open-source licens</div> 
+      </div> 
 
     </mat-drawer>
 
   <app-insertnotes></app-insertnotes>
   
+  <app-displaycontents></app-displaycontents>
     <router-outlet></router-outlet>
   </mat-drawer-container>
   
-  <app-displaycontents></app-displaycontents>
+
+  

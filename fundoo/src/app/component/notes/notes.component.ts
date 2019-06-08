@@ -17,7 +17,7 @@ export class NotesComponent implements OnInit
 {
   //parentMessage = "app-displaycontents";
   // parentMessage = "fgfg"
-
+ 
   color:any;
   headers: any;
   
@@ -26,10 +26,10 @@ export class NotesComponent implements OnInit
       this.headers = new HttpHeaders();
         this.headers.append('Access-Control-Allow-Headers', 'Authorization');
     }
-    
-flag=true;
-card:any;
-    
+  
+  flag=true;
+  card:any;
+  //headerName=FUNDOO;  
     ngOnInit() 
     {
       this.getAllCard()

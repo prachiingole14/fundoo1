@@ -13,9 +13,7 @@ import { LabelComponent } from 'src/app/component/label/label.component'
 export class DisplaycontentsComponent implements OnInit 
 {
   color: any;
- 
   @Input() allCard;
-  
   headers: any;
 
   constructor(private s_notes:NotesService, public dialog:MatDialog, private snack : MatSnackBar) 
@@ -38,4 +36,5 @@ export class DisplaycontentsComponent implements OnInit
   {
     this.dialog.open(LabelComponent)
   }
+
 }
