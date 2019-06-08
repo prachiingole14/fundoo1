@@ -1,32 +1,33 @@
 <div fxLayout="row" fxLayoutAlign="space-around end"  [style.backgroundColor]="color">
    
-  <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
+  <mat-icon matTooltip="Remind Me" class="margin">notification_important</mat-icon>
       <div style=" margin-top: 20px;" [style.backgroundColor]='color'>
         <div >
             <mat-menu  #remainder="matMenu">
-              <button mat-menu-item>Remainder:</button>
+              <button mat-menu-item [matMenuTriggerFor]="arrowback"> <mat-icon>arrow_back</mat-icon>Remainder:</button>
 
-              <button mat-menu-item>Later today 
-               <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
-              </button>
-
-              <button mat-menu-item>Tomorrow 
+                <button mat-menu-item>Later today 
                 <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
-              </button>
+                </button>
 
-              <button mat-menu-item>Next week
-                <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
-              </button>
+                <button mat-menu-item>Tomorrow 
+                  <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
+                </button>
 
-              <button mat-menu-item>Work 
-                <input matInput value="Govandi" style="border: none; margin-left: 24px; text-align-last: right;">
-              </button>
+                <button mat-menu-item>Next week
+                  <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
+                </button>
+
+                <button mat-menu-item>Work 
+                  <input matInput value="Govandi" style="border: none; margin-left: 24px; text-align-last: right;">
+                </button>
 
               <button mat-menu-item><mat-icon>query_builder</mat-icon> Select date and Time</button>
               <button mat-menu-item><mat-icon>room</mat-icon> Select Place</button>
             </mat-menu>
         </div>
       </div>
+
 
     <mat-icon matTooltip="Colabrate" class="margin">person_add</mat-icon>
 
