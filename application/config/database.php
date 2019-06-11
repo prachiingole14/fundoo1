@@ -79,7 +79,7 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> 'mysql:host=localhost; dbname=fundoo',
 	'hostname' => 'localhost',
-	'username' => 'root',
+	'username' => 'phpmyadmin',
 	'password' => 'Root@1234',
 	'database' => 'fundoo',
 	'dbdriver' => 'pdo',

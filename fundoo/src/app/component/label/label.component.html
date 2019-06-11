@@ -1,18 +1,21 @@
 <span >Edit Label</span>
 
 <div fxLayout="row">
-  <!-- <div *ngIf="flag==true"> -->
-      <mat-icon class="icon">add_box</mat-icon>
-      <input matInput placeholder="Create new Label" class="input" class="font" [formControl]="lable_name" required>
-      <mat-error *ngIf="lable_name.dirty">{{lableError()}}</mat-error>
-  <!-- </div> -->
 
-  <!-- <div *ngIf="flag==false">
-      <mat-icon class="icon">check</mat-icon>
-      <input class="input" matInput placeholder="Create new Label">
+  <div fxLayout="row" fxAlign="start center" *ngIf="flag==true">
+      <mat-icon class="icon">add</mat-icon>
+      <input matInput placeholder="Create new Label" class="input" class="font"  >    
+  </div>
+
+  <div fxLayout="row" fxAlign="start center"  *ngIf="flag!=true">
+      <mat-icon class="icon" (click)="reverse()">check</mat-icon>
+      <input class="input" matInput placeholder="Create new Label"  required>
+       <!-- <mat-error *ngIf="lable_name.dirty">{{lableError()}}</mat-error> -->
       <mat-icon>close</mat-icon>
-  </div> -->
+  </div>
     
 </div> 
+
 <mat-divider></mat-divider>
+
 <button mat-raised-button class="close-btn" mat-dialog-close="true" (click)="addLabel()">Done</button>
