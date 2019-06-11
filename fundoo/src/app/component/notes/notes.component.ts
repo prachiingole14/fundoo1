@@ -43,7 +43,6 @@ export class NotesComponent implements OnInit
       },
       err=>{
         console.log('error in get label',err);
-        
       })
     }
 
@@ -86,6 +85,4 @@ export class NotesComponent implements OnInit
     {
       return this.description.hasError('required')?'':''
     }
-
-    
 }

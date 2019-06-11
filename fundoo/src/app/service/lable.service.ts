@@ -34,4 +34,6 @@ export class lableService
   //   displaylabels.append("label_id",data);
   //   return this.http.post(this.serviceurl.host + this.serviceurl.showlabel,displaylabels);
   // }
+
+ 
 }

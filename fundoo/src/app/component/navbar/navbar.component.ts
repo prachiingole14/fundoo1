@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit
   {
     this.getAllLabels()
   }
-
+  
   openDialog()
   {
     this.dialog.open(LabelComponent)
@@ -59,13 +59,12 @@ export class NavbarComponent implements OnInit
 
   getAllLabels()
   {
-   this.s_label.getlabels().subscribe(data=>{
+    this.s_label.getlabels().subscribe(data=>{
       console.log('all labels is in',data);
         this.label=data;
     },
     err=>{
-      console.log('error in get label',err);
-      
-    })
+            console.log('error in get label',err);
+          })
   }
 }

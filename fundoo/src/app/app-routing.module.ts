@@ -16,6 +16,8 @@ import { ProfilePicComponent } from './component/profile-pic/profile-pic.compone
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { InsertnotesComponent } from './component/insertnotes/insertnotes.component';
 import { LabelComponent } from 'src/app/component/label/label.component';
+import { IconComponent } from './component/icon/icon.component';
+import { CollabratorComponent } from './component/collabrator/collabrator.component';
 
 const routes: Routes = [
     {
@@ -101,8 +103,15 @@ const routes: Routes = [
         ]
     },
 
-    
+    {
+      path: 'icon',
+      component : IconComponent
+    },
 
+    {
+      path: 'collabrator',
+      component : CollabratorComponent
+    },
   
 ];
 

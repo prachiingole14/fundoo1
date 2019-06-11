@@ -1,0 +1,32 @@
+.flex
+{
+    width: 600px;
+    height: auto;
+    border: 4px;
+    box-shadow: 4px;
+}
+
+.header-collabrator
+{
+    width: 60%;
+    box-align: center;
+}
+
+.middle-collabrator
+{
+    margin-top: 12px;
+    margin-bottom: 22px;
+}
+
+.footer-collabrator
+{
+    margin-top: 26px;
+    background-color: rgb(235, 238, 240);
+    align-content: flex-end;
+}
+
+.gapbetween
+{
+    margin-left: 10px;
+    font-size: 12px;
+}

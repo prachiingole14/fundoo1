@@ -32,7 +32,6 @@ export class LabelComponent implements OnInit
     return this.lable_name.hasError('required')?'Invalid label....!':''
   }
 
-  debugger
   addLabel()
   {
     this.model={  "lable_name":this.lable_name.value }
@@ -59,7 +58,7 @@ export class LabelComponent implements OnInit
 
   reverse()
   {
-    this.flag =!this.flag;
+    this.flag = !this.flag;
   }
 
   

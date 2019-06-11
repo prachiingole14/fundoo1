@@ -2,8 +2,8 @@
     defined('BASEPATH') or exit('No direct script access allowed');
     include "/var/www/html/fundoonote/application/Service/NoteService.php";
     header('Access-Control-Allow-Origin: *');
-    header("Access-Control-Allow-Headers: Authorization");
-    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+    header("Access-Control-Allow-Headers: X-Requested-With");
+    header("Access-Control-Allow-Methods: GET, POST");
     
     class NotesController extends CI_Controller
     {
