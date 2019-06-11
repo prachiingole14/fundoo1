@@ -16,6 +16,7 @@
 {
     margin-top: 12px;
     margin-bottom: 22px;
+    padding-left: 20px;
 }
 
 .footer-collabrator
@@ -23,10 +24,19 @@
     margin-top: 26px;
     background-color: rgb(235, 238, 240);
     align-content: flex-end;
+    overflow: hidden;
 }
 
 .gapbetween
 {
     margin-left: 10px;
     font-size: 12px;
+}
+
+.icon
+{
+    color:gray;
+    border: 2px;
+    outline: 2px;
+    outline-color: black;
 }

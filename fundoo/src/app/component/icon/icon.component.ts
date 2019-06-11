@@ -46,7 +46,9 @@ export class IconComponent implements OnInit
 
   openCollbrator() 
   {
-    this.dialog.open(CollabratorComponent)
+    this.dialog.open(CollabratorComponent,{
+      panelClass:'dailog'
+    })
   }
 
   // deleteLabel()
