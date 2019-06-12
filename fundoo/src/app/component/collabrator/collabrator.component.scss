@@ -2,29 +2,32 @@
 {
     width: 600px;
     height: auto;
-    border: 4px;
     box-shadow: 4px;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
 }
 
 .header-collabrator
 {
     width: 60%;
     box-align: center;
+    padding-left: 20px;
 }
 
 .middle-collabrator
 {
-    margin-top: 12px;
-    margin-bottom: 22px;
-    padding-left: 20px;
+    margin-top: 22px;
+    
 }
 
 .footer-collabrator
 {
-    margin-top: 26px;
-    background-color: rgb(235, 238, 240);
+    padding-left: 0px;
+    margin-top: 50px;
+    background-color: rgb(241, 232, 229);
     align-content: flex-end;
-    overflow: hidden;
 }
 
 .gapbetween
@@ -39,4 +42,6 @@
     border: 2px;
     outline: 2px;
     outline-color: black;
+    font-size: 38px;
+    padding-left: 22px;
 }
