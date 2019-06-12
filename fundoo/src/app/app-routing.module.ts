@@ -18,6 +18,8 @@ import { InsertnotesComponent } from './component/insertnotes/insertnotes.compon
 import { LabelComponent } from 'src/app/component/label/label.component';
 import { IconComponent } from './component/icon/icon.component';
 import { CollabratorComponent } from './component/collabrator/collabrator.component';
+import { from } from 'rxjs';
+
 
 const routes: Routes = [
     {
@@ -70,7 +72,6 @@ const routes: Routes = [
               component : ArchiveComponent,
             },
 
-
             {
               path: 'trash',
               component : TrashComponent,
@@ -112,7 +113,10 @@ const routes: Routes = [
       path: 'collabrator',
       component : CollabratorComponent
     },
+
+    
   
+
 ];
 
 @NgModule({

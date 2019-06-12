@@ -44,7 +44,7 @@ card:any;
           status.subscribe(res=>{
           console.log(res);
                 
-          let snackBarRef = this.snack.open('Label added successfully.....!', 'Undo');});    
+          let snackBarRef = this.snack.open('Note added successfully.....!', 'Undo');});    
       }
       else 
       {

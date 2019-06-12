@@ -50,6 +50,5 @@
             $result= $this->note->changeColor($note_id,$color);
             return $result;
         }
-
       
     }   
