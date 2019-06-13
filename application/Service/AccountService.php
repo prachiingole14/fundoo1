@@ -10,8 +10,6 @@
         {
             parent::__construct();
             $this->load->database();
-          
-        
         }
 
         public function Registration($firstName, $address,$contact, $email, $password, $confirm_password)

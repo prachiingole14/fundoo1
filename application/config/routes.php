@@ -50,6 +50,9 @@
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+
+
+
 $route['default_controller'] = 'welcome';
 
 //login,registration,reset routing

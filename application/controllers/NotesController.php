@@ -2,8 +2,8 @@
     defined('BASEPATH') or exit('No direct script access allowed');
     include "/var/www/html/fundoonote/application/Service/NoteService.php";
     header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
     header("Access-Control-Allow-Headers: X-Requested-With");
-    header("Access-Control-Allow-Methods: GET, POST");
     
     class NotesController extends CI_Controller
     {
@@ -21,7 +21,6 @@
             $title = $_POST['title'];
             $description = $_POST['description'];
             $color = $_POST['color'];
-    
             $result = $this->note->AddNotes($title, $description, $color);
             return print_r(json_encode($result));
         }
@@ -45,8 +44,7 @@
         public function editcolor()
         {
             $note_id = $_POST['note_id'];
-            $color = $_POST['color'];
-            
+            $color = $_POST['color'];    
             $result= $this->note->changeColor($note_id,$color);
             return $result;
         }

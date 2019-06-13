@@ -51,6 +51,7 @@ export class IconComponent implements OnInit
     })
   }
 
+ 
   // deleteLabel()
   // {
   //   this.model={"lable_id":this.lable_id.value}

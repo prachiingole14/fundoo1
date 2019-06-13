@@ -22,8 +22,6 @@ export class ReminderComponent implements OnInit
   title=new FormControl(' ',[Validators.required]);
   description=new FormControl(' ',[Validators.required]);
 
-
-
   titleError()
   {
     return this.title.hasError('required')?'':''
