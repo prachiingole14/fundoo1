@@ -7,15 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollabratorComponent implements OnInit 
 {
-  flag=true;
-  constructor() { }
+  
+  constructor() {}
 
-  ngOnInit() {
-  }
+  flag=true;
+  
+  ngOnInit() {}
 
   cancle()
   {
-    this.flag = !this.flag;
+    this.flag=!this.flag;
     console.log("back to")
   }
+
 }

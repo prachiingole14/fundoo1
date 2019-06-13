@@ -23,12 +23,48 @@
    <mat-icon  matTooltip="Grid-View" (click)="flag=false" *ngIf=flag class="navbar-content">dns </mat-icon>
  <!--drid end -->
 
- <mat-icon  class="navbar-content11" matTooltip="Settings" [matMenuTriggerFor]="menu1">settings_outline</mat-icon>
+  <mat-icon  class="navbar-content11" matTooltip="Settings" [matMenuTriggerFor]="menu1">settings_outline</mat-icon>
 
+  <button mat-mini-fab color="primary" class="navbar-content11" [matMenuTriggerFor]="profile" style="background-color: rgb(123, 27, 200);">P</button>
 
- <button mat-mini-fab color="primary" class="navbar-content11">P</button>
+  <mat-menu #profile="matMenu" >
+      <div fxLayout="row" class="profileMenu">
+
+        <div>
+          <button style="font-size:20px;text-align:center;" mat-fab color="primary" [matMenuTriggerFor]="menu">
+            <span>P</span>
+            <mat-divider></mat-divider>
+            <!-- <input type="file" style="display:none" #profile> -->
+            <span class="add-profile-pic">change</span>
+          </button>
+        </div>
+
+        <div fxLayout='column'>
+          <div class="text">
+            Prachi Ingole
+          </div>
+
+          <div class="margin">
+            prachi760@gmail.com
+          </div>
+
+          <div class="margin2">privacy
+            <!-- <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a> -->
+          </div>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div fxLayout='row'>
+        <div>
+          <button mat-stroked-button class="basic-btn">Add Account</button>
+        </div>
+        <div>
+          <button mat-stroked-button  class="basic-btn2">Sign Out</button>
+        </div>
+      </div>
+  </mat-menu>
 </mat-toolbar>
- 
+
   <!-- setting start -->
     <mat-menu #menu1="matMenu">
       
@@ -56,7 +92,6 @@
 <!--setting end -->
 
 <!-- <mat-icon matTooltip="FundooApps">apps</mat-icon> -->
-
 <mat-drawer-container class="example-container" #drawer>
     <mat-drawer #drawer  mode="side">
       <div style="margin-top:5px;margin-right: 4px; width:300px;">
@@ -80,15 +115,15 @@
         <mat-divider></mat-divider>
 
         <mat-nav-list >
-            <span style="color:grey; margin-left: 6px; margin-top:8px;">Labels</span>
-                <div *ngFor="let data of label" >
-                  <div fxLayout="column">
-                    <mat-list-item  class="nav" >
-                        <mat-icon >label_outline</mat-icon>
-                        <p class="navmargin">{{data.label_name}}
-                    </mat-list-item>
-                  </div>
-                </div>
+          <span style="color:grey; margin-left: 6px; margin-top:8px;">Labels</span>
+            <div *ngFor="let data of label" >
+              <div fxLayout="column">
+                <mat-list-item  class="nav" >
+                  <mat-icon >label_outline</mat-icon>
+                  <p class="navmargin">{{data.label_name}}
+                </mat-list-item>
+              </div>
+            </div>
         </mat-nav-list>
 
         <mat-nav-list class="nav" >
@@ -128,6 +163,7 @@
   <app-insertnotes></app-insertnotes>
   
   <app-displaycontents></app-displaycontents>
+
     <router-outlet></router-outlet>
   </mat-drawer-container>
   

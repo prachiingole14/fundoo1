@@ -1,5 +1,5 @@
 <?php
-//defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -54,6 +54,8 @@
 
 
 $route['default_controller'] = 'welcome';
+$route['scaffolding_trigger'] = '';
+
 
 //login,registration,reset routing
 $route['register'] = 'AccountController/register';

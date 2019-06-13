@@ -29,6 +29,7 @@ export class NotesComponent implements OnInit
   
   flag=true;
   card:any;
+  
   //headerName=FUNDOO;  
     ngOnInit() 
     {

@@ -29,7 +29,7 @@ export class NotesService
 
   getcard()
   {
-    return this.http.post('http://localhost/displaynotes' , {});
+    return this.http.get('http://localhost/fundoo1/index.php/displaynotes' , {});
   }
  
   // displayNotes(data)

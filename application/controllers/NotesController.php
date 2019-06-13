@@ -1,9 +1,11 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
-    include "/var/www/html/fundoonote/application/Service/NoteService.php";
+    require APPPATH . 'libraries/REST_Controller.php';
+    include '/var/www/html/fundoo1/application/Service/NoteService.php';
     header('Access-Control-Allow-Origin: *');
     header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
     header("Access-Control-Allow-Headers: X-Requested-With");
+    
     
     class NotesController extends CI_Controller
     {
@@ -38,7 +40,7 @@
         {
           $note_id=$_POST['note_id'];
           $result = $this->note->deleteNote($note_id);
-            return $result;
+          return $result;
         }
 
         public function editcolor()

@@ -91,6 +91,7 @@ body
   margin-right: 16px; 
   margin-top: 10px;
   margin-left:20px; 
+  
 }
 .navbar-content1
 {
@@ -173,7 +174,6 @@ body
 :host ::ng-deep .mat-drawer-side
 {
   border-right: 0px !important
-
 } 
 
 :host ::ng-deep .mat-drawer-container
@@ -181,3 +181,52 @@ body
   overflow: hidden !important ;
 }
 
+//////////////////////////////////////// @profile ///////////////////////////////////////////
+
+.profileMenu
+{
+  margin-block-end: 0px;
+  margin-block-start: 2px;
+}
+
+.add-profile-pic
+{
+  margin-bottom: 8px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.basic-btn
+{
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.basic-btn2
+{
+  margin-left: 40px;
+  margin-right:7px;
+  margin-top: 15px;
+}
+
+.margin
+{
+  padding-left: 10px;
+  font-size: 14px;
+  color:  rgb(80, 79, 79);
+}
+
+.margin2
+{
+  padding-left: 10px;
+  padding-bottom: 14px;
+  font-size: 15px;
+}
+
+.text
+{
+  font-size: 16px;
+  padding-left: 10px;
+  color:  rgb(80, 79, 79);
+  margin-top: 6px;
+}
