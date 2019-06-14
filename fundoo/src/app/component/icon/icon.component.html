@@ -1,6 +1,6 @@
-<div fxLayout="row" fxLayoutAlign="start end"  [style.backgroundColor]="color" style="width:100%;">
+<div fxLayout="row" fxLayoutAlign="space-around center"  [style.backgroundColor]="color">
    
-  <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
+  <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder" style="color:rgb(75, 71, 71);">notification_important</mat-icon>
     <mat-menu  #remainder="matMenu">
       <span style="margin-left:12px;">Remainder:</span> 
         <button mat-menu-item>Later today 
@@ -26,9 +26,9 @@
         <button mat-menu-item><mat-icon>room</mat-icon> Select Place</button>
      </mat-menu>
 
-    <mat-icon matTooltip="Colabrate" class="margin2"  (click)="openCollbrator()">person_add</mat-icon>
+    <mat-icon matTooltip="Colabrate" class="margin2"  (click)="openCollbrator()" style="color:rgb(75, 71, 71);"> person_add</mat-icon>
 
-    <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color">palette</mat-icon>
+    <mat-icon matTooltip="Change Background Color" class="margin" [matMenuTriggerFor]="color" style="color:rgb(75, 71, 71);">palette</mat-icon>
       <mat-menu #color="matMenu">
         
          <div fxLayout="row" fxLayoutAlign="center center">
@@ -53,12 +53,12 @@
           </div>
       </mat-menu>
 
-    <input type="file"  style="display:none"  #img>
-    <mat-icon matTooltip="Add Image" class="margin2" (click)="img.click()">insert_photo</mat-icon>
+    <input type="file"  style="display:none; color:gray;"  #img>
+    <mat-icon matTooltip="Add Image" class="margin2" (click)="img.click()" style="color:rgb(75, 71, 71);">insert_photo</mat-icon>
    
-    <mat-icon matTooltip="Archive" class="margin2">archive</mat-icon>
+    <mat-icon matTooltip="Archive" class="margin2" style="color:rgb(75, 71, 71);">archive</mat-icon>
 
-    <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+    <mat-icon class="margin" [matMenuTriggerFor]="menu" style="color:rgb(75, 71, 71);">more_vert</mat-icon>
 
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="openDialog()"><span >Add Label</span></button>

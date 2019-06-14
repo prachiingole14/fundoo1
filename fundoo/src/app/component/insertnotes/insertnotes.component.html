@@ -1,5 +1,5 @@
 <mat-card class="flex" [style.backgroundColor]='color'>
-    <div *ngIf="flag==true" (click)="reverse()" fxLayout="row" fxLayoutAlign="center center">
+    <div *ngIf="flag==true" (click)="reverse()" fxLayout="row" fxLayoutAlign=" center">
   
         <div style="width:80%;">
           <input matInput placeholder="Take a notes"  style="width:80%;outline: none; border:none;" >
@@ -24,13 +24,14 @@
           </div>
   
           <div style="margin-top:18px; ">
-            <input matInput  placeholder="Take a Note...."  style="outline: none; border:none;" required>
+            <textarea matInput  placeholder="Take a Note...."  style="outline: none; border:none;width: 100%;overflow: hidden;" required></textarea>
               <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
           </div>
   
         <div fxLayout='row' fxLayoutAlign="start end" >
           <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
-            <div style="margin-left:10px;">
+            <div>
+            <!-- <div style="margin-left:10px;"> -->
               <mat-menu  #remainder="matMenu">
                 <button mat-menu-item>Remainder:</button>
                 <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>

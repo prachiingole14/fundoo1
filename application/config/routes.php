@@ -74,7 +74,7 @@ $route['deletenote'] = 'NotesController/deletenote';
 //label routing
 $route['addLabel'] = 'EditLabelController/addLabel'; 
 $route['deleteLabel'] = 'EditLabelController/deleteLabel';
-$route['displaylabeles'] = 'EditLabelController/displaylabeles';
+$route['displaylabels'] = 'EditLabelController/displaylabels';
 $route['deleteLabel'] = 'EditLabelController/deleteLabel';
 
 $route['404_override'] = '';

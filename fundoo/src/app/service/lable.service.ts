@@ -24,7 +24,8 @@ export class lableService
   
   getlabels()
   {
-    return this.http.post(this.serviceurl.host+this.serviceurl.getLabel , {});
+    return this.http.get('http://localhost/fundoo1/index.php/displaylabels' , {});
+  }
   }
 
   // displaylabeles(data)
@@ -36,4 +37,4 @@ export class lableService
   // }
 
  
-}
+

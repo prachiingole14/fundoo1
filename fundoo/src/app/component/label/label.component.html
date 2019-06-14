@@ -3,14 +3,14 @@
 <div *ngIf="flag == true">
   <div fxLayout="row" fxAlign="start center" >
       <mat-icon class="icon">add</mat-icon>
-      <input matInput placeholder="Create new Label" class="input" class="font">    
+      <input matInput placeholder="Create new Label" class="input" class="font" [formControl]>    
   </div>
 </div>
 
 <div *ngIf="flag == false">
   <div fxLayout="row" fxAlign="start center" *ngIf="flag == false"> 
       <mat-icon class="icon" >check</mat-icon>
-      <input class="input" matInput placeholder="Create new Label" required>
+      <input class="input" matInput placeholder="Create new Label"  required>
       <!-- <mat-error *ngIf="lable_name.dirty">{{lableError()}}</mat-error> -->
       <mat-icon (click)="reverse()">close</mat-icon>
   </div> 

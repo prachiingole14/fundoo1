@@ -1,8 +1,10 @@
 <?php
+    include "/var/www/html/fundoo1/application/Service/LabelService.php";
     defined('BASEPATH') or exit('No direct script access allowed');
-    include "/var/www/html/fundoonote/application/Service/labelService.php";
-    // header('Access-Control-Allow-Origin: *');
-    // header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+    require APPPATH . 'libraries/REST_Controller.php';
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
+    header("Access-Control-Allow-Headers: X-Requested-With");
     
     class EditLabelController extends CI_Controller
     {
@@ -11,7 +13,7 @@
         {
             parent::__construct();
             $this->load->database();
-            $this->label = new labelService();
+            $this->label = new LabelService();
         }
 
         public function addLabel()
@@ -32,10 +34,10 @@
             return $result;
         }
 
-        public function displaylabeles()
+        public function displaylabels()
         {
             $data = $this->label->show_labels();
-            json_encode($data);
+            print_r($data);
            return $data;
         }
    
