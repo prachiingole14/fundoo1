@@ -4,7 +4,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { LabelComponent } from 'src/app/component/label/label.component'
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+
 @Component({
   selector: 'app-displaycontents',
   templateUrl: './displaycontents.component.html',

@@ -38,7 +38,8 @@ export class LabelComponent implements OnInit
 
     if(this.lable_name.value == ' ')
     {
-      let snackBarRef = this.snack.open('Label empty....!', 'Undo');
+      let snackBarRef = this.snack.open('Label empty....!');
+      console.log("label not added")
     }
     else
     {
@@ -48,11 +49,11 @@ export class LabelComponent implements OnInit
       status.subscribe(res=>{
       console.log(res);
 
-      let snackBarRef = this.snack.open('Label added successfully.....!', 'Undo');
+      let snackBarRef = this.snack.open('Label added successfully.....!');
       });
   
       this.submit=console.log(this.lable_name.value)
-     console.log("label not added")
+     
     }
   }
 
@@ -60,8 +61,5 @@ export class LabelComponent implements OnInit
   {
     this.flag = !this.flag;
   }
-
-  
-
  
 }

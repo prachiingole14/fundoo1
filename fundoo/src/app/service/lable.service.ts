@@ -15,17 +15,13 @@ export class lableService
   addLables(editlable)
   {
     let addlable = new FormData();
-    addlable.append("editlables", editlable.lable_name);
-    let url=this.serviceurl.host+this.serviceurl.label;
-    console.log(url);
-    
+    addlable.append("editlables", editlable.lable_name);    
     return this.http.post(this.serviceurl.host+this.serviceurl.label, addlable);
   }
   
   getlabels()
   {
     return this.http.get('http://localhost/fundoo1/index.php/displaylabels' , {});
-  }
   }
 
   // displaylabeles(data)
@@ -36,5 +32,8 @@ export class lableService
   //   return this.http.post(this.serviceurl.host + this.serviceurl.showlabel,displaylabels);
   // }
 
+  }
+
+  
  
 
