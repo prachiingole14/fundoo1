@@ -25,25 +25,25 @@ export class LabelComponent implements OnInit
 
   model: any = {};
 
-  lable_name = new FormControl(' ',[Validators.required]);
+  label_name = new FormControl(' ',[Validators.required]);
   
   lableError()
   {
-    return this.lable_name.hasError('required')?'Invalid label....!':''
+    return this.label_name.hasError('required')?'Invalid label....!':''
   }
 
   addLabel()
   {
-    this.model={  "lable_name":this.lable_name.value }
+    this.model={  "label_name":this.label_name.value }
 
-    if(this.lable_name.value == ' ')
+    if(this.label_name.value == ' ')
     {
       let snackBarRef = this.snack.open('Label empty....!');
       console.log("label not added")
     }
     else
     {
-      this.model={"lable_name":this.lable_name.value}
+      this.model={"lable_name":this.label_name.value}
 
       let status = this.s_label.addLables(this.model)
       status.subscribe(res=>{
@@ -52,7 +52,7 @@ export class LabelComponent implements OnInit
       let snackBarRef = this.snack.open('Label added successfully.....!');
       });
   
-      this.submit=console.log(this.lable_name.value)
+      this.submit=console.log(this.label_name.value)
      
     }
   }

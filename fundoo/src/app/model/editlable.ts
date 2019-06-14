@@ -1,4 +1,4 @@
 export class Editlable 
 {
-    lable_name="string";
+    label_name="string";
 }

@@ -3,8 +3,10 @@
 <div *ngIf="flag == true">
   <div fxLayout="row" fxAlign="start center" >
       <mat-icon class="icon">add</mat-icon>
-      <input matInput placeholder="Create new Label" class="input" class="font" [formControl]>    
-  </div>
+
+      <input matInput placeholder="Create new Label" class="input" class="font" [formControl]="label_name">    
+ 
+    </div>
 </div>
 
 <div *ngIf="flag == false">

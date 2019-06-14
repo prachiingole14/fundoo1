@@ -11,12 +11,12 @@ export class lableService
 {
   constructor(private http:HttpClient,private serviceurl:ServiceUrlService) { }
   editlable : Editlable;
-
-  addLables(editlable)
+ 
+  addLables(editlable) 
   {
-    let addlable = new FormData();
-    addlable.append("editlables", editlable.lable_name);    
-    return this.http.post(this.serviceurl.host+this.serviceurl.label, addlable);
+    let addLable = new FormData();
+    addLable.append("editlables", editlable.lable_name);    
+    return this.http.post('ocalhost/fundoo1/index.php/addLabel', editlable);
   }
   
   getlabels()
