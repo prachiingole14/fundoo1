@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit
 
   constructor(public dialog: MatDialog,public s_label: lableService) { }
 
-  @Input() alllabel;
+  @Input() alllabel: any;
   
   flag=true;
   showFiller = false;

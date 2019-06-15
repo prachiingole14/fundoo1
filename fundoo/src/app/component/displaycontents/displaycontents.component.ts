@@ -4,6 +4,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { LabelComponent } from 'src/app/component/label/label.component'
+import { lableService } from 'src/app/service/lable.service';
 
 @Component({
   selector: 'app-displaycontents',
@@ -14,9 +15,10 @@ export class DisplaycontentsComponent implements OnInit
 {
   color: any;
   @Input() allCard;
+  @Input() alllabels;
   headers: any;
 
-  constructor(private s_notes:NotesService, public dialog:MatDialog, private snack : MatSnackBar) 
+  constructor(private s_notes:NotesService, public dialog:MatDialog, private snack : MatSnackBar, public label : lableService) 
   {
     this.headers = new HttpHeaders();
     this.headers.append('Access-Control-Allow-Headers', 'Authorization');
@@ -25,17 +27,5 @@ export class DisplaycontentsComponent implements OnInit
   flag=false;
 
   ngOnInit() {}
-
-  ChangeColor(color)
-  {
-    this.color=color;
-    console.log(this.color,"change color");
-  }
-
-  openDialog() 
-  {
-    this.dialog.open(LabelComponent)
-  }
-
 
 }

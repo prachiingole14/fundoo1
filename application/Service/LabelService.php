@@ -8,11 +8,12 @@
             $this->load->database();
         }
 
-        public function add_label($label_name)
+        public function add_label($label_name, $note_id)
         {
-            $data = array("label_name" => $label_name);
+            $data = array("label_name" => $label_name,
+                            "note_id" => $note_id);
             //$query= $this->db->query("INSERT INTO labels(`label_name`) VALUES ('$label_name')");
-            $query=$this->db->insert('labels');
+            $query=$this->db->insert('labels',$data);
             print_r($query);
             echo json_encode($query);
         }

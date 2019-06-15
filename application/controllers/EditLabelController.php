@@ -8,7 +8,6 @@
     
     class EditLabelController extends CI_Controller
     {
-
         public function __construct()
         {
             parent::__construct();
@@ -19,11 +18,12 @@
         public function addLabel()
         {
             $label_name=$_GET['label_name'];
+            $note_id=$_GET['note_id'];
             print $label_name;
-            $result = $this->label->add_label($label_name);
+            print $note_id;
+            $result = $this->label->add_label($label_name,$note_id);
             $data=json_encode($result);
             return $data;
-        
         }
 
         public function deleteLabel()
@@ -38,7 +38,7 @@
         {
             $data = $this->label->show_labels();
             print_r($data);
-           return $data;
+            return $data;
         }
    
     }

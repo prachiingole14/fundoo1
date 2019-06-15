@@ -18,6 +18,18 @@
   </div> 
 </div> 
 
+
+<span style="color:grey; margin-left: 6px; margin-top:8px;">Labels</span>
+<div *ngFor="let data of label" >
+  <div fxLayout="column">
+    <mat-list-item  class="nav" >
+      <mat-icon >label_outline</mat-icon>
+      <p class="navmargin">{{data.label_name}}
+    </mat-list-item>
+  </div>
+</div>
+
 <mat-divider></mat-divider>
 
 <button mat-raised-button class="close-btn" mat-dialog-close="true" (click)="addLabel()">Done</button>
+<app-displaycontents  [alllabels]="label"></app-displaycontents>

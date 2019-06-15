@@ -9,39 +9,16 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class ReminderComponent implements OnInit 
 {
-  color:any;
-  image: any;
+  
   
   flag=true;
 
   constructor() {}
 
   ngOnInit() {}
-  model: any = {};
 
-  title=new FormControl(' ',[Validators.required]);
-  description=new FormControl(' ',[Validators.required]);
+  
 
-  titleError()
-  {
-    return this.title.hasError('required')?'':''
-  }
-
-  descriptionError()
-  {
-    return this.description.hasError('required')?'':''
-  }
-
-  ChangeColor(color)
-  {
-    this.color=color;
-    console.log(this.color,"change color");
-  }
-
-  reverse()
-  {
-    this.flag = !this.flag
-  }
 
 }
 

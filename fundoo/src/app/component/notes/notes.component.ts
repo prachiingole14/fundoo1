@@ -5,6 +5,7 @@ import { LabelComponent } from '../label/label.component';
 import { HttpHeaders } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { lableService } from 'src/app/service/lable.service';
 
 const newLocal = 'This field is empty';
 @Component({
@@ -20,8 +21,9 @@ export class NotesComponent implements OnInit
  
   color:any;
   headers: any;
+  label: any;
   
-    constructor(private s_notes: NotesService, public dialog:MatDialog, private snack:MatSnackBar) 
+    constructor(private s_notes: NotesService, public s_labels: lableService, public dialog:MatDialog, private snack:MatSnackBar) 
     {
       this.headers = new HttpHeaders();
         this.headers.append('Access-Control-Allow-Headers', 'Authorization');
@@ -34,6 +36,7 @@ export class NotesComponent implements OnInit
     ngOnInit() 
     {
       this.getAllCard()
+      this.getAllLabels()
     }
     
     getAllCard()
@@ -44,6 +47,17 @@ export class NotesComponent implements OnInit
       },
       err=>{
         console.log('error in get notes',err);
+      })
+    }
+
+    getAllLabels()
+    {
+      this.s_labels.getlabels().subscribe(data=>{
+        console.log('labels on note',data);
+          this.label=data;
+      },
+      err=>{
+        console.log('get error label on notes',err);
       })
     }
 
