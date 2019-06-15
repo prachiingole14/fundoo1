@@ -17,8 +17,5 @@ export class ReminderComponent implements OnInit
 
   ngOnInit() {}
 
-  
-
-
 }
 

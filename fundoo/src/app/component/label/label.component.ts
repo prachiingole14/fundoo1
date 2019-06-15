@@ -13,13 +13,12 @@ export class LabelComponent implements OnInit
 {
   submit: void;
   label: any;
-  constructor(private s_label:lableService , private snack : MatSnackBar) { }
-  @Input() alllabel;
-  
-  flag = true;
 
-  ngOnInit() 
-  {}
+  constructor(private s_label:lableService , private snack : MatSnackBar) { }
+
+  @Input() alllabel;
+  flag = true;
+  ngOnInit() {}
 
   model: any = {};
 

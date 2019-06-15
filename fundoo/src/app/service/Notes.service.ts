@@ -10,6 +10,9 @@ import { from } from 'rxjs';
 
 export class NotesService 
 {
+  getlabels() {
+    throw new Error("Method not implemented.");
+  }
   title: any;
   description: any;
   httpClient: any;

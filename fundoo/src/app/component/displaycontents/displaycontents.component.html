@@ -6,27 +6,21 @@
         <mat-card   *ngFor="let data of allCard" [ngStyle]="{'background-color': data.color}" class="flex">
            <div>
               <div fxLayout='column'>
-                
                 <div class="title-design">
                   {{data.title}}
                 </div>
                 <div class="description-design">
                   {{data.description}}
                 </div>
-                
               </div>
               <div *ngFor="let label of alllabels">
                   <div class="title-design">
-                      {{label.label_name}}
-                    </div>
+                    {{label.label_name}}
+                  </div>
               </div>   
               <app-icon></app-icon> 
-                
            </div> 
-           
         </mat-card>
-        
     </ng-container>
-    
 </div>
 

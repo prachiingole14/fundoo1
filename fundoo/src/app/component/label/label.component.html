@@ -3,9 +3,7 @@
 <div *ngIf="flag == true">
   <div fxLayout="row" fxAlign="start center" >
       <mat-icon class="icon">add</mat-icon>
-
       <input matInput placeholder="Create new Label" class="input" class="font" [formControl]="label_name">    
- 
     </div>
 </div>
 
@@ -17,7 +15,6 @@
       <mat-icon (click)="reverse()">close</mat-icon>
   </div> 
 </div> 
-
 
 <span style="color:grey; margin-left: 6px; margin-top:8px;">Labels</span>
 <div *ngFor="let data of label" >
@@ -32,4 +29,10 @@
 <mat-divider></mat-divider>
 
 <button mat-raised-button class="close-btn" mat-dialog-close="true" (click)="addLabel()">Done</button>
-<app-displaycontents  [alllabels]="label"></app-displaycontents>
+
+<!-- <div *ngFor="let label of alllabels">
+    <div class="title-design">
+        {{label.label_name}}
+      </div>
+</div> 
+<app-label [alllabels]="label"></app-label'> -->
