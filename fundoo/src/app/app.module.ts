@@ -32,6 +32,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { Dashboard1Component } from './component/dashboard1/dashboard1.component';
 import { EditLabelComponent } from './component/edit-label/edit-label.component';
 import { CollabratorComponent } from './component/collabrator/collabrator.component';
+import { SearchPipe } from './search.pipe';
 
 //import { Component} from '@angular/core';
 
@@ -57,6 +58,7 @@ import { CollabratorComponent } from './component/collabrator/collabrator.compon
     NavbarComponent,
     Dashboard1Component,
     CollabratorComponent,
+    SearchPipe,
     
    
   ],

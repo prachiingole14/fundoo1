@@ -41,14 +41,16 @@ export class NotesComponent implements OnInit
     
     getAllCard()
     {
-      this.s_notes.getcard().subscribe(data=>{
-        console.log('all notes is ',data);
-          this.card=data;
-      },
-      err=>{
-        console.log('error in get notes',err);
-      })
+        this.s_notes.getcard().subscribe(data=>{
+          console.log('all notes is ',data);
+            this.card=data;
+        },
+        err=>{
+          console.log('error in get notes',err);
+        })
     }
+
+   
 
     getAllLabels()
     {

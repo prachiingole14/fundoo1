@@ -17,6 +17,7 @@ export class DisplaycontentsComponent implements OnInit
   @Input() allCard;
   @Input() alllabels;
   headers: any;
+  card: Object;
 
   constructor(private s_notes:NotesService, public dialog:MatDialog, private snack : MatSnackBar, public label : lableService) 
   {
@@ -26,6 +27,20 @@ export class DisplaycontentsComponent implements OnInit
 
   flag=false;
 
-  ngOnInit() {}
+  ngOnInit() {this.allCard;}
+
+  // getCardsearch()
+  // {
+  //   {
+  //     this.s_notes.getcard().subscribe(data=>{
+  //       console.log('all notes is ',data);
+  //         this.card=data;
+  //     },
+  //     err=>{
+  //       console.log('error in get notes',err);
+  //     })
+  //   }
+   
+  // }
 
 }

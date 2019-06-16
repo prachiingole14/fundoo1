@@ -17,6 +17,7 @@ import { lableService } from 'src/app/service/lable.service';
 export class NavbarComponent implements OnInit 
 {
   label: any;
+  _bottomSheet: any;
 
   constructor(public dialog: MatDialog,public s_label: lableService) { }
 
@@ -67,4 +68,5 @@ export class NavbarComponent implements OnInit
             console.log('error in get label',err);
           })
   }
+
 }
