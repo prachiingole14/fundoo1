@@ -12,7 +12,7 @@
 
 .input
 {
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
     margin-left: 20px;
     margin-top: 20px;
     color:black;
@@ -28,5 +28,20 @@
     font-size: 15px;
     margin-top: 22px;
     margin-left: 20px;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
+}
+
+.labelgap
+{
+    padding-left: 10px;
+    padding-top: 7px;
+    color: gray;
+    // padding-bottom: 12px;
+}
+
+.labellist
+{
+    padding-left: 16px;
+   // padding-bottom:12px;
+    color:gray; 
 }

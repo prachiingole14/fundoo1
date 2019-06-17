@@ -1,28 +1,27 @@
 <span >Edit Label</span>
 
-<div *ngIf="flag == true">
-  <div fxLayout="row" fxAlign="start center" >
+<div *ngIf="flag === true">
+  <div fxLayout="row">
       <mat-icon class="icon">add</mat-icon>
-      <input matInput placeholder="Create new Label" class="input" class="font" [formControl]="label_name">    
+      <input placeholder="Create new Label" class="input" class="font" [formControl]="label_name">    
     </div>
 </div>
 
-<div *ngIf="flag == false">
-  <div fxLayout="row" fxAlign="start center" *ngIf="flag == false"> 
+<div *ngIf="flag === false">
+  <div fxLayout="row" fxAlign="start center" *ngIf="flag === false"> 
       <mat-icon class="icon" >check</mat-icon>
-      <input class="input" matInput placeholder="Create new Label"  required>
+      <input matInput placeholder="Create new Label" class="input" required>
       <!-- <mat-error *ngIf="lable_name.dirty">{{lableError()}}</mat-error> -->
       <mat-icon (click)="reverse()">close</mat-icon>
   </div> 
 </div> 
 
-<span style="color:grey; margin-left: 6px; margin-top:8px;">Labels</span>
 <div *ngFor="let data of label" >
   <div fxLayout="column">
-    <mat-list-item  class="nav" >
-      <mat-icon >label_outline</mat-icon>
-      <p class="navmargin">{{data.label_name}}
-    </mat-list-item>
+      <div fxLayout="row">
+          <mat-icon class="labelgap">label</mat-icon>
+          <p class="labellist">{{data.label_name}}
+      </div>
   </div>
 </div>
 

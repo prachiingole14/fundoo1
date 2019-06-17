@@ -7,6 +7,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import { from } from 'rxjs';
 import { lableService } from 'src/app/service/lable.service';
 import { CollabratorComponent } from '../collabrator/collabrator.component';
+import { Reminder } from 'src/app/model/reminder';
+import { ReminderService } from 'src/app/service/reminder.service';
 
 @Component({
   selector: 'app-icon',
@@ -22,7 +24,7 @@ export class IconComponent implements OnInit
   lable_id: any;
   model: { "lable_id": any; };
 
-  constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_label : lableService) 
+  constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_label : lableService, public remind : ReminderService) 
   {
     this.headers = new HttpHeaders();
     this.headers.append('Access-Control-Allow-Headers', 'Authorization');
@@ -64,4 +66,10 @@ export class IconComponent implements OnInit
   //     });
   //   }
   
-}
+  todayRemind()
+  {
+    //this.model = {"date_and_time" : this.date_and_time.value}
+    let status = this.remind.todayRemind(this.model)
+    status.subscribe(res => { console.log("today reminder:") })
+  }
+} 

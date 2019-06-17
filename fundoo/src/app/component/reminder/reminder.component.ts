@@ -7,14 +7,11 @@ import { FormControl, Validators } from '@angular/forms';
   templateUrl: './reminder.component.html',
   styleUrls: ['./reminder.component.scss']
 })
+
 export class ReminderComponent implements OnInit 
 {
-  
-  
   flag=true;
-
   constructor() {}
-
   ngOnInit() {}
 
 }

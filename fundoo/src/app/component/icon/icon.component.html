@@ -3,8 +3,9 @@
   <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder" style="color:rgb(75, 71, 71);">notification_important</mat-icon>
     <mat-menu  #remainder="matMenu">
       <span style="margin-left:12px;">Remainder:</span> 
+
         <button mat-menu-item>Later today 
-          <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
+          <input matInput value="08:00 PM" style="border: none; text-align-last: right;" (click)="todayRemind()">
         </button>
 
         <button mat-menu-item>Tomorrow 
@@ -18,7 +19,7 @@
         <button mat-menu-item>Work 
           <input matInput value="Govandi" style="border: none; margin-left: 24px; text-align-last: right;">
         </button>
-       
+        
         <button mat-menu-item>
           <mat-icon>query_builder</mat-icon> Select date and Time
         </button>

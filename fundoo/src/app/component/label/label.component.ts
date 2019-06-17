@@ -18,7 +18,10 @@ export class LabelComponent implements OnInit
 
   @Input() alllabel;
   flag = true;
-  ngOnInit() {}
+  ngOnInit() 
+  {
+    this.getAllLabels()
+  }
 
   model: any = {};
 
@@ -56,5 +59,15 @@ export class LabelComponent implements OnInit
   {
     this.flag = !this.flag;
   }
- 
+
+  getAllLabels()
+  {
+    this.s_label.getlabels().subscribe(data=>{
+      console.log('all labels is in',data);
+        this.label=data;
+    },
+    err=>{
+            console.log('error in get label',err);
+          })
+  }
 }

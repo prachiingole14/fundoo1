@@ -16,7 +16,7 @@ export class lableService
   {
     let addLable = new FormData();
     addLable.append("editlables", editlable.lable_name);    
-    return this.http.post('ocalhost/fundoo1/index.php/addLabel', editlable);
+    return this.http.post('localhost/fundoo1/index.php/addLabel', editlable);
   }
   
   getlabels()
