@@ -11,7 +11,7 @@ export class ReminderService
   constructor( private http:HttpClient, serviceUrl:ServiceUrlService) { }
   reminder=Reminder;
 
-  todayRemind(reminder)
+  todayremind(reminder,note_id)
   {
     let todayremind = new FormData();
     todayremind.append("reminder", reminder.date_and_time);

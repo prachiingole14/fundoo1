@@ -77,5 +77,8 @@ $route['deleteLabel'] = 'EditLabelController/deleteLabel';
 $route['displaylabels'] = 'EditLabelController/displaylabels';
 $route['deleteLabel'] = 'EditLabelController/deleteLabel';
 
+// Reminder Routing
+$route['todayreminder'] = 'Reminder/todayreminder';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -58,6 +58,8 @@ export class LabelComponent implements OnInit
   reverse()
   {
     this.flag = !this.flag;
+
+    
   }
 
   getAllLabels()

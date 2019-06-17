@@ -1,4 +1,4 @@
 export class Reminder
 {
-    date_and_time : string;
+    date_time : string;
 }

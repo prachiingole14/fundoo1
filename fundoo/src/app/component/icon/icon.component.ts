@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LabelComponent } from '../label/label.component';
 import { HttpHeaders } from '@angular/common/http';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatCard, MatCardSmImage } from '@angular/material';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
 import { from } from 'rxjs';
@@ -20,6 +20,7 @@ export class IconComponent implements OnInit
 
   color: any;
   @Input() alllabels;
+  @Input() card;
   headers: any;
   lable_id: any;
   model: { "lable_id": any; };
@@ -53,6 +54,21 @@ export class IconComponent implements OnInit
     })
   }
 
+  todayRemind(card)
+  {
+    var date =new Date();
+    date.setHours(20,0,0);
+    card.reminder =date.getFullYear() + "-" +(date.getMonth()+1) + "-" + date.getDate() + "-" + (date.getHours() + "-" + date.getMinutes() + "-" + date.getSeconds());
+
+    this.remind.todayremind(note_id).subscribe(data=>{this.todayRemind.emit({})
+      console.log("todays reminder : ", data)
+      }
+    err => {
+      console.log("error in todays remind");
+      
+    }
+  }
+
  
   // deleteLabel()
   // {
@@ -66,10 +82,4 @@ export class IconComponent implements OnInit
   //     });
   //   }
   
-  todayRemind()
-  {
-    //this.model = {"date_and_time" : this.date_and_time.value}
-    let status = this.remind.todayRemind(this.model)
-    status.subscribe(res => { console.log("today reminder:") })
-  }
 } 
