@@ -24,5 +24,12 @@ Class Reminder extends CI_Controller
         $date_time = $this->remind->setTodayReminder($date_time);
         return $date_time;
     }
+
+    public function showreminders()
+    {
+        $data = $this->remind->display();
+        print_r($data);
+        return $data;
+    }
 }
 ?>

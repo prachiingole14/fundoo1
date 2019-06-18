@@ -27,7 +27,8 @@ export class DisplaycontentsComponent implements OnInit
 
   flag=false;
 
-  ngOnInit() {this.allCard;}
+  ngOnInit() {this.allCard;
+              this.alllabels;}
 
   // getCardsearch()
   // {

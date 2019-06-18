@@ -23,7 +23,8 @@
             $title = $_POST['title'];
             $description = $_POST['description'];
             $color = $_POST['color'];
-            $result = $this->note->AddNotes($title, $description, $color);
+            $reminder= $_POST['reminder']
+            $result = $this->note->AddNotes($title, $description, $color, $reminder);
             return print_r(json_encode($result));
         }
 
@@ -31,6 +32,7 @@
         {
             // $note_id=$_GET['note_id'];
            $data = $this->note->shownotes();
+
            //$result= $this->db->query("SELECT note_id FROM notes where 'note_id=$note_id'");
            print_r($data);
            return $data;

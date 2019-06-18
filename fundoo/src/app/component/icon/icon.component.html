@@ -1,14 +1,16 @@
-<div fxLayout="row" fxLayoutAlign="space-around center"  [style.backgroundColor]="color">
+
+<div>
+<div fxLayout="row" fxLayoutAlign="space-around center" [style.backgroundColor]="color">
    
   <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder" style="color:rgb(75, 71, 71);">notification_important</mat-icon>
     <mat-menu  #remainder="matMenu">
       <span style="margin-left:12px;">Remainder:</span> 
 
-        <button mat-menu-item>Later today 
-          <input matInput value="08:00 PM" style="border: none; text-align-last: right;" (click)="todayRemind()">
+        <button   (click)="todayremind()"   mat-menu-item>Later today 
+          <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
         </button>
 
-        <button mat-menu-item>Tomorrow 
+        <button   mat-menu-item>Tomorrow 
           <input matInput value="08:00 PM" style="border: none; text-align-last: right;">
         </button>
 
@@ -35,7 +37,7 @@
          <div fxLayout="row" fxLayoutAlign="center center">
             <button matTooltip="none" mat-mini-fab class="fab" style="background-color:white" (click)="ChangeColor('white')"></button>
             <button matTooltip="light red" mat-mini-fab class="fab" style="background-color:#EF9A9A;"  (click)="ChangeColor('#EF9A9A')"></button>
-            <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
+            todayremind            <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
             <button matTooltip="light deep-purpul" mat-mini-fab class="fab" style="background-color:rgb(158, 131, 206)"  (click)="ChangeColor('rgb(158, 131, 206)')"></button>
           </div>
 
@@ -67,4 +69,5 @@
       <button mat-menu-item><span>Add drawing</span></button>
       <button mat-menu-item><span>Show tick </span></button>
     </mat-menu>
+</div>
 </div>

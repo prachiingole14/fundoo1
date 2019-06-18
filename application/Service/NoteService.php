@@ -11,14 +11,17 @@
             parent::__construct();
         }
 
-        public function AddNotes($title, $description, $color)
+        public function AddNotes($title, $description, $color,$reminder)
         {
+            $reminder = date("y-m-d h-i-s");
             // $data = array('title' => $title,
             //             'description' => $description,
-            //             'color' => $color);
+            //             'color' => $color,
+            //             'reminder' => $reminder
+        //);
 
             //$query= $this->db->post->insert('notes', $data);  
-            $query =  $this->db->query("INSERT INTO notes(`title`,`description`,`color`) VALUES('$title','$description','$color')");
+            $query =  $this->db->query("INSERT INTO notes(`title`,`description`,`color`,`reminder`) VALUES('$title','$description','$color','$reminder')");
             echo json_encode($query);
         }
 

@@ -18,6 +18,6 @@ export class ReminderService
   {
     let reminders = new FormData();
     reminders.append("reminder", reminder.date_time);
-    //return this.http.get('localhost/fundoo1/index.php/todayreminder', reminders);
+    return this.http.get('http://localhost/fundoo1/index.php/todayreminder',{});
   }
 }

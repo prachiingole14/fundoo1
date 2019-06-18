@@ -28,6 +28,7 @@ export class IconComponent implements OnInit
   
   
   model: { "date_time": any; };
+  time_date: any;
 
   constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_label : lableService, public reminds : ReminderService) 
   {
@@ -56,6 +57,20 @@ export class IconComponent implements OnInit
     this.dialog.open(CollabratorComponent,{
       panelClass:'dailog'
     })
+  }
+
+  todayremind()
+  {
+    this.model={ 
+                  "date_time" : this.time_date.value  
+               };
+    //let status = this.reminder.todayremind(this.model)
+    this.reminds.todayremind(this.model).subscribe(res =>{ console.log("reminder is : ",res);
+    },
+    err=>{
+      console.log("error in reminder"); 
+    }
+    )
   }
 }
 

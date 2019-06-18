@@ -61,7 +61,7 @@ export class NavbarComponent implements OnInit
   getAllLabels()
   {
     this.s_label.getlabels().subscribe(data=>{
-      console.log('all labels is in',data);
+      console.log('all labels are in navbar',data);
         this.label=data;
     },
     err=>{

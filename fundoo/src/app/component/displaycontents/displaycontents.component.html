@@ -8,20 +8,23 @@
               <div fxLayout='column'>
                 <div class="title-design">
                   {{data.title}}
-                  <mat-icon>pin</mat-icon>
+
                 </div>
                 <div class="description-design">
                   {{data.description}}
                 </div>
+                <div class="description-design">
+                  {{data.reminder}}
+                </div>
               </div>
-              <div *ngFor="let label of alllabels">
-                  <div class="title-design">
-                    {{label.label_name}}
-                  </div>
-              </div>   
-              <app-icon></app-icon> 
            </div> 
+        <app-icon></app-icon> 
         </mat-card>
     </ng-container>
 </div>
 
+<div *ngFor="let labels of alllabels">
+  <div class="title-design">
+    {{labels.label_name}}
+  </div>
+</div> 
