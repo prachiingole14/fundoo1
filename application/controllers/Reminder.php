@@ -19,11 +19,10 @@ Class Reminder extends CI_Controller
     public function todayreminder()
     {
       // $reminder_id = $_POST['reminder_id'];
-      $note_id = $_POST['note_id'];
-        $date_time = $_POST['date_time'];
+        $date_time = $_GET['date_time'];
 
-        $data = $this->remind->setTodayReminder($note_id, $date_time);
-        return $data;
+        $date_time = $this->remind->setTodayReminder($date_time);
+        return $date_time;
     }
 }
 ?>

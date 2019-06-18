@@ -19,13 +19,17 @@ export class IconComponent implements OnInit
 {
 
   color: any;
+
   @Input() alllabels;
   @Input() card;
   headers: any;
   lable_id: any;
-  model: { "lable_id": any; };
+  date_time : any;
+  
+  
+  model: { "date_time": any; };
 
-  constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_label : lableService, public remind : ReminderService) 
+  constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_label : lableService, public reminds : ReminderService) 
   {
     this.headers = new HttpHeaders();
     this.headers.append('Access-Control-Allow-Headers', 'Authorization');
@@ -53,23 +57,14 @@ export class IconComponent implements OnInit
       panelClass:'dailog'
     })
   }
+}
 
-  todayRemind(card)
-  {
-    var date =new Date();
-    date.setHours(20,0,0);
-    card.reminder =date.getFullYear() + "-" +(date.getMonth()+1) + "-" + date.getDate() + "-" + (date.getHours() + "-" + date.getMinutes() + "-" + date.getSeconds());
 
-    this.remind.todayremind(note_id).subscribe(data=>{this.todayRemind.emit({})
-      console.log("todays reminder : ", data)
-      }
-    err => {
-      console.log("error in todays remind");
-      
-    }
-  }
 
- 
+
+
+
+
   // deleteLabel()
   // {
   //   this.model={"lable_id":this.lable_id.value}
@@ -82,4 +77,3 @@ export class IconComponent implements OnInit
   //     });
   //   }
   
-} 

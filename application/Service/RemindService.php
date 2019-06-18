@@ -8,15 +8,18 @@ class RemiderService extends CI_Controller
         //$this->load->database();
     }
 
-    public function setTodayReminder( $note_id, $date_time)
+    public function setTodayReminder($date_time)
     {
-        $data = array("date_time" => $date_time,
-                 "note_id" => $note_id);
+       // $date_time = date("y-m-d h-i-s");
+        $data = array("date_time" => $date_time);
         print_r($date_time);
-        //$query = $this->db->query("INSERT INTO `reminder` (`note_id`,`date_time,` ) VALUES ('$note_id','$date_time')");
-        $query = $this->db->insert(`reminder`,`$data`);
 
-        print_r($query);       
+        $this->db->set($data);
+        $this->db->insert($this->db->dbprefix . 'reminder');
+       
+       // $query = $this->db->query("INSERT INTO `reminder` (`date_time`) VALUES ('$date_time')");
+      //$data = $this->db->insert(`reminder`);
+      // print_r($data);       
     }
 }
 

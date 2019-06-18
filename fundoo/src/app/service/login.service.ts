@@ -22,7 +22,6 @@ export class LoginService
 
   getEmail() 
   {
-    
     let urlTocken = new FormData();
     urlTocken.append("token", this.route.snapshot.queryParamMap.get("token"));
     return this.http.post(this.serviceurl.host + this.serviceurl.getEmail, urlTocken);

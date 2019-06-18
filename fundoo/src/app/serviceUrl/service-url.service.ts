@@ -24,5 +24,7 @@ export class ServiceUrlService
 
     public label = "addLabel";
     public navbar = "displayNotes";
-    public getLabel="displaylabeles"
+    public getLabel="displaylabeles";
+
+    public todayremind="reminders";
 }

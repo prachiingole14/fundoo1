@@ -43,7 +43,6 @@ export class LabelComponent implements OnInit
     else
     {
       this.model={"lable_name":this.label_name.value}
-
       let status = this.s_label.addLables(this.model)
       status.subscribe(res=>{
       console.log(res);
@@ -58,10 +57,8 @@ export class LabelComponent implements OnInit
   reverse()
   {
     this.flag = !this.flag;
-
-    
   }
-
+  
   getAllLabels()
   {
     this.s_label.getlabels().subscribe(data=>{
