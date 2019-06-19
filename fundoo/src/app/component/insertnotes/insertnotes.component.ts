@@ -75,8 +75,4 @@ card:any;
       return this.description.hasError('required')?'':''
     }
 
-    addnotes()
-    {
-
-    }
 }

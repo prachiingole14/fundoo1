@@ -23,8 +23,7 @@
             $title = $_POST['title'];
             $description = $_POST['description'];
             $color = $_POST['color'];
-            $reminder= $_POST['reminder']
-            $result = $this->note->AddNotes($title, $description, $color, $reminder);
+            $result = $this->note->AddNotes($title, $description, $color);
             return print_r(json_encode($result));
         }
 
@@ -52,5 +51,12 @@
             $result= $this->note->changeColor($note_id,$color);
             return $result;
         }
-      
-    }   
+
+        public function update_reminder()
+        {
+            $note_id = $_GET['note_id'];
+            $reminder = $_GET['reminder'];
+            $remind = $this->note->updateNote($note_id ,$reminder);
+            return $remind;
+        }
+    }

@@ -13,7 +13,7 @@
 
         public function AddNotes($title, $description, $color,$reminder)
         {
-            $reminder = date("y-m-d h-i-s");
+            //$reminder = date("y-m-d h-i-s");
             // $data = array('title' => $title,
             //             'description' => $description,
             //             'color' => $color,
@@ -65,6 +65,25 @@
                 print("failed");
             }
             return $query;
+        }
+
+        public function updateNote($note_id, $reminder)
+        {
+            $reminder = date("y-m-d h-i-s");
+
+            $data=array('note_id' => $note_id,
+                        'reminder' => $reminder);
+
+            $reminder_query = $this->db->query("UPDATE notes SET `reminder` = '$reminder' WHERE `note_id` = '$note_id'");
+            json_encode($reminder_query);
+
+            if($reminder_query)
+            {
+                print ("Remind set");
+            }
+            else{
+                print("reminder not set");
+            }
         }
 
     }     

@@ -1,18 +1,29 @@
+.app-icon
+{
+  opacity: 0.2;
+  filter: alpha(opacity=10)
+}
+
+.app-icon:hover
+{
+  opacity: 1.0;
+  filter: alpha(opacity=100)
+}
 
 .flex
 {
     width: 26%;
     margin-top: 40px;
     margin-left: 30px;
-	 border: 1px solid #D0D0D0;
+	  border: 1px solid #D0D0D0;
     box-shadow: 0 0 10px #D0D0D0;
 }
 
 	.flex:hover
 	{
 		-moz-box-shadow: 200 200 400px #ccc;
-		-webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 5px #ccc;
+		-webkit-box-shadow: 020 200 100px #ccc;
+    box-shadow: 0 0 7px #ccc;
     border: 2px solid  rgb(194, 194, 194);
   }
   
@@ -29,6 +40,27 @@
    margin-bottom:13px; 
    font-size:14px;
 }
+
+.reminder-design
+{
+ border:2px;
+ opacity: 0.75;
+ border-bottom-left-radius: 120px;
+ border-top-left-radius: 120px;
+ border-top-right-radius: 120px;
+ border-bottom-right-radius: 120px;
+ font-size: 12px;
+ width: 180px;
+ color:black;
+ backface-visibility: visible;
+}
+
+.icon-size
+{
+  font-size: 16px;
+  padding-right: 6px;
+}
+
 
 .cardList 
 {

@@ -9,6 +9,7 @@ import { lableService } from 'src/app/service/lable.service';
 import { CollabratorComponent } from '../collabrator/collabrator.component';
 import { Reminder } from 'src/app/model/reminder';
 import { ReminderService } from 'src/app/service/reminder.service';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-icon',
@@ -62,7 +63,7 @@ export class IconComponent implements OnInit
   todayremind()
   {
     this.model={ 
-                  "date_time" : this.time_date.value  
+                "date_time" : this.time_date.value  
                };
     //let status = this.reminder.todayremind(this.model)
     this.reminds.todayremind(this.model).subscribe(res =>{ console.log("reminder is : ",res);
@@ -73,9 +74,6 @@ export class IconComponent implements OnInit
     )
   }
 }
-
-
-
 
 
 

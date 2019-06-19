@@ -70,6 +70,7 @@ $route['addnote'] = 'NotesController/addnote';
 $route['editcolor'] = 'NotesController/editcolor';
 $route['displaynotes'] = 'NotesController/displaynotes';
 $route['deletenote'] = 'NotesController/deletenote';
+$route['update_reminder'] = 'NotesController/update_reminder';
 
 //label routing
 $route['addLabel'] = 'EditLabelController/addLabel'; 
@@ -77,9 +78,6 @@ $route['deleteLabel'] = 'EditLabelController/deleteLabel';
 $route['displaylabels'] = 'EditLabelController/displaylabels';
 $route['deleteLabel'] = 'EditLabelController/deleteLabel';
 
-// Reminder Routing
-$route['todayreminder'] = 'Reminder/todayreminder';
-$route['showreminders'] = 'Reminder/showreminders';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

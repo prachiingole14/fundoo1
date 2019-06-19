@@ -1,30 +1,32 @@
 {{childMessage}}
 
 <div class="cardList" >
-  
     <ng-container *ngFor="let _ of [1]">
         <mat-card   *ngFor="let data of allCard" [ngStyle]="{'background-color': data.color}" class="flex">
            <div>
               <div fxLayout='column'>
                 <div class="title-design">
                   {{data.title}}
-
                 </div>
                 <div class="description-design">
                   {{data.description}}
                 </div>
-                <div class="description-design">
-                  {{data.reminder}}
+                <div class="reminder-design">
+                  <div fxLayout="row" fl-Align="start center">
+                      <mat-icon class="icon-size">access_time</mat-icon>
+                      {{data.reminder}}
+                      <mat-icon class="icon-size">close</mat-icon>
+                  </div>
                 </div>
               </div>
            </div> 
-        <app-icon></app-icon> 
+        <app-icon class="app-icon"></app-icon> 
         </mat-card>
     </ng-container>
 </div>
 
-<div *ngFor="let labels of alllabels">
+<!-- <div *ngFor="let labels of alllabels">
   <div class="title-design">
     {{labels.label_name}}
   </div>
-</div> 
+</div>  -->

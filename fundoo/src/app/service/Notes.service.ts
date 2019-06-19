@@ -26,7 +26,7 @@ export class NotesService
     let takeNotes = new FormData();
     takeNotes.append("title", notes.title);
     takeNotes.append("description",notes.description);
- 
+    takeNotes.append("reminder",notes);
     return this.http.post(this.serviceurl.host + this.serviceurl.notes, takeNotes);
   }
 
@@ -35,6 +35,17 @@ export class NotesService
     return this.http.get('http://localhost/fundoo1/index.php/displaynotes' , {});
   }
  
+
+  updateNotes(notes)
+  {
+    let updateNotes = new FormData();
+    updateNotes.append("title", notes.title);
+    updateNotes.append("description", notes.description);
+    updateNotes.append("reminder", notes.reminder);
+    return this.http.post("http://localhost/fundoo1/index.php/setreminder",{})
+  }
+
+
   // displayNotes(data)
   // {
   //   //debugger;
