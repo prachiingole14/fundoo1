@@ -10,6 +10,7 @@ import { CollabratorComponent } from '../collabrator/collabrator.component';
 import { Reminder } from 'src/app/model/reminder';
 import { ReminderService } from 'src/app/service/reminder.service';
 import { FormControl, Validators } from '@angular/forms';
+import { NotesService } from 'src/app/service/Notes.service';
 
 @Component({
   selector: 'app-icon',
@@ -31,7 +32,7 @@ export class IconComponent implements OnInit
   model: { "date_time": any; };
   time_date: any;
 
-  constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_label : lableService, public reminds : ReminderService) 
+  constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_notes : NotesService, public s_label : lableService, public reminds : ReminderService) 
   {
     this.headers = new HttpHeaders();
     this.headers.append('Access-Control-Allow-Headers', 'Authorization');
@@ -72,6 +73,19 @@ export class IconComponent implements OnInit
       console.log("error in reminder"); 
     }
     )
+  }
+
+     
+  deleteNote()
+  {
+    this.s_notes.deletenote().subscribe(data =>{
+      console.log("note deleted...!");
+      this.snack.open("Note move to the trash....!")
+    },
+    err => {
+      console.log("note not deleted...");
+      
+    })
   }
 }
 

@@ -78,6 +78,10 @@
           <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
   
           <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="deleteNote()">
+              <span>Add drawing</span>
+            </button>
+
             <button mat-menu-item (click)="openDialog()">
               <span>Add Label</span>
             </button>

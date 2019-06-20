@@ -62,6 +62,19 @@ export class NotesComponent implements OnInit
         console.log('get error label on notes',err);
       })
     }
+      
+    deleteNote()
+    {
+      this.s_notes.deletenote().subscribe(data =>{
+        console.log("note deleted...!");
+        this.snack.open("Note move to the trash....!")
+      },
+      err => {
+        console.log("note not deleted...");
+        
+      })
+    }
+    
 
     model: any = {};
 

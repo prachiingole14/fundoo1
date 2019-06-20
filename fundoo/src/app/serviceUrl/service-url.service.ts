@@ -17,9 +17,8 @@ export class ServiceUrlService
     public reset = "ResetPassword";
     public getEmail = "getEmailId";
 
-    public notes = "notes";
+    public takeNotes = "addnote";
     public changeColor = "col";
-    public takeNotes = "addNotes";
     public displaycontents = "displayNotes";
 
     public label = "addLabel";

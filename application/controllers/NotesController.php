@@ -23,7 +23,8 @@
             $title = $_POST['title'];
             $description = $_POST['description'];
             $color = $_POST['color'];
-            $result = $this->note->AddNotes($title, $description, $color);
+            $remind = $_POST['reminder'];
+            $result = $this->note->AddNotes($title, $description, $color, $reminder);
             return print_r(json_encode($result));
         }
 
@@ -58,5 +59,13 @@
             $reminder = $_GET['reminder'];
             $remind = $this->note->updateNote($note_id ,$reminder);
             return $remind;
+        }
+
+        public function delete()
+        {
+            $note_id = $_GET['note_id'];
+            $reminder = $_GET['reminder'];
+            $deletereminder = $this->note->getdeleted($note_id ,$reminder);
+            return $deletereminder;
         }
     }

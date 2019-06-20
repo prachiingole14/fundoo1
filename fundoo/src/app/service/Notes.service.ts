@@ -27,7 +27,7 @@ export class NotesService
     takeNotes.append("title", notes.title);
     takeNotes.append("description",notes.description);
     takeNotes.append("reminder",notes);
-    return this.http.post(this.serviceurl.host + this.serviceurl.notes, takeNotes);
+    return this.http.post('localhost/fundoo1/index.php/addnote',{});
   }
 
   getcard()
@@ -60,6 +60,11 @@ export class NotesService
     let color = new FormData();
     color.append('color', notes.color);
     return this.http.post(this.serviceurl.host+this.serviceurl.changeColor,color);
+  }
+
+  deletenote()
+  {
+    return this.http.post('localhost/fundoo1/index.php/deletenote',{});
   }
 
 }

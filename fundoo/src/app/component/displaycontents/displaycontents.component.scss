@@ -1,14 +1,15 @@
 .app-icon
 {
-  opacity: 0.2;
-  filter: alpha(opacity=10)
+  // display: block;
+   width: 100%;
+  // top: 1em;
+  // left: 4em;
+  // padding: 0.75em;
+  // pointer-events: none;
+  // color: whitesmoke;
 }
 
-.app-icon:hover
-{
-  opacity: 1.0;
-  filter: alpha(opacity=100)
-}
+
 
 .flex
 {
@@ -53,6 +54,7 @@
  width: 180px;
  color:black;
  backface-visibility: visible;
+ 
 }
 
 .icon-size

@@ -37,7 +37,7 @@
          <div fxLayout="row" fxLayoutAlign="center center">
             <button matTooltip="none" mat-mini-fab class="fab" style="background-color:white" (click)="ChangeColor('white')"></button>
             <button matTooltip="light red" mat-mini-fab class="fab" style="background-color:#EF9A9A;"  (click)="ChangeColor('#EF9A9A')"></button>
-            todayremind            <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
+            <button matTooltip="light purpul" mat-mini-fab class="fab" style="background-color:rgb(229, 166, 240)"  (click)="ChangeColor('rgb(229, 166, 240)')"></button>
             <button matTooltip="light deep-purpul" mat-mini-fab class="fab" style="background-color:rgb(158, 131, 206)"  (click)="ChangeColor('rgb(158, 131, 206)')"></button>
           </div>
 
@@ -65,6 +65,7 @@
 
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="openDialog()"><span >Add Label</span></button>
+      <button mat-menu-item (click)="deleteNote()"><span>Add drawing</span></button>
       <button mat-menu-item ><span>Delete label</span></button>
       <button mat-menu-item><span>Add drawing</span></button>
       <button mat-menu-item><span>Show tick </span></button>

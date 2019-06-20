@@ -13,7 +13,7 @@
 
         public function AddNotes($title, $description, $color,$reminder)
         {
-            //$reminder = date("y-m-d h-i-s");
+            $reminder = date("y-m-d h-i-s");
             // $data = array('title' => $title,
             //             'description' => $description,
             //             'color' => $color,
@@ -54,7 +54,7 @@
                         'color' => $color);
                     
             $note_id=$this->input->get('note_id');
-            $query = $this->db->query("UPDATE notes SET color = '$color' where note_id='".$note_id."'");
+            $query = $this->db->query("UPDATE notes SET `color` = '$color' WHERE `note_id`='.$note_id.'");
          
             if($query)
             {
@@ -86,5 +86,10 @@
             }
         }
 
+        // getdeleted($note_id ,$reminder)
+        // {
+        //     $reminder = date("y-m-d h-i-s");
+        //     $delete_query = $this->db->query("DELETE notes fr")
+        // }
     }     
 ?>
