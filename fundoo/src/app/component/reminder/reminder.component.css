@@ -1,0 +1,59 @@
+.flex {
+  width: 45%;
+  margin-top: 40px;
+  margin-left: 30%;
+  border-bottom-color: gray;
+}
+
+.formfield {
+  width: 100%;
+}
+
+.add-box {
+  margin-left: 75%;
+  margin-top: 0%;
+  color: gray;
+}
+
+.margin {
+  margin-left: 2%;
+  color: gray;
+}
+
+.close-btn {
+  margin-left: 300px;
+  color: gray;
+}
+
+.fab {
+  height: 30px;
+  width: 30px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.align {
+  margin-left: 100px;
+}
+
+.align2 {
+  margin-left: 70px;
+}
+
+.gov {
+  margin-left: 140px;
+}
+
+.back-icon {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.font {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+/*# sourceMappingURL=reminder.component.css.map */

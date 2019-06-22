@@ -1,0 +1,181 @@
+.mat-card {
+  width: 100%;
+  height: 25px;
+  margin-top: 16px;
+}
+
+.fxLayout {
+  width: 270px;
+  height: 130px;
+}
+
+.mini-mat {
+  text-align: center;
+  margin-left: 25px;
+  margin-bottom: 4%;
+}
+
+.flx.mat-btn {
+  text-align: right;
+}
+
+.mat-flat-btn {
+  width: 160px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.basic-btn {
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.basic-btn2 {
+  margin-left: 40px;
+  margin-right: 7px;
+  margin-top: 15px;
+}
+
+::ng-deep .mat-menu-panel {
+  overflow: hidden;
+}
+
+.menu {
+  width: 700px;
+}
+
+.refresh {
+  margin-left: 10%;
+  color: gray;
+  width: 20px;
+  height: 20px;
+}
+
+.grid {
+  margin-left: 2%;
+  width: 20px;
+  height: 20px;
+  color: #504f4f;
+}
+
+.settings {
+  margin-left: 2%;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 18px;
+  color: #504f4f;
+}
+
+.apps {
+  margin-left: 5%;
+  width: 20px;
+  height: 18px;
+  color: #504f4f;
+}
+
+.margin {
+  padding-left: 10px;
+  font-size: 14px;
+  color: #504f4f;
+}
+
+.margin2 {
+  padding-left: 10px;
+  padding-bottom: 14px;
+  font-size: 15px;
+}
+
+.text {
+  font-size: 16px;
+  padding-left: 10px;
+  color: #504f4f;
+  margin-top: 6px;
+}
+
+.nav {
+  width: 300px;
+}
+
+.f {
+  margin-left: 12px;
+  color: blue;
+  font-size: 20px;
+}
+
+.u {
+  color: chocolate;
+  font-size: 20px;
+}
+
+.n {
+  color: red;
+  font-size: 20px;
+}
+
+.d {
+  color: green;
+  font-size: 20px;
+}
+
+.o {
+  color: crimson;
+  font-size: 20px;
+}
+
+.oo {
+  color: purple;
+  font-size: 20px;
+}
+
+.mini-mats {
+  text-align: center;
+  margin-left: 25px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 5%;
+}
+
+.app {
+  margin-left: 5%;
+  width: 20px;
+  height: 20px;
+  color: #504f4f;
+}
+
+.setting {
+  margin-left: 80%;
+  width: 20px;
+  height: 20px;
+  color: #504f4f;
+}
+
+.grids {
+  margin-left: 2%;
+  width: 20px;
+  height: 20px;
+}
+
+.search-input {
+  width: 45%;
+  color: #504f4f;
+}
+
+.labels {
+  margin-left: 18px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #504f4f;
+}
+
+.profileMenu {
+  width: 254px;
+  -webkit-margin-after: 2px;
+          margin-block-end: 2px;
+}
+
+.add-profile-pic {
+  margin-bottom: 8px;
+  font-size: 9px;
+}
+/*# sourceMappingURL=dashboard.component.css.map */

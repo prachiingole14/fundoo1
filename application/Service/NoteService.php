@@ -81,15 +81,43 @@
             {
                 print ("Remind set");
             }
-            else{
+            else
+            {
                 print("reminder not set");
             }
         }
+        
 
-        // getdeleted($note_id ,$reminder)
-        // {
-        //     $reminder = date("y-m-d h-i-s");
-        //     $delete_query = $this->db->query("DELETE notes fr")
-        // }
+        public function getdeleted($note_id, $reminder)
+        {
+            $reminder = date("y-m-d h-i-s");
+            $delete_query = $this->db->query("UPDATE notes SET `reminder` = null WHERE `note_id` = '$note_id'");
+            json_encode($delete_query);
+
+            if($delete_query)
+            {
+                print("deleted");
+            }
+            else
+            {
+                print("error");
+            }
+        }
+
+        public function insert_image($images)
+        {
+            // $data = array('note_id' => $note_id,
+            //                 '$image' => $image);
+            
+            $upload = $this->db->query("UPDATE notes SET `images` = '$images' ");
+            if($upload)
+            {
+                print("image uploaded successfully..!");
+            }
+            else
+            {
+                print("error in upload.");
+            }
+        }
     }     
 ?>

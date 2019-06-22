@@ -1,0 +1,53 @@
+.flex {
+  width: 42%;
+  margin-top: 40px;
+  margin-left: 30%;
+  border: 2px solid #D0D0D0;
+  -webkit-box-shadow: 0 0 10px #D0D0D0;
+          box-shadow: 0 0 10px #D0D0D0;
+  border-radius: 12px;
+}
+
+.formfield {
+  width: 100%;
+}
+
+.add-box {
+  margin-left: 75%;
+  margin-top: 0%;
+  color: #504f4f;
+}
+
+.margin {
+  margin-left: 2%;
+  color: #504f4f;
+}
+
+.close-btn {
+  margin-left: 40%;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  color: #504f4f;
+}
+
+.fab {
+  height: 30px;
+  width: 30px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.align {
+  margin-left: 100px;
+}
+
+.align2 {
+  margin-left: 70px;
+}
+
+.gov {
+  margin-left: 140px;
+}
+/*# sourceMappingURL=notes.component.css.map */

@@ -1,0 +1,36 @@
+.top {
+  width: 200px;
+}
+
+.send-feedback-text {
+  background-color: #334d4d;
+  color: white;
+  font-size: 30px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.textarea {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.btn1 {
+  margin-top: 50px;
+}
+
+.btn2 {
+  margin-top: 50px;
+  color: blue;
+}
+
+.mat-card-text {
+  margin-top: 30px;
+  font-size: 12px;
+}
+/*# sourceMappingURL=sendfeedback.component.css.map */

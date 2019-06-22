@@ -1,0 +1,38 @@
+.close-btn {
+  margin-left: 170px;
+  margin-top: 20px;
+}
+
+.icon {
+  margin-top: 20px;
+  color: gray;
+}
+
+.input {
+  margin-left: 20px;
+  margin-top: 20px;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.font {
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 15px;
+  margin-top: 22px;
+  margin-left: 20px;
+}
+
+.labelgap {
+  padding-left: 10px;
+  padding-top: 7px;
+  color: gray;
+}
+
+.labellist {
+  padding-left: 16px;
+  color: gray;
+}
+/*# sourceMappingURL=label.component.css.map */

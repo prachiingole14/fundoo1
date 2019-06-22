@@ -1,0 +1,46 @@
+.head {
+  width: 240px;
+}
+
+.set {
+  text-align: center;
+  font-size: 20px;
+}
+
+.text-color {
+  color: blue;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.text {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.check {
+  margin-left: 70px;
+}
+
+.input {
+  margin-left: 150px;
+}
+
+.input2 {
+  margin-left: 140px;
+}
+
+.check2 {
+  margin-left: 125px;
+}
+
+.btn1 {
+  margin-top: 50px;
+}
+
+.btn2 {
+  margin-top: 50px;
+  color: blue;
+}
+/*# sourceMappingURL=setting.component.css.map */

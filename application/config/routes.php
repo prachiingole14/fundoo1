@@ -71,6 +71,8 @@ $route['editcolor'] = 'NotesController/editcolor';
 $route['displaynotes'] = 'NotesController/displaynotes';
 $route['deletenote'] = 'NotesController/deletenote';
 $route['update_reminder'] = 'NotesController/update_reminder';
+$route['remind_deleted'] = 'NotesController/remind_deleted';
+$route['do_upload'] = 'NotesController/do_upload';
 
 //label routing
 $route['addLabel'] = 'EditLabelController/addLabel'; 

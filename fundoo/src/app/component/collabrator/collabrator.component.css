@@ -1,0 +1,43 @@
+.flex {
+  width: 600px;
+  height: auto;
+  -webkit-box-shadow: 4px;
+          box-shadow: 4px;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+}
+
+.header-collabrator {
+  width: 60%;
+  box-align: center;
+  padding-left: 20px;
+}
+
+.middle-collabrator {
+  margin-top: 22px;
+}
+
+.footer-collabrator {
+  padding-left: 0px;
+  margin-top: 55px;
+  background-color: #f1e8e5;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.gapbetween {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.icon {
+  color: gray;
+  border: 2px;
+  outline: 2px;
+  outline-color: black;
+  font-size: 25px;
+  padding-left: 18px;
+}
+/*# sourceMappingURL=collabrator.component.css.map */
