@@ -21,17 +21,21 @@ export class IconComponent implements OnInit
 
   color: any;
 
+
   @Input() alllabels;
   @Input() card;
   
+  url:'';
   headers: any;
   lable_id: any;
   date_time : any;
+  result : any;
 
   model: { "date_time": any; };
   time_date: any;
   show :boolean= true;
   image: any;
+
   constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_notes : NotesService, public s_label : lableService) 
   {
     this.headers = new HttpHeaders();
@@ -70,7 +74,7 @@ export class IconComponent implements OnInit
     err=>{
       console.log("error in reminder"); 
     }
-    )
+    );
   }
 
      
@@ -95,6 +99,22 @@ export class IconComponent implements OnInit
       console.log("error in uploading image...");
     });
   }
+
+  onSelectFile(event) 
+  {
+    if (event.target.files && event.target.files[0]) 
+    {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => 
+      { 
+      
+      }
+    }
+  }
+
 }
 
 
