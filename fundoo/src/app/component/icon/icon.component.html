@@ -1,8 +1,7 @@
-
 <div>
-<div fxLayout="row" fxLayoutAlign="space-around center" [style.backgroundColor]="color">
+<div fxLayout="row" fxLayoutAlign="space-around center" [style.backgroundColor]="color" >
    
-  <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder" style="color:rgb(75, 71, 71);">notification_important</mat-icon>
+  <mat-icon  matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder" style="color:rgb(75, 71, 71);">notification_important</mat-icon>
     <mat-menu  #remainder="matMenu">
       <span style="margin-left:12px;">Remainder:</span> 
 
@@ -55,18 +54,18 @@
             <button matTooltip="light lime" mat-mini-fab class="fab" style="background-color:rgb(211, 218, 149)" (click)="ChangeColor('rgb(211, 218, 149)')"></button>
           </div>
       </mat-menu>
-
-    <input type="file"  style="display:none; color:gray;"  #img>
-    <mat-icon matTooltip="Add Image" class="margin2" (click)="img.click()" style="color:rgb(75, 71, 71);">insert_photo</mat-icon>
+     
+    <input type="file" style="display:none; color:gray;" (change)="onSelectFile($event)" #image>
+    <mat-icon matTooltip="Add Image" class="margin2" (click)="image.click()" style="color:rgb(75, 71, 71);">insert_photo</mat-icon>
    
     <mat-icon matTooltip="Archive" class="margin2" style="color:rgb(75, 71, 71);">archive</mat-icon>
 
     <mat-icon class="margin" [matMenuTriggerFor]="menu" style="color:rgb(75, 71, 71);">more_vert</mat-icon>
 
-    <mat-menu #menu="matMenu">
+    <mat-menu #menu="matMenu" >
       <button mat-menu-item (click)="openDialog()"><span >Add Label</span></button>
-      <button mat-menu-item (click)="deleteNote()"><span>Add drawing</span></button>
-      <button mat-menu-item ><span>Delete label</span></button>
+      <button mat-menu-item><span>Add drawing</span></button>
+      <button mat-menu-item (click)="deleteNote()"><span>Delete Note</span></button>
       <button mat-menu-item><span>Add drawing</span></button>
       <button mat-menu-item><span>Show tick </span></button>
     </mat-menu>

@@ -64,7 +64,29 @@ export class NotesService
 
   deletenote()
   {
-    return this.http.post('localhost/fundoo1/index.php/deletenote',{});
+    return this.http.post('http://localhost/fundoo1/index.php/deletenote',{});
+  }
+
+
+  todayremind(note)
+  {
+    let reminders = new FormData();
+    reminders.append("reminder", note.date_time);
+    return this.http.get('http://localhost/fundoo1/index.php/todayreminder',{});
+  }
+
+  DeleteReminder(note)
+  {
+    let deletereminder = new FormData();
+    deletereminder.append("date_time", note.deletereminder );
+    return this.http.get('localhost/fundoo1/index.php/remind_deleted',{})
+  }
+
+  get_Image(note)
+  {
+    let select_image = new FormData();
+    select_image.append("image", note.image);
+    return this.http.get('http://localhost/fundoo1/index.php/upload_image', {});
   }
 
 }

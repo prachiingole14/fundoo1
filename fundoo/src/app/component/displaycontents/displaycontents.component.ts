@@ -1,10 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NotesService } from 'src/app/service/Notes.service';
 import { HttpHeaders } from '@angular/common/http';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatChipInputEvent } from '@angular/material';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { LabelComponent } from 'src/app/component/label/label.component'
 import { lableService } from 'src/app/service/lable.service';
+
 
 @Component({
   selector: 'app-displaycontents',
@@ -26,9 +27,21 @@ export class DisplaycontentsComponent implements OnInit
   }
 
   flag=false;
+  show:boolean=true;
 
   ngOnInit() {this.allCard;
               this.alllabels;}
+
+  RemindDelete()
+  {
+  
+    this.s_notes.DeleteReminder(this.s_notes).subscribe(deletereminder=>
+      {console.log("delete reminder");
+    },
+
+    err=>{console.log("error");
+    })
+  }
 
   // getCardsearch()
   // {
@@ -43,5 +56,9 @@ export class DisplaycontentsComponent implements OnInit
   //   }
    
   // }
+
+
+
+
 
 }

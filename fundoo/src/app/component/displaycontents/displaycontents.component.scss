@@ -1,14 +1,8 @@
 .app-icon
 {
-  // display: block;
-   width: 100%;
-  // top: 1em;
-  // left: 4em;
-  // padding: 0.75em;
-  // pointer-events: none;
-  // color: whitesmoke;
+   opacity: 0;
+  
 }
-
 
 
 .flex
@@ -44,23 +38,26 @@
 
 .reminder-design
 {
- border:2px;
- opacity: 0.75;
- border-bottom-left-radius: 120px;
- border-top-left-radius: 120px;
- border-top-right-radius: 120px;
- border-bottom-right-radius: 120px;
- font-size: 12px;
- width: 180px;
- color:black;
- backface-visibility: visible;
- 
+  padding-top: 4px;
+   padding-right: 6px;
+  // padding-bottom: 4px;
+  // padding-left: 4px;
+  border-bottom-left-radius: 120px;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 120px;
+  color:black;
+  text-align: center;
+  font-size : 12px;
 }
 
 .icon-size
 {
-  font-size: 16px;
-  padding-right: 6px;
+  padding-top: 4px;
+  // padding-right: 4px;
+  // padding-bottom: 4px;
+  // padding-left: 4px;
+  font-size: 12px;
 }
 
 

@@ -4,4 +4,5 @@ export class Notes
     description: string;
     color: string;
     image: string;
+    date_time : string;
 }

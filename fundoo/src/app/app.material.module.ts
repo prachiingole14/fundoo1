@@ -21,7 +21,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import {MatChipsModule} from '@angular/material/chips';
+import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
     declarations: [],
   
@@ -46,7 +47,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
       MatTabsModule,
       DragDropModule,
       MatSnackBarModule,
-      MatToolbarModule
+      MatToolbarModule,
+      MatChipsModule,
+      BrowserModule
     ],
 
     exports:[
@@ -70,7 +73,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
       MatTabsModule,
       DragDropModule,
       MatSnackBarModule,
-      MatToolbarModule
+      MatToolbarModule,
+      MatChipsModule,
+      BrowserModule
     ],
   
     providers: [],

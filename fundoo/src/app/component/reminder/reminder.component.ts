@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ReminderService } from 'src/app/service/reminder.service';
 
 // import {Inject} from '@angular/core';
 
@@ -15,7 +14,7 @@ export class ReminderComponent implements OnInit
   flag=true;
   model: {};
   time_date: any;
-  constructor(private reminder:ReminderService) {}
+  constructor() {}
   ngOnInit() {}
 
 

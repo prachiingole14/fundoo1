@@ -20,6 +20,7 @@ export class ServiceUrlService
     public takeNotes = "addnote";
     public changeColor = "col";
     public displaycontents = "displayNotes";
+    public upload_image = "select_image";
 
     public label = "addLabel";
     public navbar = "displayNotes";

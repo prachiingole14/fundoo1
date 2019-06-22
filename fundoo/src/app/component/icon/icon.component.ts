@@ -7,8 +7,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import { from } from 'rxjs';
 import { lableService } from 'src/app/service/lable.service';
 import { CollabratorComponent } from '../collabrator/collabrator.component';
-import { Reminder } from 'src/app/model/reminder';
-import { ReminderService } from 'src/app/service/reminder.service';
+
 import { FormControl, Validators } from '@angular/forms';
 import { NotesService } from 'src/app/service/Notes.service';
 
@@ -24,21 +23,20 @@ export class IconComponent implements OnInit
 
   @Input() alllabels;
   @Input() card;
+  
   headers: any;
   lable_id: any;
   date_time : any;
-  
-  
+
   model: { "date_time": any; };
   time_date: any;
-
-  constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_notes : NotesService, public s_label : lableService, public reminds : ReminderService) 
+  show :boolean= true;
+  image: any;
+  constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_notes : NotesService, public s_label : lableService) 
   {
     this.headers = new HttpHeaders();
     this.headers.append('Access-Control-Allow-Headers', 'Authorization');
   }
-
-  flag=true;
 
   ngOnInit() 
   {}
@@ -67,7 +65,7 @@ export class IconComponent implements OnInit
                 "date_time" : this.time_date.value  
                };
     //let status = this.reminder.todayremind(this.model)
-    this.reminds.todayremind(this.model).subscribe(res =>{ console.log("reminder is : ",res);
+    this.s_notes.todayremind(this.model).subscribe(res =>{ console.log("reminder is : ",res);
     },
     err=>{
       console.log("error in reminder"); 
@@ -84,12 +82,20 @@ export class IconComponent implements OnInit
     },
     err => {
       console.log("note not deleted...");
-      
     })
   }
+
+
+  insert_image()
+  {
+    this.s_notes.get_Image(this.model).subscribe(upload=>{
+      console.log("image uploaded successfully...!");
+    },
+    err => {
+      console.log("error in uploading image...");
+    });
+  }
 }
-
-
 
 
   // deleteLabel()

@@ -5,22 +5,31 @@
         <mat-card   *ngFor="let data of allCard" [ngStyle]="{'background-color': data.color}" class="flex">
            <div>
               <div fxLayout='column'>
-                <div class="title-design">
-                  {{data.title}}
-                </div>
-                <div class="description-design">
-                  {{data.description}}
-                </div>
-                <div class="reminder-design">
-                  <div fxLayout="row" fl-Align="start center">
-                      <mat-icon class="icon-size">access_time</mat-icon>
-                      {{data.reminder}}
-                      <mat-icon class="icon-size">close</mat-icon>
+
+                  <div class="description-design">
+                      {{data.image}}
                   </div>
+
+                  <div class="title-design">
+                    {{data.title}}
+                  </div>
+
+                  <div class="description-design">
+                    {{data.description}}
+                  </div>
+
+                  <div fxLayout="row" fx-Align="start center">
+                       <mat-chip  class="reminder-design" >
+                          <mat-icon class="icon-size">access_time</mat-icon>
+                             {{data.reminder}}
+                             <mat-icon style="font-size: 12px;" (click)="RemindDelete()">close</mat-icon>
+                       </mat-chip> 
+                  </div>
+                  
                 </div>
-              </div>
            </div> 
         <app-icon class="app-icon"></app-icon> 
+        <!-- <app-icon [hidden]="!show"  class="app-icon"  #show></app-icon>  -->
         </mat-card>
     </ng-container>
 </div>
@@ -28,5 +37,4 @@
 <!-- <div *ngFor="let labels of alllabels">
   <div class="title-design">
     {{labels.label_name}}
-  </div>
-</div>  -->
+  </div>-->
