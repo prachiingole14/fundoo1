@@ -97,7 +97,7 @@
 
            $note_id=$this->input->post('note_id');
                
-            $temp_name=['image'],['teP name'],
+            $temp_name=['image'],['temp_name'],
 
               
         //    if ( ! $this->upload->do_upload('image')) {
