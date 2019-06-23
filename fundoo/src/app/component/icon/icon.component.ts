@@ -35,6 +35,16 @@ export class IconComponent implements OnInit
   time_date: any;
   show :boolean= true;
   image: any;
+  fulldate: string;
+  currentDateAndTime: string;
+  timer: boolean;
+  isDate: boolean;
+  moment: any;
+  note_id: any;
+  message: string;
+  imagePath: any;
+  imgURL: string | ArrayBuffer;
+  
 
   constructor(public dialog:MatDialog, private snack : MatSnackBar, public s_notes : NotesService, public s_label : lableService) 
   {
@@ -65,27 +75,38 @@ export class IconComponent implements OnInit
 
   todayremind()
   {
-    this.model={ 
-                "date_time" : this.time_date.value  
-               };
-    //let status = this.reminder.todayremind(this.model)
-    this.s_notes.todayremind(this.model).subscribe(res =>{ console.log("reminder is : ",res);
-    },
-    err=>{
-      console.log("error in reminder"); 
-    }
-    );
+    // this.model={ 
+    //             "date_time" : this.time_date.value  
+    //            };
+    // //let status = this.reminder.todayremind(this.model)
+    // this.s_notes.todayremind(this.model).subscribe(res =>{ console.log("reminder is : ",res);
+    // },
+    // err=>{
+    //   console.log("error in reminder"); 
+    // }
+    // );
+
+      var day = new Date();
+      this.fulldate = day.toDateString();
+      let currentDate = this.moment(this.fulldate).format("DD/MM/YYYY");
+      this.currentDateAndTime = currentDate + " " + " 08:00 PM";
+      this.timer = true;
+      this.isDate = false;
+      console.log(this.currentDateAndTime);
+
   }
+ 
+
 
      
   deleteNote()
   {
-    this.s_notes.deletenote().subscribe(data =>{
+    this.s_notes.deletenote(this.note_id).subscribe(data =>{
       console.log("note deleted...!");
       this.snack.open("Note move to the trash....!")
     },
     err => {
-      console.log("note not deleted...");
+      console.log("error in delete note....");
     })
   }
 
@@ -115,6 +136,26 @@ export class IconComponent implements OnInit
     }
   }
 
+
+  preview(files) {
+    if (files.length === 0)
+      return;
+ 
+    var mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported.";
+      return;
+    }
+ 
+    var reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]); 
+    reader.onload = (_event) => { 
+      this.imgURL = reader.result; 
+    }
+  }
+
+  
 }
 
 

@@ -62,7 +62,7 @@ export class NotesService
     return this.http.post(this.serviceurl.host+this.serviceurl.changeColor,color);
   }
 
-  deletenote()
+  deletenote(note_id)
   {
     return this.http.post('http://localhost/fundoo1/index.php/deletenote',{});
   }

@@ -104,13 +104,20 @@
             }
         }
 
-        public function insert_image($images)
+        public function insert_image($note_id,$images)
         {
             // $data = array('note_id' => $note_id,
             //                 '$image' => $image);
+
+            $config = array('upload_path' => '../../fundoo/assets/images/',
+                            'allowed_types' => 'gif|jpg|png|svg|jpeg',
+                            'max_size' => '100',
+                            'max_width' => '100',
+                            'max_height' => '100');
+            $image=$this->load->library('upload', $config);
             
-            $upload = $this->db->query("UPDATE notes SET `images` = '$images' ");
-            if($upload)
+            $upload = $this->db->query("UPDATE notes SET `images` = '$images' WHERE `note_id` = '$note_id'");
+            if(!$upload)
             {
                 print("image uploaded successfully..!");
             }

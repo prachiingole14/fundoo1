@@ -18,6 +18,7 @@ export class ServiceUrlService
     public getEmail = "getEmailId";
 
     public takeNotes = "addnote";
+    public deletenote = "deletenote";
     public changeColor = "col";
     public displaycontents = "displayNotes";
     public upload_image = "select_image";

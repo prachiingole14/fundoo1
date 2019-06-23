@@ -22,6 +22,7 @@ export class NotesComponent implements OnInit
   color:any;
   headers: any;
   label: any;
+  note_id: any;
   
     constructor(private s_notes: NotesService, public s_labels: lableService, public dialog:MatDialog, private snack:MatSnackBar) 
     {
@@ -65,7 +66,7 @@ export class NotesComponent implements OnInit
       
     deleteNote()
     {
-      this.s_notes.deletenote().subscribe(data =>{
+      this.s_notes.deletenote(this.note_id).subscribe(data =>{
         console.log("note deleted...!");
         this.snack.open("Note move to the trash....!")
       },

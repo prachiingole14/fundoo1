@@ -10,7 +10,7 @@
 <div *ngIf="flag === false">
   <div fxLayout="row" fxAlign="start center" *ngIf="flag === false"> 
       <mat-icon class="icon" >check</mat-icon>
-      <input matInput placeholder="Create new Label" class="input" required>
+      <input matInput placeholder="Create new Label" [formControl]="label_name" class="input" required>
       <!-- <mat-error *ngIf="lable_name.dirty">{{lableError()}}</mat-error> -->
       <mat-icon (click)="reverse()">close</mat-icon>
   </div> 

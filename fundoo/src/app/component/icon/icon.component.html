@@ -1,12 +1,13 @@
-<div>
+<div >
 <div fxLayout="row" fxLayoutAlign="space-around center" [style.backgroundColor]="color" >
    
   <mat-icon  matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder" style="color:rgb(75, 71, 71);">notification_important</mat-icon>
     <mat-menu  #remainder="matMenu">
-      <span style="margin-left:12px;">Remainder:</span> 
+      <span  class="visible" style="margin-left:12px;">Remainder:</span> 
 
-        <button   (click)="todayremind()"   mat-menu-item>Later today 
-          <input matInput value="08:00 PM"  style="border: none; text-align-last: right;">
+        <button  mat-menu-item>
+          <span  (click)="todayremind()" > Later today </span>
+          <input matInput value="08:00 PM"  style="border: none; text-align-last: right;" >
         </button>
 
         <button   mat-menu-item>Tomorrow 
@@ -55,7 +56,10 @@
           </div>
       </mat-menu>
      
-    <input type="file"  style="display:none; color:gray;" (change)="onSelectFile($event)" #image>
+      <input #file type="file" accept='image/*' (change)="preview(file.files)" style="display:none;" (change)="onSelectFile($event)" #image/>
+      <img [src]="imgURL" height="120" width="100" *ngIf="imgURL">
+<!-- 
+    <input type="file"  style="display:none; color:gray;" (change)="onSelectFile($event)" #image> -->
     <mat-icon matTooltip="Add Image" class="margin2" (click)="image.click()" style="color:rgb(75, 71, 71);">insert_photo</mat-icon>
    
     <mat-icon matTooltip="Archive" class="margin2" style="color:rgb(75, 71, 71);">archive</mat-icon>
@@ -71,3 +75,5 @@
     </mat-menu>
 </div>
 </div>
+
+

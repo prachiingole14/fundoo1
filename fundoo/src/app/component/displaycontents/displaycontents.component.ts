@@ -19,6 +19,9 @@ export class DisplaycontentsComponent implements OnInit
   @Input() alllabels;
   headers: any;
   card: Object;
+  message: string;
+  imagePath: any;
+  imgURL: string | ArrayBuffer;
 
   constructor(private s_notes:NotesService, public dialog:MatDialog, private snack : MatSnackBar, public label : lableService) 
   {
@@ -57,8 +60,7 @@ export class DisplaycontentsComponent implements OnInit
    
   // }
 
-
-
+ 
 
 
 }

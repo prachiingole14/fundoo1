@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
-import { lableService } from 'src/app/service/lable.service'
-import { from } from 'rxjs';
-
+import { lableService } from 'src/app/service/lable.service';
+import { HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-label',
   templateUrl: './label.component.html',
@@ -13,8 +12,13 @@ export class LabelComponent implements OnInit
 {
   submit: void;
   label: any;
+  headers: any;
 
-  constructor(private s_label:lableService , private snack : MatSnackBar) { }
+  constructor(private s_label:lableService , private snack : MatSnackBar) 
+  {
+    this.headers = new HttpHeaders();
+    this.headers.append('Access-Control-Allow-Headers', 'Authorization');
+   }
 
   @Input() alllabel;
   flag = true;

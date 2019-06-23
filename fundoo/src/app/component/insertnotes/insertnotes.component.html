@@ -1,4 +1,4 @@
-<mat-card class="flex" [style.backgroundColor]='color'>
+<mat-card class="flex" [ngStyle]="{ 'background-color': color }">
     <div *ngIf="flag==true" (click)="reverse()" fxLayout="row" fxLayoutAlign=" center">
   
         <div style="width:80%;">
@@ -78,8 +78,8 @@
           <mat-icon class="margin" [matMenuTriggerFor]="menu">more_vert</mat-icon>
   
           <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="deleteNote()">
-              <span>Add drawing</span>
+            <button mat-menu-item>
+              <span (click)="deleteNote()">Delete Note</span>
             </button>
 
             <button mat-menu-item (click)="openDialog()">
