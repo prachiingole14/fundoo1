@@ -20,17 +20,21 @@
 
                   <div fxLayout="row" fx-Align="start center">
                        <mat-chip  class="reminder-design" >
-                          <mat-icon class="icon-size" (removed)="remove(reminder)">access_time</mat-icon><svg height="18px" width="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="#000000"> <path d="m0 0h18v18h-18z" fill="none"/> <path d="m6.61 11.89l-3.11-3.11-1.06 1.06 4.17 4.16 8.95-8.95-1.06-1.05z"/> </svg>
-
+                          <mat-icon class="icon-size" (removed)="remove(reminder)">access_time</mat-icon>
                              {{data.reminder}}
                              <!-- <mat-icon style="font-size: 12px;" (click)="RemindDelete()">close</mat-icon> -->
                        </mat-chip>  
                   </div>
-                  
                 </div>
-           </div> 
+              </div>
+                <!-- <div  *ngFor="let labels of alllabels">
+                  <div class="title-design">
+                    {{labels.label_name}}
+                  </div>
+           </div>  -->
         <!-- <app-icon class="app-icon"></app-icon>  -->
-        <app-icon style="visibility:hover hidden;" class="app-icon"></app-icon> 
+        
+        <app-icon class="app-icon"></app-icon> 
         </mat-card>
     </ng-container>
 </div>
@@ -38,5 +42,5 @@
 <!-- <div *ngFor="let labels of alllabels">
   <div class="title-design">
     {{labels.label_name}}
-  </div>-->
+  </div> -->
  

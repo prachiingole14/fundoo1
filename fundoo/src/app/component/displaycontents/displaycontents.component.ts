@@ -61,6 +61,10 @@ export class DisplaycontentsComponent implements OnInit
   // }
 
  
+  getfile()
+  {
+  
+  }
 
 
 }

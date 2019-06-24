@@ -121,6 +121,7 @@ export class IconComponent implements OnInit
     });
   }
 
+
   onSelectFile(event) 
   {
     if (event.target.files && event.target.files[0]) 
@@ -129,20 +130,19 @@ export class IconComponent implements OnInit
 
       reader.readAsDataURL(event.target.files[0]); // read file as data url
 
-      reader.onload = (event) => 
-      { 
-      
-      }
+      reader.onload = (event) => {}
     }
   }
 
 
-  preview(files) {
+  preview(files) 
+  {
     if (files.length === 0)
       return;
  
     var mimeType = files[0].type;
-    if (mimeType.match(/image\/*/) == null) {
+    if (mimeType.match(/image\/*/) == null) 
+    {
       this.message = "Only images are supported.";
       return;
     }
@@ -152,11 +152,11 @@ export class IconComponent implements OnInit
     reader.readAsDataURL(files[0]); 
     reader.onload = (_event) => { 
       this.imgURL = reader.result; 
+      console.log(this.imagePath = files);
     }
   }
 
-  
-}
+ 
 
 
   // deleteLabel()
@@ -170,4 +170,5 @@ export class IconComponent implements OnInit
   //     let snackBarRef = this.snack.open('Label deleted.....!', 'Undo');
   //     });
   //   }
+}
   

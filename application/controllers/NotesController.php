@@ -15,6 +15,7 @@
         {
             parent::__construct();
             $this->load->database();
+            $this->load->helper("url");
             $this->note = new NoteService();
         }
 
@@ -71,18 +72,28 @@
 
         public function do_upload()
         {
-            // $config = array('upload_path' => '../../fundoo/assets/images/',
-            //                 'allowed_types' => 'gif|jpg|png|svg|jpeg',
-            //                 'max_size' => '100',
-            //                 'max_width' => '100',
-            //                 'max_height' => '100');
-            // $this->load->library('upload', $config);
+            $config = array('upload_path' => '../../fundoo/assets/images/',
+                            'allowed_types' => 'gif|jpg|png|svg|jpeg',
+                            'max_size' => '100',
+                            'max_width' => '100',
+                            'max_height' => '100');
+           $image = $this->load->library('upload', $config);
+           print_r($image);
 
-            $note_id = $_GET['note_id'];
-            $images = $_GET['images'];
-            $upload = $this->note->insert_image($note_id,$images);
-            return $upload;
+           
+        // $images = $this->upload_path + $this->upload;
+        // $upload = $this->note->insert_image($note_id,$images);
+        // return $upload;
         }
+
+
+
+
+
+
+
+
+
 
         // public function do_upload() 
         // { 
@@ -91,23 +102,20 @@
         //    $config['max_size']      = 100; 
         //    $config['max_width']     = 1024; 
         //    $config['max_height']    = 768;  
-        
         //    $images=$this->load->library('upload', $config);
         //    print_r($images);  
-        //    // $temp_name=['image'],['temp_name'],
-
-              
+        //    // $temp_name=['image'],['temp_name'],              
         //    if ( ! $this->upload->do_upload('')) 
         //    {
         //       $error = array('error' => $this->upload->display_errors()); 
-        //       //$this->load->view('Upload_form', $error); 
+        //      GET); 
         //    }
-        //    else 
-        //    { 
+        //    elGET
+        //    { GET
         //       $data = array('upload_data' => $this->upload->data()); 
         //       $this->load->view('Upload_success', $data); 
         //    } 
-        //} 
+        // } 
     }
     //  controller end class
 ?>
