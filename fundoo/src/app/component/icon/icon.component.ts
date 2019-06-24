@@ -95,10 +95,7 @@ export class IconComponent implements OnInit
       console.log(this.currentDateAndTime);
 
   }
- 
-
-
-     
+    
   deleteNote()
   {
     this.s_notes.deletenote(this.note_id).subscribe(data =>{
@@ -121,7 +118,6 @@ export class IconComponent implements OnInit
     });
   }
 
-
   onSelectFile(event) 
   {
     if (event.target.files && event.target.files[0]) 
@@ -134,30 +130,25 @@ export class IconComponent implements OnInit
     }
   }
 
-
   preview(files) 
   {
     if (files.length === 0)
       return;
- 
     var mimeType = files[0].type;
     if (mimeType.match(/image\/*/) == null) 
     {
       this.message = "Only images are supported.";
       return;
     }
- 
     var reader = new FileReader();
     this.imagePath = files;
     reader.readAsDataURL(files[0]); 
-    reader.onload = (_event) => { 
+    reader.onload = (_event) =>
+    { 
       this.imgURL = reader.result; 
       console.log(this.imagePath = files);
     }
   }
-
- 
-
 
   // deleteLabel()
   // {

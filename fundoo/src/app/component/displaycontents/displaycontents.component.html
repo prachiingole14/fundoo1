@@ -4,7 +4,7 @@
     <ng-container *ngFor="let _ of [1]">
         <mat-card   *ngFor="let data of allCard" [ngStyle]="{'background-color': data.color}" class="flex">
            <div>
-              <div fxLayout='column' style="height: auto;">
+              <!-- <div fxLayout='column' style="height: auto;"> -->
     
                   <!-- <div class="description-design">
                     {{data.images}}
@@ -20,12 +20,12 @@
 
                   <div fxLayout="row" fx-Align="start center">
                        <mat-chip  class="reminder-design" >
-                          <mat-icon class="icon-size" (removed)="remove(reminder)">access_time</mat-icon>
+                          <mat-icon class="icon-size" (removed)="remove(reminder)" *ngIf="data.reminder">access_time</mat-icon>
                              {{data.reminder}}
                              <!-- <mat-icon style="font-size: 12px;" (click)="RemindDelete()">close</mat-icon> -->
                        </mat-chip>  
                   </div>
-                </div>
+                <!-- </div> -->
               </div>
                 <!-- <div  *ngFor="let labels of alllabels">
                   <div class="title-design">

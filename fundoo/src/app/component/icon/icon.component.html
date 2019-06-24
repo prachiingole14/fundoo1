@@ -1,4 +1,7 @@
+
 <div >
+  <img [src]="imgURL" style="height:100; width:100%; padding-top: 10px;"  *ngIf="imgURL">
+  
 <div fxLayout="row" fxLayoutAlign="space-around center" [style.backgroundColor]="color" >
    
   <mat-icon  matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder" style="color:rgb(75, 71, 71);">notification_important</mat-icon>
@@ -57,7 +60,7 @@
       </mat-menu>
      
       <input #file type="file" accept='image/*' (change)="preview(file.files)" style="display:none;" (change)="onSelectFile($event)" #image/>
-      <img [src]="imgURL" height="120" width="100" *ngIf="imgURL">
+    
       <!-- <input type="file"  style="display:none; color:gray;" (change)="onSelectFile($event)" #image> -->
     <mat-icon matTooltip="Add Image" class="margin2" (click)="image.click()" style="color:rgb(75, 71, 71);">insert_photo</mat-icon>
    

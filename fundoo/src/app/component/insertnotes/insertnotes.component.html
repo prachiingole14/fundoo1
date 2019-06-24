@@ -18,20 +18,25 @@
       <div fxLayout='column' class="formfield"  [style.backgroundColor]='color'>
         <!-- <mat-label>Title : </mat-label> -->
        
-          <div style="width:70%;"  >
+          <div style="width:70%;"  fxLayout="row">
             <input matInput placeholder="Title" style="outline: none; border:none; margin-bottom:20px;" required>
             <mat-error *ngIf="title.dirty">{{titleError()}}</mat-error>
+            <img class="pinned" mat-card-image src='/../../assets/images/Pin-512.png'>
           </div>
   
           <div style="margin-top:18px; ">
             <textarea matInput  placeholder="Take a Note...."  style="outline: none; border:none;width: 100%;overflow: hidden;" required></textarea>
               <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
           </div>
+        </div>
+    </div>
+</mat-card>
+          
   
-        <div fxLayout='row' fxLayoutAlign="start end" >
+        <!-- <div fxLayout='row' fxLayoutAlign="start end" >
           <mat-icon matTooltip="Remind Me" class="margin" [matMenuTriggerFor]="remainder">notification_important</mat-icon>
             <div>
-            <!-- <div style="margin-left:10px;"> -->
+            <!-- <div style="margin-left:10px;"> --
               <mat-menu  #remainder="matMenu">
                 <button mat-menu-item>Remainder:</button>
                 <button mat-menu-item>Later today <span  class="align">08:00 PM</span></button>
@@ -101,4 +106,4 @@
       </div>
     </div>
   </mat-card>
-  
+   -->

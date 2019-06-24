@@ -1,6 +1,10 @@
 <?php
     defined('BASEPATH') or exit('No direct script access allowed');
     include "/var/www/html/fundoonote/application/Service/AccountService.php";
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
+    header("Access-Control-Allow-Headers: X-Requested-With");
+    
 
     class AccountController extends CI_Controller
     {

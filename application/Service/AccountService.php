@@ -5,6 +5,7 @@
         private $connect;
         public $constants = "";
         public static $emailid = "";
+        private $accountService = "";
 
         public function __construct()
         {

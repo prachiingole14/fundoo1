@@ -1,4 +1,4 @@
-<div class="flx" fxLayout='row' fxLayoutAlign='center center'>
+<!-- <div class="flx" fxLayout='row' fxLayoutAlign='center center'>
     <mat-card fxFlex='32'>
         
         <h3 class="h3">Registration form</h3>
@@ -10,7 +10,7 @@
                             <input matInput placeholder="Enter your name" [formControl]="firstName" required>
                         </mat-form-field>
                         <mat-error *ngIf="firstName.dirty">{{firstNameError()}}</mat-error>
-                        <!-- <mat-error *ngIf="firstName.pattern">{{firstNamepError()}}</mat-error> -->
+                        <!-- <mat-error *ngIf="firstName.pattern">{{firstNamepError()}}</mat-error> --
                     </div>
                     
                     <mat-form-field class="align">
@@ -45,37 +45,36 @@
                     
                     <div class="example-button-row">
                         <button ngSubmit="onSubmit()"  mat-stroked-button style="margin-left:120px;">Register</button>
-                        <!-- <a [routerLink]="['']"><button mat-stroked-button style="margin-left:20px;">Sign In</button></a> -->
+                        <!-- <a [routerLink]="['']"><button mat-stroked-button style="margin-left:20px;">Sign In</button></a> --
                     </div>  
 
                     <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="btn">
                     <mat-button-toggle value="italic">Submit</mat-button-toggle>
                     <a [routerLink]="['']"><mat-button-toggle value="underline">Sing In</mat-button-toggle></a>
-                    </mat-button-toggle-group> -->
+                    </mat-button-toggle-group> --
 
 
                 </form>
             </div>
     </mat-card> 
-</div>  
+</div>   -->
 
 
 
 
-
-
-<!--   
-<div fxLayout="row" fxLayoutAlign="center center" >
-    <mat-card>
-
+<div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 40px; ">
+    <mat-card style=" border: 2px solid #D0D0D0; box-shadow: 0 0 10px #D0D0D0;">
+        <div style="text-align:center; padding-bottom: 20px;">
             <span class="f">F</span>
             <span class="u">U</span>
             <span class="n">N</span>
             <span class="d">D</span>
             <span class="o">O</span>
             <span class="oo">O</span>
+        </div>
+        <mat-divider></mat-divider>
 
-        <div fxLayout="row" fxLayoutAlign="center center" >
+        <div fxLayout="row" fxLayoutAlign="center center" style="margin-top:12px;">
             <mat-form-field appearance="outline">
                 <mat-label>First Name</mat-label>
                 <input matInput placeholder="Placeholder">
@@ -86,17 +85,22 @@
                 <input matInput placeholder="Placeholder">
             </mat-form-field>
         </div>
+
+        <div fxLayout="row" fxLayoutAlign="center center" >
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Address">
+            </mat-form-field>
+        </div>
       
         <div fxLayout="row" fxLayoutAlign="center center" >
             <mat-form-field appearance="outline">
                 <mat-label>Contact No</mat-label>
                 <input matInput placeholder="Placeholder">
             </mat-form-field>
-        </div>
-
-        <div fxLayout="row" fxLayoutAlign="center center" >
-            <mat-form-field appearance="outline">
-                <mat-label>Email Id</mat-label>
+        
+            <mat-form-field appearance="outline" class="field-gap">
+                 <mat-label >Email id</mat-label>
                 <input matInput placeholder="Placeholder">
             </mat-form-field>
         </div>
@@ -112,6 +116,6 @@
                 <input matInput placeholder="Placeholder">
             </mat-form-field>
         </div>
-
+        <button mat-raised-button color="primary" style="padding-right: 100px; ">Register</button>
     </mat-card>
-</div>  -->
+</div>  
