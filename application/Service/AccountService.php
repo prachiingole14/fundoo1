@@ -115,9 +115,53 @@
                 {
                     return 3;
                 }
-                
             }
         }
+
+
+        public function setProfile($data)
+        {
+            $data = array( "user_id" => $_POST['user_id'],
+                           "profile_picture" => $_POST['profile_picture']);
+            $query = $this->db->insert('register', $data);
+            print_r(json_encode($query));
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // public function ResetPassword($email, $password, $newpassword)
         // {

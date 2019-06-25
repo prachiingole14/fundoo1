@@ -48,6 +48,7 @@
             return $query; 
         }
 
+
         public function changeColor($note_id,$color)
         {
             $data=array('note_id' => $note_id,

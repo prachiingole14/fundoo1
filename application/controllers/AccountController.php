@@ -1,11 +1,11 @@
 <?php
+
     defined('BASEPATH') or exit('No direct script access allowed');
-    include "/var/www/html/fundoonote/application/Service/AccountService.php";
+    //include "/var/www/html/fundoo1/application/Service/AccountService.php";
     header('Access-Control-Allow-Origin: *');
     header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
     header("Access-Control-Allow-Headers: X-Requested-With");
     
-
     class AccountController extends CI_Controller
     {
         
@@ -13,9 +13,7 @@
         {
             parent::__construct();
             $this->load->database();
-           // $this->AccModel=new AccountModel();
-            $this->AccService = new AccountService();
-           // $this->AccModel= new AccountModel();
+           // $this->AccService = new AccountService();
         }
 
 
@@ -68,11 +66,26 @@
             $res=$this->AccService->getlogin($email,$password);
         }
 
-        // public function getEmailId()
-        // {
-        //     $token = $_POST['token'];
-        //     return $this->AccService->getEmailId($token);
-        // }
+        public function uploadprofile()
+        {
+            $config = array(    'upload_path' => './upload/',
+                                'allowed_type' => 'jpg|jpeg|png|',
+                                'max_size' => '100',
+                                'max_width' => '100',
+                                'max_height' => '100'   );
+        
+            $this->load->library('upload', $config);
+            $this->input->post('profile_picture');
+            $data_upload_files = $this->upload->data();
+            $images = data_upload_files('../../src/assets/images/');
+
+            $data = array( "user_id" => $_POST['user_id'],
+                           "profile_picture" => $_POST['profile_picture']);
+
+            //$uploadProfilePicture = $this->AccService->setProfile($data);
+            $uploadProfilePicture = $this->db->insert('register', $data);
+            return $uploadProfilePicture;
+        }
 
     }
 ?>

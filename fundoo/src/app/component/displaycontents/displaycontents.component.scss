@@ -1,7 +1,7 @@
 .app-icon
 {
    opacity: 0;
-  
+   visibility: hidden;
 }
 
 
@@ -12,13 +12,15 @@
     margin-left: 30px;
 	  border: 1px solid #D0D0D0;
     box-shadow: 0 0 10px #D0D0D0;
+   
 }
-      .flex:hover
+      .flex:hover .app-icon
       {
         -moz-box-shadow: 200 200 400px #ccc;
         -webkit-box-shadow: 020 200 100px #ccc;
         box-shadow: 0 0 7px #ccc;
         border: 2px solid  rgb(194, 194, 194);
+        visibility: visible;
       }
   
 .title-design
@@ -53,10 +55,8 @@
 .icon-size
 {
   padding-top: 4px;
-  // padding-right: 4px;
-  // padding-bottom: 4px;
-  // padding-left: 4px;
   font-size: 12px;
+  color:gray;
 }
 
 
@@ -69,6 +69,8 @@
    margin-left: 12%;
    width: 100%;
  }
+ 
+
 
  /* Column Gap */
  .cardList > * 
