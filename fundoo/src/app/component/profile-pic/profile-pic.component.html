@@ -9,31 +9,43 @@
 <div fxLayout="row"  class="upload" >
   <mat-tab-group fxFlex="100">
     <mat-tab label="Upload photos">
-      <mat-icon class="upload_icon">filter</mat-icon>
+
+      <div>
+          <img [src]="croppedImage" style="padding-top: 25px;"/>
+        <input type="file" (change)="fileChangeEvent($event)" style="display:none" #insert_img/>   
+        <image-cropper  [imageChangedEvent]="imageChangedEvent"
+                        [maintainAspectRatio]="true"
+                        [aspectRatio]="4 / 3"
+                        [resizeToWidth]="128"
+                        format="png"
+                        (imageCropped)="imageCropped($event)"
+                        (imageLoaded)="imageLoaded()"
+                        (cropperReady)="cropperReady()"
+                        (loadImageFailed)="loadImageFailed()">
+        </image-cropper>
+        <button mat-raised-button  (click)="insert_img.click()" class="upload_btn">Select a photo from your computer</button> 
+      </div>
+    
       <div>
         <span class="upload_text">Drag a profile picture here</span>
       </div>
-      <div>
-        <span class="upload_text2">--or--</span>
-      </div>
-      <input type="file" style="display:none" #insert_img>
-      <button mat-raised-button (click)="insert_img.click()" class="upload_btn">Select a photo from your computer</button>
+      <!-- <input type="file" style="display:none" #insert_img>-->
+      <!-- <button mat-raised-button (click)="insert_img.click()" class="upload_btn">Select a photo from your computer</button>  -->
     </mat-tab>
 
     <mat-tab label="Your photoes">
-      <span class="phototext" >No photos</span> 
+      <div class="phototext" >
+          <span>No photos</span> 
+      </div>
     </mat-tab>
 
-    <mat-tab label="Photoes of you">
-      <span class="phototext" >No photos</span> 
-    </mat-tab>
   </mat-tab-group>
 </div>
 
 <mat-divider></mat-divider>
 
 <div  fxLayout="row">
-    <button mat-raised-button class="upload-bottom-btn" style="background-color: rgb(25, 140, 216);" disabled>Set as a profile picture</button>
+   <button mat-raised-button class="upload-bottom-btn" style="background-color: rgb(25, 140, 216);" *ngIf="insert_img" disabled>Set as a profile picture</button>
    <button mat-raised-button class="upload-bottom-btn2">Cancle</button>
     <span>
       <p class="upload-bottom-text">Your profile photo is visibale to everyone, accross the google product.
@@ -42,3 +54,4 @@
 </div>
 
 </div>
+

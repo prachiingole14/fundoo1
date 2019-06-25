@@ -23,6 +23,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatChipsModule} from '@angular/material/chips';
 import { BrowserModule } from '@angular/platform-browser';
+import { ImageCropperModule } from 'ngx-image-cropper';
+
 @NgModule({
     declarations: [],
   
@@ -49,7 +51,8 @@ import { BrowserModule } from '@angular/platform-browser';
       MatSnackBarModule,
       MatToolbarModule,
       MatChipsModule,
-      BrowserModule
+      BrowserModule,
+      ImageCropperModule
     ],
 
     exports:[
@@ -75,7 +78,8 @@ import { BrowserModule } from '@angular/platform-browser';
       MatSnackBarModule,
       MatToolbarModule,
       MatChipsModule,
-      BrowserModule
+      BrowserModule,
+      ImageCropperModule
     ],
   
     providers: [],

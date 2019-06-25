@@ -7,6 +7,8 @@ import { LabelComponent } from 'src/app/component/label/label.component'
 import { lableService } from 'src/app/service/lable.service';
 
 
+import { ImageCroppedEvent } from 'ngx-image-cropper';
+
 @Component({
   selector: 'app-displaycontents',
   templateUrl: './displaycontents.component.html',
@@ -61,10 +63,9 @@ export class DisplaycontentsComponent implements OnInit
   // }
 
  
-  getfile()
-  {
   
-  }
+
+
 
 
 }

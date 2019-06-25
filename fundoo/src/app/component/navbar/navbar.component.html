@@ -42,19 +42,23 @@
           </button>
         </div> -->
 
-        <div fxLayout='column'>
-          <div class="text">
-            Prachi Ingole
-          </div>
-
-          <div class="margin">
-            prachi760@gmail.com
-          </div>
-
-          <div class="margin2">privacy
-            <!-- <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a> -->
-          </div>
+        <div fxLayout="row" style="padding-left: 16px;">
+          <button mat-fab color="primary" (click)="profile_pic()">P</button>
+            <div fxLayout='column'>
+                <div class="text">
+                  Prachi Ingole
+                </div>
+      
+                <div class="margin">
+                  prachi760@gmail.com
+                </div>
+      
+                <div class="margin2">
+                  <a href="https://policies.google.com/privacy?hl=en-GB">privacy</a>
+                </div>
+              </div>
         </div>
+      
       </div>
       <mat-divider></mat-divider>
       <div fxLayout='row'>
@@ -169,6 +173,4 @@
 
     <router-outlet></router-outlet>
   </mat-drawer-container>
-  
-
   

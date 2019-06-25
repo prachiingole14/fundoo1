@@ -55,7 +55,7 @@
 
         public function showregistered()
         {   $email = $_POST['email'];
-            $query=$this->db->query("select email_id,password from Registration where email_id='$email'");
+            $query=$this->db->query("select email_id,password from Registration where `email_id`='$email'");
             print_r($query->result());
         }
 
@@ -85,6 +85,23 @@
             //$uploadProfilePicture = $this->AccService->setProfile($data);
             $uploadProfilePicture = $this->db->insert('register', $data);
             return $uploadProfilePicture;
+        }
+
+
+        public function display()
+        {
+            $firstName = $_POST['firstName'];
+            print $firstName;
+            $address = $_POST['address'];
+            print $address;
+            $contact_no = $_POST['contact'];
+            print $contact_no;
+            $email_id = $_POST['email'];
+            print $email_id;
+            $password = $_POST['password'];
+            $confirm_password = $_POST['confirm_password'];
+            $profile_picture = $_POST['profile_picture'];
+            print $profile_picture;
         }
 
     }

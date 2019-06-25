@@ -62,7 +62,7 @@ $route['register'] = 'AccountController/register';
 $route['login'] = 'AccountController/login';
 $route['ResetPassword'] = 'AccountController/ResetPassword';
 $route['showregistered'] = 'AccountController/showregistered';
-$route['uploadprofile'] = 'AccountController/uploadprofile';
+$route['display'] = 'AccountController/display';
 
 $route['sam'] = 'Sample/sam';
 

@@ -28,8 +28,14 @@
             <textarea matInput  placeholder="Take a Note...."  style="outline: none; border:none;width: 100%;overflow: hidden;" required></textarea>
               <mat-error *ngIf="description.dirty">{{descriptionError()}}</mat-error>
           </div>
+
+          <div fxLayout="row">
+              <app-icon></app-icon>
+              <button mat-button (click)='reverse()'  fxLayoutAlign="end end" matTooltip="Close" class="close-btn">Close</button>
+            </div>
         </div>
     </div>
+    
 </mat-card>
           
   
